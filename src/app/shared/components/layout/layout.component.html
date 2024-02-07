@@ -1,0 +1,23 @@
+<app-header></app-header>
+<div class="layout">
+    <div class="sidebar" [ngStyle]="{ 'width':sidebarTog?'200px':'0px', 'display':sidebarTog?'block':'none'}">
+        <lsidebar></lsidebar>
+    </div>
+    <div class="content-area"
+        [ngStyle]="{ 'width':sidebarTog?'calc(100% - 200px)':'calc(100% - 0px)', 'margin-left':sidebarTog?'200px':'0px'}">
+        <div class="toggal-arrow">
+            <span (click)="sidebarTog = !sidebarTog"
+                [ngClass]="sidebarTog?'bi-arrow-left-square':'bi-arrow-right-square'">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="none"
+                    [ngStyle]="{ 'rotate':sidebarTog?'180deg':'0deg'}">
+                    <path d="M0 0h24v24H0V0z" fill="none"></path>
+                    <path d="M16.01 11H4v2h12.01v3L20 12l-3.99-4v3z" fill="currentColor"></path>
+                </svg>
+            </span>
+        </div>
+        <div class="content">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,24 @@
+.search-input {
+    display: flex;
+    align-items: center;
+    position: relative;
+    max-width: max-content;
+
+    input {
+        padding: 2px 8px;
+        height: 36px;
+        outline: none;
+        color: #7f56d9;
+        font-size: 16px;
+        font-weight: 500;
+        border: 1px solid #7f56d9;
+        border-radius: 4px;
+    }
+
+    mat-icon {
+        color: #7f56d9;
+        position: absolute;
+        right: 4px;
+        top: 6px;
+    }
+}

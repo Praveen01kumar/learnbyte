@@ -1,0 +1,37 @@
+.layout {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 50px;
+    height: 94dvh;
+
+    .sidebar {
+        transition: all 0.3s ease-in-out;
+        background-color: transparent;
+        height: fit-content;
+        border-right: 1px solid rgba(127, 86, 217, 0.5294117647);
+        padding: 4px;
+        position: fixed;
+    }
+
+    .content-area {
+        transition: all 0.3s ease-in-out;
+        padding: 4px 1%;
+
+        .toggal-arrow {
+            position: fixed;
+            color: #efebfb;
+
+            span {
+                svg {
+                    background-color: #7f56d9;
+                    cursor: pointer;
+                    border-radius: 2px;
+                }
+            }
+        }
+
+        .content {
+            margin-top: 30px;
+        }
+    }
+}

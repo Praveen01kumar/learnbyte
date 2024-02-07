@@ -1,0 +1,32 @@
+<app-header></app-header>
+<div *ngIf="contentData" class="content">
+    <div class="content_page">
+        <h1>
+            Explore <span>Topics</span>
+        </h1>
+        <p>Click on the Topics and explore!</p>
+        <gbsearch></gbsearch>
+    </div>
+    <h2 class="content_title">{{contentData?.heading}}</h2>
+    <div class="description">
+        <p>{{contentData?.description}}</p>
+    </div>
+    <div class="list">
+        <div class="list_item" *ngFor="let content of contentData?.list;let i=index;">
+            <div class="list_title">
+                <a href="javascript:void(0)" [routerLink]="route_v+'/'+content?.href">{{content?.list_title}}</a>
+            </div>
+            <ul class="sub_list">
+                <li class="sub_item" *ngFor="let sub of content?.sub_list;let j=index;">
+                    <div class="sub_title">
+                        <a href="javascript:void(0)">
+                            <span class="index">{{i+1+'.'+(j+1)}}</span>
+                            <span class="name" [routerLink]="route_v+'/'+sub?.href">{{sub?.sub_title}}</span>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

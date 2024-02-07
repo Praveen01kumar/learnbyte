@@ -3,12 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { IntroComponent } from './lesssion/intro/intro.component';
 import { ngTopics, routeConfig } from 'src/app/shared/const/const';
+import { LayoutComponent } from 'src/app/shared/components/layout/layout.component';
 const route = routeConfig;
 const ngroute = ngTopics;
 
 const routes: Routes = [
-    {
-        path: route?.empty, component: DashboardComponent,
+    { path: route?.empty, component: DashboardComponent },
+    { path: route?.ver, component: LayoutComponent,
         children: [
             { path: ngroute?.intro, component: IntroComponent },
         ]
