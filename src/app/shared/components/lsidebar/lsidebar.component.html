@@ -1,1 +1,22 @@
-<p>lsidebar works!</p>
+<div class="lsidebar">
+    <div class="sidedata">
+        <mat-accordion>
+            <!-- <mat-expansion-panel *ngFor="let sbItem of lsidebarData?.list;" [expanded]="currentRoute1 === sbItem?.href"> -->
+            <mat-expansion-panel *ngFor="let sbItem of lsidebarData?.list;">
+                <mat-expansion-panel-header [ngStyle]="{'border-color':sbItem?.color}">
+                    <mat-panel-title>
+                        <span>{{sbItem?.list_title}}</span>
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="expansion-body">
+                    <ul class="expansion-body-item">
+                        <li class="expansion-item" *ngFor="let subItem of sbItem?.sub_list;"
+                            [routerLink]="subItem?.href" routerLinkActive='active'>
+                            <a href="javascript:void(0);">{{subItem?.sub_title}}</a>
+                        </li>
+                    </ul>
+                </div>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+</div>

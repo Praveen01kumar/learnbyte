@@ -1,1 +1,115 @@
-<p>login works!</p>
+<div class="login-container">
+    <div class="welcome">
+        <h1>Welcome to, <span>LearnByte</span></h1>
+        <p>Here, we believe that building a strong professional network begins with your participation.
+            We are delighted to offer a modern and user-friendly service to ensure you have the best experience.</p>
+        <div class="banner"><img src="assets/auth/Frame.png" alt="Frame"></div>
+    </div>
+    <div class="log-form">
+        <span class="circule"></span>
+        <h2 class="form-type">{{logForm?'Sign in':'Register'}}</h2>
+        <ng-container *ngIf="!logForm">
+            <div class="register">
+                <form [formGroup]="RegisterForm" (ngSubmit)="onRegister()">
+                    <div class="email">
+                        <label for="email">Email Address<span class="f_danger">*</span></label>
+                        <input formControlName="email" [ngClass]="{ 'f_valid': (sub || f['email'].touched) && f['email'].valid, 
+                        'f_invalid': (sub || f['email'].touched || f['email'].dirty) && f['email'].errors }"
+                            autocomplete="off" type="email" id="email" placeholder="Enter email or phone">
+                        <span
+                            *ngIf="(sub && f['email'].errors) || ((f['email'].touched || f['email'].dirty) && f['email'].errors)"
+                            class="f_danger">
+                            <p class="mp-zero" *ngIf="f['email'].errors['required']">Email is required!</p>
+                            <p class="mp-zero" *ngIf="f['email'].errors['email'] ||f['email'].errors['invalidEmail']">
+                                Email is invalid!</p>
+                        </span>
+                        <span
+                            *ngIf="(sub && f['email'].errors===null) || ((f['email'].touched || f['email'].dirty) && f['email'].errors===null)"
+                            class="f_success">
+                            <p class="mp-zero">Good to go!</p>
+                        </span>
+                    </div>
+                    <div class="password">
+                        <label for="password">Password<span class="f_danger">*</span></label>
+                        <input formControlName="password" [ngClass]="{ 'f_valid': (sub || f['password'].touched) && f['password'].valid, 
+                        'f_invalid': (sub || f['password'].touched || f['password'].dirty) && f['password'].errors }"
+                            type="password" id="password" placeholder="Enter password">
+                        <span
+                            *ngIf="(sub && f['password'].errors) || ((f['password'].touched || f['password'].dirty) && f['password'].errors)"
+                            class="f_danger">
+                            <p class="mp-zero" *ngIf="f['password'].errors['required']">Password is required!</p>
+                            <p class="mp-zero" *ngIf="f['password'].errors['minlength']">Minimum 8 Character is
+                                required!</p>
+                            <p class="mp-zero" *ngIf="f['password'].errors['maxlength']">Maximum 16 Character are
+                                allowed!</p>
+                            <p class="mp-zero" *ngIf="f['password'].errors['upp']">Atleast one upper character is
+                                required!</p>
+                            <p class="mp-zero" *ngIf="f['password'].errors['lowe']">Atleast one lower character is
+                                required!</p>
+                            <p class="mp-zero" *ngIf="f['password'].errors['numb']">Atleast one numeric character is
+                                required!</p>
+                            <p class="mp-zero" *ngIf="f['password'].errors['speci']">Atleast one special character is
+                                required!</p>
+                            <p class="mp-zero" *ngIf="f['password'].errors['space']">Space not allowed!</p>
+                        </span>
+                        <span
+                            *ngIf="(sub && f['password'].errors===null) || ((f['password'].touched || f['password'].dirty) && f['password'].errors===null)"
+                            class="f_success">
+                            <p class="mp-zero">Good to go!</p>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </ng-container>
+        <ng-container *ngIf="logForm">
+            <div class="signin">
+                <form [formGroup]="LoginForm" (ngSubmit)="onlogIn()">
+                    <div class="email">
+                        <label for="email">Email Address<span class="f_danger">*</span></label>
+                        <input formControlName="email" [ngClass]="{ 'f_valid': (sub1 || f1['email'].touched) && f1['email'].valid, 
+                        'f_invalid': (sub1 || f1['email'].touched || f1['email'].dirty) && f1['email'].errors }"
+                            autocomplete="off" type="email" id="email" placeholder="Enter email or phone">
+                        <span
+                            *ngIf="(sub1 && f1['email'].errors) || ((f1['email'].touched || f1['email'].dirty) && f1['email'].errors)"
+                            class="f_danger">
+                            <p class="mp-zero" *ngIf="f1['email'].errors['required']">Email is required!</p>
+                            <p class="mp-zero" *ngIf="f1['email'].errors['email'] ||f1['email'].errors['invalidEmail']">
+                                Email is invalid!</p>
+                        </span>
+                        <span
+                            *ngIf="(sub1 && f1['email'].errors===null) || ((f1['email'].touched || f1['email'].dirty) && f1['email'].errors===null)"
+                            class="f_success">
+                            <p class="mp-zero">Good to go!</p>
+                        </span>
+                    </div>
+                    <div class="password">
+                        <label for="password">Password<span class="f_danger">*</span></label>
+                        <input formControlName="password"
+                            [ngClass]="{ 'f_valid': (sub1 || f1['password'].touched) && f1['password'].valid, 
+                        'f_invalid': (sub1 || f1['password'].touched || f1['password'].dirty) && f1['password'].errors }" type="password"
+                            id="password" placeholder="Enter password">
+                        <span
+                            *ngIf="(sub1 && f1['password'].errors) || ((f1['password'].touched || f1['password'].dirty) && f1['password'].errors)"
+                            class="f_danger">
+                            <p class="mp-zero" *ngIf="f1['password'].errors['required']">Password is required!</p>
+                        </span>
+                        <span
+                            *ngIf="(sub1 && f1['password'].errors===null) || ((f1['password'].touched || f1['password'].dirty) && f1['password'].errors===null)"
+                            class="f_success">
+                            <p class="mp-zero">Good to go!</p>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </ng-container>
+        <p class="recover"><span (click)="logForm = !logForm">Don't Have an Account?</span><span>Recover Password ?</span></p>
+        <button class="signin-btn" *ngIf="logForm" (click)="onlogIn()">Sign in</button>
+        <button class="register-btn" *ngIf="!logForm" (click)="onRegister()">Register</button>
+        <p class="continue"><span>Or Continue wuth</span></p>
+        <div class="social-login">
+            <img src="assets/auth/Facebook.png" alt="facebook">
+            <img src="assets/auth/Twitter.png" alt="twitter">
+            <img src="assets/auth/Google.png" alt="google">
+        </div>
+    </div>
+</div>

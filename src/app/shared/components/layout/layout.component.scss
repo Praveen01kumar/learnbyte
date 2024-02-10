@@ -2,15 +2,27 @@
     display: flex;
     flex-wrap: nowrap;
     margin-top: 50px;
-    height: 94dvh;
 
     .sidebar {
         transition: all 0.3s ease-in-out;
-        background-color: transparent;
+        background-color: #efebfb;
         height: fit-content;
         border-right: 1px solid rgba(127, 86, 217, 0.5294117647);
         padding: 4px;
         position: fixed;
+        overflow-y: scroll;
+        max-height: 92vh;
+        &::-webkit-scrollbar
+        {
+            width: 6px;
+            background-color: #ffffff;
+        }
+        &::-webkit-scrollbar-thumb
+        {
+            border-radius: 10px;
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+            background-color: #dcd0ff;
+        }
     }
 
     .content-area {
@@ -32,6 +44,9 @@
 
         .content {
             margin-top: 30px;
+            max-height: fit-content;
+            min-height: 100vh;
+            margin-bottom: 10%;
         }
     }
 }

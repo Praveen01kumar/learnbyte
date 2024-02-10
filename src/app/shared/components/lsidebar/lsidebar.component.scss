@@ -1,0 +1,89 @@
+.lsidebar {
+    .sidedata {}
+}
+
+
+::ng-deep {
+    .mat-expansion-panel {
+        margin: 1px 0px !important;
+        border-radius: 0px;
+
+        &:first-of-type {
+            border-radius: 0px;
+        }
+
+        &:last-of-type {
+            border-radius: 0px;
+        }
+
+        .mat-expansion-panel-header {
+            padding: 0 12px;
+
+            &:hover {
+                background-color: #e2d8ff !important;
+                transition: all ease 0.5s;
+            }
+
+            .mat-content {
+                .mat-expansion-panel-header-title {
+                    span {
+                        color: #06241B;
+                        text-decoration: none;
+                        font-size: 14px;
+                        font-weight: 500;
+                        transition: all ease-in 0.5s;
+                    }
+                }
+            }
+        }
+
+        .mat-expansion-panel-header.mat-expanded {
+            height: 48px;
+            background-color: #e2d8ff !important;
+            border-left: 3px solid;
+        }
+
+        .mat-expansion-panel-content {
+            .expansion-body {
+                .expansion-body-item {
+                    padding: 0px;
+                    margin: 0px;
+                    display: block;
+                    list-style: none;
+
+                    .expansion-item {
+                        border-bottom: 1px solid #ced4da;
+                        padding: 4px 6px;
+                        margin: 2px 0px;
+                        border-radius: 4px;
+                        a {
+                            color: #545454;
+                            font-size: 12px;
+                            font-weight: 500;
+                            transition: all 0.3s ease-out;
+                            text-decoration: none;
+                            background-color: transparent;
+                        }
+                        &:hover {
+                            background-color: #ced4da !important;
+                            cursor: pointer;
+                        }
+                    }
+
+                    // .active {
+                    //     a {
+                    //         font-weight: 700;
+                    //         border-bottom: none;
+                    //         background-color: #f8f8f8;
+                    //         @extend .expansion-item;
+                    //     }
+                    // }
+                }
+            }
+
+            .mat-expansion-panel-body {
+                padding: 0 6px 0px;
+            }
+        }
+    }
+}

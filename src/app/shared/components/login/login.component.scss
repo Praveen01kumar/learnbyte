@@ -1,0 +1,207 @@
+.login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 6% 10% 0px;
+
+    .welcome {
+        width: 70%;
+
+        h1 {
+            font-size: 40px;
+            font-weight: 700;
+            color: #06241B;
+
+            span {
+                color: #7F56D9;
+            }
+        }
+
+        p {
+            color: #7E7EAA;
+            font-size: 18px;
+            padding-right: 10%;
+            font-weight: 500;
+        }
+
+        .banner {
+            width: 60%;
+            margin-top: 6%;
+
+            img {
+                width: auto;
+                height: 100%;
+                object-fit: fill;
+            }
+        }
+    }
+
+    .log-form {
+        position: relative;
+        width: 30%;
+
+        .circule {
+            width: 60px;
+            height: 60px;
+            display: inline-block;
+            background: #38C4E5;
+            border-radius: 50%;
+            position: absolute;
+            top: -80px;
+            right: -40px;
+        }
+
+        .form-type {
+            font-size: 20px;
+            font-weight: 700;
+            color: #06241B;
+        }
+
+        .register {
+            form {
+                .email {
+                    display: flex;
+                    flex-direction: column;
+                    font-size: 14px;
+                    font-weight: 500;
+                    color: #06241B;
+                    margin-bottom: 12px;
+
+                    &:last-child {
+                        margin-bottom: 6px;
+                    }
+
+                    label {
+                        margin-bottom: 4px;
+                    }
+
+                    input {
+                        box-shadow: 26px 22px 68px -18px rgb(127, 86, 217);
+                        background-color: transparent;
+                        border: 1px solid #7F56D9;
+                        border-radius: 4px;
+                        height: 36px;
+                        outline: none;
+                        padding: 2px 6px;
+                        font-size: 14px;
+                        font-weight: 500;
+                        color: #7F56D9;
+                    }
+
+                }
+
+                .password {
+                    @extend .email;
+                }
+            }
+        }
+
+        .signin {
+            @extend .register;
+        }
+
+        .recover {
+            color: #7E7EAA;
+            font-size: 12px;
+            font-weight: 500;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            span {
+                cursor: pointer;
+            }
+        }
+
+        .signin-btn {
+            width: 100%;
+            margin-bottom: 12px;
+            height: 36px;
+            background-color: #7f56d9c2;
+            border: none;
+            border-radius: 6px;
+            font-size: 18px;
+            font-weight: 600;
+            color: #ffff;
+            cursor: pointer;
+            transition: all ease 0.5s;
+
+            &:hover {
+                background-color: #7F56D9;
+            }
+        }
+
+        .register-btn {
+            @extend .signin-btn;
+        }
+
+        .continue {
+            text-align: center;
+
+            span {
+                color: #7E7EAA;
+                font-size: 12px;
+                font-weight: 500;
+                position: relative;
+                padding: 0px 4px;
+
+                &::after {
+                    position: absolute;
+                    content: "";
+                    height: 1px;
+                    background-color: #7e7eaa7d;
+                    bottom: 5px;
+                    width: 50%;
+                    left: 100%;
+                }
+
+                &::before {
+                    position: absolute;
+                    content: "";
+                    height: 1px;
+                    background-color: #7e7eaa7d;
+                    bottom: 5px;
+                    width: 50%;
+                    right: 100%;
+                }
+            }
+        }
+
+        .social-login {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            img {
+                width: 50px;
+                height: 50px;
+                cursor: pointer;
+                object-fit: fill;
+            }
+        }
+    }
+}
+
+.f_danger {
+    color: #ff000080;
+    font-size: 10px;
+}
+
+.f_invalid {
+    border-color: #ff000080 !important;
+}
+
+.f_valid {
+    border-color: green !important;
+}
+
+.mp-zero {
+    margin: 0px;
+    padding: 0px;
+}
+
+.f_success {
+    color: green;
+    font-size: 10px;
+}

@@ -1,9 +1,9 @@
+import { AbstractControl, ValidationErrors, ValidatorFn } from "@angular/forms"
 
 export const routeConfig = {
     empty: '',
     ver: 'v1',
     login: 'login',
-    register: 'register',
     veiled: '**'
 }
 
@@ -540,3 +540,39 @@ export const TypescriptContent = {
     },
     ]
 }
+
+export const EMAIL_REGEX: RegExp = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+export const VALID_URL: RegExp = /^(http[s]?:\/\/){0,1}(www\.){0,1}[a-zA-Z0-9\.\-]+\.[a-zA-Z]{2,5}[\.]{0,1}/;
+export const SPECHAR: RegExp = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/
+export const UPLOW: RegExp = /[a-zA-Z][a-zA-Z ]+/
+export const UP: RegExp = /[A-Z]/
+export const LOW: RegExp = /[a-z]/
+export const NUM: RegExp = /[0-9]/
+
+export const emailValidator: ValidatorFn = (control: AbstractControl): ValidationErrors | null => {
+    const regularExp: RegExp = EMAIL_REGEX;
+    let cValue = control.value;
+    cValue = (cValue || '').toString().trim();
+    if (!cValue)
+      return { required: true };
+    return regularExp.test(cValue) ? null : {
+      invalidEmail: true
+    };
+  };
+
+  export const spaceNotAllowed: ValidatorFn = (control: AbstractControl): ValidationErrors | null => {
+    if ((control.value as string)?.indexOf(' ') >= 0) {
+      return { space: true }
+    }
+    return null;
+  }
+
+  export const passStrenValidator: ValidatorFn = (control: AbstractControl): ValidationErrors | null => {
+    const value: string = control.value || '', upp: RegExp = UP, lowe: RegExp = LOW, numb: RegExp = NUM, speci: RegExp = SPECHAR;
+    if (!value) { return null; }
+    if (upp.test(value) === false) { return { upp: true }; }
+    if (lowe.test(value) === false) { return { lowe: true }; }
+    if (numb.test(value) === false) { return { numb: true }; }
+    if (speci.test(value) === false) { return { speci: true }; }
+    return null;
+  }

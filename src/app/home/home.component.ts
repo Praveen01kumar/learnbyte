@@ -11,9 +11,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.scss'],
   standalone: true,
   imports: [
-    Gbsearch,
     HeaderComponent,
     FooterComponent,
+    Gbsearch,
     CommonModule
   ]
 })
