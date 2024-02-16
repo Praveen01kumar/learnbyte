@@ -4,7 +4,6 @@ import { HeaderComponent } from '../header/header.component';
 import { FooterComponent } from '../footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { Gbsearch } from '../gbsearch/gbsearch.component';
-import { routeConfig } from '../../const/const';
 
 @Component({
   selector: 'app-contentbox',
@@ -21,7 +20,6 @@ import { routeConfig } from '../../const/const';
 })
 export class ContentboxComponent implements OnInit {
   @Input() contentData: any;
-  route_v: string = routeConfig?.ver;
   constructor() { }
   ngOnInit(): void { }
 

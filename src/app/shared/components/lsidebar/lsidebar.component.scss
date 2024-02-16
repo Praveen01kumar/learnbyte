@@ -1,12 +1,14 @@
-.lsidebar {
-    .sidedata {}
-}
+:host::ng-deep {
+    
+    .active1 {
+        background-color: #e2d8ff !important;
+        border-left: 3px solid;
+    }
 
-
-::ng-deep {
     .mat-expansion-panel {
         margin: 1px 0px !important;
         border-radius: 0px;
+        background: #efebfb !important;
 
         &:first-of-type {
             border-radius: 0px;
@@ -56,6 +58,7 @@
                         padding: 4px 6px;
                         margin: 2px 0px;
                         border-radius: 4px;
+
                         a {
                             color: #545454;
                             font-size: 12px;
@@ -64,20 +67,33 @@
                             text-decoration: none;
                             background-color: transparent;
                         }
+
                         &:hover {
                             background-color: #ced4da !important;
                             cursor: pointer;
                         }
                     }
 
-                    // .active {
-                    //     a {
-                    //         font-weight: 700;
-                    //         border-bottom: none;
-                    //         background-color: #f8f8f8;
-                    //         @extend .expansion-item;
-                    //     }
-                    // }
+                    .active {
+                        background-color: #ced4da !important;
+
+                        a {
+                            position: relative;
+                            padding-left: 2px;
+
+                            &::before {
+                                position: absolute;
+                                content: "";
+                                background-color: green;
+                                bottom: 0px;
+                                width: 2px;
+                                right: 100%;
+                                height: 100%;
+                            }
+
+                            @extend .expansion-item;
+                        }
+                    }
                 }
             }
 

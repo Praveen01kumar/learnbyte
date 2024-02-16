@@ -3,7 +3,9 @@ import { Gbsearch } from '../shared/components/gbsearch/gbsearch.component';
 import { HeaderComponent } from '../shared/components/header/header.component';
 import { FooterComponent } from '../shared/components/footer/footer.component';
 import { CommonModule } from '@angular/common';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
+import { courceRoute } from '../shared/const/const';
+import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
 
 @Component({
   selector: 'app-home',
@@ -14,15 +16,78 @@ import { Router } from '@angular/router';
     HeaderComponent,
     FooterComponent,
     Gbsearch,
-    CommonModule
+    CommonModule,
+    CarouselModule,
+    RouterModule,
   ]
 })
 export class HomeComponent implements OnInit {
 
+  customOptions: OwlOptions = {
+    loop: true,
+    mouseDrag: true,
+    touchDrag: false,
+    pullDrag: false,
+    dots: true,
+    navSpeed: 100,
+    navText: ['<', '>'],
+    nav: true,
+    autoplay: true,
+    autoHeight: true,
+    autoplayTimeout: 2000,
+    margin: 20,
+    autoWidth: false,
+    responsive: {
+      0: {
+        items: 1,
+        center: true,
+      },
+      400: {
+        items: 2,
+        center: true,
+      },
+      740: {
+        items: 3,
+        center: false,
+      },
+      940: {
+        items: 4,
+        center: false,
+      },
+    },
+
+  }
+
   courceCards: any[] = [
-    { name: 'Angular', url: 'angular', icon: 'assets/cource/angular.png', item_bg: '#e23237' },
-    { name: 'JavaScript', url: 'javascript', icon: 'assets/cource/javascript.png', item_bg: '#f7df1e' },
-    { name: 'TypeScript', url: 'typescript', icon: 'assets/cource/typescript.png', item_bg: '#3178c6' },
+    { name: 'JavaScript', url: courceRoute.javascript, icon: 'assets/cource/javascript.png', item_bg: '#f7df1e' },
+    { name: 'Angular', url: courceRoute.angular, icon: 'assets/cource/angular.png', item_bg: '#e23237' },
+    { name: 'TypeScript', url: courceRoute.typescript, icon: 'assets/cource/typescript.png', item_bg: '#3178c6' },
+  ];
+  courceCards1: any[] = [
+    { name: 'JavaScript', url: courceRoute.javascript, icon: 'assets/cource/javascript.png', item_bg: '#f7df1e' },
+    { name: 'Angular', url: courceRoute.angular, icon: 'assets/cource/angular.png', item_bg: '#e23237' },
+    { name: 'TypeScript', url: courceRoute.typescript, icon: 'assets/cource/typescript.png', item_bg: '#3178c6' },
+    { name: 'JavaScript', url: courceRoute.javascript, icon: 'assets/cource/javascript.png', item_bg: '#f7df1e' },
+    { name: 'Angular', url: courceRoute.angular, icon: 'assets/cource/angular.png', item_bg: '#e23237' },
+    { name: 'TypeScript', url: courceRoute.typescript, icon: 'assets/cource/typescript.png', item_bg: '#3178c6' },
+    { name: 'JavaScript', url: courceRoute.javascript, icon: 'assets/cource/javascript.png', item_bg: '#f7df1e' },
+    { name: 'Angular', url: courceRoute.angular, icon: 'assets/cource/angular.png', item_bg: '#e23237' },
+    { name: 'TypeScript', url: courceRoute.typescript, icon: 'assets/cource/typescript.png', item_bg: '#3178c6' },
+    { name: 'JavaScript', url: courceRoute.javascript, icon: 'assets/cource/javascript.png', item_bg: '#f7df1e' },
+    { name: 'Angular', url: courceRoute.angular, icon: 'assets/cource/angular.png', item_bg: '#e23237' },
+    { name: 'TypeScript', url: courceRoute.typescript, icon: 'assets/cource/typescript.png', item_bg: '#3178c6' },
+    { name: 'JavaScript', url: courceRoute.javascript, icon: 'assets/cource/javascript.png', item_bg: '#f7df1e' },
+    { name: 'Angular', url: courceRoute.angular, icon: 'assets/cource/angular.png', item_bg: '#e23237' },
+    { name: 'TypeScript', url: courceRoute.typescript, icon: 'assets/cource/typescript.png', item_bg: '#3178c6' },
+    { name: 'JavaScript', url: courceRoute.javascript, icon: 'assets/cource/javascript.png', item_bg: '#f7df1e' },
+    { name: 'Angular', url: courceRoute.angular, icon: 'assets/cource/angular.png', item_bg: '#e23237' },
+    { name: 'TypeScript', url: courceRoute.typescript, icon: 'assets/cource/typescript.png', item_bg: '#3178c6' },
+    { name: 'JavaScript', url: courceRoute.javascript, icon: 'assets/cource/javascript.png', item_bg: '#f7df1e' },
+    { name: 'Angular', url: courceRoute.angular, icon: 'assets/cource/angular.png', item_bg: '#e23237' },
+    { name: 'TypeScript', url: courceRoute.typescript, icon: 'assets/cource/typescript.png', item_bg: '#3178c6' },
+    { name: 'JavaScript', url: courceRoute.javascript, icon: 'assets/cource/javascript.png', item_bg: '#f7df1e' },
+    { name: 'Angular', url: courceRoute.angular, icon: 'assets/cource/angular.png', item_bg: '#e23237' },
+    { name: 'TypeScript', url: courceRoute.typescript, icon: 'assets/cource/typescript.png', item_bg: '#3178c6' },
   ];
 
   postCards: any[] = [

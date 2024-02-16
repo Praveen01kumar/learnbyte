@@ -1,9 +1,11 @@
 <div class="lsidebar">
     <div class="sidedata">
         <mat-accordion>
-            <!-- <mat-expansion-panel *ngFor="let sbItem of lsidebarData?.list;" [expanded]="currentRoute1 === sbItem?.href"> -->
-            <mat-expansion-panel *ngFor="let sbItem of lsidebarData?.list;">
-                <mat-expansion-panel-header [ngStyle]="{'border-color':sbItem?.color}">
+            <mat-expansion-panel *ngFor="let sbItem of lsidebarData?.list;"
+                [expanded]="currentRoute === (lsidebarData?.route+'/'+sbItem?.href)">
+                <mat-expansion-panel-header [ngStyle]="{'border-color':sbItem?.color}"
+                    (click)="gotoRout(lsidebarData?.route+'/'+sbItem?.href)"
+                    [ngClass]="currentRoute1=== ('/'+lsidebarData?.route+'/'+sbItem?.href)?'active1':''">
                     <mat-panel-title>
                         <span>{{sbItem?.list_title}}</span>
                     </mat-panel-title>
@@ -11,7 +13,7 @@
                 <div class="expansion-body">
                     <ul class="expansion-body-item">
                         <li class="expansion-item" *ngFor="let subItem of sbItem?.sub_list;"
-                            [routerLink]="subItem?.href" routerLinkActive='active'>
+                            [routerLink]="subItem?.href" routerLinkActive='active' (click)="openedPanel()">
                             <a href="javascript:void(0);">{{subItem?.sub_title}}</a>
                         </li>
                     </ul>

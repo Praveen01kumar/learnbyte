@@ -14,7 +14,8 @@ import { NotfoundComponent } from './shared/components/notfound/notfound.compone
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent],
