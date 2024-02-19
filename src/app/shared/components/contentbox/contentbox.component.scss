@@ -138,6 +138,12 @@
                             }
                         }
                     }
+                @media (min-width:0px) and (max-width:500px){
+                    width: 100%;
+                }
+                @media (min-width:501px) and (max-width:900px){
+                    width: 50%;
+                }
                 }
             }
         }

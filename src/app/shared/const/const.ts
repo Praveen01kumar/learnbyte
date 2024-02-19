@@ -2,7 +2,7 @@ import { AbstractControl, ValidationErrors, ValidatorFn } from "@angular/forms"
 
 export const routeConfig = {
     empty: '',
-    login: 'login',
+    auth: 'auth',
     veiled: '**'
 }
 
@@ -10,6 +10,736 @@ export const courceRoute = {
     angular: 'angular',
     javascript: 'javascript',
     typescript: 'typescript',
+    nodejs: 'nodejs',
+    nestjs: 'nestjs',
+    sequelize: 'sequelize',
+    expressjs: 'expressjs',
+}
+
+export const exTopics = {
+    intro: 'intro',
+    architecture: "architecture",
+
+    express: "express",
+    express_json: "express_json",
+    express_static: "express_static",
+    express_router: "express_router",
+    express_urlencoded: "express_urlencoded",
+
+    application: "application",
+    the_app: "the_app",
+    events_mount: "events_mount",
+
+    request: "request",
+    the_request: "the_request",
+
+    response: "response",
+    the_response: "the_response",
+
+    router: "router",
+    the_router: "the_router",
+
+    miscellaneous: "miscellaneous",
+    cookies: "cookies",
+    file_upload: "file_upload",
+    middleware: "middleware",
+    scaffolding: "scaffolding",
+    template_engine: "template_engine",
+}
+
+export const ExpressJsContent = {
+    heading: "The ExpressJs language.",
+    description: "avaScript is a high-level, dynamic, interpreted programming language primarily used for front-end web development. It allows developers to add interactivity and dynamic behavior to web pages. JavaScript is commonly used alongside HTML and CSS to create dynamic and interactive user interfaces for websites and web applications. JavaScript code can be embedded directly into HTML documents or referenced externally, and it can manipulate the content and structure of web pages, respond to user actions, and communicate with servers to fetch or send data asynchronously, allowing for the creation of responsive and interactive web applications. Originally created by Brendan Eich at Netscape Communications Corporation in 1995, JavaScript has evolved significantly over the years and is now supported by all major web browsers. It has also expanded beyond front-end development and is now used in server-side development (Node.js), mobile app development (React Native), desktop application development (Electron), and more.",
+    route: courceRoute?.expressjs,
+    list: [{
+        list_title: "An Introduction",
+        href: exTopics?.intro,
+        sub_list: [
+            { sub_title: "architecture", href: exTopics?.architecture },
+        ]
+    },
+    {
+        list_title: "express()",
+        href: exTopics?.express,
+        sub_list: [
+            { sub_title: "express.json()", href: exTopics?.express_json },
+            { sub_title: "express.static()", href: exTopics?.express_static },
+            { sub_title: "express.Router()", href: exTopics?.express_router },
+            { sub_title: "express.urlencoded()", href: exTopics?.express_urlencoded },
+        ]
+    },
+    {
+        list_title: "Application",
+        href: exTopics?.application,
+        sub_list: [
+            { sub_title: "the app", href: exTopics?.the_app },
+            { sub_title: "Events(mount)", href: exTopics?.events_mount },
+        ]
+    },
+    {
+        list_title: "Request",
+        href: exTopics?.request,
+        sub_list: [
+            { sub_title: "the Request", href: exTopics?.the_request },
+        ]
+    },
+    {
+        list_title: "Response",
+        href: exTopics?.response,
+        sub_list: [
+            { sub_title: "the Response", href: exTopics?.the_response },
+        ]
+    },
+    {
+        list_title: "Router",
+        href: exTopics?.router,
+        sub_list: [
+            { sub_title: "the Router", href: exTopics?.the_router },
+        ]
+    },
+    {
+        list_title: "miscellaneous",
+        href: exTopics?.miscellaneous,
+        sub_list: [
+            { sub_title: "cookies", href: exTopics?.cookies },
+            { sub_title: "File Upload", href: exTopics?.file_upload },
+            { sub_title: "Middleware", href: exTopics?.middleware },
+            { sub_title: "Scaffolding", href: exTopics?.scaffolding },
+            { sub_title: "Template Engine", href: exTopics?.template_engine },
+        ]
+    },
+    ]
+}
+
+export const nodeTopics = {
+    intro: 'intro',
+    architecture: "architecture",
+
+    core_modules: "core_modules",
+    fs: "fs",
+    http: "http",
+    https: "https",
+    path: "path",
+    util: "util",
+    events: "events",
+    crypto: "crypto",
+    os: "os",
+    child_processes: "child_processes",
+    assert: "assert",
+    dns: "dns",
+    querystring: "querystring",
+    url: "url",
+    zlib: "zlib",
+    timers: "timers",
+    buffer: "buffer",
+    vm: "vm",
+    async_hooks: "async_hooks",
+
+    npm_modules: "npm_modules",
+    cli_commands: "cli_commands",
+
+    community_modules: "community_modules",
+    express: "express",
+    socket_io: "socket_io",
+    request: "request",
+    async: "async",
+    lodash: "lodash",
+    mongoose: "mongoose",
+    mysql: "mysql",
+
+    event_emitter: "event_emitter",
+    event_driven: "event_driven",
+    eventemitter_class: "eventemitter_class",
+
+    streams: "streams",
+    to_streams: "to_streams",
+    from_streams: "from_streams",
+    writing_to_streams: "writing_to_streams",
+    piping_streams: "piping_streams",
+
+    security: "security",
+    best_practices: "best_practices",
+    encryption: "encryption",
+    cross_site: "cross_site",
+    authentication: "authentication",
+    authorization: "authorization",
+    input_validation: "input_validation",
+    secure_communication: "secure_communication",
+    helmet_js: "helmet_js",
+
+    apis: "apis",
+    restful_apis: "restful_apis",
+    creating_apis: "creating_apis",
+    handling_http_methods: "handling_http_methods",
+    rest_api_design: "rest_api_design",
+
+    email: "email",
+    handling_email: "handling_email",
+
+    asynchronous_programming: "asynchronous_programming",
+    asynchronous: "asynchronous",
+    callbacks: "callbacks",
+    promises: "promises",
+    async_await: "async_await",
+
+    experimental: "experimental",
+    worker_threads: "worker_threads",
+
+    web_development: "web_development",
+    routing: "routing",
+    middleware: "middleware",
+    template_engines: "template_engines",
+    authentication_and_authorization: "authentication_and_authorization",
+
+    performance_optimization: "performance_optimization",
+    profiling: "profiling",
+    caching: "caching",
+    load_balancing: "load_balancing",
+    scaling: "scaling",
+
+    advanced: "advanced",
+    cluster_module: "cluster_module",
+    addons: "addons",
+    error_handling: "error_handling",
+
+    additional: "additional",
+    globals: "globals",
+    js_env: "js_env",
+    stability_index: "stability_index",
+    deprecated_apis: "deprecated_apis",
+
+}
+
+export const NodeJsContent = {
+    heading: "The NodeJs language.",
+    description: "avaScript is a high-level, dynamic, interpreted programming language primarily used for front-end web development. It allows developers to add interactivity and dynamic behavior to web pages. JavaScript is commonly used alongside HTML and CSS to create dynamic and interactive user interfaces for websites and web applications. JavaScript code can be embedded directly into HTML documents or referenced externally, and it can manipulate the content and structure of web pages, respond to user actions, and communicate with servers to fetch or send data asynchronously, allowing for the creation of responsive and interactive web applications. Originally created by Brendan Eich at Netscape Communications Corporation in 1995, JavaScript has evolved significantly over the years and is now supported by all major web browsers. It has also expanded beyond front-end development and is now used in server-side development (Node.js), mobile app development (React Native), desktop application development (Electron), and more.",
+    route: courceRoute?.nodejs,
+    list: [{
+        list_title: "An Introduction",
+        href: nodeTopics?.intro,
+        sub_list: [
+            { sub_title: "architecture", href: nodeTopics?.architecture },
+        ]
+    },
+    {
+        list_title: "Core Modules",
+        href: nodeTopics?.core_modules,
+        sub_list: [
+            { sub_title: "fs (File System)", href: nodeTopics?.fs },
+            { sub_title: "http (HTTP)", href: nodeTopics?.http },
+            { sub_title: "https (HTTPS)", href: nodeTopics?.https },
+            { sub_title: "path (Path)", href: nodeTopics?.path },
+            { sub_title: "util (Utilities)", href: nodeTopics?.util },
+            { sub_title: "events (Events, Event Loop)", href: nodeTopics?.events },
+            { sub_title: "crypto (Cryptography)", href: nodeTopics?.crypto },
+            { sub_title: "os (Operating System)", href: nodeTopics?.os },
+            { sub_title: "Child Processes", href: nodeTopics?.child_processes },
+            { sub_title: "assert (Assertion Testing)", href: nodeTopics?.assert },
+            { sub_title: "dns (Domain Name System)", href: nodeTopics?.dns },
+            { sub_title: "querystring (Query String)", href: nodeTopics?.querystring },
+            { sub_title: "url (URL)", href: nodeTopics?.url },
+            { sub_title: "zlib (Compression)", href: nodeTopics?.zlib },
+            { sub_title: "timers (Timers)", href: nodeTopics?.timers },
+            { sub_title: "buffer (Buffer)", href: nodeTopics?.buffer },
+            { sub_title: "vm (Virtual Machine)", href: nodeTopics?.vm },
+            { sub_title: "Async Hooks", href: nodeTopics?.async_hooks },
+        ]
+    },
+    {
+        list_title: "NPM Modules",
+        href: nodeTopics?.npm_modules,
+        sub_list: [
+            { sub_title: "NPM CLI commands", href: nodeTopics?.cli_commands },
+        ]
+    },
+    {
+        list_title: "Community Modules",
+        href: nodeTopics?.community_modules,
+        sub_list: [
+            { sub_title: "express (Express.js web framework)", href: nodeTopics?.express },
+            { sub_title: "socket.io (Real-time communication library)", href: nodeTopics?.socket_io },
+            { sub_title: "request (HTTP client)", href: nodeTopics?.request },
+            { sub_title: "async (Asynchronous utilities)", href: nodeTopics?.async },
+            { sub_title: "lodash (Utility library)", href: nodeTopics?.lodash },
+            { sub_title: "mongoose (MongoDB object modeling for Node.js)", href: nodeTopics?.mongoose },
+            { sub_title: "mysql (MySQL client)", href: nodeTopics?.mysql },
+        ]
+    },
+    {
+        list_title: "Events and Event Emitter",
+        href: nodeTopics?.event_emitter,
+        sub_list: [
+            { sub_title: "Event-driven Architecture", href: nodeTopics?.event_driven },
+            { sub_title: "EventEmitter Class", href: nodeTopics?.eventemitter_class },
+        ]
+    },
+    {
+        list_title: "Streams",
+        href: nodeTopics?.streams,
+        sub_list: [
+            { sub_title: "Introduction to Streams", href: nodeTopics?.to_streams },
+            { sub_title: "Reading from Streams", href: nodeTopics?.from_streams },
+            { sub_title: "Writing to Streams", href: nodeTopics?.writing_to_streams },
+            { sub_title: "Piping Streams", href: nodeTopics?.piping_streams },
+        ]
+    },
+    {
+        list_title: "Security",
+        href: nodeTopics?.security,
+        sub_list: [
+            { sub_title: "Security Best Practices", href: nodeTopics?.best_practices },
+            { sub_title: "SSL/TLS Encryption", href: nodeTopics?.encryption },
+            { sub_title: "Cross-site Scripting (XSS) Prevention", href: nodeTopics?.cross_site },
+            { sub_title: "Authentication (JWT, OAuth)", href: nodeTopics?.authentication },
+            { sub_title: "Authorization", href: nodeTopics?.authorization },
+            { sub_title: "Input Validation", href: nodeTopics?.input_validation },
+            { sub_title: "Secure Communication (HTTPS)", href: nodeTopics?.secure_communication },
+            { sub_title: "Helmet.js", href: nodeTopics?.helmet_js },
+        ]
+    },
+    {
+        list_title: "RESTful APIs",
+        href: nodeTopics?.apis,
+        sub_list: [
+            { sub_title: "Introduction to RESTful APIs", href: nodeTopics?.restful_apis },
+            { sub_title: "Creating RESTful APIs", href: nodeTopics?.creating_apis },
+            { sub_title: "Handling HTTP Methods (GET, POST, PUT, DELETE)", href: nodeTopics?.handling_http_methods },
+            { sub_title: "REST API Design Best Practices", href: nodeTopics?.rest_api_design },
+        ]
+    },
+    {
+        list_title: "Handling Email",
+        href: nodeTopics?.email,
+        sub_list: [
+            { sub_title: "Introduction to Email Sending with Node.js", href: nodeTopics?.handling_email },
+        ]
+    },
+    {
+        list_title: "Asynchronous Programming",
+        href: nodeTopics?.asynchronous_programming,
+        sub_list: [
+            { sub_title: "Understanding Asynchronous Programming", href: nodeTopics?.asynchronous },
+            { sub_title: "Callbacks", href: nodeTopics?.callbacks },
+            { sub_title: "Promises", href: nodeTopics?.promises },
+            { sub_title: "Async/Await", href: nodeTopics?.async_await },
+        ]
+    },
+    {
+        list_title: "Experimental Modules",
+        href: nodeTopics?.experimental,
+        sub_list: [
+            { sub_title: "Worker Threads", href: nodeTopics?.worker_threads },
+        ]
+    },
+    {
+        list_title: "Web Development",
+        href: nodeTopics?.web_development,
+        sub_list: [
+            { sub_title: "Routing", href: nodeTopics?.routing },
+            { sub_title: "Middleware", href: nodeTopics?.middleware },
+            { sub_title: "Template Engines", href: nodeTopics?.template_engines },
+            { sub_title: "Authentication and Authorization", href: nodeTopics?.authentication_and_authorization },
+        ]
+    },
+    {
+        list_title: "Performance Optimization",
+        href: nodeTopics?.performance_optimization,
+        sub_list: [
+            { sub_title: "Profiling", href: nodeTopics?.profiling },
+            { sub_title: "Caching", href: nodeTopics?.caching },
+            { sub_title: "Load Balancing", href: nodeTopics?.load_balancing },
+            { sub_title: "Scaling", href: nodeTopics?.scaling },
+        ]
+    },
+    {
+        list_title: "Advanced Concepts",
+        href: nodeTopics?.advanced,
+        sub_list: [
+            { sub_title: "Cluster Module", href: nodeTopics?.cluster_module },
+            { sub_title: "C++ Addons", href: nodeTopics?.addons },
+            { sub_title: "Error Handling", href: nodeTopics?.error_handling },
+        ]
+    },
+    {
+        list_title: "Additional Topics",
+        href: nodeTopics?.additional,
+        sub_list: [
+            { sub_title: "Globals", href: nodeTopics?.globals },
+            { sub_title: "JavaScript Environment", href: nodeTopics?.js_env },
+            { sub_title: "Stability Index", href: nodeTopics?.stability_index },
+            { sub_title: "Deprecated APIs", href: nodeTopics?.deprecated_apis },
+        ]
+    },
+    ]
+}
+
+export const nestTopics = {
+    intro: 'intro',
+    architecture: "architecture",
+
+    cli: "cli",
+    installation: "installation",
+    usage: "usage",
+    schematics: "schematics",
+    cli_recipes: "cli_recipes",
+    generating_applications: "generating_applications",
+    generating_libraries: "generating_libraries",
+    generating_resources: "generating_resources",
+
+    fundamentals: "fundamentals",
+    controllers: "controllers",
+    providers: "providers",
+    modules: "modules",
+    middleware: "middleware",
+    custom_decorators: "custom_decorators",
+    async_providers: "async_providers",
+
+    techniques: "techniques",
+    async_await: "async_await",
+    serialization: "serialization",
+    error_handling: "error_handling",
+    testing: "testing",
+    security: "security",
+    logging: "logging",
+    configuration: "configuration",
+    http_module: "http_module",
+    graphql: "graphql",
+    microservices: "microservices",
+    mongodb: "mongodb",
+    typeorm: "typeorm",
+    mongoose: "mongoose",
+    sequelize: "sequelize",
+
+    recipes: "recipes",
+    authentication: "authentication",
+    authorization: "authorization",
+    database: "database",
+    file_upload: "file_upload",
+    sending_emails: "sending_emails",
+    scheduling_tasks: "scheduling_tasks",
+    caching: "caching",
+    docker: "docker",
+    continuous_integration: "continuous_integration",
+
+    best_practices: "best_practices",
+    code_style: "code_style",
+    performance: "performance",
+    scalability: "scalability",
+    dependency_injection: "dependency_injection",
+    exception_filters: "exception_filters",
+    pipes: "pipes",
+    guards: "guards",
+    interceptors: "interceptors",
+    versioning: "versioning",
+    hybrid_applications: "hybrid_applications",
+    bp_http_module: "bp_http_module",
+    websockets: "websockets",
+
+}
+
+export const NestJsContent = {
+    heading: "The NestJs language.",
+    description: "avaScript is a high-level, dynamic, interpreted programming language primarily used for front-end web development. It allows developers to add interactivity and dynamic behavior to web pages. JavaScript is commonly used alongside HTML and CSS to create dynamic and interactive user interfaces for websites and web applications. JavaScript code can be embedded directly into HTML documents or referenced externally, and it can manipulate the content and structure of web pages, respond to user actions, and communicate with servers to fetch or send data asynchronously, allowing for the creation of responsive and interactive web applications. Originally created by Brendan Eich at Netscape Communications Corporation in 1995, JavaScript has evolved significantly over the years and is now supported by all major web browsers. It has also expanded beyond front-end development and is now used in server-side development (Node.js), mobile app development (React Native), desktop application development (Electron), and more.",
+    route: courceRoute?.nestjs,
+    list: [{
+        list_title: "Introduction to NestJS",
+        href: nestTopics?.intro,
+        sub_list: [
+            { sub_title: "architecture", href: nestTopics?.architecture },
+        ]
+    },
+    {
+        list_title: "CLI",
+        href: nestTopics?.cli,
+        sub_list: [
+            { sub_title: "Installation", href: nestTopics?.installation },
+            { sub_title: "Usage", href: nestTopics?.usage },
+            { sub_title: "Schematics", href: nestTopics?.schematics },
+            { sub_title: "Recipes", href: nestTopics?.cli_recipes },
+            { sub_title: "Generating Applications", href: nestTopics?.generating_applications },
+            { sub_title: "Generating Libraries", href: nestTopics?.generating_libraries },
+            { sub_title: "Generating Resources", href: nestTopics?.generating_resources },
+        ]
+    },
+    {
+        list_title: "Fundamentals",
+        href: nestTopics?.fundamentals,
+        sub_list: [
+            { sub_title: "Controllers", href: nestTopics?.controllers },
+            { sub_title: "Providers", href: nestTopics?.providers },
+            { sub_title: "Modules", href: nestTopics?.modules },
+            { sub_title: "Middleware", href: nestTopics?.middleware },
+            { sub_title: "Custom Decorators", href: nestTopics?.custom_decorators },
+            { sub_title: "Async Providers", href: nestTopics?.async_providers },
+        ]
+    },
+    {
+        list_title: "Techniques",
+        href: nestTopics?.techniques,
+        sub_list: [
+            { sub_title: "Async/Await", href: nestTopics?.async_await },
+            { sub_title: "Serialization", href: nestTopics?.serialization },
+            { sub_title: "Error Handling", href: nestTopics?.error_handling },
+            { sub_title: "Testing", href: nestTopics?.testing },
+            { sub_title: "Security", href: nestTopics?.security },
+            { sub_title: "Logging", href: nestTopics?.logging },
+            { sub_title: "Configuration", href: nestTopics?.configuration },
+            { sub_title: "HTTP module", href: nestTopics?.http_module },
+            { sub_title: "GraphQL", href: nestTopics?.graphql },
+            { sub_title: "Microservices", href: nestTopics?.microservices },
+            { sub_title: "MongoDB", href: nestTopics?.mongodb },
+            { sub_title: "TypeORM", href: nestTopics?.typeorm },
+            { sub_title: "Mongoose", href: nestTopics?.mongoose },
+            { sub_title: "Sequelize", href: nestTopics?.sequelize },
+        ]
+    },
+    {
+        list_title: "Recipes",
+        href: nestTopics?.recipes,
+        sub_list: [
+            { sub_title: "Authentication", href: nestTopics?.authentication },
+            { sub_title: "Authorization", href: nestTopics?.authorization },
+            { sub_title: "Database", href: nestTopics?.database },
+            { sub_title: "File Upload", href: nestTopics?.file_upload },
+            { sub_title: "Sending Emails", href: nestTopics?.sending_emails },
+            { sub_title: "Scheduling Tasks", href: nestTopics?.scheduling_tasks },
+            { sub_title: "Caching", href: nestTopics?.caching },
+            { sub_title: "Docker", href: nestTopics?.docker },
+            { sub_title: "Continuous Integration", href: nestTopics?.continuous_integration },
+        ]
+    },
+    {
+        list_title: "Best Practices",
+        href: nestTopics?.best_practices,
+        sub_list: [
+            { sub_title: "Code Style", href: nestTopics?.code_style },
+            { sub_title: "Performance", href: nestTopics?.performance },
+            { sub_title: "Scalability", href: nestTopics?.scalability },
+            { sub_title: "Dependency Injection", href: nestTopics?.dependency_injection },
+            { sub_title: "Exception Filters", href: nestTopics?.exception_filters },
+            { sub_title: "Pipes", href: nestTopics?.pipes },
+            { sub_title: "Guards", href: nestTopics?.guards },
+            { sub_title: "Interceptors", href: nestTopics?.interceptors },
+            { sub_title: "Versioning", href: nestTopics?.versioning },
+            { sub_title: "Hybrid Applications", href: nestTopics?.hybrid_applications },
+            { sub_title: "HTTP Module", href: nestTopics?.bp_http_module },
+            { sub_title: "Websockets", href: nestTopics?.websockets },
+        ]
+    },
+    ]
+}
+
+export const seqTopics = {
+
+    intro: 'intro',
+    usage: "usage",
+
+    basics: "basics",
+    models: "models",
+    instances: "instances",
+    working_with_promises: "working_with_promises",
+
+    querying: "querying",
+    q_basics: "q_basics",
+    finders: "finders",
+    scope: "scope",
+    aggregating: "aggregating",
+    pagination: "pagination",
+    query_types: "query_types",
+    raw_queries: "raw_queries",
+    plugins: "plugins",
+
+    model_definition: "model_definition",
+    data_types: "data_types",
+    validation: "validation",
+    md_hooks: "md_hooks",
+    default_scope: "default_scope",
+    scopes: "scopes",
+    indexes: "indexes",
+    creating_indexes: "creating_indexes",
+    removing_indexes: "removing_indexes",
+    model_options: "model_options",
+    md_associations: "md_associations",
+
+    migrations: "migrations",
+    sli_usage: "sli_usage",
+    api: "api",
+
+    instance_methods: "instance_methods",
+    save: "save",
+    reload: "reload",
+    validate: "validate",
+    update: "update",
+    destroy: "destroy",
+    increment: "increment",
+    decrement: "decrement",
+
+    hooks: "hooks",
+    lifecycle_hooks: "lifecycle_hooks",
+    instance_hooks: "instance_hooks",
+    model_hooks: "model_hooks",
+
+    associations: "associations",
+    o_o_associations: "o_o_associations",
+    o_m_associations: "o_m_associations",
+    m_n_associations: "m_n_associations",
+    through_models: "through_models",
+    self_associations: "self_associations",
+
+    transactions: "transactions",
+    implicit_transactions: "implicit_transactions",
+    explicit_transactions: "explicit_transactions",
+
+    validations: "validations",
+    v_basics: "v_basics",
+    validators: "validators",
+    custom_validators: "custom_validators",
+
+    configuration: "configuration",
+    options: "options",
+    logging: "logging",
+
+    error_handling: "error_handling",
+    handling_errors: "handling_errors",
+    errors: "errors",
+
+    utils: "utils",
+    helpers: "helpers",
+
+}
+
+export const SequelizeContent = {
+    heading: "The Sequelize language.",
+    description: "avaScript is a high-level, dynamic, interpreted programming language primarily used for front-end web development. It allows developers to add interactivity and dynamic behavior to web pages. JavaScript is commonly used alongside HTML and CSS to create dynamic and interactive user interfaces for websites and web applications. JavaScript code can be embedded directly into HTML documents or referenced externally, and it can manipulate the content and structure of web pages, respond to user actions, and communicate with servers to fetch or send data asynchronously, allowing for the creation of responsive and interactive web applications. Originally created by Brendan Eich at Netscape Communications Corporation in 1995, JavaScript has evolved significantly over the years and is now supported by all major web browsers. It has also expanded beyond front-end development and is now used in server-side development (Node.js), mobile app development (React Native), desktop application development (Electron), and more.",
+    route: courceRoute?.sequelize,
+    list: [{
+        list_title: "Getting Started",
+        href: seqTopics?.intro,
+        sub_list: [
+            { sub_title: "Usage", href: seqTopics?.usage },
+        ]
+    },
+    {
+        list_title: "Basics",
+        href: seqTopics?.basics,
+        sub_list: [
+            { sub_title: "Models", href: seqTopics?.models },
+            { sub_title: "Instances", href: seqTopics?.instances },
+            { sub_title: "Working with Promises", href: seqTopics?.working_with_promises },
+        ]
+    },
+    {
+        list_title: "Querying",
+        href: seqTopics?.querying,
+        sub_list: [
+            { sub_title: "Basics", href: seqTopics?.q_basics },
+            { sub_title: "Finders", href: seqTopics?.finders },
+            { sub_title: "Scopes", href: seqTopics?.scope },
+            { sub_title: "Aggregating", href: seqTopics?.aggregating },
+            { sub_title: "Pagination", href: seqTopics?.pagination },
+            { sub_title: "Query Types", href: seqTopics?.query_types },
+            { sub_title: "Raw Queries", href: seqTopics?.raw_queries },
+            { sub_title: "Plugins", href: seqTopics?.plugins },
+        ]
+    },
+    {
+        list_title: "Model Definition",
+        href: seqTopics?.model_definition,
+        sub_list: [
+            { sub_title: "Data Types", href: seqTopics?.data_types },
+            { sub_title: "Validation", href: seqTopics?.validation },
+            { sub_title: "Hooks", href: seqTopics?.md_hooks },
+            { sub_title: "Default Scope", href: seqTopics?.default_scope },
+            { sub_title: "Scopes", href: seqTopics?.scopes },
+            { sub_title: "Indexes", href: seqTopics?.indexes },
+            { sub_title: "Creating Indexes", href: seqTopics?.creating_indexes },
+            { sub_title: "Removing Indexes", href: seqTopics?.removing_indexes },
+            { sub_title: "Model Options", href: seqTopics?.model_options },
+            { sub_title: "Associations", href: seqTopics?.md_associations },
+        ]
+    },
+    {
+        list_title: "Migrations",
+        href: seqTopics?.migrations,
+        sub_list: [
+            { sub_title: "CLI Usage", href: seqTopics?.sli_usage },
+            { sub_title: "API", href: seqTopics?.api },
+        ]
+    },
+    {
+        list_title: "Instance Methods",
+        href: seqTopics?.instance_methods,
+        sub_list: [
+            { sub_title: "Save", href: seqTopics?.save },
+            { sub_title: "Reload", href: seqTopics?.reload },
+            { sub_title: "Validate", href: seqTopics?.validate },
+            { sub_title: "Update", href: seqTopics?.update },
+            { sub_title: "Destroy", href: seqTopics?.destroy },
+            { sub_title: "Increment", href: seqTopics?.increment },
+            { sub_title: "Decrement", href: seqTopics?.decrement },
+        ]
+    },
+    {
+        list_title: "Hooks",
+        href: seqTopics?.hooks,
+        sub_list: [
+            { sub_title: "Lifecycle Hooks", href: seqTopics?.lifecycle_hooks },
+            { sub_title: "Instance Hooks", href: seqTopics?.instance_hooks },
+            { sub_title: "Model Hooks", href: seqTopics?.model_hooks },
+        ]
+    },
+    {
+        list_title: "Associations",
+        href: seqTopics?.associations,
+        sub_list: [
+            { sub_title: "1:1 Associations", href: seqTopics?.o_o_associations },
+            { sub_title: "1:M Associations", href: seqTopics?.o_m_associations },
+            { sub_title: "M:N Associations", href: seqTopics?.m_n_associations },
+            { sub_title: "Through Models", href: seqTopics?.through_models },
+            { sub_title: "Self-Associations", href: seqTopics?.self_associations },
+        ]
+    },
+    {
+        list_title: "Transactions",
+        href: seqTopics?.transactions,
+        sub_list: [
+            { sub_title: "Implicit Transactions", href: seqTopics?.implicit_transactions },
+            { sub_title: "Explicit Transactions", href: seqTopics?.explicit_transactions },
+        ]
+    },
+    {
+        list_title: "Validations",
+        href: seqTopics?.validations,
+        sub_list: [
+            { sub_title: "Basics", href: seqTopics?.v_basics },
+            { sub_title: "Validators", href: seqTopics?.validators },
+            { sub_title: "Custom Validators", href: seqTopics?.custom_validators },
+        ]
+    },
+    {
+        list_title: "Configuration",
+        href: seqTopics?.configuration,
+        sub_list: [
+            { sub_title: "Options", href: seqTopics?.options },
+            { sub_title: "Logging", href: seqTopics?.logging },
+        ]
+    },
+    {
+        list_title: "Error Handling",
+        href: seqTopics?.error_handling,
+        sub_list: [
+            { sub_title: "Handling Errors", href: seqTopics?.handling_errors },
+            { sub_title: "Errors", href: seqTopics?.errors },
+        ]
+    },
+    {
+        list_title: "Utils",
+        href: seqTopics?.utils,
+        sub_list: [
+            { sub_title: "Helpers", href: seqTopics?.helpers },
+        ]
+    },
+    ]
 }
 
 export const jsTopics = {

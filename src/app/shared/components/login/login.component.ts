@@ -44,7 +44,6 @@ export class LoginComponent implements OnInit {
     if (this.LoginForm?.invalid) { return; }
     const fvalue = this.LoginForm?.value;
     const payload = { email: fvalue?.email, password: fvalue?.password };
-    debugger
   }
 
   onRegister() {
@@ -52,6 +51,5 @@ export class LoginComponent implements OnInit {
     if (this.RegisterForm?.invalid) { return; }
     const fvalue = this.RegisterForm?.value;
     const payload = { email: fvalue?.email, password: fvalue?.password };
-    debugger
   }
 }

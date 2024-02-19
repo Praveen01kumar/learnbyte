@@ -5,7 +5,7 @@ import { FooterComponent } from '../footer/footer.component';
 import { LsidebarComponent } from '../lsidebar/lsidebar.component';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { AngularContent, JavaScriptContent, TypescriptContent, courceRoute } from '../../const/const';
+import { AngularContent, ExpressJsContent, JavaScriptContent, NestJsContent, NodeJsContent, SequelizeContent, TypescriptContent, courceRoute } from '../../const/const';
 
 @Component({
   selector: 'app-layout',
@@ -37,6 +37,18 @@ export class LayoutComponent implements OnInit, OnDestroy {
         }
         if (v?.courceData === courceRoute?.typescript) {
           this.lsidebarData = TypescriptContent;
+        }
+        if (v?.courceData === courceRoute?.nodejs) {
+          this.lsidebarData = NodeJsContent;
+        }
+        if (v?.courceData === courceRoute?.expressjs) {
+          this.lsidebarData = ExpressJsContent;
+        }
+        if (v?.courceData === courceRoute?.nestjs) {
+          this.lsidebarData = NestJsContent;
+        }
+        if (v?.courceData === courceRoute?.sequelize) {
+          this.lsidebarData = SequelizeContent;
         }
       } else {
         this.lsidebarData = undefined;
