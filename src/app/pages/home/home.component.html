@@ -1,0 +1,22 @@
+<app-header></app-header>
+<home-layout [homeData]="homeData"></home-layout>
+<course-list [courceList]="courseCards"></course-list>
+<div class="post-card">
+    <div class="post-section">
+        <div class="heading">
+            <h1>
+                Our Most <span>Popular Posts</span>
+            </h1>
+            <p>Let’s join our best classes with our famous instructor and institutes!</p>
+        </div>
+        <button class="explore-more">
+            <span>Explore More</span>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="none">
+                <path d="M0 0h24v24H0V0z" fill="none"></path>
+                <path d="M16.01 11H4v2h12.01v3L20 12l-3.99-4v3z" fill="currentColor"></path>
+            </svg>
+        </button>
+    </div>
+    <post-list [postList]="postCards"></post-list>
+</div>
+<app-footer></app-footer>

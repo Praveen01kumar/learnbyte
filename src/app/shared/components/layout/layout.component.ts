@@ -1,4 +1,4 @@
-import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { Component, HostListener, Input, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from '../header/header.component';
 import { FooterComponent } from '../footer/footer.component';
@@ -6,6 +6,7 @@ import { LsidebarComponent } from '../lsidebar/lsidebar.component';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { AngularContent, ExpressJsContent, JavaScriptContent, NestJsContent, NodeJsContent, SequelizeContent, TypescriptContent, courceRoute } from '../../const/const';
+import { HLayOut } from '../../interfaces/interfaces';
 
 @Component({
   selector: 'app-layout',
@@ -21,11 +22,14 @@ import { AngularContent, ExpressJsContent, JavaScriptContent, NestJsContent, Nod
   styleUrls: ['./layout.component.scss']
 })
 export class LayoutComponent implements OnInit, OnDestroy {
-  sidebarTog: boolean = true;
-  @Input() layoutData: any;
+  sidebarTog: boolean = false;
+  screenWidth: number;
+  @Input() layoutData!: HLayOut;
   lsidebarData: any;
   sub: Subscription[] = [];
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute) { this.screenWidth = window?.innerWidth; }
+  @HostListener('window:resize', ['$event'])
+  onResize() { this.screenWidth = window?.innerWidth; this.sidebarTog = this.screenWidth > 750 ? true : false; }
   ngOnInit() {
     const data = this.route.data.subscribe((v: any) => {
       if (v) {
@@ -56,7 +60,12 @@ export class LayoutComponent implements OnInit, OnDestroy {
     }
     );
     this.sub.push(data);
+    this.sidebarTog = this.screenWidth > 750 ? true : false;
   }
 
   ngOnDestroy() { this.sub.forEach((s: Subscription) => { s.unsubscribe() }); }
+  
+
+
+
 }

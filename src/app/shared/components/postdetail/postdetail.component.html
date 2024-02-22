@@ -1,0 +1,78 @@
+<app-header></app-header>
+
+<div class="post_detail">
+    <div class="post-data" *ngIf="postCards">
+        <div class="heading">
+            <h1>{{postCards[0].name}}</h1>
+            <div class="auth-time">
+                <div class="auth">
+                    <img class="img" [src]="postCards[0].other.img" [alt]="postCards[0].other.name">
+                    <span class="name">{{postCards[0].other.name}}</span>
+                </div>
+                <div class="time">
+                    <mat-icon>calendar_today</mat-icon>
+                    <span class="time">12 Jan 2024</span>
+                </div>
+            </div>
+        </div>
+        <div class="post-image">
+            <img [src]="postCards[0].img" [alt]="postCards[0].name">
+        </div>
+        <div class="description">
+            <p>Did you come here for something in particular or just general Riker-bashing? And blowing into maximum
+                warp speed, you appeared for an instant to be in two places at once. We have a saboteur aboard. We know
+                you’re dealing in stolen ore. But I wanna talk about the assassination attempt on Lieutenant Worf. Could
+                someone survive inside a transporter buffer for 75 years? Fate. It protects fools, little children, and
+                ships.</p>
+            <p>Did you come here for something in particular or just general Riker-bashing? And blowing into maximum
+                warp speed, you appeared for an instant to be in two places at once. We have a saboteur aboard. We know
+                you’re dealing in stolen ore. But I wanna talk about the assassination attempt on Lieutenant Worf. Could
+                someone survive inside a transporter buffer for 75 years? Fate. It protects fools, little children, and
+                ships.</p>
+            <p>Did you come here for something in particular or just general Riker-bashing? And blowing into maximum
+                warp speed, you appeared for an instant to be in two places at once. We have a saboteur aboard. We know
+                you’re dealing in stolen ore. But I wanna talk about the assassination attempt on Lieutenant Worf. Could
+                someone survive inside a transporter buffer for 75 years? Fate. It protects fools, little children, and
+                ships.</p>
+            <p>Did you come here for something in particular or just general Riker-bashing? And blowing into maximum
+                warp speed, you appeared for an instant to be in two places at once. We have a saboteur aboard. We know
+                you’re dealing in stolen ore. But I wanna talk about the assassination attempt on Lieutenant Worf. Could
+                someone survive inside a transporter buffer for 75 years? Fate. It protects fools, little children, and
+                ships.</p>
+            <p>Did you come here for something in particular or just general Riker-bashing? And blowing into maximum
+                warp speed, you appeared for an instant to be in two places at once. We have a saboteur aboard. We know
+                you’re dealing in stolen ore. But I wanna talk about the assassination attempt on Lieutenant Worf. Could
+                someone survive inside a transporter buffer for 75 years? Fate. It protects fools, little children, and
+                ships.</p>
+            <p>Did you come here for something in particular or just general Riker-bashing? And blowing into maximum
+                warp speed, you appeared for an instant to be in two places at once. We have a saboteur aboard. We know
+                you’re dealing in stolen ore. But I wanna talk about the assassination attempt on Lieutenant Worf. Could
+                someone survive inside a transporter buffer for 75 years? Fate. It protects fools, little children, and
+                ships.</p>
+            <p>Did you come here for something in particular or just general Riker-bashing? And blowing into maximum
+                warp speed, you appeared for an instant to be in two places at once. We have a saboteur aboard. We know
+                you’re dealing in stolen ore. But I wanna talk about the assassination attempt on Lieutenant Worf. Could
+                someone survive inside a transporter buffer for 75 years? Fate. It protects fools, little children, and
+                ships.</p>
+            <p>Did you come here for something in particular or just general Riker-bashing? And blowing into maximum
+                warp speed, you appeared for an instant to be in two places at once. We have a saboteur aboard. We know
+                you’re dealing in stolen ore. But I wanna talk about the assassination attempt on Lieutenant Worf. Could
+                someone survive inside a transporter buffer for 75 years? Fate. It protects fools, little children, and
+                ships.</p>
+        </div>
+    </div>
+    <div class="post-meta">
+        <div class="category">
+            <h2>Popular <span>Category</span></h2>
+            <ul>
+                <li *ngFor="let category of category;"><a href="javascript:void(0)">{{category}}</a></li>
+            </ul>
+        </div>
+        <div class="popular">
+            <h2>Popular <span>Posts</span></h2>
+            <post-list [postList]="postCards"></post-list>
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>

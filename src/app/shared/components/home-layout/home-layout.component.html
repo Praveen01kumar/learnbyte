@@ -1,0 +1,9 @@
+<div class="home_page">
+    <span class="circle1"></span>
+    <span class="circle2"></span>
+    <h1>
+        Explore <span>{{homeData.head}}</span>
+    </h1>
+    <p>{{homeData.des}}</p>
+    <gbsearch [searchData]="searchBy" *ngIf="homeData.search" (filteredData)="filteredData($event)"></gbsearch>
+</div>

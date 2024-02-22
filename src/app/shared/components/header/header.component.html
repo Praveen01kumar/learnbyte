@@ -4,9 +4,9 @@
         <div class="header">
             <ul>
                 <li (click)="gotoRoute('')">Home</li>
-                <li>Courses</li>
-                <li>Posts</li>
-                <li>Contact</li>
+                <li (click)="gotoRoute('courses')">Courses</li>
+                <li (click)="gotoRoute('posts')">Posts</li>
+                <!-- <li (click)="gotoRoute('contact')">Contact</li> -->
             </ul>
         </div>
         <div class="action">
@@ -22,9 +22,9 @@
             <mat-menu #menu="matMenu">
                 <div class="action-btn">
                     <button (click)="gotoRoute('')">Home</button>
-                    <button>Courses</button>
-                    <button>Posts</button>
-                    <button>Contact</button>
+                    <button (click)="gotoRoute('courses')">Courses</button>
+                    <button (click)="gotoRoute('posts')">Posts</button>
+                    <!-- <button (click)="gotoRoute('contact')">Contact</button> -->
                     <button (click)="gotoRoute('auth')">Sign In</button>
                 </div>
             </mat-menu>

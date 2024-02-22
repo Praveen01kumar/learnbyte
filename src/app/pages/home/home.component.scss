@@ -1,0 +1,61 @@
+.post-card {
+    background-color: #e4e4ff;
+    padding: 2rem 6%;
+    border-top-right-radius: 40px;
+
+    .post-section {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+
+        .heading {
+            h1 {
+                font-size: 28px;
+                font-weight: 600;
+                color: #06241B;
+
+                span {
+                    color: #7F56D9;
+                }
+            }
+
+            p {
+                color: #7E7EAA;
+                font-size: 18px;
+                font-weight: 500;
+            }
+        }
+
+        .explore-more {
+            border: none;
+            background: transparent;
+            position: relative;
+            color: #7E7EAA;
+            font-size: 18px;
+            font-weight: 500;
+            white-space: nowrap;
+            cursor: pointer;
+
+            span {
+                &::after {
+                    position: absolute;
+                    content: "";
+                    width: 100%;
+                    height: 2px;
+                    background-color: #7E7EAA;
+                    bottom: 0px;
+                    left: 0px;
+                }
+            }
+
+            svg {
+                position: absolute;
+                top: -3px;
+                right: -26px;
+                rotate: -50deg;
+                width: 28px;
+                height: 28px;
+            }
+        }
+    }
+}

@@ -4,6 +4,8 @@ import { HeaderComponent } from '../header/header.component';
 import { FooterComponent } from '../footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { Gbsearch } from '../gbsearch/gbsearch.component';
+import { MatIconModule } from '@angular/material/icon';
+import { Content } from '../../interfaces/interfaces';
 
 @Component({
   selector: 'app-contentbox',
@@ -13,15 +15,24 @@ import { Gbsearch } from '../gbsearch/gbsearch.component';
     HeaderComponent,
     FooterComponent,
     Gbsearch,
-    RouterModule
+    RouterModule,
+    MatIconModule
   ],
   templateUrl: './contentbox.component.html',
   styleUrls: ['./contentbox.component.scss']
 })
 export class ContentboxComponent implements OnInit {
-  @Input() contentData: any;
+  searchFilter: any;
+  @Input() contentData!: Content;
+  @Input() contentFilterData: any;
   constructor() { }
-  ngOnInit(): void { }
+
+  ngOnInit(): void { this.searchFilter = this.contentFilterData; }
+
+  Search(event: any) {
+    this.contentFilterData = this.searchFilter;
+    this.contentFilterData = this.contentFilterData?.filter((i: any) => i?.list_title?.toLowerCase()?.indexOf((event?.target as HTMLInputElement)?.value?.toLocaleLowerCase()) !== -1);
+  }
 
 
 }

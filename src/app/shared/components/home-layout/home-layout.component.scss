@@ -1,0 +1,120 @@
+.home_page {
+    text-align: center;
+    margin: 20vh 20px 6%;
+    position: relative;
+
+    gbsearch {
+        display: flex;
+        justify-content: center;
+    }
+
+    h1 {
+        font-size: 40px;
+        font-weight: 700;
+        color: #06241B;
+
+        span {
+            color: #7F56D9;
+        }
+    }
+
+    p {
+        color: #7E7EAA;
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    .circle1 {
+        position: absolute;
+        top: 0vh;
+        right: 22vw;
+        width: 80px;
+        height: 80px;
+        background-color: #38C4E5;
+        border-radius: 50%;
+    }
+
+    .circle2 {
+        position: absolute;
+        top: 10vh;
+        left: 22vw;
+        width: 60px;
+        height: 60px;
+        background-color: #FF9776;
+        border-radius: 60px 0px 60px 60px;
+    }
+}
+
+@media (min-width:0px) and (max-width:320px) {
+    .home_page {
+        .circle1 {
+            display: none;
+        }
+
+        .circle2 {
+            display: none;
+        }
+
+        h1 {
+            line-height: 44px;
+        }
+    }
+}
+
+@media (min-width:320px) and (max-width:425px) {
+    .home_page {
+        .circle1 {
+            top: 12vh;
+            right: -2vw;
+            width: 40px;
+            height: 40px;
+        }
+
+        .circle2 {
+            top: 12vh;
+            left: -4vw;
+            width: 40px;
+            height: 40px;
+        }
+
+        h1 {
+            line-height: 44px;
+        }
+    }
+}
+
+@media (min-width:425px) and (max-width:768px) {
+    .home_page {
+        .circle1 {
+            top: 12vh;
+            right: -1vw;
+            width: 50px;
+            height: 50px;
+        }
+
+        .circle2 {
+            top: 12vh;
+            left: -1vw;
+            width: 50px;
+            height: 50px;
+        }
+
+        h1 {
+            line-height: 44px;
+        }
+    }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+    .home_page {
+        .circle1 {
+            top: 10vh;
+            right: 10vw;
+        }
+
+        .circle2 {
+            top: 13vh;
+            left: 10vw;
+        }
+    }
+}

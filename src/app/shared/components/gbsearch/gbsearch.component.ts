@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 
 @Component({
@@ -10,14 +10,22 @@ import { MatIconModule } from '@angular/material/icon';
     MatIconModule,
   ]
 })
-export class Gbsearch implements OnInit{
+export class Gbsearch implements OnInit {
+  searchFilter: any;
+  placeholder: string = "search...";
+  @Input() searchData: any;
+  @Output() filteredData: EventEmitter<any[]> = new EventEmitter<any[]>();
 
-  placeholder:string = "search...";
-  
-  constructor(){}
+  constructor() { }
 
   ngOnInit(): void {
-      
+    this.searchFilter = this.searchData;
+  }
+
+  gSearch(event: any) {
+    this.searchData = this.searchFilter;
+    this.searchData = this.searchData?.filter((i: any) => i?.name?.toLowerCase()?.indexOf((event?.target as HTMLInputElement)?.value?.toLocaleLowerCase()) !== -1);
+    this.filteredData.emit(this.searchData);
   }
 
 }

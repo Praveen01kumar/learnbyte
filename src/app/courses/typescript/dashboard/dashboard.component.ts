@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { TypescriptContent } from 'src/app/shared/const/const';
+import { Content } from 'src/app/shared/interfaces/interfaces';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,5 +8,5 @@ import { TypescriptContent } from 'src/app/shared/const/const';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent {
-  contentData: any = TypescriptContent;
+  contentData: Content = TypescriptContent;
 }

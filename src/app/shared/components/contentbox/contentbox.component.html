@@ -5,14 +5,19 @@
             Explore <span>Topics</span>
         </h1>
         <p>Click on the Topics and explore!</p>
-        <gbsearch></gbsearch>
+        <div class="search-box">
+            <div class="search-input">
+                <input type="text" placeholder="search topic..." (keyup)="Search($event)">
+                <mat-icon>search</mat-icon>
+            </div>
+        </div>
     </div>
-    <h2 class="content_title">{{contentData?.heading}}</h2>
+    <h2 class="content_title">{{contentData.heading}}</h2>
     <div class="description">
-        <p>{{contentData?.description}}</p>
+        <p>{{contentData.description}}</p>
     </div>
     <div class="list">
-        <div class="list_item" *ngFor="let content of contentData?.list;let i=index;">
+        <div class="list_item" *ngFor="let content of contentFilterData;let i=index;">
             <div class="list_title">
                 <a href="javascript:void(0)" [routerLink]="content?.href">{{content?.list_title}}</a>
             </div>
