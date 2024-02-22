@@ -9,12 +9,12 @@
             </h1>
             <p>Let’s join our best classes with our famous instructor and institutes!</p>
         </div>
-        <button class="explore-more">
+        <button class="explore-more" (click)="goTo('posts')">
             <span>Explore More</span>
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="none">
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="none">
                 <path d="M0 0h24v24H0V0z" fill="none"></path>
                 <path d="M16.01 11H4v2h12.01v3L20 12l-3.99-4v3z" fill="currentColor"></path>
-            </svg>
+            </svg> -->
         </button>
     </div>
     <post-list [postList]="postCards"></post-list>

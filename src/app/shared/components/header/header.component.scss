@@ -10,7 +10,7 @@ header {
         align-items: center;
         justify-content: space-between;
         flex-wrap: wrap;
-        padding: 8px 0.5% 4px 0.5%;
+        padding: 8px 1% 4px 1%;
         border-bottom: 1px solid #7f56d987;
 
         .logo {
@@ -18,17 +18,18 @@ header {
             align-items: center;
             justify-content: left;
             width: 33%;
-
             img {
                 width: 48px;
                 height: 28px;
                 margin-right: 6px;
+                cursor: pointer;
             }
 
             span {
                 font-size: 30px;
                 font-weight: 600;
                 line-height: 35px;
+                cursor: pointer;
             }
         }
 

@@ -11,6 +11,7 @@
             font-size: 40px;
             font-weight: 700;
             color: #06241B;
+            line-height: 42px;
 
             span {
                 color: #7F56D9;
@@ -230,7 +231,7 @@
 @media (min-width:0px) and (max-width:499px) {
     .login-container {
         flex-direction: column;
-        margin: 6% 6% 0px;
+        margin: 10% 6% 0px;
         .welcome {
             width: 100%;
             .banner {

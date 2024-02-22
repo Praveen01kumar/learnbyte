@@ -64,17 +64,11 @@
 @media (min-width:320px) and (max-width:425px) {
     .home_page {
         .circle1 {
-            top: 12vh;
-            right: -2vw;
-            width: 40px;
-            height: 40px;
+            display: none;
         }
 
         .circle2 {
-            top: 12vh;
-            left: -4vw;
-            width: 40px;
-            height: 40px;
+            display: none;
         }
 
         h1 {
@@ -106,6 +100,20 @@
 }
 
 @media (min-width:768px) and (max-width:991px) {
+    .home_page {
+        .circle1 {
+            top: 10vh;
+            right: 10vw;
+        }
+
+        .circle2 {
+            top: 13vh;
+            left: 10vw;
+        }
+    }
+}
+
+@media (min-width:991px) and (max-width:1300px) {
     .home_page {
         .circle1 {
             top: 10vh;

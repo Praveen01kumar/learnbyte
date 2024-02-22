@@ -7,6 +7,7 @@ import { CourseListComponent } from 'src/app/shared/components/course-list/cours
 import { PostListComponent } from 'src/app/shared/components/post-list/post-list.component';
 import { HomeLayoutComponent } from 'src/app/shared/components/home-layout/home-layout.component';
 import { CouseCard, HLayOut, PostCard } from 'src/app/shared/interfaces/interfaces';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -39,9 +40,13 @@ export class HomeComponent implements OnInit {
 
   homeData: HLayOut = { head: "Top Cources/Posts", des: "Click on the Cources/Posts and explore!", search: false, type:"home"};
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void { }
+
+  goTo(url:string){
+    this.router.navigate([url]);
+  }
 
   
 
