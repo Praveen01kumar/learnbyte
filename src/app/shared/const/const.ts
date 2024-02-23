@@ -52,8 +52,8 @@ export const exTopics = {
 }
 
 export const ExpressJsContent: Content = {
-    heading: "The ExpressJs language.",
-    description: "avaScript is a high-level, dynamic, interpreted programming language primarily used for front-end web development. It allows developers to add interactivity and dynamic behavior to web pages. JavaScript is commonly used alongside HTML and CSS to create dynamic and interactive user interfaces for websites and web applications. JavaScript code can be embedded directly into HTML documents or referenced externally, and it can manipulate the content and structure of web pages, respond to user actions, and communicate with servers to fetch or send data asynchronously, allowing for the creation of responsive and interactive web applications. Originally created by Brendan Eich at Netscape Communications Corporation in 1995, JavaScript has evolved significantly over the years and is now supported by all major web browsers. It has also expanded beyond front-end development and is now used in server-side development (Node.js), mobile app development (React Native), desktop application development (Electron), and more.",
+    heading: "The Express.js, Node.js web application framework.",
+    description: "Express.js is a lightweight Node.js web application framework known for its simplicity and flexibility. It simplifies server-side development in JavaScript, offering a robust set of features for building web and mobile applications. With its minimalistic design, Express provides powerful routing, request handling, and response generation capabilities. It follows a middleware architecture, enabling easy integration of additional functionality. Express is ideal for creating APIs and web applications, supporting single-page, multi-page, and hybrid architectures. Its seamless integration with other Node.js modules and frameworks allows for rapid development of scalable and feature-rich applications.",
     route: courceRoute?.expressjs,
     list: [{
         list_title: "An Introduction",
@@ -215,8 +215,8 @@ export const nodeTopics = {
 }
 
 export const NodeJsContent: Content = {
-    heading: "The NodeJs language.",
-    description: "avaScript is a high-level, dynamic, interpreted programming language primarily used for front-end web development. It allows developers to add interactivity and dynamic behavior to web pages. JavaScript is commonly used alongside HTML and CSS to create dynamic and interactive user interfaces for websites and web applications. JavaScript code can be embedded directly into HTML documents or referenced externally, and it can manipulate the content and structure of web pages, respond to user actions, and communicate with servers to fetch or send data asynchronously, allowing for the creation of responsive and interactive web applications. Originally created by Brendan Eich at Netscape Communications Corporation in 1995, JavaScript has evolved significantly over the years and is now supported by all major web browsers. It has also expanded beyond front-end development and is now used in server-side development (Node.js), mobile app development (React Native), desktop application development (Electron), and more.",
+    heading: "The NodeJs (server-side JavaScript).",
+    description: "Node.js is an open-source, server-side JavaScript runtime environment built on Chrome's V8 JavaScript engine. It allows developers to execute JavaScript code outside of a web browser, enabling server-side scripting and enabling the development of scalable and high-performance network applications. Node.js uses an event-driven, non-blocking I/O model, making it lightweight and efficient, particularly for building real-time applications like chat servers and streaming applications. It has a vast ecosystem of libraries and frameworks, such as Express.js, for simplifying web development tasks. Node.js is widely used for building web servers, APIs, microservices, and various other types of server-side applications.",
     route: courceRoute?.nodejs,
     list: [{
         list_title: "An Introduction",
@@ -442,8 +442,8 @@ export const nestTopics = {
 }
 
 export const NestJsContent: Content = {
-    heading: "The NestJs language.",
-    description: "avaScript is a high-level, dynamic, interpreted programming language primarily used for front-end web development. It allows developers to add interactivity and dynamic behavior to web pages. JavaScript is commonly used alongside HTML and CSS to create dynamic and interactive user interfaces for websites and web applications. JavaScript code can be embedded directly into HTML documents or referenced externally, and it can manipulate the content and structure of web pages, respond to user actions, and communicate with servers to fetch or send data asynchronously, allowing for the creation of responsive and interactive web applications. Originally created by Brendan Eich at Netscape Communications Corporation in 1995, JavaScript has evolved significantly over the years and is now supported by all major web browsers. It has also expanded beyond front-end development and is now used in server-side development (Node.js), mobile app development (React Native), desktop application development (Electron), and more.",
+    heading: "The NestJs (object-oriented programming).",
+    description: "NestJS is a progressive Node.js framework that combines the best elements of object-oriented programming, functional programming, and functional reactive programming. It is designed to help developers build efficient, reliable, and scalable server-side applications. NestJS utilizes TypeScript, a superset of JavaScript, to provide strong typing and enhanced tooling support. It follows the modular architecture, which promotes code organization and reusability through modules, controllers, and services. NestJS also offers powerful features such as dependency injection, middleware support, and built-in support for WebSockets, GraphQL, and more. Overall, NestJS simplifies the development of complex server-side applications while maintaining high performance and flexibility.",
     route: courceRoute?.nestjs,
     list: [{
         list_title: "Introduction to NestJS",
@@ -613,8 +613,8 @@ export const seqTopics = {
 }
 
 export const SequelizeContent: Content = {
-    heading: "The Sequelize language.",
-    description: "avaScript is a high-level, dynamic, interpreted programming language primarily used for front-end web development. It allows developers to add interactivity and dynamic behavior to web pages. JavaScript is commonly used alongside HTML and CSS to create dynamic and interactive user interfaces for websites and web applications. JavaScript code can be embedded directly into HTML documents or referenced externally, and it can manipulate the content and structure of web pages, respond to user actions, and communicate with servers to fetch or send data asynchronously, allowing for the creation of responsive and interactive web applications. Originally created by Brendan Eich at Netscape Communications Corporation in 1995, JavaScript has evolved significantly over the years and is now supported by all major web browsers. It has also expanded beyond front-end development and is now used in server-side development (Node.js), mobile app development (React Native), desktop application development (Electron), and more.",
+    heading: "The Sequelize (promise-based Node.js ORM).",
+    description: "Sequelize is a promise-based Node.js ORM (Object-Relational Mapping) library for relational databases. It provides an abstraction layer that allows developers to interact with databases using JavaScript objects, eliminating the need to write raw SQL queries. Sequelize supports various database dialects such as MySQL, PostgreSQL, SQLite, and MSSQL, making it highly versatile. It offers features like schema definition, data validation, query building, and transaction support, simplifying database operations. Sequelize also supports advanced features like eager loading, associations, and migrations, making it suitable for building complex applications. Overall, Sequelize enhances productivity by providing a consistent interface for working with databases in Node.js applications.",
     route: courceRoute?.sequelize,
     list: [{
         list_title: "Getting Started",
@@ -863,8 +863,8 @@ export const jsTopics = {
 }
 
 export const JavaScriptContent: Content = {
-    heading: "The JavaScript language.",
-    description: "avaScript is a high-level, dynamic, interpreted programming language primarily used for front-end web development. It allows developers to add interactivity and dynamic behavior to web pages. JavaScript is commonly used alongside HTML and CSS to create dynamic and interactive user interfaces for websites and web applications. JavaScript code can be embedded directly into HTML documents or referenced externally, and it can manipulate the content and structure of web pages, respond to user actions, and communicate with servers to fetch or send data asynchronously, allowing for the creation of responsive and interactive web applications. Originally created by Brendan Eich at Netscape Communications Corporation in 1995, JavaScript has evolved significantly over the years and is now supported by all major web browsers. It has also expanded beyond front-end development and is now used in server-side development (Node.js), mobile app development (React Native), desktop application development (Electron), and more.",
+    heading: "The JavaScript (high-level, interpreted programming language).",
+    description: "JavaScript is a high-level, interpreted programming language primarily used for front-end web development, but also increasingly prevalent for back-end and server-side development. Developed by Netscape, it's now standardized under ECMAScript. JavaScript enables interactive and dynamic functionality within web pages, enhancing user experience by allowing manipulation of HTML and CSS, handling events, and communicating asynchronously with servers. It's characterized by its versatility, as it supports both procedural and object-oriented programming paradigms. JavaScript runs on the client side in web browsers and on the server side using platforms like Node.js. It's widely used for building web applications, mobile applications, server-side applications, and even desktop applications.",
     route: courceRoute?.javascript,
     list: [{
         list_title: "An Introduction",
@@ -1233,8 +1233,8 @@ export const ngTopics = {
 }
 
 export const AngularContent: Content = {
-    heading: "The comprehensive framework of JavaScript (Angular).",
-    description: "Angular is a comprehensive front-end web application framework developed and maintained by Google. It enables developers to build dynamic, single-page applications (SPAs) using a component-based architecture. Angular offers features such as two-way data binding, dependency injection, routing, and form handling. It promotes code organization and reusability, making it suitable for projects of all sizes. With built-in tools for managing state, handling HTTP requests, and implementing reactive programming using RxJS, Angular provides a powerful toolkit for creating modern and maintainable web applications.",
+    heading: "The Comprehensive framework of JavaScript (Angular).",
+    description: "Angular is an open-source web application framework developed by Google for building dynamic and interactive single-page applications (SPAs). It follows the Model-View-Controller (MVC) architecture and is known for its robustness, scalability, and performance. Angular utilizes HTML as its template language and extends its syntax with directives to express application components clearly. It provides features such as data binding, dependency injection, routing, and forms handling, facilitating the development of complex web applications. Angular's modular design allows developers to organize their code efficiently and encourages the use of reusable components. With its comprehensive documentation and active community support, Angular is widely adopted for building modern, feature-rich web applications.",
     route: courceRoute?.angular,
     list: [{
         list_title: "Introduction to Angular",
@@ -1676,8 +1676,8 @@ export const tsTopics = {
 }
 
 export const TypescriptContent: Content = {
-    heading: "The superset of JavaScript (Typescript).",
-    description: "TypeScript is a superset of JavaScript that adds optional static typing and other features to the language. Developed and maintained by Microsoft, TypeScript aims to enhance the development experience by providing developers with tools for building large-scale applications more effectively.",
+    heading: "The strongly-typed superset of JavaScript (Typescript).",
+    description: "TypeScript is a strongly-typed superset of JavaScript that adds static typing capabilities to the language. Developed and maintained by Microsoft, TypeScript compiles down to plain JavaScript, enabling developers to write and maintain large-scale JavaScript applications more effectively. TypeScript enhances JavaScript by introducing features such as type annotations, interfaces, enums, generics, and advanced object-oriented programming concepts like classes and inheritance. It provides benefits like improved code maintainability, enhanced code navigation and refactoring tools, and early error detection during development. TypeScript is widely used in both frontend and backend development, especially in projects built with Angular, React, Node.js, and other modern web frameworks.",
     route: courceRoute?.typescript,
     list: [{
         list_title: "Basics of TypeScript",
