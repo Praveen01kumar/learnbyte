@@ -1,62 +1,68 @@
 <app-header></app-header>
-<div class="contact-us">
-    <h1 class="heading">Write a Comment</h1>
-    <div class="comment-form">
-        <form [formGroup]="commentForm" (ngSubmit)="onComment()">
-            <div class="comment">
-                <textarea name="comment" formControlName="comment" rows="4" cols="50" [ngClass]="{ 'f_valid': (sub || f['comment'].touched) && f['comment'].valid, 
+<div class="contact-container">
+    <div class="contact-us">
+        <h1 class="heading">Write a Comment</h1>
+        <div class="right-arrow"></div>
+        <div class="left-arrow"></div>
+        <div class="comment-form">
+            <form [formGroup]="commentForm" (ngSubmit)="onComment()">
+                <div class="comment">
+                    <textarea name="comment" formControlName="comment" rows="4" cols="50" [ngClass]="{ 'f_valid': (sub || f['comment'].touched) && f['comment'].valid, 
                     'f_invalid': (sub || f['comment'].touched || f['comment'].dirty) && f['comment'].errors }"
-                    autocomplete="off" placeholder="Write comment here..."></textarea>
-                <span
-                    *ngIf="(sub && f['comment'].errors) || ((f['comment'].touched || f['comment'].dirty) && f['comment'].errors)"
-                    class="f_danger">
-                    <p class="mp-zero" *ngIf="f['comment'].errors['required']">comment is required!</p>
-                    <p class="mp-zero" *ngIf="f['comment'].errors['minlength']">Minimum 8 Character is required!</p>
-                </span>
-                <span
-                    *ngIf="(sub && f['comment'].errors===null) || ((f['comment'].touched || f['comment'].dirty) && f['comment'].errors===null)"
-                    class="f_success">
-                    <p class="mp-zero">Good to go!</p>
-                </span>
-            </div>
-            <div class="name-email">
-                <div class="name">
-                    <input formControlName="name" [ngClass]="{ 'f_valid': (sub || f['name'].touched) && f['name'].valid, 
+                        autocomplete="off" placeholder="Write comment here..."></textarea>
+                    <span
+                        *ngIf="(sub && f['comment'].errors) || ((f['comment'].touched || f['comment'].dirty) && f['comment'].errors)"
+                        class="f_danger">
+                        <p class="mp-zero" *ngIf="f['comment'].errors['required']">comment is required!</p>
+                        <p class="mp-zero" *ngIf="f['comment'].errors['minlength']">Minimum 8 Character is required!</p>
+                    </span>
+                    <span
+                        *ngIf="(sub && f['comment'].errors===null) || ((f['comment'].touched || f['comment'].dirty) && f['comment'].errors===null)"
+                        class="f_success">
+                        <p class="mp-zero">Good to go!</p>
+                    </span>
+                </div>
+                <div class="name-email">
+                    <div class="name">
+                        <input formControlName="name" [ngClass]="{ 'f_valid': (sub || f['name'].touched) && f['name'].valid, 
                     'f_invalid': (sub || f['name'].touched || f['name'].dirty) && f['name'].errors }" type="text"
-                        placeholder="Name">
-                    <span
-                        *ngIf="(sub && f['name'].errors) || ((f['name'].touched || f['name'].dirty) && f['name'].errors)"
-                        class="f_danger">
-                        <p class="mp-zero" *ngIf="f['name'].errors['required']">name is required!</p>
-                        <p class="mp-zero" *ngIf="f['name'].errors['minlength']">Minimum 8 Character is required!</p>
-                        <p class="mp-zero" *ngIf="f['name'].errors['maxlength']">Maximum 16 Character are allowed!</p>
-                    </span>
-                    <span
-                        *ngIf="(sub && f['name'].errors===null) || ((f['name'].touched || f['name'].dirty) && f['name'].errors===null)"
-                        class="f_success">
-                        <p class="mp-zero">Good to go!</p>
-                    </span>
-                </div>
-                <div class="email">
-                    <input formControlName="email" [ngClass]="{ 'f_valid': (sub || f['email'].touched) && f['email'].valid, 
+                            placeholder="Name">
+                        <span
+                            *ngIf="(sub && f['name'].errors) || ((f['name'].touched || f['name'].dirty) && f['name'].errors)"
+                            class="f_danger">
+                            <p class="mp-zero" *ngIf="f['name'].errors['required']">name is required!</p>
+                            <p class="mp-zero" *ngIf="f['name'].errors['minlength']">Minimum 8 Character is required!
+                            </p>
+                            <p class="mp-zero" *ngIf="f['name'].errors['maxlength']">Maximum 16 Character are allowed!
+                            </p>
+                        </span>
+                        <span
+                            *ngIf="(sub && f['name'].errors===null) || ((f['name'].touched || f['name'].dirty) && f['name'].errors===null)"
+                            class="f_success">
+                            <p class="mp-zero">Good to go!</p>
+                        </span>
+                    </div>
+                    <div class="email">
+                        <input formControlName="email" [ngClass]="{ 'f_valid': (sub || f['email'].touched) && f['email'].valid, 
                 'f_invalid': (sub || f['email'].touched || f['email'].dirty) && f['email'].errors }" autocomplete="off"
-                        type="email" id="email" placeholder="Email">
-                    <span
-                        *ngIf="(sub && f['email'].errors) || ((f['email'].touched || f['email'].dirty) && f['email'].errors)"
-                        class="f_danger">
-                        <p class="mp-zero" *ngIf="f['email'].errors['required']">Email is required!</p>
-                        <p class="mp-zero" *ngIf="f['email'].errors['email'] ||f['email'].errors['invalidEmail']">
-                            Email is invalid!</p>
-                    </span>
-                    <span
-                        *ngIf="(sub && f['email'].errors===null) || ((f['email'].touched || f['email'].dirty) && f['email'].errors===null)"
-                        class="f_success">
-                        <p class="mp-zero">Good to go!</p>
-                    </span>
+                            type="email" id="email" placeholder="Email">
+                        <span
+                            *ngIf="(sub && f['email'].errors) || ((f['email'].touched || f['email'].dirty) && f['email'].errors)"
+                            class="f_danger">
+                            <p class="mp-zero" *ngIf="f['email'].errors['required']">Email is required!</p>
+                            <p class="mp-zero" *ngIf="f['email'].errors['email'] ||f['email'].errors['invalidEmail']">
+                                Email is invalid!</p>
+                        </span>
+                        <span
+                            *ngIf="(sub && f['email'].errors===null) || ((f['email'].touched || f['email'].dirty) && f['email'].errors===null)"
+                            class="f_success">
+                            <p class="mp-zero">Good to go!</p>
+                        </span>
+                    </div>
                 </div>
-            </div>
-        </form>
+            </form>
+        </div>
+        <button class="comment-btn" (click)="onComment()">Leave Comment</button>
     </div>
-    <button class="comment-btn" (click)="onComment()">Leave Comment</button>
+    <app-footer></app-footer>
 </div>
-<app-footer></app-footer>

@@ -1,6 +1,6 @@
 .home_page {
     text-align: center;
-    margin: 20vh 20px 6%;
+    margin: 8rem 20px 6%;
     position: relative;
 
     gbsearch {
@@ -36,7 +36,7 @@
 
     .circle2 {
         position: absolute;
-        top: 10vh;
+        top: 5rem;
         left: 22vw;
         width: 60px;
         height: 60px;
@@ -80,14 +80,14 @@
 @media (min-width:425px) and (max-width:768px) {
     .home_page {
         .circle1 {
-            top: 12vh;
+            top: -3rem;
             right: -1vw;
             width: 50px;
             height: 50px;
         }
 
         .circle2 {
-            top: 12vh;
+            top: 8rem;
             left: -1vw;
             width: 50px;
             height: 50px;
@@ -102,12 +102,12 @@
 @media (min-width:768px) and (max-width:991px) {
     .home_page {
         .circle1 {
-            top: 10vh;
-            right: 10vw;
+            top: -4rem;
+            right: 5vw;
         }
 
         .circle2 {
-            top: 13vh;
+            top: 3rem;
             left: 10vw;
         }
     }
@@ -116,12 +116,12 @@
 @media (min-width:991px) and (max-width:1300px) {
     .home_page {
         .circle1 {
-            top: 10vh;
+            top: -2rem;
             right: 10vw;
         }
 
         .circle2 {
-            top: 13vh;
+            top: 3rem;
             left: 10vw;
         }
     }
