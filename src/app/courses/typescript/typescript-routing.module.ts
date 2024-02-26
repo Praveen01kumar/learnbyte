@@ -146,254 +146,241 @@ import { ReturnTypeVoidComponent } from './lesssion/return-type-void/return-type
 const routes: Routes = [
     { path: routeConfig?.empty, component: DashboardComponent },
     {
-        path: tsTopics?.tsintro, component: LayoutComponent,
+        path: routeConfig?.version, component: LayoutComponent,
         children: [
-            { path: routeConfig?.empty, component: IntroComponent },
-            { path: tsTopics?.installing_typeScript, component: InstallingTypeScriptComponent },
-            { path: tsTopics?.variables, component: VariablesComponent },
-        ],
-        data: { courceData: courceRoute?.typescript }
-    },
-    {
-        path: tsTopics?.data_types, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: DataTypesComponent },
-        ],
-        data: { courceData: courceRoute?.typescript }
-    },
-    {
-        path: tsTopics?.functions, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: FunctionsComponent },
-            { path: tsTopics?.declarations, component: DeclarationsComponent },
-            { path: tsTopics?.arrow_functions, component: ArrowFunctionsComponent },
-            { path: tsTopics?.parameters, component: ParametersComponent },
-            { path: tsTopics?.rest_parameters, component: RestParametersComponent },
-            { path: tsTopics?.tofixed_function, component: TofixedFunctionComponent },
-            { path: tsTopics?.tolocalestring_function, component: TolocalestringFunctionComponent },
-            { path: tsTopics?.toprecision_function, component: ToprecisionFunctionComponent },
-        ],
-        data: { courceData: courceRoute?.typescript }
-    },
-    {
-        path: tsTopics?.interfaces, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: InterfacesComponent },
-            { path: tsTopics?.object_shape, component: ObjectShapeComponent },
-            { path: tsTopics?.optional_properties, component: OptionalPropertiesComponent },
-            { path: tsTopics?.readonly_properties, component: ReadonlyPropertiesComponent },
-            { path: tsTopics?.extending_interfaces, component: ExtendingInterfacesComponent },
-            { path: tsTopics?.interface_vs_type_alias, component: InterfaceVsTypeAliasComponent },
-        ],
-        data: { courceData: courceRoute?.typescript }
-    },
-    {
-        path: tsTopics?.classes, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: ClassesComponent },
-            { path: tsTopics?.constructors, component: ConstructorsComponent },
-            { path: tsTopics?.properties, component: PropertiesComponent },
-            { path: tsTopics?.methods, component: MethodsComponent },
-            { path: tsTopics?.inheritance, component: InheritanceComponent },
-            { path: tsTopics?.access_modifiers, component: AccessModifiersComponent },
-        ],
-        data: { courceData: courceRoute?.typescript }
-    },
-    {
-        path: tsTopics?.generics, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: GenericsComponent },
-            { path: tsTopics?.generic_functions, component: GenericFunctionsComponent },
-            { path: tsTopics?.generic_classes, component: GenericClassesComponent },
-            { path: tsTopics?.generic_constraints, component: GenericConstraintsComponent },
-            { path: tsTopics?.type_inference_with_generics, component: TypeInferenceWithGenericsComponent },
-            { path: tsTopics?.generic_utilities, component: GenericUtilitiesComponent },
-        ],
-        data: { courceData: courceRoute?.typescript }
-    }, {
-        path: tsTopics?.enums, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: EnumsComponent },
-            { path: tsTopics?.numeric_enums, component: NumericEnumsComponent },
-            { path: tsTopics?.string_enums, component: StringEnumsComponent },
-            { path: tsTopics?.computed_and_constant_members, component: ComputedAndConstantMembersComponent },
-            { path: tsTopics?.reverse_mapping, component: ReverseMappingComponent },
-        ],
-        data: { courceData: courceRoute?.typescript }
-    },
-    {
-        path: tsTopics?.modules, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: ModulesComponent },
-            { path: tsTopics?.module_basics, component: ModuleBasicsComponent },
-            { path: tsTopics?.export_and_import, component: ExportAndImportComponent },
-            { path: tsTopics?.default_exports, component: DefaultExportsComponent },
-            { path: tsTopics?.namespace_imports, component: NamespaceImportsComponent },
-            { path: tsTopics?.re_exporting, component: ReExportingComponent },
-        ],
-        data: { courceData: courceRoute?.typescript }
-    },
-    {
-        path: tsTopics?.namespaces, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: NamespacesComponent },
-            { path: tsTopics?.namespaces_in_typeScript, component: NamespacesInTypeScriptComponent },
-            { path: tsTopics?.nested_namespaces, component: NestedNamespacesComponent },
-            { path: tsTopics?.declaring_ambient_modules, component: DeclaringAmbientModulesComponent },
-            { path: tsTopics?.merging_namespaces, component: MergingNamespacesComponent },
-        ],
-        data: { courceData: courceRoute?.typescript }
-    },
-    {
-        path: tsTopics?.decorators, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: DecoratorsComponent },
-            { path: tsTopics?.introduction_to_decorators, component: IntroductionToDecoratorsComponent },
-            { path: tsTopics?.class_decorators, component: ClassDecoratorsComponent },
-            { path: tsTopics?.method_decorators, component: MethodDecoratorsComponent },
-            { path: tsTopics?.property_decorators, component: PropertyDecoratorsComponent },
-            { path: tsTopics?.parameter_decorators, component: ParameterDecoratorsComponent },
-            { path: tsTopics?.decorator_factories, component: DecoratorFactoriesComponent },
-        ],
-        data: { courceData: courceRoute?.typescript }
-    },
-    {
-        path: tsTopics?.mixins, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: MixinsComponent },
-            { path: tsTopics?.mixins_in_typeScript, component: MixinsInTypeScriptComponent },
-            { path: tsTopics?.composition_over_inheritance, component: CompositionOverInheritanceComponent },
-        ],
-        data: { courceData: courceRoute?.typescript }
-    },
-    {
-        path: tsTopics?.type_inference, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: TypeInferenceComponent },
-            { path: tsTopics?.contextual_typing, component: ContextualTypingComponent },
-            { path: tsTopics?.best_common_type, component: BestCommonTypeComponent },
-            { path: tsTopics?.type_widening_and_narrowing, component: TypeWideningAndNarrowingComponent },
-            { path: tsTopics?.definite_assignment_assertions, component: DefiniteAssignmentAssertionsComponent },
-        ],
-        data: { courceData: courceRoute?.typescript }
-    },
-    {
-        path: tsTopics?.type_guards, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: TypeGuardsComponent },
-            { path: tsTopics?.typeof_type_guards, component: TypeofTypeGuardsComponent },
-            { path: tsTopics?.instanceof_type_guards, component: InstanceofTypeGuardsComponent },
-            { path: tsTopics?.user_defined_type_guards, component: UserDefinedTypeGuardsComponent },
-        ],
-        data: { courceData: courceRoute?.typescript }
-    },
-    {
-        path: tsTopics?.union_and_intersection_types, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: UnionAndIntersectionTypesComponent },
-            { path: tsTopics?.union_types, component: UnionTypesComponent },
-            { path: tsTopics?.intersection_types, component: IntersectionTypesComponent },
-            { path: tsTopics?.discriminated_unions, component: DiscriminatedUnionsComponent },
-        ],
-        data: { courceData: courceRoute?.typescript }
-    },
-    {
-        path: tsTopics?.advanced_types, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: AdvancedTypesComponent },
-            { path: tsTopics?.conditional_types, component: ConditionalTypesComponent },
-            { path: tsTopics?.mapped_types, component: MappedTypesComponent },
-            { path: tsTopics?.index_types, component: IndexTypesComponent },
-            { path: tsTopics?.tuple_types, component: TupleTypesComponent },
-            { path: tsTopics?.keyof, component: KeyofComponent },
-            { path: tsTopics?.typeof, component: TypeofComponent },
-            { path: tsTopics?.infer_type, component: InferTypeComponent },
-            { path: tsTopics?.partial_type, component: PartialTypeComponent },
-            { path: tsTopics?.required_type, component: RequiredTypeComponent },
-            { path: tsTopics?.extract_type, component: ExtractTypeComponent },
-            { path: tsTopics?.exclude_type, component: ExcludeTypeComponent },
-            { path: tsTopics?.duck_typing, component: DuckTypingComponent },
-        ],
-        data: { courceData: courceRoute?.typescript }
-    },
-    {
-        path: tsTopics?.utility_type, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: UtilityTypeComponent },
-            { path: tsTopics?.ut_partial_type, component: UtPartialTypeComponent },
-            { path: tsTopics?.record_type, component: RecordTypeComponent },
-            { path: tsTopics?.awaited_type, component: AwaitedTypeComponent },
-            { path: tsTopics?.ut_required_type, component: UtRequiredTypeComponent },
-            { path: tsTopics?.omit_type, component: OmitTypeComponent },
-            { path: tsTopics?.pick_type, component: PickTypeComponent },
-            { path: tsTopics?.ut_extract_type, component: UtExtractTypeComponent },
-            { path: tsTopics?.capitalize_type, component: CapitalizeTypeComponent },
-            { path: tsTopics?.lowercase_type, component: LowercaseTypeComponent },
-            { path: tsTopics?.constructorParameters_type, component: ConstructorParametersTypeComponent },
-            { path: tsTopics?.returntype, component: ReturntypeComponent },
-            { path: tsTopics?.creating_types, component: CreatingTypesComponent },
-            { path: tsTopics?.ut_exclude_type, component: UtExcludeTypeComponent },
-            { path: tsTopics?.uncapitalize_type, component: UncapitalizeTypeComponent },
-        ],
-        data: { courceData: courceRoute?.typescript }
-    },
-    {
-        path: tsTopics?.oo_programming, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: OoProgrammingComponent },
-            { path: tsTopics?.classes_objects, component: ClassesObjectsComponent },
-            { path: tsTopics?.standalone_objects, component: StandaloneObjectsComponent },
-            { path: tsTopics?.oo_constructors, component: OoConstructorsComponent },
-            { path: tsTopics?.property_modifiers, component: PropertyModifiersComponent },
-            { path: tsTopics?.oo_access_modifiers, component: OoAccessModifiersComponent },
-            { path: tsTopics?.parameter_properties, component: ParameterPropertiesComponent },
-            { path: tsTopics?.getters_setters, component: GettersSettersComponent },
-            { path: tsTopics?.static_methods, component: StaticMethodsComponent },
-            { path: tsTopics?.index_signatures, component: IndexSignaturesComponent },
-            { path: tsTopics?.oo_inheritance, component: OoInheritanceComponent },
-            { path: tsTopics?.composition, component: CompositionComponent },
-            { path: tsTopics?.oo_interfaces, component: OoInterfacesComponent },
-        ],
-        data: { courceData: courceRoute?.typescript }
-    },
-    {
-        path: tsTopics?.methods_m, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: MethodsMComponent },
-            { path: tsTopics?.valueOf_method, component: ValueOfMethodComponent },
-            { path: tsTopics?.tostring_method, component: TostringMethodComponent },
-            { path: tsTopics?.toexponential_method, component: ToexponentialMethodComponent },
-            { path: tsTopics?.method_overriding, component: MethodOverridingComponent },
-            { path: tsTopics?.array_methods, component: ArrayMethodsComponent },
-            { path: tsTopics?.string_methods, component: StringMethodsComponent },
-            { path: tsTopics?.object_methods, component: ObjectMethodsComponent },
-        ],
-        data: { courceData: courceRoute?.typescript }
-    },
-    {
-        path: tsTopics?.advance, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: AdvanceComponent },
-            { path: tsTopics?.generic_object_types, component: GenericObjectTypesComponent },
-            { path: tsTopics?.call_signatures, component: CallSignaturesComponent },
-            { path: tsTopics?.declaring_this_in_function, component: DeclaringThisInFunctionComponent },
-            { path: tsTopics?.constraints, component: ConstraintsComponent },
-            { path: tsTopics?.construct_signatures, component: ConstructSignaturesComponent },
-            { path: tsTopics?.generic_parameter_defaults, component: GenericParameterDefaultsComponent },
-            { path: tsTopics?.unknown_function, component: UnknownFunctionComponent },
-            { path: tsTopics?.non_null_assertion, component: NonNullAssertionComponent },
-            { path: tsTopics?.object_type_optional, component: ObjectTypeOptionalComponent },
-            { path: tsTopics?.strictnullchecks_on_type, component: StrictnullchecksOnTypeComponent },
-            { path: tsTopics?.strictnullchecks_off_type, component: StrictnullchecksOffTypeComponent },
-            { path: tsTopics?.accessor, component: AccessorComponent },
-            { path: tsTopics?.ambients_declaration, component: AmbientsDeclarationComponent },
-            { path: tsTopics?.exhaustiveness_checking, component: ExhaustivenessCheckingComponent },
-            { path: tsTopics?.writing_good_overloads, component: WritingGoodOverloadsComponent },
-            { path: tsTopics?.aliases_type, component: AliasesTypeComponent },
-            { path: tsTopics?.specifying_type_arguments, component: SpecifyingTypeArgumentsComponent },
-            { path: tsTopics?.literal_inference_type, component: LiteralInferenceTypeComponent },
-            { path: tsTopics?.interfaces_type, component: InterfacesTypeComponent },
-            { path: tsTopics?.return_type_void, component: ReturnTypeVoidComponent },
+            {
+                path: tsTopics?.tsintro,
+                children: [
+                    { path: routeConfig?.empty, component: IntroComponent },
+                    { path: tsTopics?.installing_typeScript, component: InstallingTypeScriptComponent },
+                    { path: tsTopics?.variables, component: VariablesComponent },
+                ],
+            },
+            {
+                path: tsTopics?.data_types,
+                children: [
+                    { path: routeConfig?.empty, component: DataTypesComponent },
+                ],
+            },
+            {
+                path: tsTopics?.functions,
+                children: [
+                    { path: routeConfig?.empty, component: FunctionsComponent },
+                    { path: tsTopics?.declarations, component: DeclarationsComponent },
+                    { path: tsTopics?.arrow_functions, component: ArrowFunctionsComponent },
+                    { path: tsTopics?.parameters, component: ParametersComponent },
+                    { path: tsTopics?.rest_parameters, component: RestParametersComponent },
+                    { path: tsTopics?.tofixed_function, component: TofixedFunctionComponent },
+                    { path: tsTopics?.tolocalestring_function, component: TolocalestringFunctionComponent },
+                    { path: tsTopics?.toprecision_function, component: ToprecisionFunctionComponent },
+                ],
+            },
+            {
+                path: tsTopics?.interfaces,
+                children: [
+                    { path: routeConfig?.empty, component: InterfacesComponent },
+                    { path: tsTopics?.object_shape, component: ObjectShapeComponent },
+                    { path: tsTopics?.optional_properties, component: OptionalPropertiesComponent },
+                    { path: tsTopics?.readonly_properties, component: ReadonlyPropertiesComponent },
+                    { path: tsTopics?.extending_interfaces, component: ExtendingInterfacesComponent },
+                    { path: tsTopics?.interface_vs_type_alias, component: InterfaceVsTypeAliasComponent },
+                ],
+            },
+            {
+                path: tsTopics?.classes,
+                children: [
+                    { path: routeConfig?.empty, component: ClassesComponent },
+                    { path: tsTopics?.constructors, component: ConstructorsComponent },
+                    { path: tsTopics?.properties, component: PropertiesComponent },
+                    { path: tsTopics?.methods, component: MethodsComponent },
+                    { path: tsTopics?.inheritance, component: InheritanceComponent },
+                    { path: tsTopics?.access_modifiers, component: AccessModifiersComponent },
+                ],
+            },
+            {
+                path: tsTopics?.generics,
+                children: [
+                    { path: routeConfig?.empty, component: GenericsComponent },
+                    { path: tsTopics?.generic_functions, component: GenericFunctionsComponent },
+                    { path: tsTopics?.generic_classes, component: GenericClassesComponent },
+                    { path: tsTopics?.generic_constraints, component: GenericConstraintsComponent },
+                    { path: tsTopics?.type_inference_with_generics, component: TypeInferenceWithGenericsComponent },
+                    { path: tsTopics?.generic_utilities, component: GenericUtilitiesComponent },
+                ],
+            }, {
+                path: tsTopics?.enums,
+                children: [
+                    { path: routeConfig?.empty, component: EnumsComponent },
+                    { path: tsTopics?.numeric_enums, component: NumericEnumsComponent },
+                    { path: tsTopics?.string_enums, component: StringEnumsComponent },
+                    { path: tsTopics?.computed_and_constant_members, component: ComputedAndConstantMembersComponent },
+                    { path: tsTopics?.reverse_mapping, component: ReverseMappingComponent },
+                ],
+            },
+            {
+                path: tsTopics?.modules,
+                children: [
+                    { path: routeConfig?.empty, component: ModulesComponent },
+                    { path: tsTopics?.module_basics, component: ModuleBasicsComponent },
+                    { path: tsTopics?.export_and_import, component: ExportAndImportComponent },
+                    { path: tsTopics?.default_exports, component: DefaultExportsComponent },
+                    { path: tsTopics?.namespace_imports, component: NamespaceImportsComponent },
+                    { path: tsTopics?.re_exporting, component: ReExportingComponent },
+                ],
+            },
+            {
+                path: tsTopics?.namespaces,
+                children: [
+                    { path: routeConfig?.empty, component: NamespacesComponent },
+                    { path: tsTopics?.namespaces_in_typeScript, component: NamespacesInTypeScriptComponent },
+                    { path: tsTopics?.nested_namespaces, component: NestedNamespacesComponent },
+                    { path: tsTopics?.declaring_ambient_modules, component: DeclaringAmbientModulesComponent },
+                    { path: tsTopics?.merging_namespaces, component: MergingNamespacesComponent },
+                ],
+            },
+            {
+                path: tsTopics?.decorators,
+                children: [
+                    { path: routeConfig?.empty, component: DecoratorsComponent },
+                    { path: tsTopics?.introduction_to_decorators, component: IntroductionToDecoratorsComponent },
+                    { path: tsTopics?.class_decorators, component: ClassDecoratorsComponent },
+                    { path: tsTopics?.method_decorators, component: MethodDecoratorsComponent },
+                    { path: tsTopics?.property_decorators, component: PropertyDecoratorsComponent },
+                    { path: tsTopics?.parameter_decorators, component: ParameterDecoratorsComponent },
+                    { path: tsTopics?.decorator_factories, component: DecoratorFactoriesComponent },
+                ],
+            },
+            {
+                path: tsTopics?.mixins,
+                children: [
+                    { path: routeConfig?.empty, component: MixinsComponent },
+                    { path: tsTopics?.mixins_in_typeScript, component: MixinsInTypeScriptComponent },
+                    { path: tsTopics?.composition_over_inheritance, component: CompositionOverInheritanceComponent },
+                ],
+            },
+            {
+                path: tsTopics?.type_inference,
+                children: [
+                    { path: routeConfig?.empty, component: TypeInferenceComponent },
+                    { path: tsTopics?.contextual_typing, component: ContextualTypingComponent },
+                    { path: tsTopics?.best_common_type, component: BestCommonTypeComponent },
+                    { path: tsTopics?.type_widening_and_narrowing, component: TypeWideningAndNarrowingComponent },
+                    { path: tsTopics?.definite_assignment_assertions, component: DefiniteAssignmentAssertionsComponent },
+                ],
+            },
+            {
+                path: tsTopics?.type_guards,
+                children: [
+                    { path: routeConfig?.empty, component: TypeGuardsComponent },
+                    { path: tsTopics?.typeof_type_guards, component: TypeofTypeGuardsComponent },
+                    { path: tsTopics?.instanceof_type_guards, component: InstanceofTypeGuardsComponent },
+                    { path: tsTopics?.user_defined_type_guards, component: UserDefinedTypeGuardsComponent },
+                ],
+            },
+            {
+                path: tsTopics?.union_and_intersection_types,
+                children: [
+                    { path: routeConfig?.empty, component: UnionAndIntersectionTypesComponent },
+                    { path: tsTopics?.union_types, component: UnionTypesComponent },
+                    { path: tsTopics?.intersection_types, component: IntersectionTypesComponent },
+                    { path: tsTopics?.discriminated_unions, component: DiscriminatedUnionsComponent },
+                ],
+            },
+            {
+                path: tsTopics?.advanced_types,
+                children: [
+                    { path: routeConfig?.empty, component: AdvancedTypesComponent },
+                    { path: tsTopics?.conditional_types, component: ConditionalTypesComponent },
+                    { path: tsTopics?.mapped_types, component: MappedTypesComponent },
+                    { path: tsTopics?.index_types, component: IndexTypesComponent },
+                    { path: tsTopics?.tuple_types, component: TupleTypesComponent },
+                    { path: tsTopics?.keyof, component: KeyofComponent },
+                    { path: tsTopics?.typeof, component: TypeofComponent },
+                    { path: tsTopics?.infer_type, component: InferTypeComponent },
+                    { path: tsTopics?.partial_type, component: PartialTypeComponent },
+                    { path: tsTopics?.required_type, component: RequiredTypeComponent },
+                    { path: tsTopics?.extract_type, component: ExtractTypeComponent },
+                    { path: tsTopics?.exclude_type, component: ExcludeTypeComponent },
+                    { path: tsTopics?.duck_typing, component: DuckTypingComponent },
+                ],
+            },
+            {
+                path: tsTopics?.utility_type,
+                children: [
+                    { path: routeConfig?.empty, component: UtilityTypeComponent },
+                    { path: tsTopics?.ut_partial_type, component: UtPartialTypeComponent },
+                    { path: tsTopics?.record_type, component: RecordTypeComponent },
+                    { path: tsTopics?.awaited_type, component: AwaitedTypeComponent },
+                    { path: tsTopics?.ut_required_type, component: UtRequiredTypeComponent },
+                    { path: tsTopics?.omit_type, component: OmitTypeComponent },
+                    { path: tsTopics?.pick_type, component: PickTypeComponent },
+                    { path: tsTopics?.ut_extract_type, component: UtExtractTypeComponent },
+                    { path: tsTopics?.capitalize_type, component: CapitalizeTypeComponent },
+                    { path: tsTopics?.lowercase_type, component: LowercaseTypeComponent },
+                    { path: tsTopics?.constructorParameters_type, component: ConstructorParametersTypeComponent },
+                    { path: tsTopics?.returntype, component: ReturntypeComponent },
+                    { path: tsTopics?.creating_types, component: CreatingTypesComponent },
+                    { path: tsTopics?.ut_exclude_type, component: UtExcludeTypeComponent },
+                    { path: tsTopics?.uncapitalize_type, component: UncapitalizeTypeComponent },
+                ],
+            },
+            {
+                path: tsTopics?.oo_programming,
+                children: [
+                    { path: routeConfig?.empty, component: OoProgrammingComponent },
+                    { path: tsTopics?.classes_objects, component: ClassesObjectsComponent },
+                    { path: tsTopics?.standalone_objects, component: StandaloneObjectsComponent },
+                    { path: tsTopics?.oo_constructors, component: OoConstructorsComponent },
+                    { path: tsTopics?.property_modifiers, component: PropertyModifiersComponent },
+                    { path: tsTopics?.oo_access_modifiers, component: OoAccessModifiersComponent },
+                    { path: tsTopics?.parameter_properties, component: ParameterPropertiesComponent },
+                    { path: tsTopics?.getters_setters, component: GettersSettersComponent },
+                    { path: tsTopics?.static_methods, component: StaticMethodsComponent },
+                    { path: tsTopics?.index_signatures, component: IndexSignaturesComponent },
+                    { path: tsTopics?.oo_inheritance, component: OoInheritanceComponent },
+                    { path: tsTopics?.composition, component: CompositionComponent },
+                    { path: tsTopics?.oo_interfaces, component: OoInterfacesComponent },
+                ],
+            },
+            {
+                path: tsTopics?.methods_m,
+                children: [
+                    { path: routeConfig?.empty, component: MethodsMComponent },
+                    { path: tsTopics?.valueOf_method, component: ValueOfMethodComponent },
+                    { path: tsTopics?.tostring_method, component: TostringMethodComponent },
+                    { path: tsTopics?.toexponential_method, component: ToexponentialMethodComponent },
+                    { path: tsTopics?.method_overriding, component: MethodOverridingComponent },
+                    { path: tsTopics?.array_methods, component: ArrayMethodsComponent },
+                    { path: tsTopics?.string_methods, component: StringMethodsComponent },
+                    { path: tsTopics?.object_methods, component: ObjectMethodsComponent },
+                ],
+            },
+            {
+                path: tsTopics?.advance,
+                children: [
+                    { path: routeConfig?.empty, component: AdvanceComponent },
+                    { path: tsTopics?.generic_object_types, component: GenericObjectTypesComponent },
+                    { path: tsTopics?.call_signatures, component: CallSignaturesComponent },
+                    { path: tsTopics?.declaring_this_in_function, component: DeclaringThisInFunctionComponent },
+                    { path: tsTopics?.constraints, component: ConstraintsComponent },
+                    { path: tsTopics?.construct_signatures, component: ConstructSignaturesComponent },
+                    { path: tsTopics?.generic_parameter_defaults, component: GenericParameterDefaultsComponent },
+                    { path: tsTopics?.unknown_function, component: UnknownFunctionComponent },
+                    { path: tsTopics?.non_null_assertion, component: NonNullAssertionComponent },
+                    { path: tsTopics?.object_type_optional, component: ObjectTypeOptionalComponent },
+                    { path: tsTopics?.strictnullchecks_on_type, component: StrictnullchecksOnTypeComponent },
+                    { path: tsTopics?.strictnullchecks_off_type, component: StrictnullchecksOffTypeComponent },
+                    { path: tsTopics?.accessor, component: AccessorComponent },
+                    { path: tsTopics?.ambients_declaration, component: AmbientsDeclarationComponent },
+                    { path: tsTopics?.exhaustiveness_checking, component: ExhaustivenessCheckingComponent },
+                    { path: tsTopics?.writing_good_overloads, component: WritingGoodOverloadsComponent },
+                    { path: tsTopics?.aliases_type, component: AliasesTypeComponent },
+                    { path: tsTopics?.specifying_type_arguments, component: SpecifyingTypeArgumentsComponent },
+                    { path: tsTopics?.literal_inference_type, component: LiteralInferenceTypeComponent },
+                    { path: tsTopics?.interfaces_type, component: InterfacesTypeComponent },
+                    { path: tsTopics?.return_type_void, component: ReturnTypeVoidComponent },
+                ],
+            },
         ],
         data: { courceData: courceRoute?.typescript }
     },

@@ -69,142 +69,135 @@ import { HelpersComponent } from './lesssion/helpers/helpers.component';
 const routes: Routes = [
     { path: routeConfig?.empty, component: DashboardComponent },
     {
-        path: seqTopics?.intro, component: LayoutComponent,
+        path: routeConfig?.version, component: LayoutComponent,
         children: [
-            { path: routeConfig?.empty, component: IntroComponent },
-            { path: seqTopics?.usage, component: UsageComponent },
-        ],
-        data: { courceData: courceRoute?.sequelize }
-    },
-    {
-        path: seqTopics?.basics, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: BasicsComponent },
-            { path: seqTopics?.models, component: ModelsComponent },
-            { path: seqTopics?.instances, component: InstancesComponent },
-            { path: seqTopics?.working_with_promises, component: WorkingWithPromisesComponent },
-        ],
-        data: { courceData: courceRoute?.sequelize }
-    },
-    {
-        path: seqTopics?.querying, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: QueryingComponent },
-            { path: seqTopics?.q_basics, component: QBasicsComponent },
-            { path: seqTopics?.finders, component: FindersComponent },
-            { path: seqTopics?.scope, component: ScopeComponent },
-            { path: seqTopics?.aggregating, component: AggregatingComponent },
-            { path: seqTopics?.pagination, component: PaginationComponent },
-            { path: seqTopics?.query_types, component: QueryTypesComponent },
-            { path: seqTopics?.raw_queries, component: RawQueriesComponent },
-            { path: seqTopics?.plugins, component: PluginsComponent },
-        ],
-        data: { courceData: courceRoute?.sequelize }
-    },
-    {
-        path: seqTopics?.model_definition, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: ModelDefinitionComponent },
-            { path: seqTopics?.data_types, component: DataTypesComponent },
-            { path: seqTopics?.validation, component: ValidationComponent },
-            { path: seqTopics?.md_hooks, component: MdHooksComponent },
-            { path: seqTopics?.default_scope, component: DefaultScopeComponent },
-            { path: seqTopics?.scopes, component: ScopesComponent },
-            { path: seqTopics?.indexes, component: IndexesComponent },
-            { path: seqTopics?.creating_indexes, component: CreatingIndexesComponent },
-            { path: seqTopics?.removing_indexes, component: RemovingIndexesComponent },
-            { path: seqTopics?.model_options, component: ModelOptionsComponent },
-            { path: seqTopics?.md_associations, component: MdAssociationsComponent },
-        ],
-        data: { courceData: courceRoute?.sequelize }
-    },
-    {
-        path: seqTopics?.migrations, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: MigrationsComponent },
-            { path: seqTopics?.sli_usage, component: SliUsageComponent },
-            { path: seqTopics?.api, component: ApiComponent },
-        ],
-        data: { courceData: courceRoute?.sequelize }
-    },
-    {
-        path: seqTopics?.instance_methods, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: InstanceMethodsComponent },
-            { path: seqTopics?.save, component: SaveComponent },
-            { path: seqTopics?.reload, component: ReloadComponent },
-            { path: seqTopics?.validate, component: ValidateComponent },
-            { path: seqTopics?.update, component: UpdateComponent },
-            { path: seqTopics?.destroy, component: DestroyComponent },
-            { path: seqTopics?.increment, component: IncrementComponent },
-            { path: seqTopics?.decrement, component: DecrementComponent },
-        ],
-        data: { courceData: courceRoute?.sequelize }
-    },
-    {
-        path: seqTopics?.hooks, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: HooksComponent },
-            { path: seqTopics?.lifecycle_hooks, component: LifecycleHooksComponent },
-            { path: seqTopics?.instance_hooks, component: InstanceHooksComponent },
-            { path: seqTopics?.model_hooks, component: ModelHooksComponent },
-        ],
-        data: { courceData: courceRoute?.sequelize }
-    },
-    {
-        path: seqTopics?.associations, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: AssociationsComponent },
-            { path: seqTopics?.o_o_associations, component: OOAssociationsComponent },
-            { path: seqTopics?.o_m_associations, component: OMAssociationsComponent },
-            { path: seqTopics?.m_n_associations, component: MNAssociationsComponent },
-            { path: seqTopics?.through_models, component: ThroughModelsComponent },
-            { path: seqTopics?.self_associations, component: SelfAssociationsComponent },
-        ],
-        data: { courceData: courceRoute?.sequelize }
-    },
-    {
-        path: seqTopics?.transactions, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: TransactionsComponent },
-            { path: seqTopics?.implicit_transactions, component: ImplicitTransactionsComponent },
-            { path: seqTopics?.explicit_transactions, component: ExplicitTransactionsComponent },
-        ],
-        data: { courceData: courceRoute?.sequelize }
-    },
-    {
-        path: seqTopics?.validations, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: ValidationsComponent },
-            { path: seqTopics?.v_basics, component: VBasicsComponent },
-            { path: seqTopics?.validators, component: ValidatorsComponent },
-            { path: seqTopics?.custom_validators, component: CustomValidatorsComponent },
-        ],
-        data: { courceData: courceRoute?.sequelize }
-    },
-    {
-        path: seqTopics?.configuration, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: ConfigurationComponent },
-            { path: seqTopics?.options, component: OptionsComponent },
-            { path: seqTopics?.logging, component: LoggingComponent },
-        ],
-        data: { courceData: courceRoute?.sequelize }
-    },
-    {
-        path: seqTopics?.error_handling, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: ErrorHandlingComponent },
-            { path: seqTopics?.handling_errors, component: HandlingErrorsComponent },
-            { path: seqTopics?.errors, component: ErrorsComponent },
-        ],
-        data: { courceData: courceRoute?.sequelize }
-    },
-    {
-        path: seqTopics?.utils, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: UtilsComponent },
-            { path: seqTopics?.helpers, component: HelpersComponent },
+            {
+                path: seqTopics?.intro,
+                children: [
+                    { path: routeConfig?.empty, component: IntroComponent },
+                    { path: seqTopics?.usage, component: UsageComponent },
+                ],
+            },
+            {
+                path: seqTopics?.basics,
+                children: [
+                    { path: routeConfig?.empty, component: BasicsComponent },
+                    { path: seqTopics?.models, component: ModelsComponent },
+                    { path: seqTopics?.instances, component: InstancesComponent },
+                    { path: seqTopics?.working_with_promises, component: WorkingWithPromisesComponent },
+                ],
+            },
+            {
+                path: seqTopics?.querying,
+                children: [
+                    { path: routeConfig?.empty, component: QueryingComponent },
+                    { path: seqTopics?.q_basics, component: QBasicsComponent },
+                    { path: seqTopics?.finders, component: FindersComponent },
+                    { path: seqTopics?.scope, component: ScopeComponent },
+                    { path: seqTopics?.aggregating, component: AggregatingComponent },
+                    { path: seqTopics?.pagination, component: PaginationComponent },
+                    { path: seqTopics?.query_types, component: QueryTypesComponent },
+                    { path: seqTopics?.raw_queries, component: RawQueriesComponent },
+                    { path: seqTopics?.plugins, component: PluginsComponent },
+                ],
+            },
+            {
+                path: seqTopics?.model_definition,
+                children: [
+                    { path: routeConfig?.empty, component: ModelDefinitionComponent },
+                    { path: seqTopics?.data_types, component: DataTypesComponent },
+                    { path: seqTopics?.validation, component: ValidationComponent },
+                    { path: seqTopics?.md_hooks, component: MdHooksComponent },
+                    { path: seqTopics?.default_scope, component: DefaultScopeComponent },
+                    { path: seqTopics?.scopes, component: ScopesComponent },
+                    { path: seqTopics?.indexes, component: IndexesComponent },
+                    { path: seqTopics?.creating_indexes, component: CreatingIndexesComponent },
+                    { path: seqTopics?.removing_indexes, component: RemovingIndexesComponent },
+                    { path: seqTopics?.model_options, component: ModelOptionsComponent },
+                    { path: seqTopics?.md_associations, component: MdAssociationsComponent },
+                ],
+            },
+            {
+                path: seqTopics?.migrations,
+                children: [
+                    { path: routeConfig?.empty, component: MigrationsComponent },
+                    { path: seqTopics?.sli_usage, component: SliUsageComponent },
+                    { path: seqTopics?.api, component: ApiComponent },
+                ],
+            },
+            {
+                path: seqTopics?.instance_methods,
+                children: [
+                    { path: routeConfig?.empty, component: InstanceMethodsComponent },
+                    { path: seqTopics?.save, component: SaveComponent },
+                    { path: seqTopics?.reload, component: ReloadComponent },
+                    { path: seqTopics?.validate, component: ValidateComponent },
+                    { path: seqTopics?.update, component: UpdateComponent },
+                    { path: seqTopics?.destroy, component: DestroyComponent },
+                    { path: seqTopics?.increment, component: IncrementComponent },
+                    { path: seqTopics?.decrement, component: DecrementComponent },
+                ],
+            },
+            {
+                path: seqTopics?.hooks,
+                children: [
+                    { path: routeConfig?.empty, component: HooksComponent },
+                    { path: seqTopics?.lifecycle_hooks, component: LifecycleHooksComponent },
+                    { path: seqTopics?.instance_hooks, component: InstanceHooksComponent },
+                    { path: seqTopics?.model_hooks, component: ModelHooksComponent },
+                ],
+            },
+            {
+                path: seqTopics?.associations,
+                children: [
+                    { path: routeConfig?.empty, component: AssociationsComponent },
+                    { path: seqTopics?.o_o_associations, component: OOAssociationsComponent },
+                    { path: seqTopics?.o_m_associations, component: OMAssociationsComponent },
+                    { path: seqTopics?.m_n_associations, component: MNAssociationsComponent },
+                    { path: seqTopics?.through_models, component: ThroughModelsComponent },
+                    { path: seqTopics?.self_associations, component: SelfAssociationsComponent },
+                ],
+            },
+            {
+                path: seqTopics?.transactions,
+                children: [
+                    { path: routeConfig?.empty, component: TransactionsComponent },
+                    { path: seqTopics?.implicit_transactions, component: ImplicitTransactionsComponent },
+                    { path: seqTopics?.explicit_transactions, component: ExplicitTransactionsComponent },
+                ],
+            },
+            {
+                path: seqTopics?.validations,
+                children: [
+                    { path: routeConfig?.empty, component: ValidationsComponent },
+                    { path: seqTopics?.v_basics, component: VBasicsComponent },
+                    { path: seqTopics?.validators, component: ValidatorsComponent },
+                    { path: seqTopics?.custom_validators, component: CustomValidatorsComponent },
+                ],
+            },
+            {
+                path: seqTopics?.configuration,
+                children: [
+                    { path: routeConfig?.empty, component: ConfigurationComponent },
+                    { path: seqTopics?.options, component: OptionsComponent },
+                    { path: seqTopics?.logging, component: LoggingComponent },
+                ],
+            },
+            {
+                path: seqTopics?.error_handling,
+                children: [
+                    { path: routeConfig?.empty, component: ErrorHandlingComponent },
+                    { path: seqTopics?.handling_errors, component: HandlingErrorsComponent },
+                    { path: seqTopics?.errors, component: ErrorsComponent },
+                ],
+            },
+            {
+                path: seqTopics?.utils,
+                children: [
+                    { path: routeConfig?.empty, component: UtilsComponent },
+                    { path: seqTopics?.helpers, component: HelpersComponent },
+                ],
+            },
         ],
         data: { courceData: courceRoute?.sequelize }
     },

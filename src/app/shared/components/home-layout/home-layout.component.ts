@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { AfterViewInit, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Gbsearch } from '../gbsearch/gbsearch.component';
 import { HLayOut } from '../../interfaces/interfaces';
 

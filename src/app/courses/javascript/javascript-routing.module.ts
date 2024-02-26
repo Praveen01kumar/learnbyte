@@ -106,179 +106,172 @@ import { DynamicImportsComponent } from './lesssion/dynamic-imports/dynamic-impo
 const routes: Routes = [
     { path: routeConfig?.empty, component: DashboardComponent },
     {
-        path: jsTopics?.intro, component: LayoutComponent,
+        path: routeConfig?.version, component: LayoutComponent,
         children: [
-            { path: routeConfig?.empty, component: IntroComponent },
-            { path: jsTopics?.manuals, component: ManualsComponent },
-            { path: jsTopics?.code_editors, component: CodeEditorsComponent },
-            { path: jsTopics?.developer_console, component: DeveloperConsoleComponent },
-        ],
-        data: { courceData: courceRoute?.javascript }
-    },
-    {
-        path: jsTopics?.fundamentals, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: FundamentalsComponent },
-            { path: jsTopics?.hello_world, component: HelloWorldComponent },
-            { path: jsTopics?.code_structure, component: CodeStructureComponent },
-            { path: jsTopics?.modern_mode, component: ModernModeComponent },
-            { path: jsTopics?.variables, component: VariablesComponent },
-            { path: jsTopics?.data_types, component: DataTypesComponent },
-            { path: jsTopics?.interaction_alert, component: InteractionAlertComponent },
-            { path: jsTopics?.type_conversions, component: TypeConversionsComponent },
-            { path: jsTopics?.basic_operators, component: BasicOperatorsComponent },
-            { path: jsTopics?.comparisons, component: ComparisonsComponent },
-            { path: jsTopics?.conditional_branching, component: ConditionalBranchingComponent },
-            { path: jsTopics?.logical_operators, component: LogicalOperatorsComponent },
-            { path: jsTopics?.nullish, component: NullishComponent },
-            { path: jsTopics?.loops, component: LoopsComponent },
-            { path: jsTopics?.switch, component: SwitchComponent },
-            { path: jsTopics?.functions, component: FunctionsComponent },
-            { path: jsTopics?.expressions, component: ExpressionsComponent },
-            { path: jsTopics?.arrow_functions, component: ArrowFunctionsComponent },
-            { path: jsTopics?.javaScript_specials, component: JavaScriptSpecialsComponent }
-        ],
-        data: { courceData: courceRoute?.javascript }
-    },
-    {
-        path: jsTopics?.code_quality, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: CodeQualityComponent },
-            { path: jsTopics?.debugging, component: DebuggingComponent },
-            { path: jsTopics?.comments, component: CommentsComponent },
-            { path: jsTopics?.automated, component: AutomatedComponent },
-            { path: jsTopics?.coding_style, component: CodingStyleComponent },
-            { path: jsTopics?.ninja_code, component: NinjaCodeComponent },
-            { path: jsTopics?.polyfills, component: PolyfillsComponent },
-        ],
-        data: { courceData: courceRoute?.javascript }
-    },
-    {
-        path: jsTopics?.objects, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: ObjectsComponent },
-            { path: jsTopics?.basics_objects, component: BasicsObjectsComponent },
-            { path: jsTopics?.object_methods, component: ObjectMethodsComponent },
-            { path: jsTopics?.symbol_type, component: SymbolTypeComponent },
-            { path: jsTopics?.object_references, component: ObjectReferencesComponent },
-            { path: jsTopics?.garbage_collection, component: GarbageCollectionComponent },
-            { path: jsTopics?.constructor, component: ConstructorComponent },
-            { path: jsTopics?.optional_chaining, component: OptionalChainingComponent },
-            { path: jsTopics?.primitive_conversion, component: PrimitiveConversionComponent },
-        ],
-        data: { courceData: courceRoute?.javascript }
-    },
-    {
-        path: jsTopics?.primitives_data_types, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: PrimitivesDataTypesComponent },
-            { path: jsTopics?.primitives, component: PrimitivesComponent },
-            { path: jsTopics?.numbers, component: NumbersComponent },
-            { path: jsTopics?.strings, component: StringsComponent },
-            { path: jsTopics?.arrays, component: ArraysComponent },
-            { path: jsTopics?.array_methods, component: ArrayMethodsComponent },
-            { path: jsTopics?.iterables, component: IterablesComponent },
-            { path: jsTopics?.map_and_set, component: MapAndSetComponent },
-            { path: jsTopics?.weakmap, component: WeakmapComponent },
-            { path: jsTopics?.values_entries, component: ValuesEntriesComponent },
-            { path: jsTopics?.destructuring, component: DestructuringComponent },
-            { path: jsTopics?.date_and_time, component: DateAndTimeComponent },
-            { path: jsTopics?.json_methods, component: JsonMethodsComponent },
-        ],
-        data: { courceData: courceRoute?.javascript }
-    },
-    {
-        path: jsTopics?.advanced_working, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: AdvancedWorkingComponent },
-            { path: jsTopics?.recursion_and_stack, component: RecursionAndStackComponent },
-            { path: jsTopics?.spread_syntax, component: SpreadSyntaxComponent },
-            { path: jsTopics?.variable_scope, component: VariableScopeComponent },
-            { path: jsTopics?.the_old, component: TheOldComponent },
-            { path: jsTopics?.global_object, component: GlobalObjectComponent },
-            { path: jsTopics?.function_object, component: FunctionObjectComponent },
-            { path: jsTopics?.new_function, component: NewFunctionComponent },
-            { path: jsTopics?.scheduling, component: SchedulingComponent },
-            { path: jsTopics?.decorators, component: DecoratorsComponent },
-            { path: jsTopics?.function_binding, component: FunctionBindingComponent },
-            { path: jsTopics?.arrow_revisited, component: ArrowRevisitedComponent },
-        ],
-        data: { courceData: courceRoute?.javascript }
-    },
-    {
-        path: jsTopics?.configuration, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: ConfigurationComponent },
-            { path: jsTopics?.flags_and_descriptors, component: FlagsAndDescriptorsComponent },
-            { path: jsTopics?.getters_and_setters, component: GettersAndSettersComponent },
-        ],
-        data: { courceData: courceRoute?.javascript }
-    },
-    {
-        path: jsTopics?.prototypes, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: PrototypeComponent },
-            { path: jsTopics?.prototypal, component: PrototypalComponent },
-            { path: jsTopics?.prototypes, component: PrototypesComponent },
-            { path: jsTopics?.native_prototypes, component: NativePrototypesComponent },
-            { path: jsTopics?.prototype_methods, component: PrototypeMethodsComponent },
-        ],
-        data: { courceData: courceRoute?.javascript }
-    },
-    {
-        path: jsTopics?.classes, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: ClassesComponent },
-            { path: jsTopics?.basic_syntax, component: BasicSyntaxComponent },
-            { path: jsTopics?.class_inheritance, component: ClassInheritanceComponent },
-            { path: jsTopics?.static_properties, component: StaticPropertiesComponent },
-            { path: jsTopics?.private_and_protected, component: PrivateAndProtectedComponent },
-            { path: jsTopics?.extending_built, component: ExtendingBuiltComponent },
-            { path: jsTopics?.class_checking, component: ClassCheckingComponent },
-            { path: jsTopics?.mixins, component: MixinsComponent },
-        ],
-        data: { courceData: courceRoute?.javascript }
-    },
-    {
-        path: jsTopics?.error_handling, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: ErrorHandlingComponent },
-            { path: jsTopics?.try_catch, component: TryCatchComponent },
-            { path: jsTopics?.extending_error, component: ExtendingErrorComponent },
-        ],
-        data: { courceData: courceRoute?.javascript }
-    },
-    {
-        path: jsTopics?.promises, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: PromisesComponent },
-            { path: jsTopics?.callbacks, component: CallbacksComponent },
-            { path: jsTopics?.promise, component: PromiseComponent },
-            { path: jsTopics?.promises_chaining, component: PromisesChainingComponent },
-            { path: jsTopics?.error_handling_with, component: ErrorHandlingWithComponent },
-            { path: jsTopics?.promise_API, component: PromiseAPIComponent },
-            { path: jsTopics?.promisification, component: PromisificationComponent },
-            { path: jsTopics?.microtasks, component: MicrotasksComponent },
-            { path: jsTopics?.async_await, component: AsyncAwaitComponent },
-        ],
-        data: { courceData: courceRoute?.javascript }
-    },
-    {
-        path: jsTopics?.advanced_iteration, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: AdvancedIterationComponent },
-            { path: jsTopics?.generators, component: GeneratorsComponent },
-            { path: jsTopics?.async_iteration, component: AsyncIterationComponent },
-        ],
-        data: { courceData: courceRoute?.javascript }
-    },
-    {
-        path: jsTopics?.modules, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: ModulesComponent },
-            { path: jsTopics?.modules_duction, component: ModulesDuctionComponent },
-            { path: jsTopics?.export_and_import, component: ExportAndImportComponent },
-            { path: jsTopics?.dynamic_imports, component: DynamicImportsComponent }
+            {
+                path: jsTopics?.intro,
+                children: [
+                    { path: routeConfig?.empty, component: IntroComponent },
+                    { path: jsTopics?.manuals, component: ManualsComponent },
+                    { path: jsTopics?.code_editors, component: CodeEditorsComponent },
+                    { path: jsTopics?.developer_console, component: DeveloperConsoleComponent },
+                ]
+            },
+            {
+                path: jsTopics?.fundamentals,
+                children: [
+                    { path: routeConfig?.empty, component: FundamentalsComponent },
+                    { path: jsTopics?.hello_world, component: HelloWorldComponent },
+                    { path: jsTopics?.code_structure, component: CodeStructureComponent },
+                    { path: jsTopics?.modern_mode, component: ModernModeComponent },
+                    { path: jsTopics?.variables, component: VariablesComponent },
+                    { path: jsTopics?.data_types, component: DataTypesComponent },
+                    { path: jsTopics?.interaction_alert, component: InteractionAlertComponent },
+                    { path: jsTopics?.type_conversions, component: TypeConversionsComponent },
+                    { path: jsTopics?.basic_operators, component: BasicOperatorsComponent },
+                    { path: jsTopics?.comparisons, component: ComparisonsComponent },
+                    { path: jsTopics?.conditional_branching, component: ConditionalBranchingComponent },
+                    { path: jsTopics?.logical_operators, component: LogicalOperatorsComponent },
+                    { path: jsTopics?.nullish, component: NullishComponent },
+                    { path: jsTopics?.loops, component: LoopsComponent },
+                    { path: jsTopics?.switch, component: SwitchComponent },
+                    { path: jsTopics?.functions, component: FunctionsComponent },
+                    { path: jsTopics?.expressions, component: ExpressionsComponent },
+                    { path: jsTopics?.arrow_functions, component: ArrowFunctionsComponent },
+                    { path: jsTopics?.javaScript_specials, component: JavaScriptSpecialsComponent }
+                ],
+            },
+            {
+                path: jsTopics?.code_quality,
+                children: [
+                    { path: routeConfig?.empty, component: CodeQualityComponent },
+                    { path: jsTopics?.debugging, component: DebuggingComponent },
+                    { path: jsTopics?.comments, component: CommentsComponent },
+                    { path: jsTopics?.automated, component: AutomatedComponent },
+                    { path: jsTopics?.coding_style, component: CodingStyleComponent },
+                    { path: jsTopics?.ninja_code, component: NinjaCodeComponent },
+                    { path: jsTopics?.polyfills, component: PolyfillsComponent },
+                ],
+            },
+            {
+                path: jsTopics?.objects,
+                children: [
+                    { path: routeConfig?.empty, component: ObjectsComponent },
+                    { path: jsTopics?.basics_objects, component: BasicsObjectsComponent },
+                    { path: jsTopics?.object_methods, component: ObjectMethodsComponent },
+                    { path: jsTopics?.symbol_type, component: SymbolTypeComponent },
+                    { path: jsTopics?.object_references, component: ObjectReferencesComponent },
+                    { path: jsTopics?.garbage_collection, component: GarbageCollectionComponent },
+                    { path: jsTopics?.constructor, component: ConstructorComponent },
+                    { path: jsTopics?.optional_chaining, component: OptionalChainingComponent },
+                    { path: jsTopics?.primitive_conversion, component: PrimitiveConversionComponent },
+                ],
+            },
+            {
+                path: jsTopics?.primitives_data_types,
+                children: [
+                    { path: routeConfig?.empty, component: PrimitivesDataTypesComponent },
+                    { path: jsTopics?.primitives, component: PrimitivesComponent },
+                    { path: jsTopics?.numbers, component: NumbersComponent },
+                    { path: jsTopics?.strings, component: StringsComponent },
+                    { path: jsTopics?.arrays, component: ArraysComponent },
+                    { path: jsTopics?.array_methods, component: ArrayMethodsComponent },
+                    { path: jsTopics?.iterables, component: IterablesComponent },
+                    { path: jsTopics?.map_and_set, component: MapAndSetComponent },
+                    { path: jsTopics?.weakmap, component: WeakmapComponent },
+                    { path: jsTopics?.values_entries, component: ValuesEntriesComponent },
+                    { path: jsTopics?.destructuring, component: DestructuringComponent },
+                    { path: jsTopics?.date_and_time, component: DateAndTimeComponent },
+                    { path: jsTopics?.json_methods, component: JsonMethodsComponent },
+                ],
+            },
+            {
+                path: jsTopics?.advanced_working,
+                children: [
+                    { path: routeConfig?.empty, component: AdvancedWorkingComponent },
+                    { path: jsTopics?.recursion_and_stack, component: RecursionAndStackComponent },
+                    { path: jsTopics?.spread_syntax, component: SpreadSyntaxComponent },
+                    { path: jsTopics?.variable_scope, component: VariableScopeComponent },
+                    { path: jsTopics?.the_old, component: TheOldComponent },
+                    { path: jsTopics?.global_object, component: GlobalObjectComponent },
+                    { path: jsTopics?.function_object, component: FunctionObjectComponent },
+                    { path: jsTopics?.new_function, component: NewFunctionComponent },
+                    { path: jsTopics?.scheduling, component: SchedulingComponent },
+                    { path: jsTopics?.decorators, component: DecoratorsComponent },
+                    { path: jsTopics?.function_binding, component: FunctionBindingComponent },
+                    { path: jsTopics?.arrow_revisited, component: ArrowRevisitedComponent },
+                ],
+            },
+            {
+                path: jsTopics?.configuration,
+                children: [
+                    { path: routeConfig?.empty, component: ConfigurationComponent },
+                    { path: jsTopics?.flags_and_descriptors, component: FlagsAndDescriptorsComponent },
+                    { path: jsTopics?.getters_and_setters, component: GettersAndSettersComponent },
+                ],
+            },
+            {
+                path: jsTopics?.prototypes,
+                children: [
+                    { path: routeConfig?.empty, component: PrototypeComponent },
+                    { path: jsTopics?.prototypal, component: PrototypalComponent },
+                    { path: jsTopics?.prototypes, component: PrototypesComponent },
+                    { path: jsTopics?.native_prototypes, component: NativePrototypesComponent },
+                    { path: jsTopics?.prototype_methods, component: PrototypeMethodsComponent },
+                ],
+            },
+            {
+                path: jsTopics?.classes,
+                children: [
+                    { path: routeConfig?.empty, component: ClassesComponent },
+                    { path: jsTopics?.basic_syntax, component: BasicSyntaxComponent },
+                    { path: jsTopics?.class_inheritance, component: ClassInheritanceComponent },
+                    { path: jsTopics?.static_properties, component: StaticPropertiesComponent },
+                    { path: jsTopics?.private_and_protected, component: PrivateAndProtectedComponent },
+                    { path: jsTopics?.extending_built, component: ExtendingBuiltComponent },
+                    { path: jsTopics?.class_checking, component: ClassCheckingComponent },
+                    { path: jsTopics?.mixins, component: MixinsComponent },
+                ],
+            },
+            {
+                path: jsTopics?.error_handling,
+                children: [
+                    { path: routeConfig?.empty, component: ErrorHandlingComponent },
+                    { path: jsTopics?.try_catch, component: TryCatchComponent },
+                    { path: jsTopics?.extending_error, component: ExtendingErrorComponent },
+                ],
+            },
+            {
+                path: jsTopics?.promises,
+                children: [
+                    { path: routeConfig?.empty, component: PromisesComponent },
+                    { path: jsTopics?.callbacks, component: CallbacksComponent },
+                    { path: jsTopics?.promise, component: PromiseComponent },
+                    { path: jsTopics?.promises_chaining, component: PromisesChainingComponent },
+                    { path: jsTopics?.error_handling_with, component: ErrorHandlingWithComponent },
+                    { path: jsTopics?.promise_API, component: PromiseAPIComponent },
+                    { path: jsTopics?.promisification, component: PromisificationComponent },
+                    { path: jsTopics?.microtasks, component: MicrotasksComponent },
+                    { path: jsTopics?.async_await, component: AsyncAwaitComponent },
+                ],
+            },
+            {
+                path: jsTopics?.advanced_iteration,
+                children: [
+                    { path: routeConfig?.empty, component: AdvancedIterationComponent },
+                    { path: jsTopics?.generators, component: GeneratorsComponent },
+                    { path: jsTopics?.async_iteration, component: AsyncIterationComponent },
+                ],
+            },
+            {
+                path: jsTopics?.modules,
+                children: [
+                    { path: routeConfig?.empty, component: ModulesComponent },
+                    { path: jsTopics?.modules_duction, component: ModulesDuctionComponent },
+                    { path: jsTopics?.export_and_import, component: ExportAndImportComponent },
+                    { path: jsTopics?.dynamic_imports, component: DynamicImportsComponent }
+                ],
+            },
         ],
         data: { courceData: courceRoute?.javascript }
     },

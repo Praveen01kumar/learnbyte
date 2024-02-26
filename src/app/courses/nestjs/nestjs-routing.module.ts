@@ -62,97 +62,96 @@ import { WebsocketsComponent } from './lesssion/websockets/websockets.component'
 const routes: Routes = [
     { path: routeConfig?.empty, component: DashboardComponent },
     {
-        path: nestTopics?.intro, component: LayoutComponent,
+        path: routeConfig?.version, component: LayoutComponent,
         children: [
-            { path: routeConfig?.empty, component: IntroComponent },
-            { path: nestTopics?.architecture, component: ArchitectureComponent },
+            {
+                path: nestTopics?.intro,
+                children: [
+                    { path: routeConfig?.empty, component: IntroComponent },
+                    { path: nestTopics?.architecture, component: ArchitectureComponent },
+                ],
+            },
+            {
+                path: nestTopics?.cli,
+                children: [
+                    { path: routeConfig?.empty, component: CliComponent },
+                    { path: nestTopics?.installation, component: InstallationComponent },
+                    { path: nestTopics?.usage, component: UsageComponent },
+                    { path: nestTopics?.schematics, component: SchematicsComponent },
+                    { path: nestTopics?.cli_recipes, component: CliRecipesComponent },
+                    { path: nestTopics?.generating_applications, component: GeneratingApplicationsComponent },
+                    { path: nestTopics?.generating_libraries, component: GeneratingLibrariesComponent },
+                    { path: nestTopics?.generating_resources, component: GeneratingResourcesComponent },
+                ],
+            },
+            {
+                path: nestTopics?.fundamentals,
+                children: [
+                    { path: routeConfig?.empty, component: FundamentalsComponent },
+                    { path: nestTopics?.controllers, component: ControllersComponent },
+                    { path: nestTopics?.providers, component: ProvidersComponent },
+                    { path: nestTopics?.modules, component: ModulesComponent },
+                    { path: nestTopics?.middleware, component: MiddlewareComponent },
+                    { path: nestTopics?.custom_decorators, component: CustomDecoratorsComponent },
+                    { path: nestTopics?.async_providers, component: AsyncProvidersComponent },
+                ],
+            },
+            {
+                path: nestTopics?.techniques,
+                children: [
+                    { path: routeConfig?.empty, component: TechniquesComponent },
+                    { path: nestTopics?.async_await, component: AsyncAwaitComponent },
+                    { path: nestTopics?.serialization, component: SerializationComponent },
+                    { path: nestTopics?.error_handling, component: ErrorHandlingComponent },
+                    { path: nestTopics?.testing, component: TestingComponent },
+                    { path: nestTopics?.security, component: SecurityComponent },
+                    { path: nestTopics?.logging, component: LoggingComponent },
+                    { path: nestTopics?.configuration, component: ConfigurationComponent },
+                    { path: nestTopics?.http_module, component: HttpModuleComponent },
+                    { path: nestTopics?.graphql, component: GraphqlComponent },
+                    { path: nestTopics?.microservices, component: MicroservicesComponent },
+                    { path: nestTopics?.mongodb, component: MongodbComponent },
+                    { path: nestTopics?.typeorm, component: TypeormComponent },
+                    { path: nestTopics?.mongoose, component: MongooseComponent },
+                    { path: nestTopics?.sequelize, component: SequelizeComponent },
+                ],
+            },
+            {
+                path: nestTopics?.recipes,
+                children: [
+                    { path: routeConfig?.empty, component: RecipesComponent },
+                    { path: nestTopics?.authentication, component: AuthenticationComponent },
+                    { path: nestTopics?.authorization, component: AuthorizationComponent },
+                    { path: nestTopics?.database, component: DatabaseComponent },
+                    { path: nestTopics?.file_upload, component: FileUploadComponent },
+                    { path: nestTopics?.sending_emails, component: SendingEmailsComponent },
+                    { path: nestTopics?.scheduling_tasks, component: SchedulingTasksComponent },
+                    { path: nestTopics?.caching, component: CachingComponent },
+                    { path: nestTopics?.docker, component: DockerComponent },
+                    { path: nestTopics?.continuous_integration, component: ContinuousIntegrationComponent },
+                ],
+            },
+            {
+                path: nestTopics?.best_practices,
+                children: [
+                    { path: routeConfig?.empty, component: BestPracticesComponent },
+                    { path: nestTopics?.code_style, component: CodeStyleComponent },
+                    { path: nestTopics?.performance, component: PerformanceComponent },
+                    { path: nestTopics?.scalability, component: ScalabilityComponent },
+                    { path: nestTopics?.dependency_injection, component: DependencyInjectionComponent },
+                    { path: nestTopics?.exception_filters, component: ExceptionFiltersComponent },
+                    { path: nestTopics?.pipes, component: PipesComponent },
+                    { path: nestTopics?.guards, component: GuardsComponent },
+                    { path: nestTopics?.interceptors, component: InterceptorsComponent },
+                    { path: nestTopics?.versioning, component: VersioningComponent },
+                    { path: nestTopics?.hybrid_applications, component: HybridApplicationsComponent },
+                    { path: nestTopics?.bp_http_module, component: BpHttpModuleComponent },
+                    { path: nestTopics?.websockets, component: WebsocketsComponent },
+                ],
+            },
         ],
         data: { courceData: courceRoute?.nestjs }
     },
-    {
-        path: nestTopics?.cli, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: CliComponent },
-            { path: nestTopics?.installation, component: InstallationComponent },
-            { path: nestTopics?.usage, component: UsageComponent },
-            { path: nestTopics?.schematics, component: SchematicsComponent },
-            { path: nestTopics?.cli_recipes, component: CliRecipesComponent },
-            { path: nestTopics?.generating_applications, component: GeneratingApplicationsComponent },
-            { path: nestTopics?.generating_libraries, component: GeneratingLibrariesComponent },
-            { path: nestTopics?.generating_resources, component: GeneratingResourcesComponent },
-        ],
-        data: { courceData: courceRoute?.nestjs }
-    },
-    {
-        path: nestTopics?.fundamentals, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: FundamentalsComponent },
-            { path: nestTopics?.controllers, component: ControllersComponent },
-            { path: nestTopics?.providers, component: ProvidersComponent },
-            { path: nestTopics?.modules, component: ModulesComponent },
-            { path: nestTopics?.middleware, component: MiddlewareComponent },
-            { path: nestTopics?.custom_decorators, component: CustomDecoratorsComponent },
-            { path: nestTopics?.async_providers, component: AsyncProvidersComponent },
-        ],
-        data: { courceData: courceRoute?.nestjs }
-    },
-    {
-        path: nestTopics?.techniques, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: TechniquesComponent },
-            { path: nestTopics?.async_await, component: AsyncAwaitComponent },
-            { path: nestTopics?.serialization, component: SerializationComponent },
-            { path: nestTopics?.error_handling, component: ErrorHandlingComponent },
-            { path: nestTopics?.testing, component: TestingComponent },
-            { path: nestTopics?.security, component: SecurityComponent },
-            { path: nestTopics?.logging, component: LoggingComponent },
-            { path: nestTopics?.configuration, component: ConfigurationComponent },
-            { path: nestTopics?.http_module, component: HttpModuleComponent },
-            { path: nestTopics?.graphql, component: GraphqlComponent },
-            { path: nestTopics?.microservices, component: MicroservicesComponent },
-            { path: nestTopics?.mongodb, component: MongodbComponent },
-            { path: nestTopics?.typeorm, component: TypeormComponent },
-            { path: nestTopics?.mongoose, component: MongooseComponent },
-            { path: nestTopics?.sequelize, component: SequelizeComponent },
-        ],
-        data: { courceData: courceRoute?.nestjs }
-    },
-    {
-        path: nestTopics?.recipes, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: RecipesComponent },
-            { path: nestTopics?.authentication, component: AuthenticationComponent },
-            { path: nestTopics?.authorization, component: AuthorizationComponent },
-            { path: nestTopics?.database, component: DatabaseComponent },
-            { path: nestTopics?.file_upload, component: FileUploadComponent },
-            { path: nestTopics?.sending_emails, component: SendingEmailsComponent },
-            { path: nestTopics?.scheduling_tasks, component: SchedulingTasksComponent },
-            { path: nestTopics?.caching, component: CachingComponent },
-            { path: nestTopics?.docker, component: DockerComponent },
-            { path: nestTopics?.continuous_integration, component: ContinuousIntegrationComponent },
-        ],
-        data: { courceData: courceRoute?.nestjs }
-    },
-    {
-        path: nestTopics?.best_practices, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: BestPracticesComponent },
-            { path: nestTopics?.code_style, component: CodeStyleComponent },
-            { path: nestTopics?.performance, component: PerformanceComponent },
-            { path: nestTopics?.scalability, component: ScalabilityComponent },
-            { path: nestTopics?.dependency_injection, component: DependencyInjectionComponent },
-            { path: nestTopics?.exception_filters, component: ExceptionFiltersComponent },
-            { path: nestTopics?.pipes, component: PipesComponent },
-            { path: nestTopics?.guards, component: GuardsComponent },
-            { path: nestTopics?.interceptors, component: InterceptorsComponent },
-            { path: nestTopics?.versioning, component: VersioningComponent },
-            { path: nestTopics?.hybrid_applications, component: HybridApplicationsComponent },
-            { path: nestTopics?.bp_http_module, component: BpHttpModuleComponent },
-            { path: nestTopics?.websockets, component: WebsocketsComponent },
-        ],
-        data: { courceData: courceRoute?.nestjs }
-    },
-
 ];
 
 @NgModule({

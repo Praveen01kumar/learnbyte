@@ -29,71 +29,69 @@ import { TemplateEngineComponent } from './lesssion/template-engine/template-eng
 const routes: Routes = [
     { path: routeConfig?.empty, component: DashboardComponent },
     {
-        path: exTopics?.intro, component: LayoutComponent,
+        path: routeConfig?.version, component: LayoutComponent,
         children: [
-            { path: routeConfig?.empty, component: IntroComponent },
-            { path: exTopics?.architecture, component: ArchitectureComponent },
+            {
+                path: exTopics?.intro,
+                children: [
+                    { path: routeConfig?.empty, component: IntroComponent },
+                    { path: exTopics?.architecture, component: ArchitectureComponent },
+                ]
+            },
+            {
+                path: exTopics?.express,
+                children: [
+                    { path: routeConfig?.empty, component: ExpressComponent },
+                    { path: exTopics?.architecture, component: ArchitectureComponent },
+                    { path: exTopics?.express_json, component: ExpressJsonComponent },
+                    { path: exTopics?.express_static, component: ExpressStaticComponent },
+                    { path: exTopics?.express_router, component: ExpressRouterComponent },
+                    { path: exTopics?.express_urlencoded, component: ExpressUrlencodedComponent },
+                ],
+            },
+            {
+                path: exTopics?.application,
+                children: [
+                    { path: routeConfig?.empty, component: ApplicationComponent },
+                    { path: exTopics?.the_app, component: TheAppComponent },
+                    { path: exTopics?.events_mount, component: EventsMountComponent },
+                ],
+            },
+            {
+                path: exTopics?.request,
+                children: [
+                    { path: routeConfig?.empty, component: RequestComponent },
+                    { path: exTopics?.the_request, component: TheRequestComponent },
+                ],
+            },
+            {
+                path: exTopics?.response,
+                children: [
+                    { path: routeConfig?.empty, component: ResponseComponent },
+                    { path: exTopics?.the_response, component: TheResponseComponent },
+                ],
+            },
+            {
+                path: exTopics?.router,
+                children: [
+                    { path: routeConfig?.empty, component: RouterComponent },
+                    { path: exTopics?.the_router, component: TheRouterComponent },
+                ],
+            },
+            {
+                path: exTopics?.miscellaneous,
+                children: [
+                    { path: routeConfig?.empty, component: MiscellaneousComponent },
+                    { path: exTopics?.cookies, component: CookiesComponent },
+                    { path: exTopics?.file_upload, component: FileUploadComponent },
+                    { path: exTopics?.middleware, component: MiddlewareComponent },
+                    { path: exTopics?.scaffolding, component: ScaffoldingComponent },
+                    { path: exTopics?.template_engine, component: TemplateEngineComponent },
+                ],
+            },
         ],
         data: { courceData: courceRoute?.expressjs }
     },
-    {
-        path: exTopics?.express, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: ExpressComponent },
-            { path: exTopics?.architecture, component: ArchitectureComponent },
-            { path: exTopics?.express_json, component: ExpressJsonComponent },
-            { path: exTopics?.express_static, component: ExpressStaticComponent },
-            { path: exTopics?.express_router, component: ExpressRouterComponent },
-            { path: exTopics?.express_urlencoded, component: ExpressUrlencodedComponent },
-        ],
-        data: { courceData: courceRoute?.expressjs }
-    },
-    {
-        path: exTopics?.application, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: ApplicationComponent },
-            { path: exTopics?.the_app, component: TheAppComponent },
-            { path: exTopics?.events_mount, component: EventsMountComponent },
-        ],
-        data: { courceData: courceRoute?.expressjs }
-    },
-    {
-        path: exTopics?.request, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: RequestComponent },
-            { path: exTopics?.the_request, component: TheRequestComponent },
-        ],
-        data: { courceData: courceRoute?.expressjs }
-    },
-    {
-        path: exTopics?.response, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: ResponseComponent },
-            { path: exTopics?.the_response, component: TheResponseComponent },
-        ],
-        data: { courceData: courceRoute?.expressjs }
-    },
-    {
-        path: exTopics?.router, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: RouterComponent },
-            { path: exTopics?.the_router, component: TheRouterComponent },
-        ],
-        data: { courceData: courceRoute?.expressjs }
-    },
-    {
-        path: exTopics?.miscellaneous, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: MiscellaneousComponent },
-            { path: exTopics?.cookies, component: CookiesComponent },
-            { path: exTopics?.file_upload, component: FileUploadComponent },
-            { path: exTopics?.middleware, component: MiddlewareComponent },
-            { path: exTopics?.scaffolding, component: ScaffoldingComponent },
-            { path: exTopics?.template_engine, component: TemplateEngineComponent },
-        ],
-        data: { courceData: courceRoute?.expressjs }
-    },
-
 ];
 
 @NgModule({

@@ -7,6 +7,7 @@ export const routeConfig = {
     posts: 'posts',
     contact: 'contact',
     auth: 'auth',
+    version: 'v1',
     veiled: '**'
 }
 

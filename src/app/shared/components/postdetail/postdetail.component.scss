@@ -86,11 +86,47 @@
             p {
                 color: #06241B;
                 padding: 4px 0px;
-                font-size: 14px;
+                font-size: 18px;
                 font-weight: 500;
-                margin-bottom: 8px;
+                margin-bottom: 30px;
             }
         }
+
+        .not_found {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 30%;
+
+            p {
+                color: #06241B;
+                padding: 4px 0px;
+                font-size: 16px;
+                font-weight: 600;
+                margin: 4px 18px;
+            }
+
+            .go-home {
+                background: transparent;
+                font: inherit;
+                border: 1px solid #6558d3;
+                color: #6558d3;
+                padding: 6px 12px;
+                border-radius: 6px;
+                font-weight: 500;
+                transition: all ease 0.5s;
+                margin: 0px 12px;
+                cursor: pointer;
+
+                &:hover {
+                    background: #6558d3;
+                    color: #ffffff;
+                    border-color: #ffffff;
+                }
+            }
+        }
+
+
     }
 
     .post-meta {
@@ -137,6 +173,7 @@
 
                         &:hover {
                             color: #EF670D;
+
                             &::after {
                                 width: 100%;
                                 opacity: 1;

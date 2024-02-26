@@ -84,180 +84,171 @@ import { GlobalsComponent } from './lesssion/globals/globals.component';
 import { JsEnvComponent } from './lesssion/js-env/js-env.component';
 import { StabilityIndexComponent } from './lesssion/stability-index/stability-index.component';
 import { DeprecatedApisComponent } from './lesssion/deprecated-apis/deprecated-apis.component';
+
 const routes: Routes = [
     { path: routeConfig?.empty, component: DashboardComponent },
     {
-        path: nodeTopics?.intro, component: LayoutComponent,
+        path: routeConfig?.version, component: LayoutComponent,
         children: [
-            { path: routeConfig?.empty, component: IntroComponent },
-            { path: nodeTopics?.architecture, component: ArchitectureComponent },
+            {
+                path: nodeTopics?.intro,
+                children: [
+                    { path: routeConfig?.empty, component: IntroComponent },
+                    { path: nodeTopics?.architecture, component: ArchitectureComponent },
+                ],
+            },
+            {
+                path: nodeTopics?.core_modules,
+                children: [
+                    { path: routeConfig?.empty, component: CoreModulesComponent },
+                    { path: nodeTopics?.fs, component: FsComponent },
+                    { path: nodeTopics?.http, component: HttpComponent },
+                    { path: nodeTopics?.https, component: HttpsComponent },
+                    { path: nodeTopics?.path, component: PathComponent },
+                    { path: nodeTopics?.util, component: UtilComponent },
+                    { path: nodeTopics?.events, component: EventsComponent },
+                    { path: nodeTopics?.crypto, component: CryptoComponent },
+                    { path: nodeTopics?.os, component: OsComponent },
+                    { path: nodeTopics?.child_processes, component: ChildProcessesComponent },
+                    { path: nodeTopics?.assert, component: AssertComponent },
+                    { path: nodeTopics?.dns, component: DnsComponent },
+                    { path: nodeTopics?.querystring, component: QuerystringComponent },
+                    { path: nodeTopics?.url, component: UrlComponent },
+                    { path: nodeTopics?.zlib, component: ZlibComponent },
+                    { path: nodeTopics?.timers, component: TimersComponent },
+                    { path: nodeTopics?.buffer, component: BufferComponent },
+                    { path: nodeTopics?.vm, component: VmComponent },
+                    { path: nodeTopics?.async_hooks, component: AsyncHooksComponent },
+                ],
+            },
+            {
+                path: nodeTopics?.npm_modules,
+                children: [
+                    { path: routeConfig?.empty, component: NpmModulesComponent },
+                    { path: nodeTopics?.cli_commands, component: CliCommandsComponent },
+                ],
+            },
+            {
+                path: nodeTopics?.community_modules,
+                children: [
+                    { path: routeConfig?.empty, component: CommunityModulesComponent },
+                    { path: nodeTopics?.express, component: ExpressComponent },
+                    { path: nodeTopics?.socket_io, component: SocketIoComponent },
+                    { path: nodeTopics?.request, component: RequestComponent },
+                    { path: nodeTopics?.async, component: AsyncComponent },
+                    { path: nodeTopics?.lodash, component: LodashComponent },
+                    { path: nodeTopics?.mongoose, component: MongooseComponent },
+                    { path: nodeTopics?.mysql, component: MysqlComponent },
+                ],
+            },
+            {
+                path: nodeTopics?.event_emitter,
+                children: [
+                    { path: routeConfig?.empty, component: EventEmitterComponent },
+                    { path: nodeTopics?.event_driven, component: EventDrivenComponent },
+                    { path: nodeTopics?.eventemitter_class, component: EventemitterClassComponent },
+                ],
+            },
+            {
+                path: nodeTopics?.streams,
+                children: [
+                    { path: routeConfig?.empty, component: StreamsComponent },
+                    { path: nodeTopics?.to_streams, component: ToStreamsComponent },
+                    { path: nodeTopics?.from_streams, component: FromStreamsComponent },
+                    { path: nodeTopics?.writing_to_streams, component: WritingToStreamsComponent },
+                    { path: nodeTopics?.piping_streams, component: PipingStreamsComponent },
+                ],
+            },
+            {
+                path: nodeTopics?.security,
+                children: [
+                    { path: routeConfig?.empty, component: SecurityComponent },
+                    { path: nodeTopics?.best_practices, component: BestPracticesComponent },
+                    { path: nodeTopics?.encryption, component: EncryptionComponent },
+                    { path: nodeTopics?.cross_site, component: CrossSiteComponent },
+                    { path: nodeTopics?.authentication, component: AuthenticationComponent },
+                    { path: nodeTopics?.authorization, component: AuthorizationComponent },
+                    { path: nodeTopics?.input_validation, component: InputValidationComponent },
+                    { path: nodeTopics?.secure_communication, component: SecureCommunicationComponent },
+                    { path: nodeTopics?.helmet_js, component: HelmetJsComponent },
+                ],
+            },
+            {
+                path: nodeTopics?.apis,
+                children: [
+                    { path: routeConfig?.empty, component: ApisComponent },
+                    { path: nodeTopics?.restful_apis, component: RestfulApisComponent },
+                    { path: nodeTopics?.creating_apis, component: CreatingApisComponent },
+                    { path: nodeTopics?.handling_http_methods, component: HandlingHttpMethodsComponent },
+                    { path: nodeTopics?.rest_api_design, component: RestApiDesignComponent },
+                ],
+            },
+            {
+                path: nodeTopics?.email,
+                children: [
+                    { path: routeConfig?.empty, component: EmailComponent },
+                    { path: nodeTopics?.handling_email, component: HandlingEmailComponent },
+                ],
+            },
+            {
+                path: nodeTopics?.asynchronous_programming,
+                children: [
+                    { path: routeConfig?.empty, component: AsynchronousProgrammingComponent },
+                    { path: nodeTopics?.asynchronous, component: AsynchronousComponent },
+                    { path: nodeTopics?.callbacks, component: CallbacksComponent },
+                    { path: nodeTopics?.promises, component: PromisesComponent },
+                    { path: nodeTopics?.async_await, component: AsyncAwaitComponent },
+                ],
+            },
+            {
+                path: nodeTopics?.experimental,
+                children: [
+                    { path: routeConfig?.empty, component: ExperimentalComponent },
+                    { path: nodeTopics?.worker_threads, component: WorkerThreadsComponent },
+                ],
+            },
+            {
+                path: nodeTopics?.web_development,
+                children: [
+                    { path: routeConfig?.empty, component: WebDevelopmentComponent },
+                    { path: nodeTopics?.routing, component: RoutingComponent },
+                    { path: nodeTopics?.middleware, component: MiddlewareComponent },
+                    { path: nodeTopics?.template_engines, component: TemplateEnginesComponent },
+                    { path: nodeTopics?.authentication_and_authorization, component: AuthenticationAndAuthorizationComponent },
+                ],
+            },
+            {
+                path: nodeTopics?.performance_optimization,
+                children: [
+                    { path: routeConfig?.empty, component: PerformanceOptimizationComponent },
+                    { path: nodeTopics?.profiling, component: ProfilingComponent },
+                    { path: nodeTopics?.caching, component: CachingComponent },
+                    { path: nodeTopics?.load_balancing, component: LoadBalancingComponent },
+                    { path: nodeTopics?.scaling, component: ScalingComponent },
+                ],
+            },
+            {
+                path: nodeTopics?.advanced,
+                children: [
+                    { path: routeConfig?.empty, component: AdvancedComponent },
+                    { path: nodeTopics?.cluster_module, component: ClusterModuleComponent },
+                    { path: nodeTopics?.addons, component: AddonsComponent },
+                    { path: nodeTopics?.error_handling, component: ErrorHandlingComponent },
+                ],
+            },
+            {
+                path: nodeTopics?.additional,
+                children: [
+                    { path: routeConfig?.empty, component: AdditionalComponent },
+                    { path: nodeTopics?.globals, component: GlobalsComponent },
+                    { path: nodeTopics?.js_env, component: JsEnvComponent },
+                    { path: nodeTopics?.stability_index, component: StabilityIndexComponent },
+                    { path: nodeTopics?.deprecated_apis, component: DeprecatedApisComponent },
+                ],
+            },
         ],
         data: { courceData: courceRoute?.nodejs }
     },
-    {
-        path: nodeTopics?.core_modules, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: CoreModulesComponent },
-            { path: nodeTopics?.fs, component: FsComponent },
-            { path: nodeTopics?.http, component: HttpComponent },
-            { path: nodeTopics?.https, component: HttpsComponent },
-            { path: nodeTopics?.path, component: PathComponent },
-            { path: nodeTopics?.util, component: UtilComponent },
-            { path: nodeTopics?.events, component: EventsComponent },
-            { path: nodeTopics?.crypto, component: CryptoComponent },
-            { path: nodeTopics?.os, component: OsComponent },
-            { path: nodeTopics?.child_processes, component: ChildProcessesComponent },
-            { path: nodeTopics?.assert, component: AssertComponent },
-            { path: nodeTopics?.dns, component: DnsComponent },
-            { path: nodeTopics?.querystring, component: QuerystringComponent },
-            { path: nodeTopics?.url, component: UrlComponent },
-            { path: nodeTopics?.zlib, component: ZlibComponent },
-            { path: nodeTopics?.timers, component: TimersComponent },
-            { path: nodeTopics?.buffer, component: BufferComponent },
-            { path: nodeTopics?.vm, component: VmComponent },
-            { path: nodeTopics?.async_hooks, component: AsyncHooksComponent },
-        ],
-        data: { courceData: courceRoute?.nodejs }
-    },
-    {
-        path: nodeTopics?.npm_modules, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: NpmModulesComponent },
-            { path: nodeTopics?.cli_commands, component: CliCommandsComponent },
-        ],
-        data: { courceData: courceRoute?.nodejs }
-    },
-    {
-        path: nodeTopics?.community_modules, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: CommunityModulesComponent },
-            { path: nodeTopics?.express, component: ExpressComponent },
-            { path: nodeTopics?.socket_io, component: SocketIoComponent },
-            { path: nodeTopics?.request, component: RequestComponent },
-            { path: nodeTopics?.async, component: AsyncComponent },
-            { path: nodeTopics?.lodash, component: LodashComponent },
-            { path: nodeTopics?.mongoose, component: MongooseComponent },
-            { path: nodeTopics?.mysql, component: MysqlComponent },
-        ],
-        data: { courceData: courceRoute?.nodejs }
-    },
-    {
-        path: nodeTopics?.event_emitter, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: EventEmitterComponent },
-            { path: nodeTopics?.event_driven, component: EventDrivenComponent },
-            { path: nodeTopics?.eventemitter_class, component: EventemitterClassComponent },
-        ],
-        data: { courceData: courceRoute?.nodejs }
-    },
-    {
-        path: nodeTopics?.streams, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: StreamsComponent },
-            { path: nodeTopics?.to_streams, component: ToStreamsComponent },
-            { path: nodeTopics?.from_streams, component: FromStreamsComponent },
-            { path: nodeTopics?.writing_to_streams, component: WritingToStreamsComponent },
-            { path: nodeTopics?.piping_streams, component: PipingStreamsComponent },
-        ],
-        data: { courceData: courceRoute?.nodejs }
-    },
-    {
-        path: nodeTopics?.security, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: SecurityComponent },
-            { path: nodeTopics?.best_practices, component: BestPracticesComponent },
-            { path: nodeTopics?.encryption, component: EncryptionComponent },
-            { path: nodeTopics?.cross_site, component: CrossSiteComponent },
-            { path: nodeTopics?.authentication, component: AuthenticationComponent },
-            { path: nodeTopics?.authorization, component: AuthorizationComponent },
-            { path: nodeTopics?.input_validation, component: InputValidationComponent },
-            { path: nodeTopics?.secure_communication, component: SecureCommunicationComponent },
-            { path: nodeTopics?.helmet_js, component: HelmetJsComponent },
-        ],
-        data: { courceData: courceRoute?.nodejs }
-    },
-    {
-        path: nodeTopics?.apis, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: ApisComponent },
-            { path: nodeTopics?.restful_apis, component: RestfulApisComponent },
-            { path: nodeTopics?.creating_apis, component: CreatingApisComponent },
-            { path: nodeTopics?.handling_http_methods, component: HandlingHttpMethodsComponent },
-            { path: nodeTopics?.rest_api_design, component: RestApiDesignComponent },
-        ],
-        data: { courceData: courceRoute?.nodejs }
-    },
-    {
-        path: nodeTopics?.email, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: EmailComponent },
-            { path: nodeTopics?.handling_email, component: HandlingEmailComponent },
-        ],
-        data: { courceData: courceRoute?.nodejs }
-    },
-    {
-        path: nodeTopics?.asynchronous_programming, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: AsynchronousProgrammingComponent },
-            { path: nodeTopics?.asynchronous, component: AsynchronousComponent },
-            { path: nodeTopics?.callbacks, component: CallbacksComponent },
-            { path: nodeTopics?.promises, component: PromisesComponent },
-            { path: nodeTopics?.async_await, component: AsyncAwaitComponent },
-        ],
-        data: { courceData: courceRoute?.nodejs }
-    },
-    {
-        path: nodeTopics?.experimental, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: ExperimentalComponent },
-            { path: nodeTopics?.worker_threads, component: WorkerThreadsComponent },
-        ],
-        data: { courceData: courceRoute?.nodejs }
-    },
-    {
-        path: nodeTopics?.web_development, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: WebDevelopmentComponent },
-            { path: nodeTopics?.routing, component: RoutingComponent },
-            { path: nodeTopics?.middleware, component: MiddlewareComponent },
-            { path: nodeTopics?.template_engines, component: TemplateEnginesComponent },
-            { path: nodeTopics?.authentication_and_authorization, component: AuthenticationAndAuthorizationComponent },
-        ],
-        data: { courceData: courceRoute?.nodejs }
-    },
-    {
-        path: nodeTopics?.performance_optimization, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: PerformanceOptimizationComponent },
-            { path: nodeTopics?.profiling, component: ProfilingComponent },
-            { path: nodeTopics?.caching, component: CachingComponent },
-            { path: nodeTopics?.load_balancing, component: LoadBalancingComponent },
-            { path: nodeTopics?.scaling, component: ScalingComponent },
-        ],
-        data: { courceData: courceRoute?.nodejs }
-    },
-    {
-        path: nodeTopics?.advanced, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: AdvancedComponent },
-            { path: nodeTopics?.cluster_module, component: ClusterModuleComponent },
-            { path: nodeTopics?.addons, component: AddonsComponent },
-            { path: nodeTopics?.error_handling, component: ErrorHandlingComponent },
-        ],
-        data: { courceData: courceRoute?.nodejs }
-    },
-    {
-        path: nodeTopics?.additional, component: LayoutComponent,
-        children: [
-            { path: routeConfig?.empty, component: AdditionalComponent },
-            { path: nodeTopics?.globals, component: GlobalsComponent },
-            { path: nodeTopics?.js_env, component: JsEnvComponent },
-            { path: nodeTopics?.stability_index, component: StabilityIndexComponent },
-            { path: nodeTopics?.deprecated_apis, component: DeprecatedApisComponent },
-        ],
-        data: { courceData: courceRoute?.nodejs }
-    },
-
 ];
 
 @NgModule({

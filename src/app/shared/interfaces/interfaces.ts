@@ -32,6 +32,7 @@ export interface Other {
 }
 
 export interface PostCard {
+    id: string;
     name: string;
     img: string;
     view_count: number;
@@ -39,6 +40,8 @@ export interface PostCard {
     other: Other;
     catcol: string;
     post_cat: string;
+    created: string;
+    description: string;
 }
 
 export interface HLayOut {

@@ -5,6 +5,8 @@ import { FooterComponent } from '../footer/footer.component';
 import { MatIconModule } from '@angular/material/icon';
 import { PostCard } from '../../interfaces/interfaces';
 import { PostListComponent } from '../post-list/post-list.component';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ApiService } from '../../service/api-service';
 
 @Component({
   selector: 'app-postdetail',
@@ -16,18 +18,39 @@ import { PostListComponent } from '../post-list/post-list.component';
     HeaderComponent,
     FooterComponent,
     MatIconModule,
-    PostListComponent
+    PostListComponent,
   ]
 })
 export class PostdetailComponent implements OnInit {
-  postCards: PostCard[] = [
-    { img: 'assets/post/post-img-1.jpg', name: 'Supervised Machine Learning: Regression and Classification', view_count: 124, like_count: 34, other: { img: 'assets/auth/avatar.webp', name: 'Wade Warren', des: 'Python Developer' }, catcol: '#24D198', post_cat: 'Design' },
-    { img: 'assets/post/post-img-5.jpg', name: 'Python for Financial Analysis Next and Algorithmic Trading', view_count: 124, like_count: 34, other: { img: 'assets/auth/avatar.webp', name: 'Dianne Russell', des: 'Financial Expert' }, catcol: '#FF6905', post_cat: 'Design' },
-  ];
-  category: any[] = ["Design", "Programming", "Leadership", "Marketing", "Lengauge"];
-  constructor() { }
-  ngOnInit(): void {
 
+  postCards!: PostCard[];
+  category: any[] = ["Design", "Programming", "Leadership", "Marketing", "Lengauge"];
+  postData: any;
+  postList!: PostCard[];
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private apiService: ApiService
+  ) { }
+
+  ngOnInit(): void {
+    this.onInitCall();
   }
+
+  Goto(url: string) {
+    this.router.navigate([url]);
+  }
+
+  onInitCall() {
+    this.apiService.getAis().subscribe((res: any) => {
+      if (res) {
+        this.postCards = res?.popularPost;
+        this.postList = res?.postList;
+        this.route.params.subscribe(params => { this.postData = this.postList.find((post: any) => post?.id === params['id']); });
+      }
+    });
+  }
+
+
 
 }

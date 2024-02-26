@@ -31,7 +31,7 @@
                             *ngIf="(sub && f['name'].errors) || ((f['name'].touched || f['name'].dirty) && f['name'].errors)"
                             class="f_danger">
                             <p class="mp-zero" *ngIf="f['name'].errors['required']">name is required!</p>
-                            <p class="mp-zero" *ngIf="f['name'].errors['minlength']">Minimum 8 Character is required!
+                            <p class="mp-zero" *ngIf="f['name'].errors['minlength']">Minimum 3 Character is required!
                             </p>
                             <p class="mp-zero" *ngIf="f['name'].errors['maxlength']">Maximum 16 Character are allowed!
                             </p>

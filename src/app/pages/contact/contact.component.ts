@@ -36,7 +36,7 @@ export class ContactComponent implements OnInit {
   userCommentForm() {
     this.commentForm = this.fb.group({
       comment: ['', [Validators.required, Validators.minLength(8)]],
-      name: ['', [Validators.required, Validators.minLength(8), Validators.maxLength(16),]],
+      name: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(16),]],
       email: ['', [Validators.required, Validators.email, emailValidator]],
     });
   }

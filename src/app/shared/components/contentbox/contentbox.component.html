@@ -19,14 +19,14 @@
     <div class="list">
         <div class="list_item" *ngFor="let content of contentFilterData;let i=index;">
             <div class="list_title">
-                <a href="javascript:void(0)" [routerLink]="content?.href">{{content?.list_title}}</a>
+                <a href="javascript:void(0)" [routerLink]="'v1/'+content?.href">{{content?.list_title}}</a>
             </div>
             <ul class="sub_list">
                 <li class="sub_item" *ngFor="let sub of content?.sub_list;let j=index;">
                     <div class="sub_title">
                         <a href="javascript:void(0)">
                             <span class="index">{{i+1+'.'+(j+1)}}</span>
-                            <span class="name" [routerLink]="content?.href+'/'+sub?.href">{{sub?.sub_title}}</span>
+                            <span class="name" [routerLink]="'v1/'+content?.href+'/'+sub?.href">{{sub?.sub_title}}</span>
                         </a>
                     </div>
                 </li>
