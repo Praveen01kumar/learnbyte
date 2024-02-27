@@ -52,3 +52,8 @@ export interface HLayOut {
     course?: CouseCard[];
     type: string;
 }
+
+export interface RsideBar {
+    id: string;
+    name: string;
+}

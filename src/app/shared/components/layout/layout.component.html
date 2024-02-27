@@ -1,22 +1,46 @@
 <app-header></app-header>
 <div class="layout">
-    <div class="sidebar" [ngStyle]="{ 'width':sidebarTog?'200px':'0px', 'display':sidebarTog?'block':'none'}">
-        <lsidebar [lsidebarData]="lsidebarData"></lsidebar>
-    </div>
-    <div class="content-area"
-        [ngStyle]="{ 'width':sidebarTog?'calc(100% - 200px)':'calc(100% - 0px)', 'margin-left':sidebarTog?'200px':'0px'}">
-        <div class="toggal-arrow">
-            <span (click)="sidebarTog = !sidebarTog"
-                [ngClass]="sidebarTog?'bi-arrow-left-square':'bi-arrow-right-square'">
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="none"
-                    [ngStyle]="{ 'rotate':sidebarTog?'180deg':'0deg'}">
-                    <path d="M0 0h24v24H0V0z" fill="none"></path>
-                    <path d="M16.01 11H4v2h12.01v3L20 12l-3.99-4v3z" fill="currentColor"></path>
-                </svg>
-            </span>
+    <div class="content-area">
+        <div class="l-arrow">
+            <div class="l-toggal-arrow">
+                <span (click)="LsidebarTog = !LsidebarTog"
+                    [ngClass]="LsidebarTog?'bi-arrow-left-square':'bi-arrow-right-square'">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="none"
+                        [ngStyle]="{ 'rotate':LsidebarTog?'180deg':'0deg'}">
+                        <path d="M0 0h24v24H0V0z" fill="none"></path>
+                        <path d="M16.01 11H4v2h12.01v3L20 12l-3.99-4v3z" fill="currentColor"></path>
+                    </svg>
+                </span>
+            </div>
+            <div class="l-sidebar" [ngStyle]="{ 'display':LsidebarTog?'block':'none'}">
+                <lsidebar [lsidebarData]="lsidebarData"></lsidebar>
+            </div>
         </div>
-        <div class="content">
+        <div class="content" [ngStyle]="{ 
+            'margin-left':((screenWidth > 650 )&&LsidebarTog)?'200px':'0px', 
+            'margin-right':((screenWidth > 650 )&&RsidebarTog)?'200px':'0px'
+            }">
             <router-outlet></router-outlet>
+        </div>
+        <div class="r-arrow" *ngIf="rsidebarData?.length">
+            <div class="r-toggal-arrow">
+                <span (click)="RsidebarTog = !RsidebarTog"
+                    [ngClass]="RsidebarTog?'bi-arrow-left-square':'bi-arrow-right-square'">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="none"
+                        [ngStyle]="{ 'rotate':RsidebarTog?'0deg':'180deg'}">
+                        <path d="M0 0h24v24H0V0z" fill="none"></path>
+                        <path d="M16.01 11H4v2h12.01v3L20 12l-3.99-4v3z" fill="currentColor"></path>
+                    </svg>
+                </span>
+            </div>
+            <div class="r-sidebar" [ngStyle]="{ 'display':RsidebarTog?'block':'none'}">
+                <rsidebar [rsidebarData]="rsidebarData"></rsidebar>
+            </div>
         </div>
     </div>
 </div>
+
+<button [ngClass]="{'show-scroll': showScroll}" class="scroll-to-top" [ngStyle]="{ 'right':RsidebarTog?'210px':'15px'}"
+    (click)="scrollToTop()">
+    <mat-icon>keyboard_arrow_up</mat-icon>
+</button>

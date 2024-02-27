@@ -1,0 +1,26 @@
+.id-sidebar-data {
+    .id-sidebar {
+        display: flex;
+        flex-direction: column;
+
+        a {
+            border-bottom: 1px solid #ced4da;
+            padding: 4px 6px;
+            margin: 2px 0px;
+            border-radius: 4px;
+            color: #545454;
+            font-size: 12px;
+            font-weight: 500;
+            transition: all 0.3s ease-out;
+            text-decoration: none;
+            background-color: transparent;
+
+            &:hover {
+                background-color: #ced4da !important;
+            }
+        }
+        .active{
+            background-color: #ced4da;
+        }
+    }
+}

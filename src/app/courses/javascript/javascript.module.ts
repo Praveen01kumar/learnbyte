@@ -209,7 +209,7 @@ import { DynamicImportsComponent } from './lesssion/dynamic-imports/dynamic-impo
   imports: [
     CommonModule,
     JavascriptRoutingModule,
-    ContentboxComponent
+    ContentboxComponent,
   ]
 })
 export class JavascriptModule { }

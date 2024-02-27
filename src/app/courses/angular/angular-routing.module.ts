@@ -191,9 +191,9 @@ const routes: Routes = [
             {
                 path: ngTopics?.ngintro,
                 children: [
-                    { path: routeConfig?.empty, component: IntroComponent },
+                    { path: routeConfig?.empty, component: IntroComponent},
                     { path: ngTopics?.features_of_angular, component: FeaturesOfAngularComponent },
-                ]
+                ],
             },
             {
                 path: ngTopics?.angular_cli,

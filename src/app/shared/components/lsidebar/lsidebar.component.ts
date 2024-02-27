@@ -1,8 +1,9 @@
 import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatExpansionModule } from '@angular/material/expansion';
-import { Router, RouterModule } from '@angular/router';
+import { NavigationEnd, Router, RouterModule } from '@angular/router';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'lsidebar',
@@ -28,17 +29,25 @@ export class LsidebarComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.openedPanel();
+    this.openedPanel(this.router?.url);
   }
 
-  openedPanel() {
-    this.currentRoute1 = this.router?.url;
-    this.currentRoute = this.router?.url?.replace(/^\/|\/$/g, "");
+  openedPanel(url: string) {
+    this.currentRoute1 = url;
+    this.currentRoute = url?.replace(/^\/|\/$/g, "");
     this.currentRoute = this.currentRoute.substring(0, this.currentRoute.lastIndexOf('/'));
   }
 
-  gotoRout(url:string){
+  gotoRout(url: string) {
     this.router.navigate([url]);
+    this.router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe((event: any) => {
+      this.openedPanel(event?.url);
+    });
   }
+
+  openedInnerPanel() {
+    this.openedPanel(this.router?.url);
+  }
+
 
 }

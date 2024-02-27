@@ -1,1 +1,6 @@
-<p>rsidebar works!</p>
+<div *ngIf="rsidebarData?.length" class="id-sidebar-data">
+    <div class="id-sidebar">
+        <a href="javascript:void(0)" *ngFor="let item of rsidebarData;" [ngClass]="current_Id===('#'+item?.id)?'active':''"
+            (click)="scroll('#'+item?.id)">{{item?.name}}</a>
+    </div>
+</div>

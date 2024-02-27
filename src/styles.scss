@@ -11,5 +11,47 @@ body {
     background-color: #{$bgColor};
     font-family: Inter;
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+
+.paragraph-description {
+    color: #000000;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.content-heading {
+    font-weight: 600 !important;
+    color: #000000;
+}
+
+.content-sub-heading {
+    color: #000000;
+    margin: 0px !important;
+}
+
+.sub-paragraph-description {
+    color: #000000;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.bullet-1 {
+    margin: 0px !important; 
+
+    .bullet-1-description {
+        color: #000000;
+        font-size: 14px;
+        line-height: 0px;
+        font-weight: 500;
+    }
+}
