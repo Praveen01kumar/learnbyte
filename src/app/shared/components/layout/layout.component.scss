@@ -13,6 +13,7 @@
         .l-arrow {
             position: fixed;
             top: 48px;
+            z-index: 1;
 
             .l-toggal-arrow {
                 color: #efebfb;
@@ -39,7 +40,7 @@
             max-height: fit-content;
             min-height: 100vh;
             margin-bottom: 10%;
-            padding: 0px 2%;
+            padding: 0px 30px;
         }
 
         .r-arrow {
