@@ -46,12 +46,71 @@ body {
 }
 
 .bullet-1 {
-    margin: 0px !important; 
+    margin: 0px !important;
 
     .bullet-1-description {
         color: #000000;
         font-size: 14px;
         line-height: 0px;
         font-weight: 500;
+    }
+
+    .dot-li {
+
+        li {
+            color: #000000;
+            font-size: 14px;
+            font-weight: 500;
+            margin-left: 30px;
+
+            p {
+                margin: 0px;
+            }
+        }
+    }
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #dcd0ff;
+}
+
+// @import "~prismjs/themes/prism.css";
+@import "prismjs/themes/prism-okaidia.css";
+// @import "~prismjs/themes/prism-dark.css";
+// @import "~prismjs/themes/prism-coy.css";
+// @import "~prismjs/themes/prism-funky.css";
+// @import "~prismjs/themes/prism-solarizedlight.css";
+// @import "~prismjs/themes/prism-tomorrow.css";
+// @import "~prismjs/themes/prism-twilight.css";
+
+.code-toolbar {
+    position: relative;
+
+    .toolbar {
+        position: absolute;
+        top: 6px;
+        right: 6px;
+
+        .toolbar-item {
+            .copy-to-clipboard-button {
+                padding: 2px 6px;
+                border-radius: 4px;
+                background-color: #7f56d9;
+                color: #ffffff;
+                font-weight: 500;
+                border: none;
+                outline: none;
+                cursor: pointer;
+            }
+        }
+
     }
 }

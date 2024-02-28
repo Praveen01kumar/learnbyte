@@ -113,17 +113,17 @@ export class LayoutComponent implements OnInit, OnDestroy {
 
   }
 
-  scrollToTop(duration: number = 1000) {
-    const startTime = performance.now();
-    const startScroll = document.documentElement.scrollTop || document.body.scrollTop;
-    const scrollStep = (timestamp: number) => {
-      const elapsed = timestamp - startTime;
-      const progress = Math.min(elapsed / duration, 1);
-      window.scrollTo(0, startScroll * (1 - progress));
-      if (progress < 1) { window.requestAnimationFrame(scrollStep); }
-    };
-    window.requestAnimationFrame(scrollStep);
-  }
+  // scrollToTop(duration: number = 1000) {
+  //   const startTime = performance.now();
+  //   const startScroll = document.documentElement.scrollTop || document.body.scrollTop;
+  //   const scrollStep = (timestamp: number) => {
+  //     const elapsed = timestamp - startTime;
+  //     const progress = Math.min(elapsed / duration, 1);
+  //     window.scrollTo(0, startScroll * (1 - progress));
+  //     if (progress < 1) { window.requestAnimationFrame(scrollStep); }
+  //   };
+  //   window.requestAnimationFrame(scrollStep);
+  // }
 
 
   ngOnDestroy() { this.sub.forEach((s: Subscription) => { s.unsubscribe() }); }

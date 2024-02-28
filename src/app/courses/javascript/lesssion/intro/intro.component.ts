@@ -1,5 +1,4 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
 import { RsideBar } from 'src/app/shared/interfaces/interfaces';
 import { SharedService } from 'src/app/shared/service/shared-service';
 

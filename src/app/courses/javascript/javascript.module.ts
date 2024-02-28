@@ -102,6 +102,7 @@ import { ModulesComponent } from './lesssion/modules/modules.component';
 import { ModulesDuctionComponent } from './lesssion/modules-duction/modules-duction.component';
 import { ExportAndImportComponent } from './lesssion/export-and-import/export-and-import.component';
 import { DynamicImportsComponent } from './lesssion/dynamic-imports/dynamic-imports.component';
+import { PrismcodeComponent } from 'src/app/shared/components/prismcode/prismcode.component';
 
 @NgModule({
   declarations: [
@@ -210,6 +211,7 @@ import { DynamicImportsComponent } from './lesssion/dynamic-imports/dynamic-impo
     CommonModule,
     JavascriptRoutingModule,
     ContentboxComponent,
+    PrismcodeComponent
   ]
 })
 export class JavascriptModule { }
