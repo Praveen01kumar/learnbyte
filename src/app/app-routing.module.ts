@@ -13,7 +13,7 @@ const routes: Routes = [
   { path: routeConfig?.empty, component: HomeComponent },
   { path: routeConfig?.courses, component: CoursesComponent },
   { path: routeConfig?.posts, component: PostsComponent },
-  { path: routeConfig?.posts+'/:id', component: PostdetailComponent },
+  { path: routeConfig?.posts + '/:id', component: PostdetailComponent },
   { path: routeConfig?.contact, component: ContactComponent },
   { path: courceRoute?.angular, loadChildren: () => import('./courses/angular/angular.module').then(m => m.AngularModule) },
   { path: courceRoute?.javascript, loadChildren: () => import('./courses/javascript/javascript.module').then(m => m.JavascriptModule) },
@@ -27,7 +27,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled' })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
