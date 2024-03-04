@@ -1,1 +1,184 @@
-<p>modern-mode works!</p>
+<div>
+    <p class="paragraph-description" id="use_strict_directive_in_JavaScript">The "use strict" directive in JavaScript enables developers to opt into a stricter mode of script execution, enforcing enhanced syntax checks and providing a more secure and optimized runtime environment. This comprehensive note delves into the nuances of the modern mode and "use strict" in JavaScript, elucidating their significance, functionality, and practical implementation through simple explanations and concise code examples.</p>
+    <h2 class="content-sub-heading">1. Introduction to the Modern Mode:</h2>
+    <h2 class="bullet-1">
+        <ul class="dot-li">
+            <li>The modern mode, also known as strict mode, is a feature introduced in ECMAScript 5 (ES5) to enhance JavaScript's security, maintainability, and performance.</li>
+            <li>It introduces a set of restrictions and enhancements to the language's default behavior, mitigating common pitfalls and promoting best practices.</li>
+        </ul>
+    </h2>
+
+    <h2 class="content-sub-heading" id="Significance_of_use_strict">2. Significance of "use strict":</h2>
+    <h2 class="bullet-1">
+        <ul class="dot-li">
+            <li>The "use strict" directive is a literal expression placed at the beginning of a script or a function.</li>
+            <li>When enabled, it instructs the JavaScript interpreter to execute code in strict mode, adhering to a stricter set of rules and guidelines.</li>
+            <li>"use strict" is backward-compatible, meaning it can be safely added to existing codebases without breaking backward compatibility.</li>
+        </ul>
+    </h2>
+
+    <h2 class="content-sub-heading" id="Enabling_Strict_Mode">3. Enabling Strict Mode:</h2>
+    <h2 class="bullet-1">
+        <ul class="dot-li">
+            <li>To enable strict mode in a script, simply add the "use strict" directive at the beginning of the file.
+                <br>
+                <prismcode [code]="code" language="javascript"></prismcode>
+            </li>
+            <li>Alternatively, strict mode can be applied within a function scope to restrict its behavior.
+                <br>
+                <prismcode [code]="code1" language="javascript"></prismcode>
+            </li>
+        </ul>
+    </h2>
+
+    <h2 class="content-sub-heading" id="Key_Features_and_Benefits_of_Strict_Mode">4. Key Features and Benefits of Strict Mode:</h2>
+    <h2 class="bullet-1">
+        <ul class="dot-li">
+            <li>
+                <h2 class="bullet-1">
+                    Elimination of Implicit Globals:
+                <br>
+                    <ul class="dot-li">
+                     <li>In non-strict mode, variables declared without the var, let, or const keywords become global variables by default.</li>
+                     <li>Strict mode prevents the accidental creation of global variables, promoting better encapsulation and reducing namespace pollution.</li>
+                 </ul>
+                 </h2> 
+                 <h2 class="bullet-1">
+                    Silent Errors Converted to Throw Errors:
+                <br>
+                    <ul class="dot-li">
+                     <li>In strict mode, certain silent errors, such as assignment to undeclared variables, are converted into syntax errors, alerting developers to potential bugs at runtime.</li>
+                 </ul>
+                 </h2> 
+                 <h2 class="bullet-1">
+                    Prohibition of Octal Numeric Literals:
+                <br>
+                    <ul class="dot-li">
+                     <li>Strict mode disallows the use of octal numeric literals (those prefixed with a leading zero), mitigating confusion and enhancing code readability.</li>
+                 </ul>
+                 </h2> 
+                 <h2 class="bullet-1">
+                    Enhanced Security and Robustness:
+                <br>
+                    <ul class="dot-li">
+                     <li>By enforcing stricter syntax checks and eliminating unsafe or ambiguous behaviors, strict mode enhances the security and robustness of JavaScript applications.</li>
+                 </ul>
+                 </h2> 
+            </li>
+        </ul>
+    </h2>
+
+    <h2 class="content-sub-heading" id="Practical_Examples_of_Strict_Mode">5. Practical Examples of Strict Mode:</h2>
+    <h2 class="bullet-1">
+        <ul class="dot-li">
+            <li>
+                <h2 class="bullet-1">
+                    Implicit Globals Prevention:
+                <br>
+                <ul class="dot-li">
+                    <li>
+                        <prismcode [code]="code2" language="javascript"></prismcode>
+                    </li>
+                </ul>
+                 </h2> 
+                 <h2 class="bullet-1">
+                    Assignment to Immutable Objects:
+                <br>
+                <ul class="dot-li">
+                    <li>
+                        <prismcode [code]="code3" language="javascript"></prismcode>
+                    </li>
+                </ul>
+                 </h2> 
+            </li>
+        </ul>
+    </h2>
+
+    <h2 class="content-sub-heading" id="Unraveling_use_strict">6. Unraveling "use strict":</h2>
+    <h2 class="bullet-1">
+        <ul class="dot-li">
+            <li>"use strict" is a literal expression introduced in ECMAScript 5 (ES5) that enables strict mode, a stricter set of rules and guidelines for JavaScript code execution.</li>
+            <li>It can be placed at the beginning of a script or within a function to activate strict mode within the respective scope.</li>
+        </ul>
+    </h2>
+
+    <h2 class="content-sub-heading" id="Benefits_of_use_strict">7. Benefits of "use strict":</h2>
+    <h2 class="bullet-1">
+        <ul class="dot-li">
+            <li>
+                <h2 class="bullet-1">Enhanced Security: <span class="bullet-1-description">Strict mode mitigates common security vulnerabilities by disallowing unsafe practices such as assignment to undeclared variables and octal numeric literals.</span></h2>
+                <h2 class="bullet-1">Debugging Assistance: <span class="bullet-1-description">By converting silent errors into thrown errors, strict mode facilitates early detection and debugging of potential issues.</span></h2>
+                <h2 class="bullet-1">Improved Code Quality: <span class="bullet-1-description">Strict mode promotes better coding practices, such as eliminating implicit globals and enforcing immutable bindings, leading to cleaner and more maintainable codebases.</span></h2>
+            </li>
+        </ul>
+    </h2>
+    
+
+    <h2 class="content-sub-heading" id="Application_of_use_strict">8. Application of "use strict":</h2>
+    <h2 class="bullet-1">
+        <ul class="dot-li">
+            <li>
+                <h2 class="bullet-1">
+                    Browser Console:
+                <br>
+                    <ul class="dot-li">
+                     <li>Developers can enable strict mode in the browser console to perform ad-hoc debugging and testing of JavaScript code.</li>
+                     <li>Simply type "use strict"; at the beginning of the console session to activate strict mode for subsequent code execution.</li>
+                 </ul>
+                 </h2> 
+                 <h2 class="bullet-1">
+                    Script-Level Application:
+                <br>
+                    <ul class="dot-li">
+                     <li>In script files, developers can include "use strict" at the beginning of the file to apply strict mode globally within the script.</li>
+                     <li>This ensures that all code within the script adheres to the stricter rules enforced by strict mode.</li>
+                 </ul>
+                 </h2> 
+                 <h2 class="bullet-1">
+                    Function-Level Application:
+                <br>
+                    <ul class="dot-li">
+                     <li>Developers can apply strict mode within specific function scopes to restrict the behavior of those functions only.</li>
+                     <li>This allows for granular control over strict mode enforcement, particularly in cases where certain functions require stricter rules while others do not.</li>
+                 </ul>
+                 </h2> 
+            </li>
+        </ul>
+    </h2>
+
+    <h2 class="content-sub-heading" id="Should_we_use_strict_">9. Should we "use strict"?:</h2>
+    <h2 class="bullet-1">
+        <ul class="dot-li">
+            <li>The decision to use strict mode depends on various factors, including project requirements, team preferences, and legacy code compatibility.</li>
+            <li>For new projects or modules, enabling strict mode from the outset can prevent common errors and promote cleaner code practices.</li>
+            <li>In existing projects, introducing strict mode incrementally and conducting thorough testing can help identify and address compatibility issues with legacy code.</li>
+        </ul>
+    </h2>
+
+    <h2 class="content-sub-heading" id="Considerations_for_use_strict">10. Considerations for "use strict":</h2>
+    <h2 class="bullet-1">
+        <ul class="dot-li">
+            <li>
+                <h2 class="bullet-1">Compatibility:<span class="bullet-1-description">While strict mode is backward-compatible, it may introduce breaking changes in older codebases or third-party libraries that rely on legacy behavior.</span></h2> 
+            </li>
+            <li>
+                <h2 class="bullet-1">Performance:<span class="bullet-1-description">Strict mode may impose a slight overhead due to additional runtime checks and optimizations, although the impact is generally negligible in modern JavaScript engines.</span></h2> 
+            </li>
+            <li>
+                <h2 class="bullet-1">Developer Awareness:<span class="bullet-1-description">It's essential for developers to understand the implications of strict mode and its effects on code behavior to leverage its benefits effectively.</span></h2> 
+            </li>
+        </ul>
+    </h2>
+
+    <h2 class="content-sub-heading" id="Conclusion_use_strict">Conclusion:</h2>
+    <h2 class="bullet-1">
+        <ul class="dot-li">
+            <li>"use strict" in JavaScript serves as a valuable mechanism for promoting code quality, enhancing security, and facilitating debugging.</li>
+            <li>Whether to "use strict" depends on project requirements, team expertise, and compatibility considerations.</li>
+            <li>By weighing the benefits and considerations of strict mode, developers can make informed decisions and harness its power to build more robust and maintainable JavaScript applications.</li>
+            <li>In conclusion, "use strict" embodies a fundamental aspect of modern JavaScript development, offering developers a means to enforce stricter rules and guidelines for code execution. Through its judicious application and thoughtful consideration, developers can leverage strict mode to enhance code quality, mitigate common pitfalls, and foster a culture of excellence in JavaScript development practices.</li>
+        </ul>
+    </h2>
+
+
+</div>
