@@ -1364,100 +1364,709 @@
 
 
     <h1 class="content-heading" id="Declaring_twice_triggers_an_error">Declaring twice triggers an error:</h1>
-    <h1 class="content-heading" id="An_aside_on_variable_naming_rules">An aside on variable naming rules :</h1>
-    <h1 class="content-heading" id="Non_Latin_letters_are_allowed_but_not_recommended">Non-Latin letters are allowed,
-        but not recommended :</h1>
-    <h1 class="content-heading" id="An_assignment_without_use_strict">An assignment without use strict :</h1>
-    <h1 class="content-heading" id="JavaScript_Arithmetic">JavaScript Arithmetic :</h1>
-    <h1 class="content-heading" id="Reuse_or_create">Reuse or create?</h1>
-    <h1 class="content-heading" id="Just_Like_Algebra">Just Like Algebra :</h1>
-    <h1 class="content-heading" id="One_Statement_Many_Variables">One Statement, Many Variables :</h1>
-    <h1 class="content-heading" id="Value_equals_undefined">Value = undefined :</h1>
+    <p class="content-sub-heading">In JavaScript, declaring the same variable name twice within the same scope typically
+        triggers an error, unless one of the declarations is within a nested scope. This behavior ensures that variables
+        are declared only once within their immediate scope, preventing potential confusion and bugs in the code. Let's
+        illustrate this with an analogy:</p>
+    <h2 class="content-sub-heading">Real-life Analogy:</h2>
+    <p class="content-sub-heading">Consider a classroom with a seating chart where each student's name corresponds to a
+        unique seat. If the teacher tries to assign two students to the same seat simultaneously, it would cause
+        confusion and chaos. Similarly, in JavaScript, attempting to declare the same variable name twice within the
+        same scope can lead to confusion and errors in the code.</p>
+    <h2 class="content-sub-heading">JavaScript Example:</h2>
+    <p class="sub-paragraph-description">
+        <prismcode [code]="code86" language="javascript"></prismcode>
+    </p>
+    <h2 class="content-sub-heading">Error Message:</h2>
+    <p class="sub-paragraph-description">
+        <prismcode [code]="code87" language="javascript"></prismcode>
+    </p>
+    <h2 class="content-sub-heading">Explanation:</h2>
+    <ul class="dot-li">
+        <li>In this example, the variable age is declared and assigned a value of 25.</li>
+        <li>When attempting to declare age again with a different value (30), JavaScript recognizes that age has already
+            been declared within the same scope and raises a SyntaxError.</li>
+        <li>This error prevents accidental redeclaration of variables, promoting code clarity and preventing potential
+            bugs.</li>
+    </ul>
+    <h2 class="content-sub-heading">Exceptions:</h2>
+    <ul class="dot-li">
+        <li>When attempting to declare age again with a different value (30), JavaScript recognizes that age has already
+            been declared within the same scope and raises a SyntaxError.</li>
+        <li>Using different variable declaration keywords (var, let, const) allows redeclaration within the same scope
+            but may lead to unexpected behavior and should be avoided for clarity and consistency.</li>
+    </ul>
+
+
     <h1 class="content-heading" id="What_is_the_Scope_of_Variables_in_Javascript">What is the Scope of Variables in
         Javascript?</h1>
-    <h1 class="content-heading" id="What_is_Global_Scope">What is Global Scope?</h1>
-    <h1 class="content-heading" id="What_is_Local_Scope">What is Local Scope?</h1>
-    <h1 class="content-heading" id="What_is_Block_Scope">What is Block Scope?</h1>
-    <h1 class="content-heading" id="What_is_Function_Scope">What is Function Scope?</h1>
-    <h1 class="content-heading" id="What_is_Lexical_scope">What is Lexical scope?</h1>
-    <h1 class="content-heading" id="temporal_dead_zone">temporal dead zone?</h1>
-    <h1 class="content-heading" id="const_and_let_temporal_dead_zone">const and let: temporal dead zone :</h1>
+    <p class="content-sub-heading">In JavaScript, the scope of a variable defines where the variable is accessible or
+        visible within your code. Understanding variable scope is crucial for writing clean, maintainable, and bug-free
+        JavaScript code. There are primarily two types of variable scope in JavaScript:</p>
+
+    <h2 class="content-sub-heading1" id="What_is_Global_Scope">1. Global Scope:</h2>
+    <p class="content-sub-heading">Global scope refers to the outermost scope in JavaScript, where variables are
+        accessible from anywhere in the code, including inside functions and blocks.</p>
+    <h2 class="content-sub-heading">Characteristics:</h2>
+    <ul class="dot-li">
+        <li>Variables declared outside of any function or block have global scope.</li>
+        <li>Global variables can be accessed and modified from any part of the code.</li>
+        <li>Global variables are not enclosed within any function or block.</li>
+    </ul>
+    <h2 class="content-sub-heading">Example:</h2>
+    <p class="sub-paragraph-description">
+        <prismcode [code]="code88" language="javascript"></prismcode>
+    </p>
+
+    <h2 class="content-sub-heading1" id="What_is_Local_Scope">2. Local Scope:</h2>
+    <p class="content-sub-heading">Local scope refers to the inner scope within functions or blocks, where variables are
+        only accessible within the function or block in which they are declared.</p>
+    <h2 class="content-sub-heading">Characteristics:</h2>
+    <ul class="dot-li">
+        <li>Variables declared inside a function or block have local scope.</li>
+        <li>Local variables are not accessible from outside the function or block in which they are declared.</li>
+        <li>Local variables can have function scope or block scope, depending on where they are declared.</li>
+    </ul>
+    <h2 class="content-sub-heading">Example (Function Scope):</h2>
+    <p class="sub-paragraph-description">
+        <prismcode [code]="code89" language="javascript"></prismcode>
+    </p>
+    <h2 class="content-sub-heading">Example (Block Scope - Introduced in ES6):</h2>
+    <p class="sub-paragraph-description">
+        <prismcode [code]="code90" language="javascript"></prismcode>
+    </p>
+
+    <h2 class="content-sub-heading1" id="What_is_Block_Scope">3. Block Scope:</h2>
+    <p class="content-sub-heading"> Block scope refers to the scope defined by curly braces {{block}} in JavaScript,
+        introduced in ES6 with the let and const keywords.</p>
+    <h2 class="content-sub-heading">Characteristics:</h2>
+    <ul class="dot-li">
+        <li>Variables declared with let or const inside a block are scoped to that block and are not accessible from
+            outside the block.</li>
+        <li>Block scope allows for more precise control over variable visibility and prevents accidental variable
+            leakage.</li>
+    </ul>
+    <h2 class="content-sub-heading">Example:</h2>
+    <p class="sub-paragraph-description">
+        <prismcode [code]="code91" language="javascript"></prismcode>
+    </p>
+
+    <h2 class="content-sub-heading1" id="What_is_Function_Scope">4. Function Scope:</h2>
+    <p class="content-sub-heading"> Function scope refers to the scope defined by functions in JavaScript, where
+        variables are accessible only within the function in which they are declared.</p>
+    <h2 class="content-sub-heading">Characteristics:</h2>
+    <ul class="dot-li">
+        <li>Variables declared with var inside a function have function scope and are accessible only within that
+            function.</li>
+        <li>Function scope allows for encapsulation and prevents variable pollution in the global scope.</li>
+    </ul>
+    <h2 class="content-sub-heading">Example:</h2>
+    <p class="sub-paragraph-description">
+        <prismcode [code]="code92" language="javascript"></prismcode>
+    </p>
+
+    <h2 class="content-sub-heading1" id="What_is_Lexical_scope">5. Lexical Scope:</h2>
+    <p class="content-sub-heading">Lexical scope, also known as static scope, refers to the way variables are resolved
+        in nested functions based on their position in the code.</p>
+    <h2 class="content-sub-heading">Characteristics:</h2>
+    <ul class="dot-li">
+        <li>Lexical scope determines variable visibility based on where variables are declared in the source code,
+            rather than where they are called.</li>
+        <li>Inner functions have access to variables declared in their outer scope, but not vice versa.</li>
+        <li>Lexical scoping helps maintain variable integrity and prevents naming conflicts.</li>
+    </ul>
+    <h2 class="content-sub-heading">Example:</h2>
+    <p class="sub-paragraph-description">
+        <prismcode [code]="code93" language="javascript"></prismcode>
+    </p>
+
+    <h2 class="content-sub-heading1" id="What_is_Hoisting_scope">6. Hoisting:</h2>
+    <p class="content-sub-heading">Hoisting is a JavaScript mechanism where variable and function declarations are moved
+        to the top of their containing scope during the compile phase, before the code is executed.</p>
+    <h2 class="content-sub-heading">Characteristics:</h2>
+    <ul class="dot-li">
+        <li>Variables declared with var are hoisted to the top of their scope and initialized with undefined, allowing
+            them to be accessed anywhere within the scope.</li>
+        <li>Function declarations are also hoisted, allowing them to be called before they are defined in the code.</li>
+        <li>Only the declarations are hoisted, while the assignments remain in place.</li>
+    </ul>
+    <h2 class="content-sub-heading">Example (Variable Hoisting):</h2>
+    <p class="sub-paragraph-description">
+        <prismcode [code]="code94" language="javascript"></prismcode>
+    </p>
+    <h2 class="content-sub-heading">Example (Function Hoisting):</h2>
+    <p class="sub-paragraph-description">
+        <prismcode [code]="code95" language="javascript"></prismcode>
+    </p>
+
+    <h2 class="content-sub-heading1" id="What_is_Nested_Scope">7. Nested Scope ?</h2>
+    <p class="content-sub-heading">Nested scope refers to the situation where one scope is enclosed within another
+        scope. In JavaScript, functions can be nested within other functions, creating nested scopes.</p>
+    <h2 class="content-sub-heading">Characteristics:</h2>
+    <ul class="dot-li">
+        <li>Inner scopes have access to variables declared in their outer scopes, but the reverse is not true.</li>
+        <li>Variables in outer scopes are accessible in inner scopes due to lexical scoping, which determines variable
+            visibility based on their position in the source code.</li>
+        <li>Each function invocation creates a new scope chain, allowing for nested scopes.</li>
+    </ul>
+    <h2 class="content-sub-heading">Example:</h2>
+    <p class="sub-paragraph-description">
+        <prismcode [code]="code96" language="javascript"></prismcode>
+    </p>
+    <p class="content-sub-heading">Understanding hoisting and nested scope is crucial for understanding variable and
+        function behavior in JavaScript. Hoisting ensures that variables and functions can be accessed even before they
+        are declared in the code, while nested scope allows for encapsulation and access to outer scope variables within
+        inner scopes. These concepts are fundamental to writing efficient and maintainable JavaScript code.</p>
+
+
+    <h1 class="content-heading" id="temporal_dead_zone">Temporal dead zone?</h1>
+    <p class="content-sub-heading">The Temporal Dead Zone (TDZ) is a concept introduced with the introduction of
+        block-scoped variables (let and const) in ECMAScript 2015 (ES6). It refers to the period between entering a
+        scope (such as a block) and the actual declaration of a variable within that scope. During this time, accessing
+        the variable results in a ReferenceError.</p>
+    <h2 class="content-sub-heading1">Temporal Dead Zone (TDZ):</h2>
+    <p class="content-sub-heading">The Temporal Dead Zone is the period within a scope where a variable exists but
+        cannot be accessed due to being in an uninitialized state.</p>
+    <h2 class="content-sub-heading">Characteristics:</h2>
+    <ul class="dot-li">
+        <li>Occurs when trying to access a let or const variable before it has been declared.</li>
+        <li>Accessing the variable during the TDZ results in a ReferenceError.</li>
+        <li>Ends when the variable is declared, allowing access to its value.</li>
+    </ul>
+    <h2 class="content-sub-heading">Example:</h2>
+    <p class="sub-paragraph-description">
+        <prismcode [code]="code97" language="javascript"></prismcode>
+    </p>
+    <h2 class="content-sub-heading">Explanation:</h2>
+    <ul class="dot-li">
+        <li>In the above example, attempting to access myVariable before its declaration creates a TDZ.</li>
+        <li>During the TDZ, any attempt to access myVariable results in a ReferenceError.</li>
+        <li>Once myVariable is declared, the TDZ ends, and the variable can be accessed without errors.</li>
+    </ul>
+    <h2 class="content-sub-heading">Benefits of Temporal Dead Zone:</h2>
+    <ul class="dot-li">
+        <li><strong>Early Detection of Errors:</strong> TDZ helps in detecting potential issues in the code where
+            variables are accessed before their declaration, preventing bugs.</li>
+        <li><strong>Improved Code Quality:</strong> Encourages developers to declare variables at the beginning of their
+            scope, leading to cleaner and more readable code.</li>
+        <li><strong>Better Understanding of Variable Scope:</strong> Helps developers understand the scope behavior of
+            block-scoped variables in JavaScript.</li>
+    </ul>
+    <h2 class="content-sub-heading">Considerations:</h2>
+    <ul class="dot-li">
+        <li><strong>Use typeof for Safeguarding:</strong>Using typeof operator within the TDZ is safe and does not throw
+            an error. It's often used to check if a variable has been declared.</li>
+        <li><strong>Avoid Using var:</strong>The TDZ does not apply to variables declared with var, as they are hoisted
+            to the top of their scope and initialized with undefined. However, it's generally recommended to use let and
+            const instead of var to take advantage of block scoping and avoid issues related to hoisting.</li>
+    </ul>
+    <p class="content-sub-heading">Understanding the Temporal Dead Zone helps developers write safer and more
+        predictable code when working with block-scoped variables in JavaScript. It encourages best practices and
+        contributes to overall code quality.</p>
+
+
     <h1 class="content-heading" id="JavaScript_Strict_Mode_for_Defining_Scope_of_a_Variable">JavaScript Strict Mode for
         Defining Scope of a Variable :</h1>
-    <h1 class="content-heading" id="Life_of_a_Variable_in_JavaScript">Life of a Variable in JavaScript :</h1>
-    <h1 class="content-heading" id="const_and_immutability">const and immutability :</h1>
-    <h1 class="content-heading" id="const_and_loops">const and loops :</h1>
-    <h1 class="content-heading" id="Deciding_between_const_and_let">Deciding between const and let :</h1>
-    <h1 class="content-heading" id="Shadowing_variables">Shadowing variables :</h1>
-    <h1 class="content-heading" id="Why_eval">Why eval()?</h1>
-    <h1 class="content-heading" id="Terminology_static_vs_dynamic">Terminology: static vs. dynamic :</h1>
-    <h1 class="content-heading" id="Static_phenomenon_scopes_of_variables">Static phenomenon: scopes of variables :</h1>
-    <h1 class="content-heading" id="Dynamic_phenomenon_function_calls">Dynamic phenomenon: function calls :</h1>
-    <h1 class="content-heading" id="Global_variables_and_the_global_object">Global variables and the global object :
-    </h1>
-    <h1 class="content-heading" id="globalThis">globalThis :</h1>
-    <h1 class="content-heading" id="Alternatives_to_globalThis">Alternatives to globalThis :</h1>
-    <h1 class="content-heading" id="Use_cases_for_globalThis">Use cases for globalThis :</h1>
-    <h1 class="content-heading" id="scope_and_activation">scope and activation :</h1>
-    <h1 class="content-heading" id="Function_declarations_and_early_activation">Function declarations and early
-        activation :</h1>
-    <h1 class="content-heading" id="Calling_ahead_without_early_activation">Calling ahead without early activation :
-    </h1>
-    <h1 class="content-heading" id="A_pitfall_of_early_activation">A pitfall of early activation :</h1>
-    <h1 class="content-heading" id="The_pros_and_cons_of_early_activation">The pros and cons of early activation :</h1>
-    <h1 class="content-heading" id="Class_declarations_are_not_activated_early">Class declarations are not activated
-        early :</h1>
-    <h1 class="content-heading" id="var_hoisting_partial_early_activation">var: hoisting (partial early activation) :
-    </h1>
-    <h1 class="content-heading" id="Closures">Closures :</h1>
-    <h1 class="content-heading" id="Bound_variables_vs_free_variables">Bound variables vs. free variables :</h1>
-    <h1 class="content-heading" id="What_is_a_closure">What is a closure? :</h1>
-    <h1 class="content-heading" id="Example_A_factory_for_incrementors">Example: A factory for incrementors :</h1>
-    <h1 class="content-heading" id="Use_cases_for_closures">Use cases for closures :</h1>
+    <p class="content-sub-heading">In JavaScript, strict mode is a feature that enhances the language by enforcing
+        stricter rules and eliminating some of the "silent" errors that may occur in normal mode. One of the features of
+        strict mode is that it helps in defining the scope of a variable more explicitly. Let's explore how strict mode
+        affects variable scope:</p>
+    <h2 class="content-sub-heading">Enabling Strict Mode:</h2>
+    <p class="content-sub-heading">To enable strict mode, you can add the directive 'use strict'; at the beginning of a
+        script or a function. When strict mode is enabled, it applies to the entire script or the containing function
+        and its nested functions.</p>
+    <p class="sub-paragraph-description">
+        <prismcode [code]="code98" language="javascript"></prismcode>
+    </p>
+    <h2 class="content-sub-heading">Impact on Variable Scope:</h2>
+    <h2 class="content-sub-heading">1. Prevents Implicit Global Variables:</h2>
+    <p class="content-sub-heading">In strict mode, omitting the var, let, or const keywords when declaring a variable
+        inside a function or a block results in a ReferenceError, preventing the accidental creation of global
+        variables.</p>
+    <p class="sub-paragraph-description">
+        <prismcode [code]="code99" language="javascript"></prismcode>
+    </p>
+    <h2 class="content-sub-heading">2. Strict Mode in Modules:</h2>
+    <p class="content-sub-heading">In ECMAScript modules (&lt;script type="module"&gt; or files loaded using import),
+        strict mode is automatically enabled for the entire module, and you don't need to add the 'use strict';
+        directive explicitly.</p>
+    <p class="sub-paragraph-description">
+        <prismcode [code]="code100" language="javascript"></prismcode>
+    </p>
+    <h2 class="content-sub-heading">Benefits of Using Strict Mode for Variable Scope:</h2>
+    <ul class="dot-li">
+        <li><strong>Prevents Common Mistakes:</strong>Strict mode helps catch common coding mistakes and prevents
+            unintentional variable declarations that could lead to unexpected behavior.</li>
+        <li><strong>Improves Code Quality:</strong>By enforcing stricter rules, strict mode promotes cleaner and more
+            maintainable code by reducing the risk of errors and enhancing code readability.</li>
+        <li><strong>Enhances Security:</strong>Strict mode mitigates security vulnerabilities by preventing certain
+            actions that could potentially lead to security risks, such as accessing variables before they are declared.
+        </li>
+    </ul>
+    <h2 class="content-sub-heading">Considerations:</h2>
+    <ul class="dot-li">
+        <li><strong>Compatibility:</strong>While strict mode is widely supported in modern JavaScript environments,
+            older browsers may not fully support it. However, it's safe to use in most modern web applications.</li>
+        <li><strong>Global Scope:</strong>Strict mode does not affect the global scope directly. To enable strict mode
+            for an entire script, place the 'use strict'; directive at the beginning of the script.</li>
+        <li><strong>Opting Out:</strong>If necessary, you can opt out of strict mode within a function or a block by
+            enclosing the strict-mode code within a non-strict-mode block.</li>
+    </ul>
+    <p class="sub-paragraph-description">
+        <prismcode [code]="code101" language="javascript"></prismcode>
+    </p>
+    <p class="content-sub-heading">By using strict mode to define the scope of variables, developers can write safer and
+        more reliable JavaScript code, reducing the likelihood of bugs and enhancing overall code quality.</p>
 
+
+    <h1 class="content-heading" id="Life_of_a_Variable_in_JavaScript">Life of a Variable in JavaScript :</h1>
+    <p class="content-sub-heading">In JavaScript, the life of a variable refers to its existence and accessibility
+        within the program. Understanding the life cycle of variables is essential for writing predictable and efficient
+        code. Let's explore the stages in the life of a variable:</p>
+    <h2 class="content-sub-heading1">1. Declaration Stage:</h2>
+    <p class="content-sub-heading">The variable is declared using var, let, or const keywords. At this stage, memory
+        space is allocated for the variable, and its name is registered within its containing scope.</p>
+    <h2 class="content-sub-heading">Example:</h2>
+    <p class="sub-paragraph-description">
+        <prismcode [code]="code102" language="javascript"></prismcode>
+    </p>
+    <h2 class="content-sub-heading1">2. Initialization Stage:</h2>
+    <p class="content-sub-heading">The variable is initialized with an initial value. This stage is optional; variables
+        can be declared without initialization.</p>
+    <h2 class="content-sub-heading">Example:</h2>
+    <p class="sub-paragraph-description">
+        <prismcode [code]="code103" language="javascript"></prismcode>
+    </p>
+    <h2 class="content-sub-heading1">3. Assignment Stage:</h2>
+    <p class="content-sub-heading">The variable's value is updated or reassigned to a new value. This stage can occur
+        multiple times during the variable's life cycle.</p>
+    <h2 class="content-sub-heading">Example:</h2>
+    <p class="sub-paragraph-description">
+        <prismcode [code]="code104" language="javascript"></prismcode>
+    </p>
+    <h2 class="content-sub-heading1">4. Scope Stage:</h2>
+    <p class="content-sub-heading">The variable's scope defines where the variable is accessible within the program.
+        Variables can have global scope, function scope, or block scope, depending on where they are declared.</p>
+    <h2 class="content-sub-heading">Example:</h2>
+    <p class="sub-paragraph-description">
+        <prismcode [code]="code105" language="javascript"></prismcode>
+    </p>
+    <h2 class="content-sub-heading1">5. Usage Stage:</h2>
+    <p class="content-sub-heading">The variable is accessed or used within the program. This stage involves reading or
+        modifying the variable's value to perform computations or manipulate data.</p>
+    <h2 class="content-sub-heading">Example:</h2>
+    <p class="sub-paragraph-description">
+        <prismcode [code]="code106" language="javascript"></prismcode>
+    </p>
+    <h2 class="content-sub-heading1">6. End of Life Stage:</h2>
+    <p class="content-sub-heading">The variable's life cycle ends when it goes out of scope or is no longer needed by
+        the program. At this stage, the variable's memory is freed up for reuse by the system.</p>
+    <h2 class="content-sub-heading">Example:</h2>
+    <p class="sub-paragraph-description">
+        <prismcode [code]="code107" language="javascript"></prismcode>
+    </p>
+    <h2 class="content-sub-heading">Considerations:</h2>
+    <ul class="dot-li">
+        <li><strong>Garbage Collection:</strong>In JavaScript, memory management is handled automatically by the garbage
+            collector. Variables that are no longer in use are automatically removed from memory to free up space.</li>
+        <li><strong>Memory Leaks:</strong>Improper management of variables, such as holding onto references
+            unnecessarily, can lead to memory leaks where memory is not released even after the variable is no longer
+            needed.</li>
+    </ul>
+    <p class="content-sub-heading">Understanding the life cycle of variables helps developers write efficient and
+        bug-free JavaScript code. By managing variables properly and understanding their scope, developers can optimize
+        memory usage and improve the overall performance of their applications.</p>
+
+
+
+    <h1 class="content-heading" id="const_and_immutability">const and immutability :</h1>
+    <p class="content-sub-heading"> In JavaScript, the const keyword is used to declare constants, which are variables
+        whose value cannot be reassigned once initialized. While const provides immutability for the reference to the
+        value, it does not make the value itself immutable if it's an object or an array. Let's delve into the concept
+        of immutability in JavaScript, especially in relation to variables declared with const:</p>
+    <h2 class="content-sub-heading1">Immutability with const:</h2>
+    <h2 class="content-sub-heading">1. Value Assignment Immutability:</h2>
+    <p class="content-sub-heading">When you declare a variable with const, you cannot reassign a new value to that
+        variable. Attempting to do so will result in a syntax error.</p>
+    <p class="sub-paragraph-description">
+        <prismcode [code]="code108" language="javascript"></prismcode>
+    </p>
+    <h2 class="content-sub-heading">2. Reference Immutability:</h2>
+    <p class="content-sub-heading">For primitive data types (e.g., numbers, strings), the value itself is immutable, and
+        const ensures that the reference to that value cannot be reassigned.</p>
+    <p class="sub-paragraph-description">
+        <prismcode [code]="code109" language="javascript"></prismcode>
+    </p>
+    <h2 class="content-sub-heading">3. Immutability in Objects and Arrays:</h2>
+    <p class="content-sub-heading">While const prevents reassignment of the variable reference, it does not make the
+        object or array immutable. You can still modify the properties of an object or the elements of an array declared
+        with const.</p>
+    <p class="sub-paragraph-description">
+        <prismcode [code]="code110" language="javascript"></prismcode>
+    </p>
+    <h2 class="content-sub-heading1">Achieving Immutability:</h2>
+    <h2 class="content-sub-heading">1. Freezing Objects:</h2>
+    <p class="content-sub-heading">You can use Object.freeze() to make an object immutable, preventing any modifications
+        to its properties.</p>
+    <p class="sub-paragraph-description">
+        <prismcode [code]="code111" language="javascript"></prismcode>
+    </p>
+    <h2 class="content-sub-heading">2. Immutable Libraries:</h2>
+    <p class="content-sub-heading">Libraries like Immutable.js provide data structures that are inherently immutable,
+        allowing you to work with immutable collections and enforce immutability in your code.</p>
+    <p class="sub-paragraph-description">
+        <prismcode [code]="code112" language="javascript"></prismcode>
+    </p>
+    <h2 class="content-sub-heading">Benefits of Immutability:</h2>
+    <ul class="dot-li">
+        <li><strong>Predictability:</strong>Immutable data structures make it easier to reason about the state of your
+            application, as values cannot change after they are created.</li>
+        <li><strong>Concurrency:</strong>Immutability simplifies concurrent programming, as shared data structures
+            cannot be modified in place, reducing the risk of race conditions and side effects.</li>
+        <li><strong>Performance:</strong> Immutable data structures can be optimized for memory usage and performance,
+            as they can safely share structure between versions.</li>
+    </ul>
+    <h2 class="content-sub-heading">Considerations:</h2>
+    <ul class="dot-li">
+        <li><strong>Trade-offs:</strong>While immutability offers many benefits, it may introduce additional memory
+            overhead, especially when dealing with large data structures.</li>
+        <li><strong>Mutation Methods:</strong>Be cautious when using mutation methods (e.g., push(), splice()) with
+            const-declared arrays or objects, as they will modify the underlying data.</li>
+    </ul>
+    <p class="content-sub-heading">In summary, const provides immutability for variable references in JavaScript, but it
+        does not inherently make the values themselves immutable. To achieve immutability for objects and arrays,
+        additional techniques such as object freezing or using immutable data structures may be necessary.</p>
+
+
+    <h1 class="content-heading" id="const_and_loops">const and loops :</h1>
+    <p class="content-sub-heading">In JavaScript, when using the const keyword to declare a variable, you are indicating
+        that the variable's reference cannot be reassigned to a different value. However, this does not mean that the
+        value itself is immutable. When it comes to using const with loops, there are a few important considerations to
+        keep in mind:</p>
+    <h2 class="content-sub-heading1">Using const with Loops:</h2>
+    <h2 class="content-sub-heading">1. Loop Counter with const:</h2>
+    <p class="content-sub-heading">When using const in a loop declaration, you can use it for the loop counter variable
+        if you don't intend to reassign it within the loop. This is often the case in for...of and for...in loops where
+        the loop variable is automatically reassigned in each iteration.</p>
+    <p class="sub-paragraph-description">
+        <prismcode [code]="code113" language="javascript"></prismcode>
+    </p>
+    <h2 class="content-sub-heading">2. Iteration over Immutable Data:</h2>
+    <p class="content-sub-heading">If you're iterating over an array or object declared with const, the contents of the
+        array or object can still be modified. const only prevents reassignment of the variable reference.</p>
+    <p class="sub-paragraph-description">
+        <prismcode [code]="code114" language="javascript"></prismcode>
+    </p>
+    <h2 class="content-sub-heading1">Loop Variable Reassignment:</h2>
+    <h2 class="content-sub-heading">1. Reassigning const Variables within a Loop:</h2>
+    <p class="content-sub-heading">Attempting to reassign a const variable within a loop, such as in a traditional for
+        loop, will result in a syntax error.</p>
+    <p class="sub-paragraph-description">
+        <prismcode [code]="code115" language="javascript"></prismcode>
+    </p>
+    <h2 class="content-sub-heading">2. Using Block Scope for Loop Variables:</h2>
+    <p class="content-sub-heading">You can use block-scoped variables (let or const) within loops to limit their scope
+        to the loop block, preventing accidental reassignment outside the loop.</p>
+    <p class="sub-paragraph-description">
+        <prismcode [code]="code116" language="javascript"></prismcode>
+    </p>
+    <h2 class="content-sub-heading1">Best Practices:</h2>
+    <ul class="dot-li">
+        <li><strong>Prefer const When Possible:</strong>Use const for loop variables if you don't intend to reassign
+            them within the loop. This helps communicate intent and prevents accidental reassignment.</li>
+        <li><strong>Use Block Scope:</strong>When working with loop counters, consider using block-scoped variables (let
+            or const) to limit their scope to the loop block, reducing the risk of unintended side effects.</li>
+        <li><strong>Avoid Mutating const Arrays/Object within Loops:</strong>Be cautious when modifying arrays or
+            objects declared with const within loops to avoid unexpected behavior. Consider using immutable data
+            structures or creating new arrays/objects instead.</li>
+    </ul>
+    <p class="content-sub-heading">By understanding how const behaves in loops and following best practices, you can
+        write more predictable and maintainable code in JavaScript.</p>
+
+
+    <h1 class="content-heading" id="Shadowing_variables">Shadowing variables :</h1>
+    <p class="content-sub-heading">Shadowing variables occurs when a variable declared within a specific scope (such as
+        a function or a block) has the same name as a variable declared in an outer scope. In such cases, the inner
+        variable "shadows" or takes precedence over the outer variable within its scope, effectively hiding it from the
+        outer scope. This can lead to unexpected behavior and bugs if not handled properly. Let's explore shadowing
+        variables in more detail:</p>
+    <h2 class="content-sub-heading1">Shadowing Variables:</h2>
+    <h2 class="content-sub-heading">1. Variable Declaration in Inner Scope:</h2>
+    <p class="content-sub-heading">When a variable with the same name as an outer variable is declared within a nested
+        scope, it shadows the outer variable within that scope.</p>
+    <p class="sub-paragraph-description">
+        <prismcode [code]="code117" language="javascript"></prismcode>
+    </p>
+    <h2 class="content-sub-heading">2. Block Scope Shadowing:</h2>
+    <p class="content-sub-heading">Variables declared with let or const within a block also shadow variables with the
+        same name declared outside the block.</p>
+    <p class="sub-paragraph-description">
+        <prismcode [code]="code118" language="javascript"></prismcode>
+    </p>
+    <h2 class="content-sub-heading1">Implications of Shadowing:</h2>
+    <h2 class="content-sub-heading">1. Limited Visibility:</h2>
+    <p class="content-sub-heading">The outer variable is not accessible within the scope where the inner variable is
+        declared due to shadowing.</p>
+    <p class="sub-paragraph-description">
+        <prismcode [code]="code119" language="javascript"></prismcode>
+    </p>
+    <h2 class="content-sub-heading">2. Potential Bugs:</h2>
+    <p class="content-sub-heading">Shadowing can lead to confusion and unintended behavior if the developer is not aware
+        of the presence of both inner and outer variables with the same name.</p>
+    <p class="sub-paragraph-description">
+        <prismcode [code]="code120" language="javascript"></prismcode>
+    </p>
+    <h2 class="content-sub-heading1">Mitigating Shadowing:</h2>
+    <ul class="dot-li">
+        <li><strong>Avoiding Shadowing:</strong>To prevent shadowing, use unique variable names within different scopes,
+            or refactor code to avoid naming conflicts.</li>
+        <li><strong>Use Different Naming Conventions:</strong>Adopting naming conventions (e.g., prefixing or suffixing)
+            for variables in different scopes can help differentiate them and reduce the likelihood of shadowing.</li>
+        <li><strong>Be Mindful of Scope:</strong>Understand the scope chain in JavaScript and how variables are resolved
+            to avoid unintended shadowing.</li>
+    </ul>
+    <p class="content-sub-heading">Shadowing variables can be a useful feature for creating local variables within
+        specific scopes without affecting variables in outer scopes. However, it requires careful consideration to avoid
+        confusion and bugs, especially in complex codebases. By understanding the implications of shadowing and adopting
+        best practices, developers can write clearer and more maintainable code.</p>
+
+
+    <h1 class="content-heading" id="Why_eval">Why eval()?</h1>
+    <p class="content-sub-heading">The eval() function in JavaScript is a powerful yet controversial feature that allows
+        you to execute JavaScript code represented as a string. When eval() is called, it evaluates the string passed to
+        it as JavaScript code and executes it within the current lexical scope. While eval() can be useful in certain
+        situations, it also poses security risks and can lead to poor code maintainability if used improperly. Let's
+        explore the reasons for using eval():</p>
+    <h2 class="content-sub-heading1">Reasons for Using eval():</h2>
+    <h2 class="content-sub-heading">1. Dynamic Code Execution:</h2>
+    <p class="content-sub-heading">eval() allows you to execute dynamically generated JavaScript code represented as
+        strings. This can be useful for scenarios where the code to be executed is not known until runtime.</p>
+    <p class="sub-paragraph-description">
+        <prismcode [code]="code121" language="javascript"></prismcode>
+    </p>
+    <h2 class="content-sub-heading">2. Code Transformation:</h2>
+    <p class="content-sub-heading">eval() can be used to dynamically modify or transform JavaScript code before
+        execution. This can be particularly useful in code generation or transformation scenarios.</p>
+    <p class="sub-paragraph-description">
+        <prismcode [code]="code122" language="javascript"></prismcode>
+    </p>
+    <h2 class="content-sub-heading">3. Dynamic Function Creation:</h2>
+    <p class="content-sub-heading">eval() can be used to dynamically create functions from strings. This is often used
+        in scenarios where functions need to be generated based on user input or configuration.</p>
+    <p class="sub-paragraph-description">
+        <prismcode [code]="code123" language="javascript"></prismcode>
+    </p>
+    <h2 class="content-sub-heading1">Considerations when Using eval():</h2>
+    <h2 class="content-sub-heading">1. Security Risks:</h2>
+    <p class="content-sub-heading">eval() can execute arbitrary JavaScript code, including potentially malicious code.
+        This opens up security vulnerabilities such as code injection attacks if user-supplied data is passed to eval()
+        without proper validation.</p>
+    <h2 class="content-sub-heading">2. Performance Impact:</h2>
+    <p class="content-sub-heading">Using eval() can have a performance impact, especially in performance-sensitive
+        applications, due to the overhead of parsing and executing the evaluated code.</p>
+    <h2 class="content-sub-heading">3. Debugging and Maintainability:</h2>
+    <p class="content-sub-heading">Code that relies heavily on eval() can be difficult to debug and maintain since it
+        introduces dynamic behavior that may not be immediately obvious from the source code.</p>
+    <h2 class="content-sub-heading">4. Alternatives:</h2>
+    <p class="content-sub-heading">In many cases, there are safer and more maintainable alternatives to eval(), such as
+        using function constructors, Function(), or more structured approaches to dynamic code generation.</p>
+    <h2 class="content-sub-heading1">Mitigating Shadowing:</h2>
+    <ul class="dot-li">
+        <li>To prevent shadowing, use unique variable names within different scopes, or refactor code to avoid naming
+            conflicts.</li>
+        <li>Adopting naming conventions (e.g., prefixing or suffixing) for variables in different scopes can help
+            differentiate them and reduce the likelihood of shadowing.</li>
+        <li>Understand the scope chain in JavaScript and how variables are resolved to avoid unintended shadowing.</li>
+    </ul>
+    <p class="content-sub-heading">Shadowing variables can be a useful feature for creating local variables within
+        specific scopes without affecting variables in outer scopes. However, it requires careful consideration to avoid
+        confusion and bugs, especially in complex codebases. By understanding the implications of shadowing and adopting
+        best practices, developers can write clearer and more maintainable code.</p>
+    <h2 class="content-sub-heading1">Use Cases for eval():</h2>
+    <ul class="dot-li">
+        <li><strong>Calculator Applications:</strong>eval() can be used to evaluate mathematical expressions entered by
+            users in calculator applications.</li>
+        <li><strong>Dynamic Configuration:</strong>eval() can be used to interpret and execute configuration files or
+            scripts dynamically.</li>
+        <li><strong>Plugin Systems:</strong>eval() can be used in plugin systems to dynamically load and execute plugin
+            code.</li>
+    </ul>
+    <h2 class="content-sub-heading1">Conclusion:</h2>
+    <p class="content-sub-heading">While eval() can be a powerful tool for executing dynamic code in JavaScript, it
+        should be used judiciously and with caution due to its security risks and potential impact on code
+        maintainability. Whenever possible, consider safer alternatives or refactor code to avoid the need for eval().
+        If eval() is necessary, ensure that input is properly validated and sanitized to mitigate security risks.</p>
+
+
+    <h1 class="content-heading" id="Terminology_static_vs_dynamic">Terminology: static vs. dynamic :</h1>
+    <p class="content-sub-heading">In JavaScript, the concepts of static and dynamic phenomena are often discussed in
+        the context of variable scopes and function calls. Let's explore these concepts in more detail:</p>
+    <h2 class="content-sub-heading1">Terminology: Static vs. Dynamic:</h2>
+    <h2 class="content-sub-heading">1. TermiStatic Phenomenon:</h2>
+    <p class="content-sub-heading">Static phenomena in JavaScript often refer to aspects of the language that are
+        determined or resolved during compile time or when the code is initially parsed. This includes features like
+        variable scoping rules and lexical analysis.</p>
+    <h2 class="content-sub-heading">2. Dynamic Phenomenon:</h2>
+    <p class="content-sub-heading">Dynamic phenomena involve behavior that occurs at runtime, such as function
+        invocation, object instantiation, and type coercion. These behaviors are not resolved until the code is
+        executed.</p>
+    <h2 class="content-sub-heading1">Static Phenomenon: Scopes of Variables:</h2>
+    <h2 class="content-sub-heading">1. Global Scope:</h2>
+    <p class="content-sub-heading">Variables declared outside of any function have global scope, meaning they are
+        accessible from anywhere in the codebase.</p>
+    <h2 class="content-sub-heading">2. Local Scope:</h2>
+    <p class="content-sub-heading">Variables declared within a function (using var, let, or const) have local scope,
+        meaning they are accessible only within the function in which they are declared.</p>
+    <h2 class="content-sub-heading">3. Lexical Scope:</h2>
+    <p class="content-sub-heading">JavaScript uses lexical scoping, meaning the scope of a variable is determined by its
+        location within the source code. Inner functions have access to variables declared in their outer scope.</p>
+    <h2 class="content-sub-heading1">Dynamic Phenomenon: Function Calls:</h2>
+    <h2 class="content-sub-heading">1. Dynamic Function Invocation:</h2>
+    <p class="content-sub-heading">JavaScript allows functions to be invoked dynamically at runtime, which means the
+        function to be called can be determined based on program logic or user input.</p>
+    <h2 class="content-sub-heading">2. Callback Functions:</h2>
+    <p class="content-sub-heading">Callback functions are functions passed as arguments to other functions and are
+        invoked later, often in response to an event or asynchronous operation. The specific function to be called can
+        be determined dynamically.</p>
+    <h2 class="content-sub-heading">3. Higher-Order Functions:</h2>
+    <p class="content-sub-heading">Higher-order functions are functions that accept other functions as arguments or
+        return functions as results. These functions enable dynamic behavior by allowing functions to be passed around
+        and invoked dynamically.</p>
+    <h2 class="content-sub-heading1">Examples:</h2>
+    <h2 class="content-sub-heading">1. Static Phenomenon (Variable Scopes):</h2>
+    <p class="sub-paragraph-description">
+        <prismcode [code]="code124" language="javascript"></prismcode>
+    </p>
+    <h2 class="content-sub-heading">2. Dynamic Phenomenon (Function Calls):</h2>
+    <p class="sub-paragraph-description">
+        <prismcode [code]="code125" language="javascript"></prismcode>
+    </p>
+    <h2 class="content-sub-heading1">Conclusion:</h2>
+    <p class="content-sub-heading">Understanding the distinction between static and dynamic phenomena in JavaScript is
+        essential for writing effective and maintainable code. Static phenomena, such as variable scoping rules, are
+        determined during compilation, while dynamic phenomena, like function calls, occur at runtime based on program
+        logic. By mastering both static and dynamic aspects of JavaScript, developers can leverage the full power and
+        flexibility of the language.</p>
+
+
+    <h1 class="content-heading" id="What_is_a_closure">What is a closure? :</h1>
+    <p class="content-sub-heading">A closure in JavaScript is a combination of a function and the lexical environment
+        within which that function was declared. This lexical environment consists of the variables that were in scope
+        at the time the closure was created. In simpler terms, a closure allows a function to remember and access its
+        lexical scope even when it is executed outside of that scope.</p>
+    <h2 class="content-sub-heading1">Key Characteristics of Closures:</h2>
+    <h2 class="content-sub-heading">1. Access to Outer Scope:</h2>
+    <p class="content-sub-heading">Closures have access to variables declared in their outer (enclosing) scope, even
+        after the outer scope has finished executing.</p>
+    <h2 class="content-sub-heading">2. Preservation of Scope Chain:</h2>
+    <p class="content-sub-heading">Closures maintain a reference to the variables in their lexical environment, forming
+        a "closure" around the function that encapsulates its scope chain.</p>
+    <h2 class="content-sub-heading">3. Access to Private Variables:</h2>
+    <p class="content-sub-heading">Closures can be used to create private variables and encapsulate data within a
+        function, preventing external manipulation.</p>
+    <h2 class="content-sub-heading">Example of a Closure</h2>
+    <p class="sub-paragraph-description">
+        <prismcode [code]="code126" language="javascript"></prismcode>
+    </p>
+    <p class="content-sub-heading">In this example:</p>
+    <ul class="dot-li">
+        <li>outerFunction defines a variable outerVariable and declares an inner function innerFunction.</li>
+        <li>innerFunction accesses outerVariable, which is outside of its own scope.</li>
+        <li>When outerFunction is called and returns innerFunction, it creates a closure, capturing the lexical
+            environment of outerFunction.</li>
+        <li>The returned innerFunction retains access to outerVariable even though outerFunction has finished executing.
+        </li>
+    </ul>
+    <h2 class="content-sub-heading1">Use Cases of Closures:</h2>
+    <h2 class="content-sub-heading">1. Encapsulation and Data Privacy:</h2>
+    <p class="content-sub-heading">Closures are commonly used to create private variables and functions, hiding
+        implementation details and preventing direct access to sensitive data.</p>
+    <h2 class="content-sub-heading">2. Callbacks and Event Handlers:</h2>
+    <p class="content-sub-heading">Closures are frequently used in callback functions and event handlers to maintain
+        access to variables in the surrounding context when the function is later invoked.</p>
+    <h2 class="content-sub-heading">3. Memoization and Caching:</h2>
+    <p class="content-sub-heading">Closures can be used to implement memoization techniques, caching the results of
+        expensive computations to improve performance.</p>
+    <h2 class="content-sub-heading">4. Module Patterns:</h2>
+    <p class="content-sub-heading">Closures are instrumental in implementing module patterns, allowing for the creation
+        of modules with private and public methods, enabling better organization and structure in code.</p>
+    <h2 class="content-sub-heading1">Benefits of Closures:</h2>
+    <ul class="dot-li">
+        <li><strong>Encapsulation:</strong>Closures facilitate encapsulation by allowing functions to retain access to
+            variables in their lexical scope, leading to cleaner and more modular code.</li>
+        <li><strong>Code Reusability:</strong>Closures enable the creation of reusable functions that can access their
+            surrounding context, promoting code reuse and reducing duplication.</li>
+        <li><strong>Maintainability:</strong>Closures aid in maintaining the integrity of data and functionality by
+            encapsulating them within well-defined scopes, enhancing code maintainability and reducing the risk of bugs.
+        </li>
+    </ul>
+    <p class="content-sub-heading">Closures are a fundamental concept in JavaScript and are widely used in modern
+        JavaScript programming, contributing to its expressive and flexible nature. Understanding closures is crucial
+        for mastering JavaScript and leveraging its full potential in building robust and scalable </p>
+
+    <h1 class="content-heading" id="Bound_variables_vs_free_variables">Bound variables vs. free variables :</h1>
+    <p class="content-sub-heading">In the context of programming languages, particularly in the realm of functional
+        programming and lambda calculus, two key concepts are often discussed: bound variables and free variables. These
+        concepts are crucial for understanding scoping rules and the behavior of functions. Let's delve into each:</p>
+    <h2 class="content-sub-heading1">Bound Variables:</h2>
+    <h2 class="content-sub-heading">1. Definition:</h2>
+    <p class="content-sub-heading">Bound variables are variables that are locally defined within a certain scope and are
+        confined to that scope. They are typically introduced by quantifiers, lambda abstractions, or other constructs
+        that define scope.</p>
+    <h2 class="content-sub-heading">2. Scope:</h2>
+    <p class="content-sub-heading">Bound variables are confined to the scope in which they are introduced. They have no
+        meaning outside of their enclosing scope.</p>
+    <h2 class="content-sub-heading">3. No Conflicts:</h2>
+    <p class="content-sub-heading">Bound variables can have the same name as variables in outer scopes or other bound
+        variables within different scopes without causing conflicts.</p>
+    <h2 class="content-sub-heading">4. Example:</h2>
+    <p class="content-sub-heading">In the lambda calculus, variables introduced by lambda abstraction (λx. ...) are
+        bound within the scope of the function.</p>
+    <h2 class="content-sub-heading">Example:</h2>
+    <p class="sub-paragraph-description">
+        <prismcode [code]="code127" language="javascript"></prismcode>
+    </p>
+    <p class="content-sub-heading">Here, x is a bound variable within the scope of the lambda abstraction.</p>
+
+    <h2 class="content-sub-heading1">Free Variables:</h2>
+    <h2 class="content-sub-heading">1. Definition:</h2>
+    <p class="content-sub-heading">Free variables are variables that are referenced within a certain scope but are not
+        locally defined within that scope. They are variables that are "free" to take on any value from the surrounding
+        environment.</p>
+    <h2 class="content-sub-heading">2. Scope:</h2>
+    <p class="content-sub-heading">Free variables are not confined to a specific scope; they can be referenced from any
+        enclosing scope where they are defined.</p>
+    <h2 class="content-sub-heading">3. Dependencies:</h2>
+    <p class="content-sub-heading">The value of a free variable depends on where it is evaluated or invoked. It takes on
+        the value of the variable from the closest enclosing scope where it is defined.</p>
+    <h2 class="content-sub-heading">4. Example:</h2>
+    <p class="content-sub-heading">In the lambda calculus, variables that are referenced but not introduced within a
+        lambda abstraction are free variables.</p>
+    <h2 class="content-sub-heading">Example:</h2>
+    <p class="sub-paragraph-description">
+        <prismcode [code]="code128" language="javascript"></prismcode>
+    </p>
+    <p class="content-sub-heading">Here, y is a free variable because it is referenced within the lambda abstraction but
+        not locally defined.</p>
+
+    <h2 class="content-sub-heading1">Relationship and Importance:</h2>
+    <h2 class="content-sub-heading">1. Scope Resolution:</h2>
+    <p class="content-sub-heading">Understanding the distinction between bound and free variables is crucial for
+        resolving variable references and scoping rules in programming languages.</p>
+    <h2 class="content-sub-heading">2. Functional Programming:</h2>
+    <p class="content-sub-heading">In functional programming, functions often manipulate and operate on variables, and
+        understanding bound and free variables helps in understanding the behavior of functions and closures.</p>
+    <h2 class="content-sub-heading">3. Compiler Design:</h2>
+    <p class="content-sub-heading">In compiler design and interpretation, knowledge of bound and free variables is
+        essential for correctly translating and optimizing code.</p>
+    <h2 class="content-sub-heading">4. Lambda Calculus:</h2>
+    <p class="content-sub-heading">In lambda calculus, the distinction between bound and free variables is fundamental
+        for defining and manipulating functions.</p>
+    <h2 class="content-sub-heading1">Conclusion:</h2>
+    <p class="content-sub-heading">Bound and free variables are fundamental concepts in programming languages,
+        influencing scoping rules, function behavior, and compiler design. Understanding these concepts is crucial for
+        writing correct and efficient code, particularly in functional programming paradigms where functions play a
+        central role. By grasping the distinction between bound and free variables, programmers can write more
+        expressive and maintainable code.</p>
 
 </div>
-
-<!-- Declaring twice triggers an error
-    An aside on variable naming rules 
-    Non-Latin letters are allowed, but not recommended 
-    An assignment without use strict 
-    JavaScript Arithmetic 
-    Reuse or create? 
-    Just Like Algebra 
-    One Statement, Many Variables 
-    Value = undefined 
-    What is the Scope of Variables in Javascript
-    What is Global Scope
-    What is Local Scope
-    What is Block Scope
-    What is Function Scope
-    What is Lexical scope
-    temporal dead zone
-    const and let: temporal dead zone 
-    JavaScript Strict Mode for Defining Scope of a Variable 
-    Life of a Variable in JavaScript 
-    const and immutability 
-    const and loops 
-    Deciding between const and let 
-    Shadowing variables 
-    Why eval()
-    Terminology: static vs. dynamic 
-    Static phenomenon: scopes of variables 
-    Dynamic phenomenon: function calls 
-    Global variables and the global object 
-    globalThis 
-    Alternatives to globalThis 
-    Use cases for globalThis 
-    scope and activation 
-    Function declarations and early activation 
-    Calling ahead without early activation 
-    A pitfall of early activation 
-    The pros and cons of early activation 
-    Class declarations are not activated early 
-    var: hoisting (partial early activation) 
-    Closures 
-    Bound variables vs. free variables 
-    What is a closure? 
-    Example: A factory for incrementors 
-    Use cases for closures  -->

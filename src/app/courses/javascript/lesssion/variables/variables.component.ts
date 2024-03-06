@@ -10,7 +10,7 @@ import { SharedService } from 'src/app/shared/service/shared-service';
 export class VariablesComponent implements OnInit, OnDestroy {
 
   constructor(public shearedService: SharedService) { }
-
+  block: string = '{}';
   ngOnInit(): void { this.callOninIt(); }
 
   callOninIt() {
@@ -35,48 +35,24 @@ export class VariablesComponent implements OnInit, OnDestroy {
       { name: 'Undefined Variable Value in JavaScript', id: "Undefined_Variable_Value_in_JavaScript" },
       { name: 'A real-life analogy', id: "A_real_life_analogy" },
       { name: 'Declaring twice triggers an error', id: "Declaring_twice_triggers_an_error" },
-      { name: 'An aside on variable naming rules', id: "An_aside_on_variable_naming_rules" },
-      { name: 'Non-Latin letters are allowed, but not recommended', id: "Non_Latin_letters_are_allowed_but_not_recommended" },
-      { name: 'An assignment without use strict', id: "An_assignment_without_use_strict" },
-      { name: 'JavaScript Arithmetic', id: "JavaScript_Arithmetic" },
-      { name: 'Reuse or create?', id: "Reuse_or_create" },
-      { name: 'Just Like Algebra', id: "Just_Like_Algebra" },
-      { name: 'One Statement, Many Variables', id: "One_Statement_Many_Variables" },
-      { name: 'Value = undefined', id: "Value_equals_undefined" },
       { name: 'What is the Scope of Variables in JavaScript?', id: "What_is_the_Scope_of_Variables_in_Javascript" },
       { name: 'What is Global Scope?', id: "What_is_Global_Scope" },
       { name: 'What is Local Scope?', id: "What_is_Local_Scope" },
       { name: 'What is Block Scope?', id: "What_is_Block_Scope" },
       { name: 'What is Function Scope?', id: "What_is_Function_Scope" },
       { name: 'What is Lexical scope?', id: "What_is_Lexical_scope" },
-      { name: 'temporal dead zone', id: "temporal_dead_zone" },
-      { name: 'const and let: temporal dead zone', id: "const_and_let_temporal_dead_zone" },
+      { name: 'Hoisting ?', id: "What_is_Hoisting_scope" },
+      { name: 'Nested Scope ?', id: "What_is_Nested_Scope" },
+      { name: 'Temporal dead zone', id: "temporal_dead_zone" },
       { name: 'JavaScript Strict Mode for Defining Scope of a Variable', id: "JavaScript_Strict_Mode_for_Defining_Scope_of_a_Variable" },
       { name: 'Life of a Variable in JavaScript', id: "Life_of_a_Variable_in_JavaScript" },
       { name: 'const and immutability', id: "const_and_immutability" },
       { name: 'const and loops', id: "const_and_loops" },
-      { name: 'Deciding between const and let', id: "Deciding_between_const_and_let" },
       { name: 'Shadowing variables', id: "Shadowing_variables" },
       { name: 'Why eval()?', id: "Why_eval" },
       { name: 'Terminology: static vs. dynamic', id: "Terminology_static_vs_dynamic" },
-      { name: 'Static phenomenon: scopes of variables', id: "Static_phenomenon_scopes_of_variables" },
-      { name: 'Dynamic phenomenon: function calls', id: "Dynamic_phenomenon_function_calls" },
-      { name: 'Global variables and the global object', id: "Global_variables_and_the_global_object" },
-      { name: 'globalThis', id: "globalThis" },
-      { name: 'Alternatives to globalThis', id: "Alternatives_to_globalThis" },
-      { name: 'Use cases for globalThis', id: "Use_cases_for_globalThis" },
-      { name: 'scope and activation', id: "scope_and_activation" },
-      { name: 'Function declarations and early activation', id: "Function_declarations_and_early_activation" },
-      { name: 'Calling ahead without early activation', id: "Calling_ahead_without_early_activation" },
-      { name: 'A pitfall of early activation', id: "A_pitfall_of_early_activation" },
-      { name: 'The pros and cons of early activation', id: "The_pros_and_cons_of_early_activation" },
-      { name: 'Class declarations are not activated early', id: "Class_declarations_are_not_activated_early" },
-      { name: 'var: hoisting (partial early activation)', id: "var_hoisting_partial_early_activation" },
-      { name: 'Closures', id: "Closures" },
-      { name: 'Bound variables vs. free variables', id: "Bound_variables_vs_free_variables" },
       { name: 'What is a closure?', id: "What_is_a_closure" },
-      { name: 'Example: A factory for incrementors', id: "Example_A_factory_for_incrementors" },
-      { name: 'Use cases for closures', id: "Use_cases_for_closures" },
+      { name: 'Bound variables vs. free variables', id: "Bound_variables_vs_free_variables" },
     ];
     this.shearedService.rSidebar_Id_Data$.next(data);
   }
@@ -519,8 +495,274 @@ let totalPrice = subtotal * (1 + TAX_RATE);
     console.log("z is defined");
   }
   `;
-  code86: string = ``;
+  code86: string = `
+  let age = 25; // Declaring 'age' variable
 
+  // Attempting to declare 'age' variable again in the same scope
+  let age = 30; // This will trigger an error
+  `;
+  code87: string = `Uncaught SyntaxError: Identifier 'age' has already been declared`;
+  code88: string = `
+  let globalVariable = "I'm in global scope";
+
+  function myFunction() {
+      console.log(globalVariable); // Output: I'm in global scope
+  }
+  myFunction();
+  `;
+  code89: string = `
+  function myFunction() {
+    let localVariable = "I'm in local scope";
+    console.log(localVariable); // Output: I'm in local scope
+}
+myFunction();
+console.log(localVariable); // Throws ReferenceError: localVariable is not defined
+`;
+  code90: string = `
+{
+    let blockVariable = "I'm in block scope";
+    console.log(blockVariable); // Output: I'm in block scope
+}
+console.log(blockVariable); // Throws ReferenceError: blockVariable is not defined
+`;
+  code91: string = `
+{
+    let blockVariable = "I'm in block scope";
+    console.log(blockVariable); // Output: I'm in block scope
+}
+console.log(blockVariable); // Throws ReferenceError: blockVariable is not defined
+`;
+  code92: string = `
+  function myFunction() {
+    var functionVariable = "I'm in function scope";
+    console.log(functionVariable); // Output: I'm in function scope
+}
+myFunction();
+console.log(functionVariable); // Throws ReferenceError: functionVariable is not defined
+`;
+  code93: string = `
+function outerFunction() {
+    let outerVariable = "Outer";
+
+    function innerFunction() {
+        console.log(outerVariable); // Inner function has access to outerVariable
+    }
+
+    innerFunction();
+}
+
+outerFunction(); // Output: Outer
+`;
+  code94: string = `
+  console.log(x); // Output: undefined
+  var x = 5;
+  `;
+  code95: string = `
+  myFunction(); // Output: Hello, world!
+  function myFunction() {
+      console.log("Hello, world!");
+  }
+  `;
+  code96: string = `
+function outerFunction() {
+    let outerVariable = "Outer";
+
+    function innerFunction() {
+        let innerVariable = "Inner";
+        console.log(outerVariable); // Inner function has access to outerVariable
+        console.log(innerVariable); // Inner function has access to innerVariable
+    }
+
+    innerFunction(); // Output: Outer, Inner
+}
+
+outerFunction();
+`;
+  code97: string = `
+  console.log(myVariable); // Throws ReferenceError: Cannot access 'myVariable' before initialization
+  let myVariable = 10;
+  `;
+  code98: string = `
+'use strict';
+
+  // Strict mode enabled for this script
+  
+  function myFunction() {
+      // Strict mode enabled for this function and its nested functions
+  }
+  `;
+  code99: string = `
+  'use strict';
+
+  function myFunction() {
+      myVar = 10; // Throws ReferenceError: myVar is not defined
+  }
+  `;
+  code100: string = `
+  // Module script (strict mode is automatically enabled)
+  export function myFunction() {
+      myVar = 10; // Throws ReferenceError: myVar is not defined
+  }
+  `;
+  code101: string = `
+  function myFunction() {
+    'use strict';
+    // Strict mode enabled for this function
+
+    {
+        // Non-strict mode block
+        // Strict mode is not enforced here
+    }
+}
+`;
+  code102: string = `let myVariable; // Declaration stage`;
+  code103: string = `let myVariable = 10; // Initialization stage`;
+  code104: string = `myVariable = 20; // Assignment stage`;
+  code105: string = `
+let globalVariable = 10; // Global scope
+  function myFunction() {
+      let localVariable = 20; // Function scope
+      {
+          let blockVariable = 30; // Block scope
+      }
+  }
+  `;
+  code106: string = `
+  console.log(myVariable); // Usage stage (reading)
+  myVariable = 30; // Usage stage (modification)
+  `;
+  code107: string = `
+function myFunction() {
+    let localVariable = 20;
+    // End of life stage for localVariable when myFunction completes execution
+}
+`;
+  code108: string = `
+  const myConst = 10;
+  myConst = 20; // Throws TypeError: Assignment to constant variable
+  `;
+  code109: string = `const myConst = 10;`;
+  code110: string = `
+  const myArray = [1, 2, 3];
+  myArray.push(4); // This is allowed
+  `;
+  code111: string = `
+  const myObject = Object.freeze({ key: 'value' });
+  myObject.key = 'new value'; // This will not change the value of 'key'
+  `;
+  code112: string = `
+  const { List } = require('immutable');
+  const myList = List([1, 2, 3]);
+  const newList = myList.push(4); // Returns a new List with the additional element
+  `;
+  code113: string = `
+  const array = [1, 2, 3];
+  for (const element of array) {
+      console.log(element);
+  }
+  `;
+  code114: string = `
+  const array = [1, 2, 3];
+  for (const element of array) {
+      array.push(element * 2); // Allowed, but be cautious of infinite loops
+  }
+  `;
+  code115: string = `
+  const limit = 5;
+  for (let i = 0; i < limit; i++) {
+      // Cannot reassign 'i' within the loop
+      console.log(i);
+  }
+  `;
+  code116: string = `
+  const limit = 5;
+  for (let i = 0; i < limit; i++) {
+      console.log(i);
+  }
+  console.log(i); // Throws ReferenceError: i is not defined
+  `;
+  code117: string = `
+  let x = 10; // Outer variable
+  function myFunction() {
+      let x = 20; // Inner variable shadows outer variable
+      console.log(x); // Output: 20
+  }
+  myFunction();
+  console.log(x); // Output: 10 (outer variable remains unchanged)
+  `;
+  code118: string = `
+  let y = 10; // Outer variable
+  {
+      let y = 20; // Inner variable shadows outer variable
+      console.log(y); // Output: 20
+  }
+  console.log(y); // Output: 10 (outer variable remains unchanged)
+  `;
+  code119: string = `
+  let z = 10;
+  function myFunction() {
+      let z = 20;
+      console.log(z); // Output: 20
+  }
+  myFunction();
+  console.log(z); // Output: 10 (outer variable remains unchanged)
+  `;
+  code120: string = `
+  let count = 5;
+  function increaseCount() {
+      for (let count = 0; count < 3; count++) {
+          console.log(count); // Output: 0, 1, 2
+      }
+      console.log(count); // Output: 5 (outer variable remains unchanged)
+  }
+  increaseCount();
+  `;
+  code121: string = `
+  const expression = '2 + 3';
+  const result = eval(expression); // result will be 5
+  `;
+  code122: string = `
+  const code = 'console.log("Hello, world!")';
+  eval(code.replace('world', 'JavaScript')); // Outputs: Hello, JavaScript!
+  `;
+  code123: string = `
+  const functionName = 'myFunction';
+  const functionBody = 'console.log("This is a dynamically created function")';
+  eval(\`function \${functionName}() { \${functionBody} }\`); 
+  myFunction(); // Outputs: This is a dynamically created function
+  `;
+  code124: string = `
+  var globalVar = 10; // Global variable
+  function myFunction() {
+      var localVar = 20; // Local variable
+      console.log(globalVar); // Accessible (static)
+      console.log(localVar); // Accessible (static)
+  }
+  `;
+  code125: string = `
+function greet(name) {
+    console.log('Hello, ' + name + '!'); // Dynamic function invocation
+}
+function sayHello() {
+    greet('John'); // Dynamic function call
+}
+`;
+  code126: string = `
+  function outerFunction() {
+    let outerVariable = 'I am from the outer function';
+    
+    function innerFunction() {
+        console.log(outerVariable); // Accessing outerVariable from outer scope
+    }
+    
+    return innerFunction; // Return the inner function
+}
+
+const closure = outerFunction(); // Assign the inner function to a variable
+closure(); // This will log: "I am from the outer function"
+`;
+  code127: string = `λx. x + 1`;
+  code128: string = `λx. y + x`;
 
   ngOnDestroy(): void { this.shearedService.rSidebar_Id_Data$.next([]); }
 }
