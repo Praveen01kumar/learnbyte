@@ -1229,6 +1229,7 @@ export const ngTopics = {
     grouping_and_sequencing: "grouping-and-sequencing",
     dynamic_animations: "dynamic-animations",
     integration_with_angular_directives: "integration-with-angular-directives",
+    inter_views: "inter-views",
 }
 
 export const AngularContent: Content = {
@@ -1509,6 +1510,11 @@ export const AngularContent: Content = {
             { sub_title: "Dynamic Animations", href: ngTopics?.dynamic_animations },
             { sub_title: "Integration with Angular Directives", href: ngTopics?.integration_with_angular_directives }
         ]
+    },
+    {
+        list_title: "InterView",
+        href: ngTopics?.inter_views,
+        sub_list: []
     },
     ]
 }

@@ -182,6 +182,8 @@ import { AnimationMetadataComponent } from './lesssion/animation-metadata/animat
 import { GroupingAndSequencingComponent } from './lesssion/grouping-and-sequencing/grouping-and-sequencing.component';
 import { DynamicAnimationsComponent } from './lesssion/dynamic-animations/dynamic-animations.component';
 import { IntegrationWithAngularDirectivesComponent } from './lesssion/integration-with-angular-directives/integration-with-angular-directives.component';
+import { InterViewsComponent } from './lesssion/inter-views/inter-views.component';
+import { PrismcodeComponent } from 'src/app/shared/components/prismcode/prismcode.component';
 
 @NgModule({
   declarations: [
@@ -364,12 +366,14 @@ import { IntegrationWithAngularDirectivesComponent } from './lesssion/integratio
     AnimationMetadataComponent,
     GroupingAndSequencingComponent,
     DynamicAnimationsComponent,
-    IntegrationWithAngularDirectivesComponent
+    IntegrationWithAngularDirectivesComponent,
+    InterViewsComponent
   ],
   imports: [
     CommonModule,
     AngularRoutingModule,
-    ContentboxComponent
+    ContentboxComponent,
+    PrismcodeComponent
   ]
 })
 export class AngularModule { }
