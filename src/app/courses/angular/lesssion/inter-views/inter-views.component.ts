@@ -69,6 +69,7 @@ export class InterViewsComponent implements OnInit, OnDestroy {
       { name: 'What is the purpose of common module?', id: "What_is_the_purpose_of_common_module" },
       { name: 'What is codelyzer?', id: "What_is_codelyzer" },
       { name: 'What is angular animation?', id: "What_is_angular_animation" },
+      { name: 'What are the steps to use animation module?', id: "What_are_the_steps_to_use_animation_module" },
       { name: 'What is State function?', id: "What_is_State_function" },
       { name: 'What is Style function?', id: "What_is_Style_function" },
       { name: 'What is the purpose of animate function?', id: "What_is_the_purpose_of_animate_function" },
