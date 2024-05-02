@@ -1,0 +1,804 @@
+<div class="javascript-interviews">
+    <div class="content-list">
+        <a *ngFor=" let item of contentList;let i = index;" href="javascript:void(0)"
+            (click)="scroll('#'+item?.id)">{{i+1}}. {{item?.name}}</a>
+    </div>
+
+    <div class="questions" id="What_is_javascript">
+        <h1>1. What is javascript?</h1>
+    </div>
+    <div class="answers">
+        <p>JavaScript is a high-level, interpreted programming language primarily used for adding interactivity and
+            dynamic behavior to web pages. Initially developed by Brendan Eich at Netscape in 1995, JavaScript has
+            evolved to become one of the most widely used languages on the web.</p>
+        <p>Here are some key points about JavaScript:</p>
+        <ol>
+            <li><b>Client-Side Scripting: </b>JavaScript is mainly used as a client-side scripting language, meaning it
+                runs on the user's web browser rather than on the web server. This allows developers to create dynamic
+                web content that responds to user actions without needing to communicate with the server.</li>
+            <li><b>Versatile Language: </b>JavaScript is versatile and can be used for a variety of purposes, including
+                building web applications, creating interactive web pages, developing mobile apps (using frameworks like
+                React Native or Ionic), building server-side applications (using Node.js), and more.</li>
+            <li><b>Interactivity and Event Handling: </b>JavaScript allows developers to create interactive elements on
+                web pages, such as forms, buttons, animations, and games. It provides APIs for handling user actions
+                like clicks, mouse movements, keyboard input, and touch events.</li>
+            <li><b>Dynamic HTML Manipulation: </b>JavaScript can manipulate the HTML and CSS of a web page in real-time.
+                This means you can dynamically change the content, style, and structure of a webpage based on user
+                interactions or other conditions.</li>
+            <li><b>Asynchronous Programming: </b>JavaScript supports asynchronous programming, allowing tasks to be
+                executed concurrently without blocking the execution of other code. This is crucial for handling
+                operations like fetching data from servers, processing user input, or performing animations without
+                freezing the user interface.</li>
+            <li><b>Cross-Platform Compatibility: </b>JavaScript is supported by all modern web browsers, including
+                Chrome, Firefox, Safari, Edge, and Opera. Additionally, with the rise of server-side JavaScript
+                frameworks like Node.js, JavaScript can also be used for building server-side applications, making it a
+                full-stack language.</li>
+        </ol>
+        <p>Overall, JavaScript is a powerful and flexible language that plays a vital role in modern web development,
+            enabling developers to create rich, interactive web experiences.</p>
+    </div>
+
+    <div class="questions" id="What_are_the_various_data_types_exist_in_JavaScript">
+        <h1>2. What are the various data types exist in JavaScript?</h1>
+    </div>
+    <div class="answers">
+        <p>JavaScript supports several data types, which can be broadly categorized into two groups: primitive data
+            types and non-primitive (or reference) data types. Here's an overview of each:</p>
+        <ol>
+            <li>
+                <b>Primitive Data Types:</b>
+                <ul style="margin-left: 20px;">
+                    <li><b>Number:</b>Represents numeric values, including integers and floating-point numbers.</li>
+                    <li><b>String:</b>Represents sequences of characters enclosed within single or double quotes.</li>
+                    <li><b>Boolean:</b>Represents logical values, true or false, used for decision-making.</li>
+                    <li><b>Null:</b>Represents the intentional absence of any value.</li>
+                    <li><b>Undefined:</b>Represents a variable that has been declared but not assigned a value.</li>
+                    <li><b>Symbol:</b>Represents unique identifiers, often used as object keys.</li>
+                </ul>
+            </li>
+            <li>
+                <b>Non-Primitive (Reference) Data Types:</b>
+                <ul style="margin-left: 20px;">
+                    <li><b>Object: </b>Represents a collection of key-value pairs where values can be primitive or
+                        reference types. Objects are used for storing complex data structures and are the fundamental
+                        building blocks of JavaScript. Example: &lbrace; name: 'John', age: 30 &rbrace;.</li>
+                    <li><b>Array: </b>Represents a list-like collection of elements. Arrays can contain elements of any
+                        data type, including other arrays and objects. Example: [1, 2, 3, 4, 5].</li>
+                    <li><b>Function: </b>Represents a reusable block of code that can be invoked with a set of
+                        arguments. Functions are first-class citizens in JavaScript, meaning they can be assigned to
+                        variables, passed as arguments, and returned from other functions. Example: function add(a, b)
+                        &lbrace; return a + b; &rbrace;.</li>
+                    <li><b>Date: </b>Represents a specific point in time, typically expressed as a timestamp. Date
+                        objects are used for working with dates and times. Example: new Date().</li>
+                    <li><b>RegExp: </b>Represents a regular expression, used for pattern matching within strings.
+                        Regular expressions provide a powerful way to search, match, and replace text. Example:
+                        /pattern/.</li>
+                </ul>
+            </li>
+        </ol>
+        <p></p>
+    </div>
+
+    <div class="questions" id="what_is_truthy_and_falsy_value">
+        <h1>3. what is truthy and falsy values?</h1>
+    </div>
+    <div class="answers">
+        <p>Truthy and falsy values in JavaScript refer to values that are inherently considered as either "true" or
+            "false" when evaluated in a boolean context, such as in conditionals or logical operations. Understanding
+            truthy and falsy values is important because it affects how JavaScript behaves when conditions are
+            evaluated.</p>
+        <p>Here's a brief explanation along with examples:</p>
+        <ol>
+            <li>
+                <b>Truthy Values:</b>
+                <ul>
+                    <li>Any value that is not explicitly false, null, undefined, 0, NaN, or an empty string ('') is
+                        considered truthy.</li>
+                    <li>When evaluated in a boolean context, truthy values result in true.</li>
+                    <li>
+                        <prismcode [code]="code" language="javascript"></prismcode>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <b>Falsy Values:</b>
+                <ul>
+                    <li>Values that are inherently false, empty, or represent absence are considered falsy.</li>
+                    <li>When evaluated in a boolean context, falsy values result in false.</li>
+                    <li>
+                        <prismcode [code]="code1" language="javascript"></prismcode>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+        <p>Understanding truthy and falsy values is crucial when writing conditions in JavaScript. It allows for concise
+            and readable code by leveraging the implicit boolean coercion of values.</p>
+    </div>
+
+    <div class="questions" id="What_are_the_possible_ways_to_create_objects_in_JavaScript">
+        <h1>4. What are the possible ways to create objects in JavaScript?</h1>
+    </div>
+    <div class="answers">
+        <p>There are many ways to create objects in javascript as mentioned below:</p>
+        <ol>
+            <li>
+                <b>Object Literal</b>
+                <p>The simplest way to create an object is by using object literal notation, which involves enclosing
+                    key-value pairs within curly braces &lbrace;&rbrace;.</p>
+                <prismcode [code]="code2" language="javascript"></prismcode>
+            </li>
+            <li>
+                <b>Constructor Function</b>
+                <p>You can create objects using constructor functions, which are regular functions used with the new
+                    keyword to create instances of objects.</p>
+                <prismcode [code]="code3" language="javascript"></prismcode>
+            </li>
+            <li>
+                <b>Object.create()</b>
+                <p>The Object.create() method allows you to create a new object with the specified prototype object and
+                    optional properties.</p>
+                <prismcode [code]="code4" language="javascript"></prismcode>
+            </li>
+            <li>
+                <b>Object constructor:</b>
+                <p>The simplest way to create an empty object is using the Object constructor. Currently this approach
+                    is not recommended.</p>
+                <prismcode [code]="code5" language="javascript"></prismcode>
+                <p>The Object() is a built-in constructor function so "new" keyword is not required. The above code
+                    snippet can be re-written as:</p>
+                <prismcode [code]="code6" language="javascript"></prismcode>
+            </li>
+            <li>
+                <b>Function constructor with prototype:</b>
+                <p>This is similar to function constructor but it uses prototype for their properties and methods,</p>
+                <prismcode [code]="code7" language="javascript"></prismcode>
+                <p>This is equivalent to creating an instance with Object.create method with a function prototype and
+                    then calling that function with an instance and parameters as arguments.</p>
+                <prismcode [code]="code8" language="javascript"></prismcode>
+                <p>OR</p>
+                <prismcode [code]="code9" language="javascript"></prismcode>
+            </li>
+            <li>
+                <b>Object's assign method:</b>
+                <p>The Object.assign method is used to copy all the properties from one or more source objects and
+                    stores them into a target object.</p>
+                <p>The following code creates a new staff object by copying properties of his working company and the
+                    car he owns.</p>
+                <prismcode [code]="code10" language="javascript"></prismcode>
+            </li>
+            <li>
+                <b>Class Syntax (Introduced in ECMAScript 2015)</b>
+                <p>JavaScript classes provide syntactical sugar over constructor functions and prototypes. You can use
+                    the class keyword to define a class and create objects using the new keyword.</p>
+                <prismcode [code]="code11" language="javascript"></prismcode>
+            </li>
+            <li>
+                <b>Factory Functions</b>
+                <p>Factory functions are regular functions that return an object. They can be useful for creating
+                    multiple similar objects without the need for constructors.</p>
+                <prismcode [code]="code12" language="javascript"></prismcode>
+            </li>
+            <li>
+                <b>Singleton pattern</b>
+                <p>A Singleton is an object which can only be instantiated one time. Repeated calls to its constructor
+                    return the same instance. This way one can ensure that they don't accidentally create multiple
+                    instances.</p>
+                <prismcode [code]="code13" language="javascript"></prismcode>
+            </li>
+        </ol>
+    </div>
+
+    <div class="questions" id="What_is_a_prototype_chain">
+        <h1>5. What is a prototype chain?</h1>
+    </div>
+    <div class="answers">
+        <p>In JavaScript, every object has an internal property called [[Prototype]] (commonly referred to as the
+            "prototype"), which refers to another object. This object is often called the object's prototype, and it
+            forms what is known as the "prototype chain."</p>
+        <p>Here's how the prototype chain works:</p>
+        <ol>
+            <li>
+                <b>Object Prototype</b>
+                <ul style="margin-right: 20px;">
+                    <li>Every JavaScript object has a prototype except for the base object itself, which is the root of
+                        the prototype chain.</li>
+                    <li>The base object's prototype is null.</li>
+                </ul>
+            </li>
+            <li>
+                <b>Prototype Inheritance</b>
+                <ul style="margin-right: 20px;">
+                    <li>When you access a property or method on an object, JavaScript first looks for that property or
+                        method on the object itself.</li>
+                    <li>If the property or method is not found on the object, JavaScript then looks at the object's
+                        prototype (the object referenced by its [[Prototype]] property) and continues the search there.
+                    </li>
+                    <li>This process continues recursively until the property or method is found or until the end of the
+                        prototype chain (i.e., when the [[Prototype]] property of an object is null).</li>
+                </ul>
+            </li>
+            <li>
+                <b>Prototype Chain</b>
+                <ul style="margin-right: 20px;">
+                    <li>The prototype chain is essentially a series of linked objects, where each object's prototype is
+                        the previous object in the chain.</li>
+                    <li>By following this chain, JavaScript can implement inheritance, allowing objects to inherit
+                        properties and methods from their prototype objects.</li>
+                </ul>
+            </li>
+        </ol>
+        <p>Here's a simple example to illustrate the prototype chain:</p>
+        <prismcode [code]="code14" language="javascript"></prismcode>
+        <p>Understanding the prototype chain is essential for understanding how inheritance works in JavaScript and how
+            objects share behavior and properties.</p>
+    </div>
+
+    <div class="questions" id="What_is_the_difference_between_Call_Apply_and_Bind">
+        <h1>6. What is the difference between Call, Apply and Bind?</h1>
+    </div>
+    <div class="answers">
+        <p>call, apply, and bind are methods in JavaScript that are used to manipulate the context (this keyword) of
+            functions. Here's the difference between them:</p>
+        <ol>
+            <li>
+                <b>call</b>
+                <ul style="margin-left: 20px;">
+                    <li>The call method is used to invoke a function with a specific this value and arguments provided
+                        individually.</li>
+                    <li>It takes the this value as the first argument, followed by any additional arguments as needed.
+                    </li>
+                    <li>
+                        <prismcode [code]="code15" language="javascript"></prismcode>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <b>apply</b>
+                <ul style="margin-left: 20px;">
+                    <li>Similar to call, the apply method is used to invoke a function with a specific this value and
+                        arguments provided as an array or an array-like object.</li>
+                    <li>It takes the this value as the first argument and an array (or array-like object) containing the
+                        arguments as the second argument.</li>
+                    <li>
+                        <prismcode [code]="code16" language="javascript"></prismcode>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <b>bind</b>
+                <ul style="margin-left: 20px;">
+                    <li>The bind method is used to create a new function with a specified this value and optionally
+                        pre-filled arguments.</li>
+                    <li>It does not immediately invoke the function but returns a new function with the specified
+                        context and arguments.</li>
+                    <li>
+                        <prismcode [code]="code17" language="javascript"></prismcode>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+        <p>In summary:</p>
+        <ul>
+            <li>Use call when you want to pass arguments individually.</li>
+            <li>Use apply when you want to pass arguments as an array or array-like object.</li>
+            <li>Use bind when you want to create a new function with a specified context and optionally pre-filled
+                arguments, without immediately invoking the function.</li>
+        </ul>
+    </div>
+
+    <div class="questions" id="what_is_this_in_Javascript">
+        <h1>7. what is "this" in Javascript?</h1>
+    </div>
+    <div class="answers">
+        <p>In JavaScript, this is a special keyword that refers to the object on which a method is being invoked, or in
+            other words, the context in which a function is called. The value of this depends on how a function is
+            called, and it is determined dynamically at runtime. Understanding this is crucial for working with
+            object-oriented JavaScript and for maintaining the correct context within functions.</p>
+        <p>Here are some key points about this:</p>
+        <ol>
+            <li>
+                <b>Global Context</b>
+                <ul style="margin-left: 20px;">
+                    <li>In the global scope (outside of any function), this refers to the global object.</li>
+                    <li>In a web browser environment, the global object is window.</li>
+                    <li>
+                        <prismcode [code]="code18" language="javascript"></prismcode>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <b>Function Context</b>
+                <ul style="margin-left: 20px;">
+                    <li>Inside a function, the value of this depends on how the function is invoked.</li>
+                    <li>If a function is called as a method of an object, this refers to the object itself.</li>
+                    <li>
+                        <prismcode [code]="code19" language="javascript"></prismcode>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <b>Constructor Context</b>
+                <ul style="margin-left: 20px;">
+                    <li>When a function is used as a constructor with the new keyword, this refers to the newly created
+                        instance of the object.</li>
+                    <li>
+                        <prismcode [code]="code20" language="javascript"></prismcode>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <b>Explicit Binding</b>
+                <ul style="margin-left: 20px;">
+                    <li>You can explicitly set the value of this using call, apply, or bind methods.</li>
+                    <li>This allows you to control the context in which a function is called.</li>
+                    <li>
+                        <prismcode [code]="code21" language="javascript"></prismcode>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <b>Arrow Functions</b>
+                <ul style="margin-left: 20px;">
+                    <li>Arrow functions do not have their own this context. Instead, they inherit this from the
+                        surrounding lexical scope (the context in which they are defined).</li>
+                    <li>
+                        <prismcode [code]="code22" language="javascript"></prismcode>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+        <p>Understanding how this behaves in different contexts is essential for writing effective and maintainable
+            JavaScript code.</p>
+    </div>
+
+    <div class="questions" id="What_is_JSON_and_its_common_operations">
+        <h1>8. What is JSON and its common operations?</h1>
+    </div>
+    <div class="answers">
+        <p>JSON is a text-based data format following JavaScript object syntax, which was popularized by Douglas
+            Crockford. It is useful when you want to transmit data across a network. It is basically just a text file
+            with an extension of .json, and a MIME type of application/json</p>
+        <p>Parsing: Converting a string to a native object</p>
+        <prismcode [code]="code23" language="javascript"></prismcode>
+        <p>Stringification: Converting a native object to a string so that it can be transmitted across the network</p>
+        <prismcode [code]="code24" language="javascript"></prismcode>
+    </div>
+
+    <div class="questions" id="What_is_the_purpose_of_the_array_slice_method">
+        <h1>9. What is the purpose of the array slice method?</h1>
+    </div>
+    <div class="answers">
+        <p>The slice() method in JavaScript is used to extract a section of an array and return a new array containing
+            the extracted elements. It does not modify the original array; instead, it returns a shallow copy of a
+            portion of the array.</p>
+        <p>Here's the purpose of the slice() method along with examples:</p>
+        <ol>
+            <li>
+                <b>Extracting a Range of Elements</b>
+                <p>You can use slice() to extract a range of elements from an array. Provide the starting index
+                    (inclusive) and the ending index (exclusive).</p>
+                <prismcode [code]="code25" language="javascript"></prismcode>
+            </li>
+            <li>
+                <b>Copying an Entire Array</b>
+                <p>You can use slice() without any arguments to create a shallow copy of the entire array.</p>
+                <prismcode [code]="code26" language="javascript"></prismcode>
+            </li>
+            <li>
+                <b>Extracting the Last n Elements</b>
+                <p>You can use negative indices to extract elements starting from the end of the array.</p>
+                <prismcode [code]="code27" language="javascript"></prismcode>
+            </li>
+            <li>
+                <b>Extracting Elements from a Specific Index to the End</b>
+                <p>You can omit the second argument to extract elements from a specific index to the end of the array.
+                </p>
+                <prismcode [code]="code28" language="javascript"></prismcode>
+            </li>
+            <li>
+                <b>Using Slice with Strings</b>
+                <p>slice() can also be used with strings to extract substrings based on character indices.</p>
+                <prismcode [code]="code29" language="javascript"></prismcode>
+            </li>
+            <li>
+                <b>Extracting Elements from an Empty Array</b>
+                <p>slice() can be used on an empty array to return a new empty array.</p>
+                <prismcode [code]="code30" language="javascript"></prismcode>
+            </li>
+        </ol>
+        <p>The slice() method is versatile and useful for extracting and copying portions of arrays and strings without
+            modifying the original data.</p>
+    </div>
+
+    <div class="questions" id="What_is_the_purpose_of_the_array_splice_method">
+        <h1>10. What is the purpose of the array splice method?</h1>
+    </div>
+    <div class="answers">
+        <p>The splice() method in JavaScript is used to change the contents of an array by removing or replacing
+            existing elements and/or adding new elements in place. Unlike the slice() method, which returns a new array
+            containing a portion of the original array, splice() modifies the original array directly.</p>
+        <p>Here's the syntax of the splice() method:</p>
+        <prismcode [code]="code31" language="javascript"></prismcode>
+        <ul>
+            <li>startIndex: The index at which to start changing the array.</li>
+            <li>deleteCount: The number of elements to remove from the array (starting from startIndex). If set to 0, no
+                elements will be removed.</li>
+            <li>item1, item2, ...: Optional items to add to the array at startIndex.</li>
+        </ul>
+        <p>Here are some examples of using the splice() method:</p>
+        <ol>
+            <li>
+                <b>Removing Elements</b>
+                <p>Remove elements starting from a specified index (startIndex) and delete a certain number of elements
+                    (deleteCount).</p>
+                <prismcode [code]="code32" language="javascript"></prismcode>
+            </li>
+            <li>
+                <b>Replacing Elements</b>
+                <p>Replace elements starting from a specified index (startIndex) and delete a certain number of elements
+                    (deleteCount), then insert new elements.</p>
+                <prismcode [code]="code33" language="javascript"></prismcode>
+            </li>
+            <li>
+                <b>Adding Elements</b>
+                <p>Add new elements to an array at a specific index (startIndex) without removing any elements
+                    (deleteCount set to 0).</p>
+                <prismcode [code]="code34" language="javascript"></prismcode>
+            </li>
+            <li>
+                <b>Removing and Returning Elements</b>
+                <p>You can use splice() to both remove elements and return them as a new array.</p>
+                <prismcode [code]="code35" language="javascript"></prismcode>
+            </li>
+        </ol>
+        <p>The splice() method is versatile and allows for various manipulations of array contents, including removal,
+            replacement, and insertion, all within the same operation.</p>
+    </div>
+
+    <div class="questions" id="what_is_the_difference_between_slice_and_splice">
+        <h1>11. what is the difference between slice and splice?</h1>
+    </div>
+    <div class="answers">
+        <p>The main difference between slice() and splice() in JavaScript lies in how they modify the original array:
+        </p>
+        <ol>
+            <li>
+                <b>slice()</b>
+                <ul>
+                    <li>Returns a new array containing a shallow copy of a portion of the original array.</li>
+                    <li>Does not modify the original array; it creates and returns a new array with selected elements.
+                    </li>
+                    <li>The original array remains unchanged.</li>
+                    <li>
+                        <prismcode [code]="code36" language="javascript"></prismcode>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <b>splice()</b>
+                <ul>
+                    <li>Modifies the original array by removing, replacing, or adding elements in place.</li>
+                    <li>Returns an array containing the removed elements (if any).</li>
+                    <li>Changes the original array directly.</li>
+                    <li>
+                        <prismcode [code]="code37" language="javascript"></prismcode>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+        <p>In summary, slice() is used to create a new array from a portion of the original array without modifying the
+            original array, while splice() is used to modify the original array by removing, replacing, or adding
+            elements in place.</p>
+    </div>
+
+    <div class="questions" id="How_do_you_compare_Object_and_Map">
+        <h1>12. How do you compare Object and Map?</h1>
+    </div>
+    <div class="answers">
+        <p>Object and Map are both commonly used data structures in JavaScript, but they serve different purposes and
+            have different characteristics. Here's a comparison between the two:</p>
+        <ol>
+            <li>
+                <b>Purpose</b>
+                <ul style="margin-left:20px;">
+                    <li><b>Object</b>Objects are used to store key-value pairs where keys are strings (or symbols) and
+                        values can be of any data type. They are used for representing structured data and are
+                        fundamental in JavaScript.</li>
+                    <li><b>Map</b>Maps are also used to store key-value pairs, but unlike objects, the keys in maps can
+                        be of any data type, not just strings or symbols. They offer more flexibility in terms of the
+                        types of keys that can be used.</li>
+                </ul>
+            </li>
+            <li>
+                <b>Key Type</b>
+                <ul style="margin-left:20px;">
+                    <li><b>Object</b>Keys must be strings or symbols.</li>
+                    <li><b>Map</b>Keys can be of any data type, including objects, functions, and primitive values.</li>
+                </ul>
+            </li>
+            <li>
+                <b>Order</b>
+                <ul style="margin-left:20px;">
+                    <li><b>Object</b>The order of properties in an object is not guaranteed. Properties may be iterated
+                        in the order they were added, but this behavior is not standardized.</li>
+                    <li><b>Map</b>The order of key-value pairs is preserved. When iterating over a map, the order of
+                        insertion is maintained.</li>
+                </ul>
+            </li>
+            <li>
+                <b>Size</b>
+                <ul style="margin-left:20px;">
+                    <li><b>Object</b>To get the number of properties in an object, you need to manually iterate over the
+                        object or use Object.keys(obj).length, which can be inefficient for large objects.</li>
+                    <li><b>Map</b>Provides a size property to directly get the number of key-value pairs in the map.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <b>Iterating</b>
+                <ul style="margin-left:20px;">
+                    <li><b>Object</b> Iterating over properties of an object can be done using for...in loop or
+                        Object.keys, Object.values, or Object.entries methods.</li>
+                    <li><b>Map</b>Iterating over a map can be done using methods like forEach, keys, values, or entries.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <b>Performance</b>
+                <ul style="margin-left:20px;">
+                    <li><b>Object</b>Generally optimized for property access and manipulation. Property access is
+                        usually faster compared to maps.</li>
+                    <li><b>Map</b>Optimized for scenarios where keys are frequently added or removed, especially with
+                        large datasets.</li>
+                </ul>
+            </li>
+            <li>
+                <b>Memory Usage</b>
+                <ul style="margin-left:20px;">
+                    <li><b>Object</b>May consume less memory for smaller datasets due to internal optimizations by
+                        JavaScript engines.</li>
+                    <li><b>Map</b>May consume more memory compared to objects, especially for larger datasets, because
+                        of the additional overhead associated with each entry.</li>
+                </ul>
+            </li>
+        </ol>
+        <p>In summary, use Object when you have string or symbol keys and don't need to preserve insertion order or
+            support keys of different data types. Use Map when you need more flexibility in the types of keys, need to
+            preserve insertion order, or when working with large datasets where efficient addition and removal of
+            key-value pairs are crucial.</p>
+    </div>
+
+    <div class="questions" id="What_are_lambda_expressions_or_arrow_functions">
+        <h1>13. What are lambda expressions or arrow functions?</h1>
+    </div>
+    <div class="answers">
+        <p>An arrow function is a shorter/concise syntax for a function expression and does not have its own <b>this,
+                arguments, super, or new.target</b>. These functions are best suited for non-method functions, and they
+            cannot be used as constructors.</p>
+        <p>Some of the examples of arrow functions are listed as below,</p>
+        <prismcode [code]="code38" language="javascript"></prismcode>
+    </div>
+
+    <div class="questions" id="What_is_a_first_class_function">
+        <h1>14. What is a first class function?</h1>
+    </div>
+    <div class="answers">
+        <p>In Javascript, functions are first class objects. First-class functions means when functions in that language
+            are treated like any other variable.</p>
+        <p>For example, in such a language, a function can be passed as an argument to other functions, can be returned
+            by another function and can be assigned as a value to a variable. For example, in the below example, handler
+            functions assigned to a listener</p>
+        <prismcode [code]="code39" language="javascript"></prismcode>
+    </div>
+
+    <div class="questions" id="What_is_a_first_order_function">
+        <h1>15. What is a first order function?</h1>
+    </div>
+    <div class="answers">
+        <p>A first-order function is a function that doesn’t accept another function as an argument and doesn’t return a
+            function as its return value.</p>
+        <prismcode [code]="code40" language="javascript"></prismcode>
+    </div>
+
+    <div class="questions" id="What_is_a_higher_order_function">
+        <h1>16. What is a higher order function?</h1>
+    </div>
+    <div class="answers">
+        <p>A higher-order function is a function that accepts another function as an argument or returns a function as a
+            return value or both. The syntactic structure of higher order function will be as follows,</p>
+        <prismcode [code]="code41" language="javascript"></prismcode>
+        <p>You can also call the function which you are passing to higher order function as callback function.</p>
+        <p>The higher order function is helpful to write the modular and reusable code.</p>
+    </div>
+
+    <div class="questions" id="What_is_a_unary_function">
+        <h1>17. What is a unary function?</h1>
+    </div>
+    <div class="answers">
+        <p>A unary function (i.e. monadic) is a function that accepts exactly one argument. It stands for a single
+            argument accepted by a function.</p>
+        <p>Let us take an example of unary function,</p>
+        <prismcode [code]="code42" language="javascript"></prismcode>
+    </div>
+
+    <div class="questions" id="What_is_the_currying_function">
+        <h1>18. What is the currying function?</h1>
+    </div>
+    <div class="answers">
+        <p>Currying is the process of taking a function with multiple arguments and turning it into a sequence of
+            functions each with only a single argument. Currying is named after a mathematician <b>Haskell Curry</b>. By
+            applying currying, an n-ary function turns into a unary function.</p>
+        <p>Let's take an example of n-ary function and how it turns into a currying function,</p>
+        <prismcode [code]="code43" language="javascript"></prismcode>
+        <p>Curried functions are great to improve <b>code reusability</b> and <b>functional composition</b>.</p>
+    </div>
+
+    <div class="questions" id="What_is_a_pure_function">
+        <h1>19. What is a pure function?</h1>
+    </div>
+    <div class="answers">
+        <p>A Pure function is a function where the return value is only determined by its arguments without any side
+            effects. i.e, If you call a function with the same arguments 'n' number of times and 'n' number of places in
+            the application then it will always return the same value.</p>
+        <p>Let's take an example to see the difference between pure and impure functions,</p>
+        <prismcode [code]="code44" language="javascript"></prismcode>
+        <p>As per the above code snippets, the Push function is impure itself by altering the array and returning a push
+            number index independent of the parameter value, whereas Concat on the other hand takes the array and
+            concatenates it with the other array producing a whole new array without side effects. Also, the return
+            value is a concatenation of the previous array.</p>
+        <p>Remember that Pure functions are important as they simplify unit testing without any side effects and no need
+            for dependency injection. They also avoid tight coupling and make it harder to break your application by not
+            having any side effects. These principles are coming together with the Immutability concept of ES6: giving
+            preference to const over let usage.</p>
+    </div>
+
+    <div class="questions" id="What_is_the_purpose_of_the_let_keyword">
+        <h1>20. What is the purpose of the let keyword?</h1>
+    </div>
+    <div class="answers">
+        <p>The let statement declares a block scope local variable. Hence the variables defined with let keyword are
+            limited in scope to the block, statement, or expression on which it is used. Whereas variables declared with
+            the var keyword used to define a variable globally, or locally to an entire function regardless of block
+            scope.</p>
+        <p>Let's take an example to demonstrate the usage,</p>
+        <prismcode [code]="code45" language="javascript"></prismcode>
+    </div>
+    <div class="questions" id="What_is_the_difference_between_let_and_var">
+        <h1>21. What is the difference between let and var?</h1>
+    </div>
+    <div class="answers">
+        <p>You can list out the differences in a tabular format</p>
+        <table>
+            <tr>
+                <th>var</th>
+                <th>let</th>
+            </tr>
+            <tr>
+                <td>It has been available from the beginning of JavaScript</td>
+                <td>Introduced as part of ES6</td>
+            </tr>
+            <tr>
+                <td>It has function scope</td>
+                <td>It has block scope</td>
+            </tr>
+            <tr>
+                <td>Variable declaration will be hoisted</td>
+                <td>Hoisted but not initialized</td>
+            </tr>
+            <tr>
+                <td>It is possible to re-declare the variable in the same scope</td>
+                <td>It is not possible to re-declare the variable</td>
+            </tr>
+        </table>
+        <p>Let's take an example to see the difference,</p>
+        <prismcode [code]="code46" language="javascript"></prismcode>
+    </div>
+
+    <div class="questions" id="How_do_you_redeclare_variables_in_a_switch_block_without_an_error">
+        <h1>22. How do you redeclare variables in a switch block without an error?</h1>
+    </div>
+    <div class="answers">
+        <p>If you try to redeclare variables in a switch block then it will cause errors because there is only one
+            block. For example, the below code block throws a syntax error as below,</p>
+        <prismcode [code]="code47" language="javascript"></prismcode>
+        <p>To avoid this error, you can create a nested block inside a case clause and create a new block scoped lexical
+            environment.</p>
+        <prismcode [code]="code48" language="javascript"></prismcode>
+    </div>
+
+    <div class="questions" id="What_is_the_Temporal_Dead_Zone">
+        <h1>23. What is the Temporal Dead Zone?</h1>
+    </div>
+    <div class="answers">
+        <p>The Temporal Dead Zone(TDZ) is a specific period or area of a block where a variable is inaccessible until it
+            has been intialized with a value. This behavior in JavaScript that occurs when declaring a variable with the
+            let and const keywords, but not with var. In ECMAScript 6, accessing a let or const variable before its
+            declaration (within its scope) causes a ReferenceError.</p>
+        <p>Let's see this behavior with an example,</p>
+        <prismcode [code]="code49" language="javascript"></prismcode>
+        <p>The TDZ is a safety feature introduced with let and const to catch potential bugs caused by accessing
+            variables before they're initialized. It helps to enforce better coding practices and avoid unexpected
+            behaviors in JavaScript programs.</p>
+    </div>
+
+    <div class="questions" id="What_is_an_IIFE_Immediately_Invoked_Function_Expression">
+        <h1>24. What is an IIFE (Immediately Invoked Function Expression)?</h1>
+    </div>
+    <div class="answers">
+        <p>IIFE (Immediately Invoked Function Expression) is a JavaScript function that runs as soon as it is defined.
+            The signature of it would be as below,</p>
+        <prismcode [code]="code50" language="javascript"></prismcode>
+        <p>The primary reason to use an IIFE is to obtain data privacy because any variables declared within the IIFE
+            cannot be accessed by the outside world. i.e, If you try to access variables from the IIFE then it throws an
+            error as below,</p>
+        <prismcode [code]="code51" language="javascript"></prismcode>
+    </div>
+
+    <div class="questions" id="How_do_you_decode_or_encode_a_URL_in_JavaScript">
+        <h1>25. How do you decode or encode a URL in JavaScript?</h1>
+    </div>
+    <div class="answers">
+        <p>encodeURI() function is used to encode an URL. This function requires a URL string as a parameter and return that encoded string. decodeURI() function is used to decode an URL. This function requires an encoded URL string as parameter and return that decoded string.</p>
+        <p><b>Note:</b>If you want to encode characters such as / ? : @ & = + $ # then you need to use encodeURIComponent().</p>
+        <prismcode [code]="code52" language="javascript"></prismcode>
+    </div>
+
+    <div class="questions">
+        <h1></h1>
+    </div>
+    <div class="answers">
+        <p></p>
+    </div>
+
+    <div class="questions">
+        <h1></h1>
+    </div>
+    <div class="answers">
+        <p></p>
+    </div>
+
+    <div class="questions">
+        <h1></h1>
+    </div>
+    <div class="answers">
+        <p></p>
+    </div>
+
+    <div class="questions">
+        <h1></h1>
+    </div>
+    <div class="answers">
+        <p></p>
+    </div>
+
+    <div class="questions">
+        <h1></h1>
+    </div>
+    <div class="answers">
+        <p></p>
+    </div>
+
+    <div class="questions">
+        <h1></h1>
+    </div>
+    <div class="answers">
+        <p></p>
+    </div>
+
+</div>
+
+<!-- 
+<table>
+    <tr>
+        <th>Feature</th>
+        <th>AngularJS</th>
+        <th>Angular</th>
+    </tr>
+    <tr>
+        <td>Architecture</td>
+        <td>MVC (Model-View-Controller)</td>
+        <td>Component-Based Architecture</td>
+    </tr>
+</table> 
+<prismcode [code]="code32" language="javascript"></prismcode>
+-->

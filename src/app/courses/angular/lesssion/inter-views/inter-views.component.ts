@@ -193,11 +193,11 @@ export class InterViewsComponent implements OnInit, OnDestroy {
       { name: 'What are the differences between reactive forms and template driven forms?', id: "What_are_the_differences_between_reactive_forms_and_template_driven_forms" },
       { name: 'What are the differences between setValue() and patchValue()?', id: "What_are_the_differences_between_setValue_and_patchValue" },
       { name: 'What are the differences between reset() and clear()?', id: "What_are_the_differences_between_reset_and_clear" },
-      // { name: 'Variable_Declaration', id: "Variable_Declaration" },
-      // { name: 'Variable_Declaration', id: "Variable_Declaration" },
-      // { name: 'Variable_Declaration', id: "Variable_Declaration" },
-      // { name: 'Variable_Declaration', id: "Variable_Declaration" },
-      // { name: 'Variable_Declaration', id: "Variable_Declaration" },
+      { name: 'What is guards in angular?', id: "What_is_guards_in_angular" },
+      { name: 'Authentication Guards with NavigationCancel Handling?', id: "Authentication_Guards_with_NavigationCancel_Handling" },
+      { name: 'Content projection in angular?', id: "Content_projection_in_angular" },
+      { name: 'What is view encapsulation?', id: "What_is_view_encapsulation" },
+      { name: 'How to increase the performance of angular application?', id: "How_to_increase_the_performance_of_angular_application" },
       // { name: 'Variable_Declaration', id: "Variable_Declaration" },
       // { name: 'Variable_Declaration', id: "Variable_Declaration" },
       // { name: 'Variable_Declaration', id: "Variable_Declaration" },
@@ -1136,28 +1136,45 @@ export class InterViewsComponent implements OnInit, OnDestroy {
   code115: string = `export class InnerHtmlBindingComponent {
     htmlSnippet = 'Template <script>alert("XSS Attack")</script> <b>Code attached</b>';
   }`;
-  code116: string = `interface HttpInterceptor {
-    intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>>
-  }`;
-  code117: string = `@Injectable()
+  code116: string = `import { Injectable } from '@angular/core';
+  import { HttpInterceptor, HttpRequest, HttpHandler, HttpEvent } from '@angular/common/http';
+  import { Observable } from 'rxjs';
+  
+  @Injectable()
   export class MyInterceptor implements HttpInterceptor {
-      constructor() {}
-      intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-          ...
-      }
-  }`;
-  code118: string = `@NgModule({
-    ...
+    intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+      // Intercept the request here
+      // Modify the request or handle it before sending
+      return next.handle(request);
+    }
+  }
+  `;
+  code117: string = `import { NgModule } from '@angular/core';
+  import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+  import { MyInterceptor } from './my-interceptor';
+  
+  @NgModule({
+    imports: [
+      HttpClientModule
+    ],
     providers: [
-        {
-            provide: HTTP_INTERCEPTORS,
-            useClass: MyInterceptor,
-            multi: true
-        }
+      { provide: HTTP_INTERCEPTORS, useClass: MyInterceptor, multi: true }
     ]
-    ...
-})
-export class AppModule {}`;
+  })
+  export class AppModule { }
+  `;
+  code118: string = `// Example with multiple interceptors
+  @NgModule({
+    imports: [
+      HttpClientModule
+    ],
+    providers: [
+      { provide: HTTP_INTERCEPTORS, useClass: MyInterceptor1, multi: true },
+      { provide: HTTP_INTERCEPTORS, useClass: MyInterceptor2, multi: true }
+    ]
+  })
+  export class AppModule { }
+  `;
   code119: string = `providers: [
     { provide: HTTP_INTERCEPTORS, useClass: MyFirstInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: MySecondInterceptor, multi: true }
@@ -1819,11 +1836,269 @@ export class AppModule {}`;
     this.myForm.get('lastName').setValue('');
   }
   `;
-  code205: string = ``;
-  code206: string = ``;
-  code207: string = ``;
-  code208: string = ``;
-  code209: string = ``;
+  code205: string = `import { Injectable } from '@angular/core';
+  import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, Router } from '@angular/router';
+  import { Observable } from 'rxjs';
+  import { AuthService } from './auth.service';
+  
+  @Injectable({
+    providedIn: 'root'
+  })
+  export class AuthGuard implements CanActivate {
+    constructor(private authService: AuthService, private router: Router) {}
+  
+    canActivate(
+      next: ActivatedRouteSnapshot,
+      state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
+      if (this.authService.isLoggedIn()) {
+        return true;
+      } else {
+        // Redirect to login page
+        return this.router.createUrlTree(['/login']);
+      }
+    }
+  }
+  `;
+  code206: string = `import { Injectable } from '@angular/core';
+  import { CanActivateChild, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree } from '@angular/router';
+  import { Observable } from 'rxjs';
+  import { AuthService } from './auth.service';
+  
+  @Injectable({
+    providedIn: 'root'
+  })
+  export class AuthGuard implements CanActivateChild {
+    constructor(private authService: AuthService) {}
+  
+    canActivateChild(
+      next: ActivatedRouteSnapshot,
+      state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
+      return this.authService.isLoggedIn();
+    }
+  }
+  `;
+  code207: string = `import { Injectable } from '@angular/core';
+  import { CanDeactivate } from '@angular/router';
+  import { Observable } from 'rxjs';
+  import { ComponentWithChanges } from './component-with-changes';
+  
+  @Injectable({
+    providedIn: 'root'
+  })
+  export class ConfirmDeactivateGuard implements CanDeactivate<ComponentWithChanges> {
+    canDeactivate(
+      component: ComponentWithChanges): Observable<boolean> | Promise<boolean> | boolean {
+      if (component.hasChanges()) {
+        return confirm('Are you sure you want to leave?');
+      }
+      return true;
+    }
+  }
+  `;
+  code208: string = `import { Injectable } from '@angular/core';
+  import { Resolve, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
+  import { Observable } from 'rxjs';
+  import { DataService } from './data.service';
+  
+  @Injectable({
+    providedIn: 'root'
+  })
+  export class DataResolver implements Resolve<any> {
+    constructor(private dataService: DataService) {}
+  
+    resolve(
+      route: ActivatedRouteSnapshot,
+      state: RouterStateSnapshot): Observable<any> | Promise<any> | any {
+      return this.dataService.getData();
+    }
+  }
+  `;
+  code209: string = `import { Injectable } from '@angular/core';
+  import { CanLoad, Route, UrlSegment } from '@angular/router';
+  import { Observable } from 'rxjs';
+  import { AuthService } from './auth.service';
+  
+  @Injectable({
+    providedIn: 'root'
+  })
+  export class CanLoadModuleGuard implements CanLoad {
+    constructor(private authService: AuthService) {}
+  
+    canLoad(
+      route: Route,
+      segments: UrlSegment[]): Observable<boolean> | Promise<boolean> | boolean {
+      return this.authService.isLoggedIn();
+    }
+  }
+  `;
+  code210: string = `import { Injectable } from '@angular/core';
+  import { CanActivate, Router, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
+  import { AuthService } from './auth.service';
+  import { Observable } from 'rxjs';
+  
+  @Injectable({
+    providedIn: 'root'
+  })
+  export class AuthGuard implements CanActivate {
+    constructor(private authService: AuthService, private router: Router) {}
+  
+    canActivate(
+      next: ActivatedRouteSnapshot,
+      state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
+      if (this.authService.isAuthenticated()) {
+        return true;
+      } else {
+        this.router.navigate(['/login']);
+        return false;
+      }
+    }
+  }
+  `;
+  code211: string = `import { NgModule } from '@angular/core';
+  import { RouterModule, Routes } from '@angular/router';
+  import { HomeComponent } from './home/home.component';
+  import { LoginComponent } from './login/login.component';
+  import { AuthGuard } from './auth.guard';
+  
+  const routes: Routes = [
+    { path: '', component: HomeComponent, canActivate: [AuthGuard] },
+    { path: 'login', component: LoginComponent },
+    // Other routes...
+  ];
+  
+  @NgModule({
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
+  })
+  export class AppRoutingModule { }
+  `;
+  code212: string = `import { Component, OnInit } from '@angular/core';
+  import { Router, NavigationCancel, ActivatedRoute } from '@angular/router';
+  
+  @Component({
+    selector: 'app-login',
+    templateUrl: './login.component.html',
+    styleUrls: ['./login.component.css']
+  })
+  export class LoginComponent implements OnInit {
+    returnUrl: string;
+  
+    constructor(private route: ActivatedRoute, private router: Router) {}
+  
+    ngOnInit(): void {
+      // Get the return URL from route parameters or default to '/'
+      this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
+    }
+  
+    login() {
+      // Perform login logic...
+  
+      // If login successful, navigate to returnUrl
+      this.router.navigateByUrl(this.returnUrl);
+    }
+  }
+  `;
+  code213: string = `<p *ngIf="returnUrl !== '/'">
+  <a [routerLink]="['/']">Continue as guest</a>
+</p>
+`;
+  code214: string = `// alert.component.ts
+  import { Component } from '@angular/core';
+  
+  @Component({
+    selector: 'app-alert',
+    template: '
+      <div class="alert">
+        <ng-content></ng-content>
+      </div>
+    ',
+    styleUrls: ['./alert.component.css']
+  })
+  export class AlertComponent {}
+  `;
+  code215: string = `/* alert.component.css */
+  .alert {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 15px;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+  `;
+  code216: string = `// app.component.ts
+  import { Component } from '@angular/core';
+  
+  @Component({
+    selector: 'app-root',
+    template: '
+      <app-alert>
+        <strong>Error!</strong> Something went wrong.
+      </app-alert>
+      <app-alert>
+        <strong>Warning!</strong> This action is irreversible.
+      </app-alert>
+    ',
+    styleUrls: ['./app.component.css']
+  })
+  export class AppComponent {}
+  `;
+  code217: string = 
+  `<!-- Rendered HTML -->
+  <div class="alert">
+    <strong>Error!</strong> Something went wrong.
+  </div>
+  <div class="alert">
+    <strong>Warning!</strong> This action is irreversible.
+  </div>
+  `;
+  code218: string = 
+  `@Component({
+    selector: 'app-example',
+    templateUrl: './example.component.html',
+    styleUrls: ['./example.component.css'],
+    encapsulation: ViewEncapsulation.Emulated
+  })
+  export class ExampleComponent {}
+  `;
+  code219: string =
+  `@Component({
+    selector: 'app-example',
+    templateUrl: './example.component.html',
+    styleUrls: ['./example.component.css'],
+    encapsulation: ViewEncapsulation.ShadowDom
+  })
+  export class ExampleComponent {}
+  `;
+  code220: string =
+  `@Component({
+    selector: 'app-example',
+    templateUrl: './example.component.html',
+    styleUrls: ['./example.component.css'],
+    encapsulation: ViewEncapsulation.None
+  })
+  export class ExampleComponent {}
+  `;
+  code221: string = ``;
+  code222: string = ``;
+  code223: string = ``;
+  code224: string = ``;
+  code225: string = ``;
+  code226: string = ``;
+  code227: string = ``;
+  code228: string = ``;
+  code229: string = ``;
+  code230: string = ``;
+  code231: string = ``;
+  code232: string = ``;
+  code233: string = ``;
+  code234: string = ``;
+  code235: string = ``;
+  code236: string = ``;
+  code237: string = ``;
+  code238: string = ``;
+  code239: string = ``;
+  code240: string = ``;
 
   ngOnDestroy(): void { this.shearedService.rSidebar_Id_Data$.next([]); }
   scroll(id: string, duration: number = 200) {

@@ -859,6 +859,7 @@ export const jsTopics = {
     export_and_import: "export-and-import",
     dynamic_imports: "dynamic-imports",
 
+    inter_views: "inter-views",
 }
 
 export const JavaScriptContent: Content = {
@@ -1027,6 +1028,11 @@ export const JavaScriptContent: Content = {
             { sub_title: "Export and Import", href: jsTopics?.export_and_import },
             { sub_title: "Dynamic imports", href: jsTopics?.dynamic_imports }
         ]
+    },
+    {
+        list_title: "InterView",
+        href: jsTopics?.inter_views,
+        sub_list: []
     },
     ]
 }

@@ -2120,13 +2120,67 @@
         <h1>112. What are Http Interceptors?</h1>
     </div>
     <div class="answers">
-        <p></p>
-        <p></p>
-        <prismcode [code]="code116" language="javascript"></prismcode>
-        <p></p>
-        <prismcode [code]="code117" language="javascript"></prismcode>
-        <p></p>
-        <prismcode [code]="code118" language="javascript"></prismcode>
+        <p>HTTP interceptors in Angular are middleware-like services that can intercept HTTP requests and responses.
+            They provide a way to modify or handle HTTP requests and responses globally across your application.
+            Interceptors are commonly used for tasks such as adding headers to requests, logging requests and responses,
+            handling errors, and modifying responses before they reach the calling code.</p>
+        <p>Here's an overview of how HTTP interceptors work in Angular:</p>
+        <ol>
+            <li>
+                <b>Creation of Interceptors:</b>
+                <ul style="margin-left: 20px;">
+                    <li>Interceptors are Angular services that implement the HttpInterceptor interface. This interface
+                        defines two methods: intercept for intercepting requests and next for forwarding the request to
+                        the next interceptor in the chain or the backend.</li>
+                    <li>
+                        <prismcode [code]="code116" language="javascript"></prismcode>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <b>Registration of Interceptors:</b>
+                <ul style="margin-left: 20px;">
+                    <li>Once an interceptor is created, it needs to be registered with Angular's HTTP client module.
+                    </li>
+                    <li>Interceptors can be registered in the AppModule or in any module where they are required.</li>
+                    <li>
+                        <prismcode [code]="code117" language="javascript"></prismcode>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <b>Interception Logic:</b>
+                <ul style="margin-left: 20px;">
+                    <li>Inside the intercept method of the interceptor, you can implement any logic you need to handle
+                        HTTP requests and responses.</li>
+                    <li>For example, you can add headers to requests, log requests and responses, modify requests or
+                        responses, or handle errors.</li>
+                </ul>
+            </li>
+            <li>
+                <b>Chaining Interceptors:</b>
+                <ul style="margin-left: 20px;">
+                    <li>Angular supports chaining multiple interceptors. When multiple interceptors are registered, they
+                        are executed in the order in which they are provided.</li>
+                    <li>Each interceptor has the option to call next.handle(request) to pass the request to the next
+                        interceptor in the chain or the backend.</li>
+                    <li>
+                        <prismcode [code]="code118" language="javascript"></prismcode>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <b>Cleanup and Error Handling:</b>
+                <ul style="margin-left: 20px;">
+                    <li>Interceptors should clean up any resources they use and handle errors appropriately.</li>
+                    <li>If an interceptor throws an error or returns an Observable that emits an error, the error will
+                        propagate to the caller.</li>
+                </ul>
+            </li>
+        </ol>
+        <p>HTTP interceptors provide a powerful mechanism for handling HTTP requests and responses in Angular
+            applications. They allow for centralized handling of cross-cutting concerns related to HTTP communication,
+            making it easier to implement features like authentication, caching, logging, and error handling.</p>
     </div>
 
     <div class="questions" id="What_are_the_applications_of_HTTP_interceptors">
@@ -3314,8 +3368,363 @@
             values or reset specific parts of the form.</p>
     </div>
 
-    <div class="questions"></div>
-    <div class="answers"></div>
+
+    <div class="questions" id="What_is_guards_in_angular">
+        <h1>178. What is guards in angular?</h1>
+    </div>
+    <div class="answers">
+        <p>In Angular, guards are used to control navigation and to protect routes in your application. Angular provides
+            several types of guards that allow you to run code before a route is activated, which can be useful for
+            tasks like authentication, authorization, and data loading. Here's an explanation of each type of guard with
+            examples:</p>
+        <ol>
+            <li>
+                <b>CanActivate</b>
+                <ul>
+                    <li>This guard determines if a route can be activated.</li>
+                    <li>It is commonly used for authentication and authorization checks.</li>
+                    <li>If the guard returns true, navigation proceeds. If it returns false or a UrlTree, navigation is
+                        canceled.</li>
+                    <li>
+                        <prismcode [code]="code205" language="javascript"></prismcode>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <b>CanActivateChild</b>
+                <ul>
+                    <li>Similar to CanActivate, but specifically for child routes.</li>
+                    <li>It allows you to guard child routes when the parent route is activated.</li>
+                    <li>
+                        <prismcode [code]="code206" language="javascript"></prismcode>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <b>CanDeactivate</b>
+                <ul>
+                    <li>This guard determines if a route can be deactivated.</li>
+                    <li>It's used to confirm navigation away from a route, such as prompting the user if they want to
+                        discard unsaved changes.</li>
+                    <li>
+                        <prismcode [code]="code207" language="javascript"></prismcode>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <b>Resolve</b>
+                <ul>
+                    <li>This guard performs data retrieval before route activation.</li>
+                    <li>It's useful for fetching necessary data before a component is activated.</li>
+                    <li>
+                        <prismcode [code]="code208" language="javascript"></prismcode>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <b>CanLoad</b>
+                <ul>
+                    <li>This guard determines if a module can be loaded lazily.</li>
+                    <li>It's used to prevent loading of feature modules if certain conditions aren't met, like
+                        authentication.</li>
+                    <li>
+                        <prismcode [code]="code209" language="javascript"></prismcode>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+        <p>These guards provide powerful tools for controlling navigation and protecting routes in Angular applications,
+            ensuring that your application behaves as expected and remains secure.</p>
+    </div>
+
+    <div class="questions" id="Authentication_Guards_with_NavigationCancel_Handling">
+        <h1>179. Authentication Guards with NavigationCancel Handling?</h1>
+    </div>
+    <div class="answers">
+        <p>It's typically used within guards to handle scenarios where navigation needs to be aborted, often due to
+            failed authentication. Let me elaborate on how you might use it in conjunction with authentication guards:
+        </p>
+        <ol>
+            <li>
+                <b>AuthGuard</b>
+                <ul>
+                    <li>The AuthGuard is responsible for determining whether a user is authenticated and allowed to
+                        access a particular route.</li>
+                    <li>
+                        <prismcode [code]="code210" language="javascript"></prismcode>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <b>Applying AuthGuard to Routes</b>
+                <ul>
+                    <li>Apply the AuthGuard to routes that require authentication.</li>
+                    <li>
+                        <prismcode [code]="code211" language="javascript"></prismcode>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <b>Handling Navigation Cancel</b>
+                <ul>
+                    <li>Inside the AuthGuard, if authentication fails, navigate to the login page. However, when the
+                        user successfully logs in, they should be redirected back to the originally requested URL.</li>
+                    <li>This is where NavigationCancel event comes into play. You can listen to this event in a
+                        component that handles authentication, such as the login component.</li>
+                    <li>
+                        <prismcode [code]="code212" language="javascript"></prismcode>
+                    </li>
+                    <li>In the template of the login component, you can provide a way for users to navigate back to the
+                        requested URL if they choose not to log in.</li>
+                    <li>
+                        <prismcode [code]="code213" language="html"></prismcode>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+        <p>With this setup, when a user tries to access a route protected by the AuthGuard without being authenticated,
+            they are redirected to the login page. After successful authentication, they are redirected back to the
+            originally requested URL using the returnUrl parameter. If the user chooses not to log in, they can continue
+            as a guest and navigate to the home page.</p>
+    </div>
+
+    <div class="questions" id="Content_projection_in_angular">
+        <h1>180. Content projection in angular?</h1>
+    </div>
+    <div class="answers">
+        <p>Content projection, also known as transclusion, is a powerful feature in Angular that allows you to pass
+            content from a component's parent into the component itself. This enables the creation of reusable
+            components with flexible content structures. Let me explain with an example:</p>
+        <b>Example: Example: Creating a Reusable Alert Component with Content Projection</b>
+        <ol>
+            <li>
+                <b>Create the Alert Component:</b>
+                <ul style="margin-left: 20px;">
+                    <li>First, let's create an alert component that will display a message.</li>
+                    <li>
+                        <prismcode [code]="code214" language="javascript"></prismcode>
+                    </li>
+                    <li>In the template, &lt;ng-content&gt;&lt;/ng-content&gt; is a placeholder where content provided
+                        by the parent
+                        component will be projected.</li>
+                    <li>
+                        <prismcode [code]="code215" language="css"></prismcode>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <b>Using the Alert Component:</b>
+                <ul style="margin-left: 20px;">
+                    <li>Now, let's use the app-alert component in another component and pass some content into it.</li>
+                    <li>
+                        <prismcode [code]="code216" language="javascript"></prismcode>
+                    </li>
+                    <li>In the parent component's template, we provide content between the opening and closing tags of
+                        the app-alert component. This content will be projected into the
+                        &lt;ng-content&gt;&lt;/ng-content&gt;
+                        placeholder in the alert component.</li>
+                </ul>
+            </li>
+            <li>
+                <b>Result:</b>
+                <ul style="margin-left: 20px;">
+                    <li>When you run the application, the app-alert component will display the messages provided by the
+                        parent component.</li>
+                    <li>
+                        <prismcode [code]="code217" language="html"></prismcode>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+        <ul>
+            <li>
+                <b>Content Projection (&lt;ng-content&gt;):</b>
+                <ul style="margin-left: 20px;">
+                    <li>&lt;ng-content&gt;&lt;/ng-content&gt; in the alert component's template acts as a placeholder
+                        where content from the parent component will be inserted.</li>
+                    <li>Anything provided between the opening and closing tags of the app-alert component in the parent
+                        component's template will be projected into this placeholder.</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="questions" id="What_is_view_encapsulation">
+        <h1>181. What is view encapsulation?</h1>
+    </div>
+    <div class="answers">
+        <p>In Angular, view encapsulation refers to the mechanism by which the styles defined within a component are
+            scoped to that component's view only, preventing them from affecting other parts of the application. This
+            ensures that the styles defined in one component do not leak into or interfere with the styles of other
+            components.</p>
+        <p>Angular provides three types of view encapsulation:</p>
+        <ol>
+            <li>
+                <b>Emulated (Default):</b>
+                <ul style="margin-left: 20px;">
+                    <li>Emulated view encapsulation uses shadow DOM emulation to scope the styles of a component.</li>
+                    <li>Styles defined in a component's styleUrls or styles metadata are scoped to that component's view
+                        using unique attributes.</li>
+                    <li>This mode is the default in Angular.</li>
+                    <li>It ensures that the component's styles are isolated to its own view, preventing them from
+                        affecting other components.</li>
+                    <li>
+                        <prismcode [code]="code218" language="javascript"></prismcode>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <b>Shadow DOM (Experimental):</b>
+                <ul style="margin-left: 20px;">
+                    <li>Shadow DOM view encapsulation uses the native Shadow DOM to encapsulate the styles of a
+                        component.</li>
+                    <li>It provides true style isolation, similar to how styles are scoped in web components.</li>
+                    <li>This mode is experimental and requires browser support for Shadow DOM.</li>
+                    <li>To enable shadow DOM encapsulation, set the encapsulation property to
+                        ViewEncapsulation.ShadowDom.</li>
+                    <li>
+                        <prismcode [code]="code219" language="javascript"></prismcode>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <b>None:</b>
+                <ul style="margin-left: 20px;">
+                    <li>None view encapsulation disables view encapsulation altogether.</li>
+                    <li>Styles defined in a component will affect the entire application.</li>
+                    <li>This mode can be useful for applying global styles or when creating reusable stylesheets.</li>
+                    <li>Use with caution, as it can lead to style conflicts and unintended consequences.</li>
+                    <li>To disable view encapsulation, set the encapsulation property to ViewEncapsulation.None.</li>
+                    <li>
+                        <prismcode [code]="code220" language="javascript"></prismcode>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+        <p>By default, Angular components use emulated view encapsulation, which provides a good balance between style
+            isolation and compatibility across browsers. However, depending on your requirements and browser support,
+            you can choose to use shadow DOM encapsulation or disable encapsulation entirely.</p>
+    </div>
+
+    <div class="questions" id="How_to_increase_the_performance_of_angular_application">
+        <h1>182. How to increase the performance of angular application?</h1>
+    </div>
+    <div class="answers">
+        <p>Improving the performance of an Angular application involves various strategies aimed at optimizing loading
+            times, rendering, and overall user experience. Here are several techniques to enhance the performance of
+            your Angular application:</p>
+        <ol>
+            <li>
+                <b>Lazy Loading Modules:</b>
+                <ul style="margin-left: 20px;">
+                    <li>Implement lazy loading for feature modules to load only the necessary parts of the application
+                        when they are required, reducing the initial bundle size and speeding up the initial load time.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <b>Optimize Bundle Size:</b>
+                <ul style="margin-left: 20px;">
+                    <li>Use Angular CLI tools like ng build --prod with AOT (Ahead-of-Time compilation) and minification
+                        to generate optimized production builds.</li>
+                    <li>Analyze and optimize bundle size using tools like Webpack Bundle Analyzer to identify and remove
+                        unnecessary dependencies or large libraries.</li>
+                </ul>
+            </li>
+            <li>
+                <b>Code Splitting:</b>
+                <ul style="margin-left: 20px;">
+                    <li>Utilize code splitting techniques such as dynamic imports or Angular's RouterModule.forChild to
+                        split large modules into smaller chunks, which are loaded on demand.</li>
+                </ul>
+            </li>
+            <li>
+                <b>Tree Shaking:</b>
+                <ul style="margin-left: 20px;">
+                    <li>Ensure that your application's codebase is tree-shakable by removing unused code during the
+                        build process. This reduces the final bundle size significantly.</li>
+                </ul>
+            </li>
+            <li>
+                <b>Optimize Images and Assets:</b>
+                <ul style="margin-left: 20px;">
+                    <li>Compress and optimize images and other assets to reduce their file size without compromising
+                        quality. Tools like ImageOptim or TinyPNG can help with this process.</li>
+                </ul>
+            </li>
+            <li>
+                <b>Enable Production Mode:</b>
+                <ul style="margin-left: 20px;">
+                    <li>Ensure that your Angular application is running in production mode (enableProdMode()) to disable
+                        certain development features and improve performance.</li>
+                </ul>
+            </li>
+            <li>
+                <b>Performance Budgeting:</b>
+                <ul style="margin-left: 20px;">
+                    <li>Set performance budgets to establish limits for metrics like bundle size, page load time, and
+                        network requests. Regularly monitor and optimize your application to stay within these budgets.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <b>Server-Side Rendering (SSR):</b>
+                <ul style="margin-left: 20px;">
+                    <li>Implement server-side rendering to pre-render Angular application pages on the server,
+                        delivering static HTML to the client for faster initial rendering and improved SEO.</li>
+                </ul>
+            </li>
+            <li>
+                <b>Caching and Prefetching:</b>
+                <ul style="margin-left: 20px;">
+                    <li>Utilize browser caching and prefetching techniques to store assets and data locally on the
+                        client's device, reducing the need for repeated downloads and speeding up subsequent page loads.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <b>Optimize Change Detection:</b>
+                <ul style="margin-left: 20px;">
+                    <li>Minimize the number of components using ChangeDetectionStrategy.OnPush to reduce unnecessary
+                        change detection cycles.</li>
+                    <li>Use trackBy function in ngFor loops to optimize rendering performance by providing a unique
+                        identifier for each item.</li>
+                </ul>
+            </li>
+            <li>
+                <b>Avoid Heavy Computations in Templates:</b>
+                <ul style="margin-left: 20px;">
+                    <li>Offload heavy computations or data processing from templates to component classes or services to
+                        avoid performance bottlenecks during rendering.</li>
+                </ul>
+            </li>
+            <li>
+                <b>Profile and Optimize Performance:</b>
+                <ul style="margin-left: 20px;">
+                    <li>Use browser developer tools (e.g., Chrome DevTools) and performance profiling tools (e.g.,
+                        Lighthouse, WebPageTest) to identify performance issues and bottlenecks. Optimize critical
+                        rendering paths and address performance issues accordingly.</li>
+                </ul>
+            </li>
+        </ol>
+        <p>By implementing these strategies and continuously monitoring and optimizing your Angular application, you can
+            significantly improve its performance and deliver a faster and more responsive user experience.</p>
+    </div>
+
+    <div class="questions">
+        <h1></h1>
+    </div>
+    <div class="answers">
+        <p></p>
+    </div>
+
+    <div class="questions">
+        <h1></h1>
+    </div>
+    <div class="answers">
+        <p></p>
+    </div>
+
 </div>
 
 <!-- 
@@ -3332,4 +3741,18 @@
     </tr>
 </table> 
 <prismcode [code]="code200" language="javascript"></prismcode>
+
+  <ol>
+        <li>
+            <b></b>
+            <ul style="margin-left: 20px;">
+                <li></li>
+                <li></li>
+                <li>
+                    <prismcode [code]="code200" language="javascript"></prismcode>
+                </li>
+            </ul>
+        </li>
+ </ol>
+
 -->

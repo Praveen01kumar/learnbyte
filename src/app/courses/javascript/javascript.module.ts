@@ -103,6 +103,7 @@ import { ModulesDuctionComponent } from './lesssion/modules-duction/modules-duct
 import { ExportAndImportComponent } from './lesssion/export-and-import/export-and-import.component';
 import { DynamicImportsComponent } from './lesssion/dynamic-imports/dynamic-imports.component';
 import { PrismcodeComponent } from 'src/app/shared/components/prismcode/prismcode.component';
+import { InterviewComponent } from './lesssion/interview/interview.component';
 
 @NgModule({
   declarations: [
@@ -205,7 +206,8 @@ import { PrismcodeComponent } from 'src/app/shared/components/prismcode/prismcod
     ModulesComponent,
     ModulesDuctionComponent,
     ExportAndImportComponent,
-    DynamicImportsComponent
+    DynamicImportsComponent,
+    InterviewComponent
   ],
   imports: [
     CommonModule,

@@ -102,6 +102,7 @@ import { ModulesComponent } from './lesssion/modules/modules.component';
 import { ModulesDuctionComponent } from './lesssion/modules-duction/modules-duction.component';
 import { ExportAndImportComponent } from './lesssion/export-and-import/export-and-import.component';
 import { DynamicImportsComponent } from './lesssion/dynamic-imports/dynamic-imports.component';
+import { InterviewComponent } from './lesssion/interview/interview.component';
 
 const routes: Routes = [
     { path: routeConfig?.empty, component: DashboardComponent },
@@ -272,6 +273,12 @@ const routes: Routes = [
                     { path: jsTopics?.dynamic_imports, component: DynamicImportsComponent }
                 ],
             },
+            {
+                path: jsTopics?.inter_views,
+                children: [
+                    { path: routeConfig?.empty, component: InterviewComponent },
+                ],
+            }
         ],
         data: { courceData: courceRoute?.javascript }
     },
