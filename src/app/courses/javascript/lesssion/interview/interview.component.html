@@ -738,9 +738,888 @@
         <h1>25. How do you decode or encode a URL in JavaScript?</h1>
     </div>
     <div class="answers">
-        <p>encodeURI() function is used to encode an URL. This function requires a URL string as a parameter and return that encoded string. decodeURI() function is used to decode an URL. This function requires an encoded URL string as parameter and return that decoded string.</p>
-        <p><b>Note:</b>If you want to encode characters such as / ? : @ & = + $ # then you need to use encodeURIComponent().</p>
+        <p>encodeURI() function is used to encode an URL. This function requires a URL string as a parameter and return
+            that encoded string. decodeURI() function is used to decode an URL. This function requires an encoded URL
+            string as parameter and return that decoded string.</p>
+        <p><b>Note:</b>If you want to encode characters such as / ? : @ & = + $ # then you need to use
+            encodeURIComponent().</p>
         <prismcode [code]="code52" language="javascript"></prismcode>
+    </div>
+
+    <div class="questions" id="What_is_memoization">
+        <h1>26. What is memoization?</h1>
+    </div>
+    <div class="answers">
+        <p>Memoization is a functional programming technique which attempts to increase a function’s performance by
+            caching its previously computed results. Each time a memoized function is called, its parameters are used to
+            index the cache. If the data is present, then it can be returned, without executing the entire function.
+            Otherwise the function is executed and then the result is added to the cache. Let's take an example of
+            adding function with memoization,</p>
+        <prismcode [code]="code53" language="javascript"></prismcode>
+    </div>
+
+    <div class="questions"
+        id="Explain_each_Hoisting_TDZ_lexical_scope_Closure_Variable_Scop_Function_Scope_with_example">
+        <h1>27. Explain each Hoisting, TDZ, lexical scope, Closure, Variable Scope, Function Scope with example?</h1>
+    </div>
+    <div class="answers">
+        <ol>
+            <li>
+                <b>Hoisting</b>
+                <p>Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of
+                    their containing scope during the compile phase, before the code execution. However, only the
+                    declarations are hoisted, not the initializations.Example:</p>
+                <prismcode [code]="code54" language="javascript"></prismcode>
+                <p>This code is interpreted as:</p>
+                <prismcode [code]="code55" language="javascript"></prismcode>
+            </li>
+            <li>
+                <b>Temporal Dead Zone (TDZ)</b>
+                <p>TDZ is the period between entering a scope (through block or function) and the actual declaration of
+                    a variable. Accessing a variable in its TDZ results in a runtime error.Example:</p>
+                <prismcode [code]="code56" language="javascript"></prismcode>
+            </li>
+            <li>
+                <b>Lexical Scope</b>
+                <p>Lexical scope refers to the scope resolution of variables at the time of their definition by their
+                    location within the code. This means that a variable defined outside of a function can be accessed
+                    inside that function.Example:</p>
+                <prismcode [code]="code57" language="javascript"></prismcode>
+            </li>
+            <li>
+                <b>Closure</b>
+                <p>Closure is the combination of a function bundled together (enclosed) with references to its
+                    surrounding state (the lexical environment). It gives you access to an outer function's scope from
+                    an inner function.Example:</p>
+                <prismcode [code]="code58" language="javascript"></prismcode>
+            </li>
+            <li>
+                <b>Variable Scope</b>
+                <p>Variable scope defines the accessibility of variables in different parts of the code. In JavaScript,
+                    variables can have global scope, function scope, or block scope.</p>
+                <prismcode [code]="code59" language="javascript"></prismcode>
+            </li>
+            <li>
+                <b>Function Scope</b>
+                <p>In JavaScript, variables declared inside a function have function scope, meaning they are only
+                    accessible within that function.</p>
+                <prismcode [code]="code60" language="javascript"></prismcode>
+            </li>
+        </ol>
+        <p><b>Differentiation:</b></p>
+        <ul>
+            <li>Hoisting moves declarations to the top of their containing scope, allowing variables to be accessed
+                before they are declared.</li>
+            <li>Temporal Dead Zone occurs when variables are accessed before their declaration within a scope, resulting
+                in a runtime error.</li>
+            <li>Lexical scope refers to the accessibility of variables based on their location within the code,
+                following the hierarchy of scopes.</li>
+            <li>Closure allows inner functions to access variables from their outer lexical scope even after the outer
+                function has finished execution.</li>
+            <li>Variable scope defines where a variable can be accessed in the code, such as global scope, function
+                scope, or block scope.</li>
+            <li>Function scope specifically refers to the scope of variables declared within a function.</li>
+        </ul>
+    </div>
+
+    <div class="questions" id="What_are_classes_in_ES6">
+        <h1>28. What are classes in ES6?</h1>
+    </div>
+    <div class="answers">
+        <p>In ES6, Javascript classes are primarily syntactic sugar over JavaScript’s existing prototype-based
+            inheritance. For example, the prototype based inheritance written in function expression as below,</p>
+        <prismcode [code]="code61" language="javascript"></prismcode>
+        <p>Whereas ES6 classes can be defined as an alternative</p>
+        <prismcode [code]="code62" language="javascript"></prismcode>
+    </div>
+
+    <div class="questions" id="What_are_modules_and_Why_do_you_need_modules">
+        <h1>29. What are modules and Why do you need modules?</h1>
+    </div>
+    <div class="answers">
+        <p>Modules in programming languages, including JavaScript, are essentially files that contain reusable code or
+            units of functionality. They help organize code into smaller, more manageable pieces, making it easier to
+            maintain, reuse, and collaborate on larger projects. JavaScript modules were introduced as part of ES6
+            (ECMAScript 2015) to provide a standardized way to encapsulate code and its dependencies.</p>
+        <p>Here's why modules are important and why you need them:</p>
+        <ol>
+            <li><b>Encapsulation</b>Modules encapsulate related code into separate units, allowing you to hide
+                implementation details and expose only what's necessary. This helps reduce complexity and makes code
+                easier to understand and maintain.</li>
+            <li><b>Code Organization</b>Modules allow you to organize your codebase into logical units based on
+                functionality, making it easier to navigate and manage larger projects. Each module can focus on a
+                specific task or feature, improving code readability and maintainability.</li>
+            <li><b>Reusability</b>Modules promote code reuse by allowing you to import and use functionality from one
+                module into another. This reduces duplication of code and promotes a more modular and DRY (Don't Repeat
+                Yourself) coding approach.</li>
+            <li><b>Dependency Management</b>Modules help manage dependencies between different parts of your
+                application. By explicitly specifying dependencies, modules make it easier to understand and track the
+                dependencies between different components, libraries, or modules.</li>
+            <li><b>Isolation</b>Modules provide a level of isolation, ensuring that variables and functions defined
+                within a module do not pollute the global scope. This helps prevent naming collisions and conflicts
+                between different parts of your codebase.</li>
+            <li><b>Scalability</b>As your project grows, modules make it easier to scale and maintain your codebase. You
+                can add new modules or refactor existing ones without impacting the rest of your application, allowing
+                for more agile development and easier collaboration among team members.</li>
+        </ol>
+        <p>Overall, modules are essential for building maintainable, scalable, and modular JavaScript applications. They
+            promote best practices in code organization, encapsulation, and dependency management, leading to more
+            robust and easier-to-maintain codebases.</p>
+    </div>
+
+    <div class="questions" id="What_is_scope_in_javascript">
+        <h1>30. What is scope in javascript?</h1>
+    </div>
+    <div class="answers">
+        <p>Scope is the accessibility of variables, functions, and objects in some particular part of your code during
+            runtime. In other words, scope determines the visibility of variables and other resources in areas of your
+            code.</p>
+    </div>
+
+    <div class="questions" id="What_is_a_service_worker">
+        <h1>31. What is a service worker?</h1>
+    </div>
+    <div class="answers">
+        <p>A Service worker is basically a script (JavaScript file) that runs in the background, separate from a web
+            page and provides features that don't need a web page or user interaction. Some of the major features of
+            service workers are Rich offline experiences(offline first web application development), periodic background
+            syncs, push notifications, intercept and handle network requests and programmatically managing a cache of
+            responses.</p>
+    </div>
+
+    <div class="questions" id="How_do_you_manipulate_DOM_using_a_service_worker">
+        <h1>32. How do you manipulate DOM using a service worker?</h1>
+    </div>
+    <div class="answers">
+        <p>Service worker can't access the DOM directly. But it can communicate with the pages it controls by responding
+            to messages sent via the postMessage interface, and those pages can manipulate the DOM.</p>
+    </div>
+
+    <div class="questions" id="How_do_you_reuse_information_across_service_worker_restarts">
+        <h1>33. How do you reuse information across service worker restarts?</h1>
+    </div>
+    <div class="answers">
+        <p>The problem with service worker is that it gets terminated when not in use, and restarted when it's next
+            needed, so you cannot rely on global state within a service worker's onfetch and onmessage handlers. In this
+            case, service workers will have access to IndexedDB API in order to persist and reuse across restarts.</p>
+    </div>
+
+    <div class="questions" id="What_is_IndexedDB">
+        <h1>34. What is IndexedDB?</h1>
+    </div>
+    <div class="answers">
+        <p>IndexedDB is a low-level API for client-side storage of larger amounts of structured data, including
+            files/blobs. This API uses indexes to enable high-performance searches of this data.</p>
+    </div>
+
+    <div class="questions" id="What_is_web_storage">
+        <h1>35. What is web storage?</h1>
+    </div>
+    <div class="answers">
+        <p>Web storage is an API that provides a mechanism by which browsers can store key/value pairs locally within
+            the user's browser, in a much more intuitive fashion than using cookies. The web storage provides two
+            mechanisms for storing data on the client.</p>
+        <ul>
+            <li><b>Local storage</b>It stores data for current origin with no expiration date.</li>
+            <li><b>Session storage</b>It stores data for one session and the data is lost when the browser tab is
+                closed.</li>
+        </ul>
+    </div>
+
+    <div class="questions" id="What_is_a_post_message">
+        <h1>36. What is a post message?</h1>
+    </div>
+    <div class="answers">
+        <p>Post message is a method that enables cross-origin communication between Window objects.(i.e, between a page
+            and a pop-up that it spawned, or between a page and an iframe embedded within it). Generally, scripts on
+            different pages are allowed to access each other if and only if the pages follow same-origin policy(i.e,
+            pages share the same protocol, port number, and host).</p>
+    </div>
+
+    <div class="questions" id="What_is_a_Cookie">
+        <h1>37. What is a Cookie?</h1>
+    </div>
+    <div class="answers">
+        <p>A cookie is a piece of data that is stored on your computer to be accessed by your browser. Cookies are saved
+            as key/value pairs. For example, you can create a cookie named username as below,</p>
+        <prismcode [code]="code63" language="javascript"></prismcode>
+    </div>
+
+    <div class="questions" id="Which_types_of_storage_are_available_in_browser">
+        <h1>38. Which types of storage are available in browser?</h1>
+    </div>
+    <div class="answers">
+        <p>Here is varius types of storage available in web browsers, along with their properties and storage
+            capacities:</p>
+        <ol>
+            <li>
+                <b>LocalStorage</b>
+                <ul style="margin-left: 20px;">
+                    <li>
+                        <b>Properties</b>
+                        <ul style="margin-left: 20px;">
+                            <li>Stores data persistently in the browser with no expiration date.</li>
+                            <li>Data is stored as key-value pairs.</li>
+                            <li>Only strings can be stored, so complex data needs to be serialized (e.g., using
+                                JSON.stringify()).</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Storage Capacity</b>Typically around 5-10 MB, but can vary depending on the browser and
+                        device.
+                    </li>
+                    <li>
+                        <b>Usage</b>
+                        <prismcode [code]="code64" language="javascript"></prismcode>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <b>SessionStorage</b>
+                <ul style="margin-left: 20px;">
+                    <li>
+                        <b>Properties</b>
+                        <ul style="margin-left: 20px;">
+                            <li>Stores data for the duration of the page session (until the browser or tab is closed).
+                            </li>
+                            <li>Data is stored as key-value pairs.</li>
+                            <li>Similar to LocalStorage but scoped to the current session.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Storage Capacity:</b>Similar to LocalStorage, typically around 5-10 MB.
+                    </li>
+                    <li>
+                        <b>Usage</b>
+                        <prismcode [code]="code65" language="javascript"></prismcode>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <b>IndexedDB</b>
+                <ul style="margin-left: 20px;">
+                    <li>
+                        <b>Properties</b>
+                        <ul style="margin-left: 20px;">
+                            <li>Provides a more powerful API for storing large amounts of structured data.</li>
+                            <li>Supports indexes for fast data retrieval.</li>
+                            <li>Works asynchronously and supports transactions.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Storage Capacity:</b>Typically larger than LocalStorage and SessionStorage, but can vary
+                        depending on the browser and device.
+                    </li>
+                    <li>
+                        <b>Usage</b>
+                        <prismcode [code]="code66" language="javascript"></prismcode>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <b>Cookies</b>
+                <ul style="margin-left: 20px;">
+                    <li>
+                        <b>Properties</b>
+                        <ul style="margin-left: 20px;">
+                            <li>Stores small pieces of data sent from a website and stored on the user's device.</li>
+                            <li>Can have an expiration date or be session cookies that expire when the browser is
+                                closed.</li>
+                            <li>Data is sent with every HTTP request to the associated domain.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Storage Capacity:</b> Limited to around 4 KB per cookie, and there is usually a limit on the
+                        total number of cookies per domain (e.g., 20 cookies per domain).
+                    </li>
+                    <li>
+                        <b>Usage</b>
+                        <prismcode [code]="code67" language="javascript"></prismcode>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <b>Web Storage</b>
+                <ul style="margin-left: 20px;">
+                    <li>
+                        <b>Properties</b>
+                        <ul style="margin-left: 20px;">
+                            <li>Refers to the combination of LocalStorage and SessionStorage.</li>
+                            <li>Provides a simple key-value storage mechanism for persisting data in the browser.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Storage Capacity:</b>TyVaries depending on the browser and device, but typically around 5-10
+                        MB for both LocalStorage and SessionStorage combined.
+                    </li>
+                    <li>
+                        <b>Usage</b>
+                        <prismcode [code]="code68" language="javascript"></prismcode>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <b>Cache API</b>
+                <ul style="margin-left: 20px;">
+                    <li>
+                        <b>Properties</b>
+                        <ul style="margin-left: 20px;">
+                            <li>Provides programmatic access to the browser's HTTP cache for storing responses to
+                                network requests.</li>
+                            <li>Allows developers to control caching behavior, expiration, and invalidation.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Storage Capacity:</b>Varies depending on the browser and device, but typically larger than
+                        LocalStorage and SessionStorage.
+                    </li>
+                    <li>
+                        <b>Usage</b>
+                        <prismcode [code]="code69" language="javascript"></prismcode>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <b>Shared Storage</b>
+                <p>Shared Storage refers to a storage mechanism that allows data to be shared across multiple tabs or
+                    windows within the same browser. Unlike LocalStorage or SessionStorage, which are scoped to
+                    individual tabs or windows, Shared Storage enables data synchronization and sharing among all
+                    instances of the same origin (i.e., same protocol, domain, and port) within the browser.</p>
+                <ul style="margin-left: 20px;">
+                    <li>
+                        <b>Properties</b>
+                        <ul style="margin-left: 20px;">
+                            <li>Data is accessible from all tabs or windows of the same origin.</li>
+                            <li>Provides a way to share data in real-time between different instances of the same web
+                                application.</li>
+                            <li>Typically implemented using technologies like BroadcastChannel API, SharedWorker, or
+                                Service Worker.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Usage</b>
+                        <p>Shared Storage can be useful for scenarios such as real-time collaboration applications,
+                            where data needs to be synchronized across multiple browser instances.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <b>Cache Storage</b>
+                <p>Cache Storage is a storage mechanism provided by the browser that allows web developers to store and
+                    retrieve web resources (such as HTML, CSS, JavaScript, images, and other assets) for offline use or
+                    improved performance. It is part of the broader Cache API, which provides programmatic access to the
+                    browser's HTTP cache.</p>
+                <ul style="margin-left: 20px;">
+                    <li>
+                        <b>Properties</b>
+                        <ul style="margin-left: 20px;">
+                            <li>Designed for storing cached responses to network requests.</li>
+                            <li>Allows developers to control caching behavior, including expiration, invalidation, and
+                                fine-grained control over cache storage.</li>
+                            <li>Provides a way to improve performance and offline capabilities of web applications by
+                                serving cached resources instead of making network requests.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Usage</b>
+                        <p>Cache Storage is commonly used in Progressive Web Apps (PWAs) and offline-first web
+                            applications to cache resources for offline use and provide a faster, more responsive user
+                            experience.</p>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+        <p>Here's a brief example of how Cache Storage can be used:</p>
+        <prismcode [code]="code70" language="javascript"></prismcode>
+        <p>In summary, Shared Storage enables data sharing across multiple tabs or windows of the same origin, while
+            Cache Storage allows developers to store and retrieve web resources for improved performance and offline
+            capabilities. Both mechanisms play important roles in building modern web applications that prioritize
+            real-time collaboration, performance, and offline support.</p>
+        <p>These are some of the main storage options available in web browsers, each with its own properties,
+            capabilities, and limitations. The choice of storage mechanism depends on factors such as the type of data
+            to be stored, the required storage capacity, and the desired behavior (e.g., persistence, session-specific).
+        </p>
+    </div>
+
+    <div class="questions" id="What_are_the_options_in_a_cookie">
+        <h1>39. What are the options in a cookie?</h1>
+    </div>
+    <div class="answers">
+        <p>There are few below options available for a cookie,</p>
+        <ol>
+            <li>
+                <p>By default, the cookie is deleted when the browser is closed but you can change this behavior by
+                    setting expiry date (in UTC time).</p>
+                <prismcode [code]="code71" language="javascript"></prismcode>
+            </li>
+            <li>
+                <p>By default, the cookie belongs to a current page. But you can tell the browser what path the cookie
+                    belongs to using a path parameter.</p>
+                <prismcode [code]="code72" language="javascript"></prismcode>
+            </li>
+        </ol>
+    </div>
+
+    <div class="questions" id="How_do_you_delete_a_cookie">
+        <h1>40. How do you delete a cookie?</h1>
+    </div>
+    <div class="answers">
+        <p>You can delete a cookie by setting the expiry date as a passed date. You don't need to specify a cookie value
+            in this case. For example, you can delete a username cookie in the current page as below.</p>
+        <prismcode [code]="code73" language="javascript"></prismcode>
+        <p><b>Note:</b> You should define the cookie path option to ensure that you delete the right cookie. Some
+            browsers doesn't allow to delete a cookie unless you specify a path parameter.</p>
+    </div>
+
+    <div class="questions" id="What_are_the_differences_between_cookie_local_storage_and_session_storage">
+        <h1>41. What are the differences between cookie, local storage and session storage?</h1>
+    </div>
+    <div class="answers">
+        <p>Below are some of the differences between cookie, local storage and session storage,</p>
+        <table>
+            <tr>
+                <th>Feature</th>
+                <th>Cookies</th>
+                <th>LocalStorage</th>
+                <th>SessionStorage</th>
+            </tr>
+            <tr>
+                <td>Scope</td>
+                <td>Domain and path specific</td>
+                <td>Origin (all tabs/windows)</td>
+                <td>Origin (per tab/window)</td>
+            </tr>
+            <tr>
+                <td>Persistence</td>
+                <td>Can have expiration date</td>
+                <td>Persistent (until manually cleared or expiration)</td>
+                <td>Session-based (cleared when session ends)</td>
+            </tr>
+            <tr>
+                <td>Storage Size</td>
+                <td>Limited (typically around 4 KB)</td>
+                <td>Larger (typically 5-10 MB)</td>
+                <td>Similar to LocalStorage</td>
+            </tr>
+            <tr>
+                <td>Access Method</td>
+                <td>Sent with every HTTP request</td>
+                <td>Direct JavaScript API</td>
+                <td>Direct JavaScript API</td>
+            </tr>
+            <tr>
+                <td>Data Types</td>
+                <td>Only strings</td>
+                <td>Any data type (automatically serialized to strings)</td>
+                <td>Any data type (automatically serialized to strings)</td>
+            </tr>
+            <tr>
+                <td>Use Cases</td>
+                <td>Storing small amounts of data</td>
+                <td>Storing larger amounts of data</td>
+                <td>Storing data for the duration of a session</td>
+            </tr>
+            <tr>
+                <td>Usage</td>
+                <td>document.cookie API</td>
+                <td>localStorage global object</td>
+                <td>sessionStorage global object</td>
+            </tr>
+            <tr>
+                <td>Security</td>
+                <td>Can be susceptible to XSS attacks</td>
+                <td>Limited to same-origin policy</td>
+                <td>Limited to same-origin policy</td>
+            </tr>
+            <tr>
+                <td>Privacy</td>
+                <td>Subject to browser's cookie policies and regulations</td>
+                <td>Not sent to the server; more privacy-friendly</td>
+                <td>Similar to LocalStorage</td>
+            </tr>
+            <tr>
+                <td>SSL support</td>
+                <td>Supported</td>
+                <td>Not supported</td>
+                <td>Not supported</td>
+            </tr>
+            <tr>
+                <td>Lifetime</td>
+                <td>As configured using Expires option</td>
+                <td>until deleted</td>
+                <td>until tab is closed</td>
+            </tr>
+            <tr>
+                <td>Accessed on client or server side</td>
+                <td>Both server-side & client-side</td>
+                <td>client-side only</td>
+                <td>client-side only</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="questions" id="How_do_you_check_web_storage_browser_support">
+        <h1>42. How do you check web storage browser support?</h1>
+    </div>
+    <div class="answers">
+        <p>You need to check browser support for localStorage and sessionStorage before using web storage,</p>
+        <prismcode [code]="code74" language="javascript"></prismcode>
+    </div>
+
+    <div class="questions" id="How_do_you_check_web_workers_browser_support">
+        <h1>43. How do you check web workers browser support?</h1>
+    </div>
+    <div class="answers">
+        <p>You need to check browser support for web workers before using it</p>
+        <prismcode [code]="code75" language="javascript"></prismcode>
+    </div>
+
+    <div class="questions" id="Give_an_example_of_a_web_worker">
+        <h1>44. Give an example of a web worker?</h1>
+    </div>
+    <div class="answers">
+        <p>You need to follow below steps to start using web workers for counting example</p>
+        <p>Create a Web Worker File: You need to write a script to increment the count value. Let's name it as
+            counter.js</p>
+        <prismcode [code]="code76" language="javascript"></prismcode>
+        <p>Here postMessage() method is used to post a message back to the HTML page</p>
+        <p>Create a Web Worker Object: You can create a web worker object by checking for browser support. Let's name
+            this file as web_worker_example.js</p>
+        <prismcode [code]="code77" language="javascript"></prismcode>
+        <p>and we can receive messages from web worker</p>
+        <prismcode [code]="code78" language="javascript"></prismcode>
+        <p>Terminate a Web Worker: Web workers will continue to listen for messages (even after the external script is
+            finished) until it is terminated. You can use the terminate() method to terminate listening to the messages.
+        </p>
+        <prismcode [code]="code79" language="javascript"></prismcode>
+        <p>Reuse the Web Worker: If you set the worker variable to undefined you can reuse the code</p>
+        <prismcode [code]="code80" language="javascript"></prismcode>
+    </div>
+
+    <div class="questions" id="What_are_the_restrictions_of_web_workers_on_DOM">
+        <h1>45. What are the restrictions of web workers on DOM?</h1>
+    </div>
+    <div class="answers">
+        <p>WebWorkers don't have access to below javascript objects since they are defined in an external files</p>
+        <p>i. Window object</p>
+        <p>ii. Document object</p>
+        <p>iii. Parent object</p>
+    </div>
+
+    <div class="questions" id="in_javascript_how_many_possible_ways_are_there_to_handle_asynchronous_operations">
+        <h1>46. In JavaScript how many possible ways are there to handle asynchronous operations?</h1>
+    </div>
+    <div class="answers">
+        <p>In JavaScript, there are several ways to handle asynchronous operations. Here are some of the most common
+            methods, along with detailed explanations and code snippets for each:</p>
+        <ol>
+            <li>
+                <b>Callbacks</b>
+                <p>Callbacks are functions passed as arguments to other functions, to be executed once an asynchronous
+                    operation completes.Example:</p>
+                <prismcode [code]="code81" language="javascript"></prismcode>
+            </li>
+            <li>
+                <b>Promises</b>
+                <p>Promises represent the eventual completion (or failure) of an asynchronous operation and allow
+                    chaining multiple asynchronous operations.Example:</p>
+                <prismcode [code]="code82" language="javascript"></prismcode>
+            </li>
+            <li>
+                <b>Async/Await</b>
+                <p>Async/Await is a syntax built on top of Promises, providing a more synchronous-looking way to write
+                    asynchronous code.Example:</p>
+                <prismcode [code]="code83" language="javascript"></prismcode>
+            </li>
+            <li>
+                <b>Event Emitters</b>
+                <p>Event emitters allow objects to emit named events that cause listener functions to be called when the
+                    event is triggered.Example:</p>
+                <prismcode [code]="code84" language="javascript"></prismcode>
+            </li>
+            <li>
+                <b>Generators</b>
+                <p>Generators are functions that can be paused and resumed, making them useful for handling asynchronous
+                    code.Example:</p>
+                <prismcode [code]="code85" language="javascript"></prismcode>
+            </li>
+        </ol>
+        <p>This example demonstrates fetching data from an API using different asynchronous methods: callbacks,
+            promises, async/await, event emitters, and generators. Error handling is also incorporated, with error
+            messages logged when data retrieval fails. Each method's output is prefixed with the method name for
+            clarity.</p>
+    </div>
+
+    <div class="questions" id="In_Rxjs_how_many_possible_ways_are_there_to_handle_asynchronous_operations">
+        <h1>47. In Rxjs how many possible ways are there to handle asynchronous operations?</h1>
+    </div>
+    <div class="answers">
+        <p>In RxJS (Reactive Extensions for JavaScript), there are several ways to handle asynchronous operations and
+            data streams. RxJS provides a powerful set of operators and patterns for working with streams of data. Here
+            are some common ways to handle asynchronous operations using RxJS:</p>
+        <ol>
+            <li>
+                <b>Observables</b>
+                <p>Observables are a central concept in RxJS, representing a sequence of values over time. They can be
+                    created from various sources such as events, arrays, promises, or even other observables.Example:
+                </p>
+                <prismcode [code]="code86" language="javascript"></prismcode>
+            </li>
+            <li>
+                <b>Operators</b>
+                <p>RxJS provides a wide range of operators that allow you to transform, filter, combine, and manipulate
+                    data streams.Example:</p>
+                <prismcode [code]="code87" language="javascript"></prismcode>
+            </li>
+            <li>
+                <b>Subjects</b>
+                <p>Subjects are both an observable and an observer, allowing you to multicast values to multiple
+                    observers.Example:</p>
+                <prismcode [code]="code88" language="javascript"></prismcode>
+            </li>
+            <li>
+                <b>Schedulers</b>
+                <p>RxJS provides schedulers to control when and how notifications are delivered, allowing you to specify
+                    concurrency, time intervals, and execution contexts.Example:</p>
+                <prismcode [code]="code89" language="javascript"></prismcode>
+            </li>
+            <li>
+                <b>Error Handling</b>
+                <p>RxJS provides operators like catchError, retry, and throwError to handle errors in data
+                    streams.Example:</p>
+                <prismcode [code]="code90" language="javascript"></prismcode>
+            </li>
+        </ol>
+        <p>These are just a few examples of handling asynchronous operations using RxJS. The library offers a rich set
+            of features for working with reactive programming patterns, allowing you to create complex asynchronous
+            workflows in a concise and composable manner.</p>
+    </div>
+
+    <div class="questions" id="What_is_a_callback_hell">
+        <h1>48. What is a callback hell?</h1>
+    </div>
+    <div class="answers">
+        <p>Callback Hell is an anti-pattern with multiple nested callbacks which makes code hard to read and debug when
+            dealing with asynchronous logic. The callback hell looks like below,</p>
+        <prismcode [code]="code91" language="javascript"></prismcode>
+    </div>
+
+    <div class="questions" id="What_are_server_sent_events">
+        <h1>49. What are server-sent events?</h1>
+    </div>
+    <div class="answers">
+        <p>Server-sent events (SSE) is a server push technology enabling a browser to receive automatic updates from a
+            server via HTTP connection without resorting to polling. These are a one way communications channel - events
+            flow from server to client only. This has been used in Facebook/Twitter updates, stock price updates, news
+            feeds etc.</p>
+    </div>
+
+    <div class="questions" id="How_do_you_receive_server_sent_event_notifications">
+        <h1>50. How do you receive server-sent event notifications?</h1>
+    </div>
+    <div class="answers">
+        <p>The EventSource object is used to receive server-sent event notifications. For example, you can receive
+            messages from server as below,</p>
+        <prismcode [code]="code92" language="javascript"></prismcode>
+    </div>
+
+    <div class="questions" id="How_do_you_check_browser_support_for_server_sent_events">
+        <h1>51. How do you check browser support for server-sent events?</h1>
+    </div>
+    <div class="answers">
+        <p>You can perform browser support for server-sent events before using it as below,</p>
+        <prismcode [code]="code93" language="javascript"></prismcode>
+    </div>
+
+    <div class="questions" id="What_are_the_events_available_for_server_sent_events">
+        <h1>52. What are the events available for server sent events?</h1>
+    </div>
+    <div class="answers">
+        <p>Below are the list of events available for server sent events</p>
+        <table>
+            <tr>
+                <th>Event</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>onopen</td>
+                <td>It is used when a connection to the server is opened</td>
+            </tr>
+            <tr>
+                <td>onmessage</td>
+                <td>This event is used when a message is received</td>
+            </tr>
+            <tr>
+                <td>onerror</td>
+                <td>It happens when an error occurs</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="questions" id="What_are_the_main_rules_of_promise">
+        <h1>53. What are the main rules of promise?</h1>
+    </div>
+    <div class="answers">
+        <p>A promise must follow a specific set of rules:</p>
+        <p>i. A promise is an object that supplies a standard-compliant .then() method</p>
+        <p>ii. A pending promise may transition into either fulfilled or rejected state</p>
+        <p>iii. A fulfilled or rejected promise is settled and it must not transition into any other state.</p>
+        <p>iv. Once a promise is settled, the value must not change.</p>
+    </div>
+
+    <div class="questions" id="What_is_callback_in_callback">
+        <h1>54. What is callback in callback?</h1>
+    </div>
+    <div class="answers">
+        <p>You can nest one callback inside in another callback to execute the actions sequentially one by one. This is
+            known as callbacks in callbacks.</p>
+        <prismcode [code]="code94" language="javascript"></prismcode>
+    </div>
+
+    <div class="questions" id="What_is_promise_chaining">
+        <h1>55. What is promise chaining?</h1>
+    </div>
+    <div class="answers">
+        <p>The process of executing a sequence of asynchronous tasks one after another using promises is known as
+            Promise chaining. Let's take an example of promise chaining for calculating the final result,</p>
+        <prismcode [code]="code95" language="javascript"></prismcode>
+        <p>In the above handlers, the result is passed to the chain of .then() handlers with the below work flow,</p>
+        <ul>
+            <li>The initial promise resolves in 1 second,</li>
+            <li>After that .then handler is called by logging the result(1) and then return a promise with the value of
+                result * 2.</li>
+            <li>After that the value passed to the next .then handler by logging the result(2) and return a promise with
+                result * 3.</li>
+            <li>Finally the value passed to the last .then handler by logging the result(6) and return a promise with
+                result * 4.</li>
+        </ul>
+    </div>
+
+    <div class="questions" id="What_is_promise_all">
+        <h1>56. What is promise.all?</h1>
+    </div>
+    <div class="answers">
+        <p>Promise.all is a promise that takes an array of promises as an input (an iterable), and it gets resolved when
+            all the promises get resolved or any one of them gets rejected. For example, the syntax of promise.all
+            method is below,</p>
+        <prismcode [code]="code96" language="javascript"></prismcode>
+        <p><b>Note: </b>Remember that the order of the promises(output the result) is maintained as per input order.</p>
+    </div>
+
+    <div class="questions" id="What_is_the_purpose_of_the_race_method_in_promise">
+        <h1>57. What is the purpose of the race method in promise?</h1>
+    </div>
+    <div class="answers">
+        <p>Promise.race() method will return the promise instance which is firstly resolved or rejected. Let's take an
+            example of race() method where promise2 is resolved first</p>
+        <prismcode [code]="code97" language="javascript"></prismcode>
+    </div>
+
+    <div class="questions" id="What_is_a_strict_mode_in_javascript">
+        <h1>58. What is a strict mode in javascript?</h1>
+    </div>
+    <div class="answers">
+        <p>Strict Mode is a new feature in ECMAScript 5 that allows you to place a program, or a function, in a “strict”
+            operating context. This way it prevents certain actions from being taken and throws more exceptions. The
+            literal expression "use strict"; instructs the browser to use the javascript code in the Strict mode.</p>
+    </div>
+
+    <div class="questions" id="Why_do_you_need_strict_mode">
+        <h1>59. Why do you need strict mode?</h1>
+    </div>
+    <div class="answers">
+        <p>Strict mode is useful to write "secure" JavaScript by notifying "bad syntax" into real errors. For example,
+            it eliminates accidentally creating a global variable by throwing an error and also throws an error for
+            assignment to a non-writable property, a getter-only property, a non-existing property, a non-existing
+            variable, or a non-existing object.</p>
+    </div>
+
+    <div class="questions" id="How_do_you_declare_strict_mode">
+        <h1>60. How do you declare strict mode?</h1>
+    </div>
+    <div class="answers">
+        <p>The strict mode is declared by adding "use strict"; to the beginning of a script or a function. If declared
+            at the beginning of a script, it has global scope.</p>
+        <prismcode [code]="code98" language="javascript"></prismcode>
+        <p>and if you declare inside a function, it has local scope</p>
+        <prismcode [code]="code99" language="javascript"></prismcode>
+    </div>
+
+    <div class="questions">
+        <h1></h1>
+    </div>
+    <div class="answers">
+        <p></p>
+    </div>
+
+    <div class="questions">
+        <h1></h1>
+    </div>
+    <div class="answers">
+        <p></p>
+    </div>
+
+    <div class="questions">
+        <h1></h1>
+    </div>
+    <div class="answers">
+        <p></p>
+    </div>
+
+    <div class="questions">
+        <h1></h1>
+    </div>
+    <div class="answers">
+        <p></p>
+    </div>
+
+    <div class="questions">
+        <h1></h1>
+    </div>
+    <div class="answers">
+        <p></p>
+    </div>
+
+    <div class="questions">
+        <h1></h1>
+    </div>
+    <div class="answers">
+        <p></p>
+    </div>
+
+    <div class="questions">
+        <h1></h1>
+    </div>
+    <div class="answers">
+        <p></p>
+    </div>
+
+    <div class="questions">
+        <h1></h1>
+    </div>
+    <div class="answers">
+        <p></p>
+    </div>
+
+    <div class="questions">
+        <h1></h1>
+    </div>
+    <div class="answers">
+        <p></p>
+    </div>
+
+    <div class="questions">
+        <h1></h1>
+    </div>
+    <div class="answers">
+        <p></p>
+    </div>
+
+    <div class="questions">
+        <h1></h1>
+    </div>
+    <div class="answers">
+        <p></p>
     </div>
 
     <div class="questions">
@@ -800,5 +1679,5 @@
         <td>Component-Based Architecture</td>
     </tr>
 </table> 
-<prismcode [code]="code32" language="javascript"></prismcode>
+<prismcode [code]="code91" language="javascript"></prismcode>
 -->

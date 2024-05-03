@@ -41,6 +41,54 @@ export class InterviewComponent implements OnInit, OnDestroy {
       { name: 'What is the Temporal Dead Zone?', id: "What_is_the_Temporal_Dead_Zone" },
       { name: 'What is an IIFE (Immediately Invoked Function Expression)?', id: "What_is_an_IIFE_Immediately_Invoked_Function_Expression" },
       { name: 'How do you decode or encode a URL in JavaScript?', id: "How_do_you_decode_or_encode_a_URL_in_JavaScript" },
+      { name: 'What is memoization?', id: "What_is_memoization" },
+      { name: 'Explain each Hoisting, TDZ, lexical scope, Closure, Variable Scope, Function Scope with example?', id: "Explain_each_Hoisting_TDZ_lexical_scope_Closure_Variable_Scop_Function_Scope_with_example" },
+      { name: 'What are classes in ES6?', id: "What_are_classes_in_ES6" },
+      { name: 'What are modules and Why do you need modules?', id: "What_are_modules_and_Why_do_you_need_modules" },
+      { name: 'What is scope in javascript?', id: "What_is_scope_in_javascript" },
+      { name: 'What is a service worker?', id: "What_is_a_service_worker" },
+      { name: 'How do you manipulate DOM using a service worker?', id: "How_do_you_manipulate_DOM_using_a_service_worker" },
+      { name: 'How do you reuse information across service worker restarts?', id: "How_do_you_reuse_information_across_service_worker_restarts" },
+      { name: 'What is IndexedDB?', id: "What_is_IndexedDB" },
+      { name: 'What is web storage?', id: "What_is_web_storage" },
+      { name: 'What is a post message?', id: "What_is_a_post_message" },
+      { name: 'What is a Cookie?', id: "What_is_a_Cookie" },
+      { name: 'Which types of storage are available in browser?', id: "Which_types_of_storage_are_available_in_browser" },
+      { name: 'What are the options in a cookie?', id: "What_are_the_options_in_a_cookie" },
+      { name: 'How do you delete a cookie?', id: "How_do_you_delete_a_cookie" },
+      { name: 'What are the differences between cookie, local storage and session storage?', id: "What_are_the_differences_between_cookie_local_storage_and_session_storage" },
+      { name: 'How do you check web storage browser support?', id: "How_do_you_check_web_storage_browser_support" },
+      { name: 'How do you check web workers browser support?', id: "How_do_you_check_web_workers_browser_support" },
+      { name: 'Give an example of a web worker?', id: "Give_an_example_of_a_web_worker" },
+      { name: 'What are the restrictions of web workers on DOM?', id: "What_are_the_restrictions_of_web_workers_on_DOM" },
+      { name: 'In JavaScript how many possible ways are there to handle asynchronous operations?', id: "in_javascript_how_many_possible_ways_are_there_to_handle_asynchronous_operations" },
+      { name: 'In Rxjs how many possible ways are there to handle asynchronous operations?', id: "In_Rxjs_how_many_possible_ways_are_there_to_handle_asynchronous_operations" },
+      { name: 'What is a callback hell?', id: "What_is_a_callback_hell" },
+      { name: 'What are server-sent events?', id: "What_are_server_sent_events" },
+      { name: 'How do you receive server-sent event notifications?', id: "How_do_you_receive_server_sent_event_notifications" },
+      { name: 'How do you check browser support for server-sent events?', id: "How_do_you_check_browser_support_for_server_sent_events" },
+      { name: 'What are the events available for server sent events?', id: "What_are_the_events_available_for_server_sent_events" },
+      { name: 'What are the main rules of promise?', id: "What_are_the_main_rules_of_promise" },
+      { name: 'What is callback in callback?', id: "What_is_callback_in_callback" },
+      { name: 'What is promise chaining?', id: "What_is_promise_chaining" },
+      { name: 'What is promise.all?', id: "What_is_promise_all" },
+      { name: 'What is the purpose of the race method in promise?', id: "What_is_the_purpose_of_the_race_method_in_promise" },
+      { name: 'What is a strict mode in javascript?', id: "What_is_a_strict_mode_in_javascript" },
+      { name: 'Why do you need strict mode?', id: "Why_do_you_need_strict_mode" },
+      { name: 'How do you declare strict mode?', id: "How_do_you_declare_strict_mode" },
+      // { name: 'Variable_Declaration', id: "Variable_Declaration" },
+      // { name: 'Variable_Declaration', id: "Variable_Declaration" },
+      // { name: 'Variable_Declaration', id: "Variable_Declaration" },
+      // { name: 'Variable_Declaration', id: "Variable_Declaration" },
+      // { name: 'Variable_Declaration', id: "Variable_Declaration" },
+      // { name: 'Variable_Declaration', id: "Variable_Declaration" },
+      // { name: 'Variable_Declaration', id: "Variable_Declaration" },
+      // { name: 'Variable_Declaration', id: "Variable_Declaration" },
+      // { name: 'Variable_Declaration', id: "Variable_Declaration" },
+      // { name: 'Variable_Declaration', id: "Variable_Declaration" },
+      // { name: 'Variable_Declaration', id: "Variable_Declaration" },
+      // { name: 'Variable_Declaration', id: "Variable_Declaration" },
+      // { name: 'Variable_Declaration', id: "Variable_Declaration" },
       // { name: 'Variable_Declaration', id: "Variable_Declaration" },
     ];
     this.shearedService.rSidebar_Id_Data$.next(data);
@@ -392,6 +440,422 @@ person.greet(); // Output: Hello, John!
   code52: string = `let uri = "employeeDetails?name=john&occupation=manager";
   let encoded_uri = encodeURI(uri);
   let decoded_uri = decodeURI(encoded_uri);`;
+  code53: string = `const memoizAddition = () => {
+    let cache = {};
+    return (value) => {
+      if (value in cache) {
+        console.log("Fetching from cache");
+        return cache[value]; // Here, cache.value cannot be used as property name starts with the number which is not a valid JavaScript  identifier. Hence, can only be accessed using the square bracket notation.
+      } else {
+        console.log("Calculating result");
+        let result = value + 20;
+        cache[value] = result;
+        return result;
+      }
+    };
+  };
+  // returned function from memoizAddition
+  const addition = memoizAddition();
+  console.log(addition(20)); //output: 40 calculated
+  console.log(addition(20)); //output: 40 cached`;
+  code54: string = `console.log(x); // undefined
+  var x = 5;
+  console.log(x); // 5
+  `;
+  code55: string = `var x;
+  console.log(x);
+  x = 5;
+  console.log(x);
+  `;
+  code56: string = `console.log(x); // Throws ReferenceError
+  let x = 5;
+  `;
+  code57: string = `let a = 10;
+  function myFunction() {
+      console.log(a); // 10
+  }
+  myFunction();
+  `;
+  code58: string = `function outerFunction() {
+    let outerVariable = 20;
+    function innerFunction() {
+        console.log(outerVariable); // 20
+    }
+    return innerFunction;
+}
+let innerFunc = outerFunction();
+innerFunc();
+`;
+  code59: string = `// Global scope
+  let globalVar = "I am global";
+  
+  function outerFunction() {
+      // Function scope
+      let outerVar = "I am outer";
+      console.log(globalVar); // Accessible
+      console.log(outerVar); // Accessible
+  
+      function innerFunction() {
+          // Inner function scope
+          let innerVar = "I am inner";
+          console.log(globalVar); // Accessible
+          console.log(outerVar); // Accessible
+          console.log(innerVar); // Accessible
+      }
+  
+      innerFunction();
+      // console.log(innerVar); // Error: innerVar is not defined
+  }
+  
+  outerFunction();
+  // console.log(outerVar); // Error: outerVar is not defined
+  `;
+  code60: string = `function outerFunction() {
+    let outerVar = "I am outer";
+    console.log(outerVar); // Accessible
+
+    function innerFunction() {
+        let innerVar = "I am inner";
+        console.log(innerVar); // Accessible
+    }
+
+    innerFunction();
+    // console.log(innerVar); // Error: innerVar is not defined
+}
+
+outerFunction();
+// console.log(outerVar); // Error: outerVar is not defined
+`;
+  code61: string = `function Bike(model, color) {
+    this.model = model;
+    this.color = color;
+  }
+  
+  Bike.prototype.getDetails = function () {
+    return this.model + " bike has" + this.color + " color";
+  };`;
+  code62: string = `class Bike {
+    constructor(color, model) {
+      this.color = color;
+      this.model = model;
+    }
+  
+    getDetails() {
+      return this.model + " bike has" + this.color + " color";
+    }
+  }`;
+  code63: string = `document.cookie = "username=John";`;
+  code64: string = `localStorage.setItem('key', 'value');
+  let value = localStorage.getItem('key');
+  `;
+  code65: string = `sessionStorage.setItem('key', 'value');
+  let value = sessionStorage.getItem('key');
+  `;
+  code66: string = `// Open a database
+  let request = indexedDB.open('databaseName', version);
+  
+  // Create an object store
+  let objectStore = db.createObjectStore('storeName', { keyPath: 'id' });
+  
+  // Add data to the object store
+  objectStore.add({ id: 1, data: 'value' });
+  
+  // Retrieve data from the object store
+  let transaction = db.transaction(['storeName'], 'readonly');
+  let objectStore = transaction.objectStore('storeName');
+  let request = objectStore.get(1);
+  `;
+  code67: string = `document.cookie = 'name=value; expires=Sun, 31 Dec 2023 23:59:59 GMT; path=/';
+  let cookieValue = document.cookie;
+  `;
+  code68: string = `sessionStorage.setItem('key', 'value');
+  let value = sessionStorage.getItem('key');
+  `;
+  code69: string = `// Cache a response
+  caches.open('cacheName').then(cache => {
+      cache.put(request, response);
+  });
+  
+  // Retrieve a response from the cache
+  caches.match(request).then(response => {
+      if (response) {
+          // Use cached response
+      }
+  });
+  `;
+  code70: string = `// Open a cache
+  caches.open('my-cache').then(cache => {
+      // Cache a resource
+      cache.add('/path/to/resource');
+  
+      // Retrieve a resource from the cache
+      cache.match('/path/to/resource').then(response => {
+          if (response) {
+              // Use cached response
+          }
+      });
+  });
+  `;
+  code71: string = `document.cookie = "username=John; expires=Sat, 8 Jun 2019 12:00:00 UTC";`;
+  code72: string = `document.cookie = "username=John; path=/services";`;
+  code73: string = `document.cookie =
+  "username=; expires=Fri, 07 Jun 2019 00:00:00 UTC; path=/;";`;
+  code74: string = `if (typeof Storage !== "undefined") {
+    // Code for localStorage/sessionStorage.
+  } else {
+    // Sorry! No Web Storage support..
+  }`;
+  code75: string = `if (typeof Worker !== "undefined") {
+    // code for Web worker support.
+  } else {
+    // Sorry! No Web Worker support..
+  }`;
+  code76: string = `let i = 0;
+
+  function timedCount() {
+    i = i + 1;
+    postMessage(i);
+    setTimeout("timedCount()", 500);
+  }
+  
+  timedCount();`;
+  code77: string = `if (typeof w == "undefined") {
+    w = new Worker("counter.js");
+  }`;
+  code78: string = `w.onmessage = function (event) {
+    document.getElementById("message").innerHTML = event.data;
+  };`;
+  code79: string = `w.terminate();`;
+  code80: string = `w = undefined;`;
+  code81: string = `function fetchDataWithCallback(callback) {
+    setTimeout(() => {
+        const error = Math.random() < 0.3 ? new Error("Failed to fetch data") : null;
+        const data = error ? null : "Data from API";
+        callback(error, data);
+    }, 2000);
+}
+
+// Usage of callback
+fetchDataWithCallback((error, data) => {
+    if (error) {
+        console.error("Error:", error.message);
+    } else {
+        console.log("Data received (Callback):", data);
+    }
+});`;
+  code82: string = `function fetchDataWithPromise() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const error = Math.random() < 0.3 ? new Error("Failed to fetch data") : null;
+            const data = error ? null : "Data from API";
+            error ? reject(error) : resolve(data);
+        }, 2000);
+    });
+}
+
+// Usage of Promise
+fetchDataWithPromise()
+    .then((data) => {
+        console.log("Data received (Promise):", data);
+    })
+    .catch((error) => {
+        console.error("Error:", error.message);
+    });
+`;
+  code83: string = `async function fetchDataWithAsyncAwait() {
+    try {
+        const data = await fetchDataWithPromise();
+        console.log("Data received (Async/Await):", data);
+    } catch (error) {
+        console.error("Error:", error.message);
+    }
+}
+
+// Usage of Async/Await
+fetchDataWithAsyncAwait();
+
+`;
+  code84: string = `const EventEmitter = require('events');
+
+  class DataEmitter extends EventEmitter {}
+  
+  const dataEmitter = new DataEmitter();
+  
+  dataEmitter.on('data', (data) => {
+      console.log("Data received (Event Emitters):", data);
+  });
+  
+  function fetchDataWithEventEmitter() {
+      setTimeout(() => {
+          const error = Math.random() < 0.3 ? new Error("Failed to fetch data") : null;
+          const data = error ? null : "Data from API";
+          error ? dataEmitter.emit('error', error) : dataEmitter.emit('data', data);
+      }, 2000);
+  }
+  
+  // Usage of Event Emitters
+  fetchDataWithEventEmitter();
+  `;
+  code85: string = `function* fetchGenerator() {
+    try {
+        const data = yield fetchDataWithPromise();
+        console.log("Data received (Generators):", data);
+    } catch (error) {
+        console.error("Error:", error.message);
+    }
+}
+
+const generator = fetchGenerator();
+generator.next().value
+    .then((data) => {
+        generator.next(data);
+    })
+    .catch((error) => {
+        generator.throw(error);
+    });`;
+  code86: string = `import { Observable } from 'rxjs';
+
+  const observable = new Observable(observer => {
+      setTimeout(() => {
+          observer.next('Data from Observable');
+          observer.complete();
+      }, 2000);
+  });
+  
+  observable.subscribe({
+      next: data => console.log('Data received (Observable):', data),
+      error: error => console.error('Error:', error),
+      complete: () => console.log('Observable completed')
+  });
+  `;
+  code87: string = `import { of } from 'rxjs';
+  import { map, catchError } from 'rxjs/operators';
+  
+  of('Data from Observable')
+      .pipe(
+          map(data => data.toUpperCase()),
+          catchError(error => {
+              console.error('Error:', error);
+              return of('Error occurred');
+          })
+      )
+      .subscribe(data => console.log('Transformed Data:', data));
+  `;
+  code88: string = `import { Subject } from 'rxjs';
+
+  const subject = new Subject();
+  
+  subject.subscribe({
+      next: data => console.log('Observer 1:', data)
+  });
+  
+  subject.next('Data from Subject');
+  
+  subject.subscribe({
+      next: data => console.log('Observer 2:', data)
+  });
+  
+  subject.next('More data from Subject');
+  `;
+  code89: string = `import { asyncScheduler } from 'rxjs';
+
+  asyncScheduler.schedule(() => {
+      console.log('Scheduled task');
+  });
+  `;
+  code90: string = `import { throwError } from 'rxjs';
+  import { catchError } from 'rxjs/operators';
+  
+  throwError(new Error('Error occurred'))
+      .pipe(
+          catchError(error => {
+              console.error('Error:', error.message);
+              return throwError('Handled error');
+          })
+      )
+      .subscribe(data => console.log(data));
+  `;
+  code91: string = `async1(function(){
+    async2(function(){
+        async3(function(){
+            async4(function(){
+                ....
+            });
+        });
+    });
+});`;
+  code92: string = `if (typeof EventSource !== "undefined") {
+    var source = new EventSource("sse_generator.js");
+    source.onmessage = function (event) {
+      document.getElementById("output").innerHTML += event.data + "<br>";
+    };
+  }`;
+  code93: string = `if (typeof EventSource !== "undefined") {
+    // Server-sent events supported. Let's have some code here!
+  } else {
+    // No server-sent events supported
+  }`;
+  code94: string = `loadScript("/script1.js", function (script) {
+    console.log("first script is loaded");
+  
+    loadScript("/script2.js", function (script) {
+      console.log("second script is loaded");
+  
+      loadScript("/script3.js", function (script) {
+        console.log("third script is loaded");
+        // after all scripts are loaded
+      });
+    });
+  });`;
+  code95: string = `new Promise(function (resolve, reject) {
+    setTimeout(() => resolve(1), 1000);
+  })
+    .then(function (result) {
+      console.log(result); // 1
+      return result * 2;
+    })
+    .then(function (result) {
+      console.log(result); // 2
+      return result * 3;
+    })
+    .then(function (result) {
+      console.log(result); // 6
+      return result * 4;
+    });`;
+  code96: string = `Promise.all([Promise1, Promise2, Promise3]) .then(result) => {   console.log(result) }) .catch(error => console.log('Error in promises \${error}'))`;
+  code97: string = `var promise1 = new Promise(function (resolve, reject) {
+    setTimeout(resolve, 500, "one");
+  });
+  var promise2 = new Promise(function (resolve, reject) {
+    setTimeout(resolve, 100, "two");
+  });
+  
+  Promise.race([promise1, promise2]).then(function (value) {
+    console.log(value); // "two" // Both promises will resolve, but promise2 is faster
+  });`;
+  code98: string = `"use strict";
+  x = 3.14; // This will cause an error because x is not declared`;
+  code99: string = `x = 3.14; // This will not cause an error.
+  myFunction();
+  
+  function myFunction() {
+    "use strict";
+    y = 3.14; // This will cause an error
+  }`;
+  code100: string = ``;
+  code101: string = ``;
+  code102: string = ``;
+  code103: string = ``;
+  code104: string = ``;
+  code105: string = ``;
+  code106: string = ``;
+  code107: string = ``;
+  code108: string = ``;
+  code109: string = ``;
+  code110: string = ``;
+
+
+
 
   ngOnDestroy(): void { this.shearedService.rSidebar_Id_Data$.next([]); }
   scroll(id: string, duration: number = 200) {
