@@ -1545,123 +1545,687 @@
         <prismcode [code]="code99" language="javascript"></prismcode>
     </div>
 
-    <div class="questions">
+    <div class="questions" id="What_are_script_tag_attribute">
+        <h1>61. What are script tag attribute?</h1>
+    </div>
+    <div class="answers">
+        <p>In HTML, the &lt;script&gt; tag is used to define a client-side script, such as JavaScript. The
+            &lt;script&gt; tag has several attributes that can be used to customize its behavior:</p>
+        <ol>
+            <li>
+                <b>src</b>
+                <p>This attribute specifies the URL of an external script file to be imported. For example:</p>
+                <prismcode [code]="code100" language="html"></prismcode>
+            </li>
+            <li>
+                <b>type</b>
+                <p>This attribute specifies the MIME type of the script. It's often set to "text/javascript", but it's
+                    not required anymore in HTML5. For example:</p>
+                <prismcode [code]="code101" language="html"></prismcode>
+            </li>
+            <li>
+                <b>async</b>
+                <p>This Boolean attribute specifies that the script should be executed asynchronously. This means that
+                    the script is executed while the page continues to load, and it doesn't block other page processes.
+                    For example:</p>
+                <prismcode [code]="code102" language="html"></prismcode>
+            </li>
+            <li>
+                <b>defer</b>
+                <p>This Boolean attribute specifies that the script execution should be deferred until after the
+                    document has been parsed. This is useful when the script relies on the HTML structure of the page.
+                    For example:</p>
+                <prismcode [code]="code103" language="html"></prismcode>
+            </li>
+            <li>
+                <b>integrity</b>
+                <p>This attribute allows a cryptographic hash of the resource to be included, to ensure that the fetched
+                    file is delivered without unexpected manipulation. It's often used in combination with the src
+                    attribute for ensuring the integrity of external scripts. For example:</p>
+                <prismcode [code]="code104" language="html"></prismcode>
+            </li>
+            <li>
+                <b>crossorigin</b>
+                <p>This attribute is used when loading scripts from a different origin (domain). It specifies how the
+                    browser should handle the loading of the script in terms of CORS (Cross-Origin Resource Sharing)
+                    policy. It can have values like "anonymous" or "use-credentials". For example:</p>
+                <prismcode [code]="code105" language="html"></prismcode>
+            </li>
+        </ol>
+    </div>
+
+    <div class="questions" id="Explain_call_apply_and_bind_methods">
+        <h1>62. Explain call(), apply() and, bind() methods.</h1>
+    </div>
+    <div class="answers">
+        <ol>
+            <li>
+                <b>call():</b>
+                <ul>
+                    <li>It’s a predefined method in javascript.</li>
+                    <li>This method invokes a method (function) by specifying the owner object.</li>
+                    <li>Example 1:</li>
+                    <li>
+                        <prismcode [code]="code106" language="javascript"></prismcode>
+                    </li>
+                    <li>call() method allows an object to use the method (function) of another object.</li>
+                    <li>Example 2:</li>
+                    <li>
+                        <prismcode [code]="code107" language="javascript"></prismcode>
+                    </li>
+                    <li>call() accepts arguments:</li>
+                    <li>
+                        <prismcode [code]="code108" language="javascript"></prismcode>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <b>apply():</b>
+                <p>The apply method is similar to the call() method. The only difference is that,</p>
+                <b>call() method takes arguments separately whereas, apply() method takes arguments as an array.</b>
+                <prismcode [code]="code109" language="javascript"></prismcode>
+            </li>
+            <li>
+                <b>bind():</b>
+                <ul>
+                    <li>This method returns a new function, where the value of “this” keyword will be bound to the owner
+                        object, which is provided as a parameter.</li>
+                    <li>Example with arguments:</li>
+                    <li>
+                        <prismcode [code]="code110" language="javascript"></prismcode>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+
+    <div class="questions" id="What_is_the_purpose_of_the_delete_operator">
+        <h1>63. What is the purpose of the delete operator?</h1>
+    </div>
+    <div class="answers">
+        <p>The delete operator is used to delete the property as well as its value.</p>
+        <prismcode [code]="code149" language="javascript"></prismcode>
+    </div>
+
+    <div class="questions" id="How_do_you_detect_caps_lock_key_turned_on_or_not">
+        <h1>64. How do you detect caps lock key turned on or not?</h1>
+    </div>
+    <div class="answers">
+        <p>The mouseEvent getModifierState() is used to return a boolean value that indicates whether the specified modifier key is activated or not. The modifiers such as CapsLock, ScrollLock and NumLock are activated when they are clicked, and deactivated when they are clicked again.</p>
+        <p>Let's take an input element to detect the CapsLock on/off behavior with an example,</p>
+        <prismcode [code]="code150" language="html"></prismcode>
+    </div>
+
+    <div class="questions" id="What_is_an_event_flow">
+        <h1>65. What is an event flow?</h1>
+    </div>
+    <div class="answers">
+        <p>Event flow is the order in which event is received on the web page. When you click an element that is nested in various other elements, before your click actually reaches its destination, or target element, it must trigger the click event for each of its parent elements first, starting at the top with the global window object.</p>
+        <p>There are two ways of event flow</p>
+        <ol>
+            <li>
+                <b>Top to Bottom(Event Capturing)</b>
+                <p>Event capturing is a type of event propagation where the event is first captured by the outermost element, and then successively triggers on the descendants (children) of the target element in the same nesting hierarchy till it reaches the innermost target DOM element.</p>
+                <p>You need to pass true value for addEventListener method to trigger event handlers in event capturing phase.</p>
+                <prismcode [code]="code151" language="html"></prismcode>
+            </li>
+            <li>
+                <b>Bottom to Top (Event Bubbling)</b>
+                <p>Event bubbling is a type of event propagation where the event first triggers on the innermost target element, and then successively triggers on the ancestors (parents) of the target element in the same nesting hierarchy till it reaches the outermost DOM element(i.e, global window object).</p>
+                <p>By default, event handlers triggered in event bubbling phase as shown below,</p>
+                <prismcode [code]="code152" language="html"></prismcode>
+            </li>
+        </ol>
+    </div>
+
+    <div class="questions" id="What_is_the_difference_between_native_host_and_user_objects">
+        <h1>66. What is the difference between native, host and user objects?</h1>
+    </div>
+    <div class="answers">
+        <p>Native objects are objects that are part of the JavaScript language defined by the ECMAScript specification. For example, String, Math, RegExp, Object, Function etc core objects defined in the ECMAScript spec. Host objects are objects provided by the browser or runtime environment (Node). For example, window, XmlHttpRequest, DOM nodes etc are considered as host objects. User objects are objects defined in the javascript code. For example, User objects created for profile information.</p>
+    </div>
+
+    <div class="questions" id="What_are_the_pros_and_cons_of_promises_over_callbacks">
+        <h1>67. What are the pros and cons of promises over callbacks?</h1>
+    </div>
+    <div class="answers">
+        <p>Below are the list of pros and cons of promises over callbacks,</p>
+        <b>Pros:</b>
+        <ul>
+            <li>It avoids callback hell which is unreadable</li>
+            <li>Easy to write sequential asynchronous code with .then()</li>
+            <li>Easy to write parallel asynchronous code with Promise.all()</li>
+            <li>Solves some of the common problems of callbacks(call the callback too late, too early, many times and swallow errors/exceptions)</li>
+        </ul>
+        <b>Cons:</b>
+        <ul>
+            <li>It makes little complex code</li>
+            <li>You need to load a polyfill if ES6 is not supported</li>
+        </ul>
+    </div>
+
+    <div class="questions" id="What_is_the_difference_between_an_attribute_and_a_property">
+        <h1>68. What is the difference between an attribute and a property?</h1>
+    </div>
+    <div class="answers">
+        <p>In HTML, the terms "attribute" and "property" also have distinct meanings.</p>
+        <ol>
+            <li>
+                <b>Attribute</b>
+                <ul style="margin-left: 10px;">
+                    <li>In HTML, attributes are the additional information or characteristics provided within the start tag of an element.</li>
+                    <li>They define the behavior or appearance of the element.</li>
+                    <li>Attributes are always represented as strings.</li>
+                    <li>Example:In this &lt;a&gt; (anchor) element, href is an attribute specifying the hyperlink reference.</li>
+                    <li><prismcode [code]="code153" language="html"></prismcode></li>
+                </ul>
+            </li>
+            <li>
+                <b>Property</b>
+                <ul style="margin-left: 10px;">
+                    <li>In HTML, properties are related to the DOM (Document Object Model) representation of elements.</li>
+                    <li>They are JavaScript objects representing the HTML elements and their attributes.</li>
+                    <li>Properties can be accessed and manipulated through JavaScript.</li>
+                    <li>Example:In this example, innerHTML is a property of the paragraph element accessed using JavaScript. It allows you to get or set the HTML content of the element.</li>
+                    <li><prismcode [code]="code154" language="html"></prismcode></li>
+                </ul>
+            </li>
+        </ol>
+        <p>In summary, in HTML, attributes are part of the markup within the HTML tags, defining initial characteristics of elements, while properties are accessed and manipulated through JavaScript to interact with the DOM representation of those elements.</p>
+    </div>
+
+    <div class="questions" id="What_is_the_purpose_of_void">
+        <h1>69. What is the purpose of void 0?</h1>
+    </div>
+    <div class="answers">
+        <p>Void(0) is used to prevent the page from refreshing. This will be helpful to eliminate the unwanted side-effect, because it will return the undefined primitive value. It is commonly used for HTML documents that use href="JavaScript:Void(0);" within an &lt;a&gt; element. i.e, when you click a link, the browser loads a new page or refreshes the same page. But this behavior will be prevented using this expression. For example, the below link notify the message without reloading the page</p>
+        <prismcode [code]="code155" language="html"></prismcode>
+    </div>
+
+    <div class="questions" id="What_are_events">
+        <h1>70. What are events?</h1>
+    </div>
+    <div class="answers">
+        <p>Events are "things" that happen to HTML elements. When JavaScript is used in HTML pages, JavaScript can react on these events. Some of the examples of HTML events are,</p>
+        <ul>
+            <li>Web page has finished loading</li>
+            <li>Input field was changed</li>
+            <li>Button was clicked</li>
+        </ul>
+        <p>Let's describe the behavior of click event for button element,</p>
+        <prismcode [code]="code156" language="html"></prismcode>
+    </div>
+
+    <div class="questions" id="What_is_the_use_of_preventDefault_method">
+        <h1>71. What is the use of preventDefault method?</h1>
+    </div>
+    <div class="answers">
+        <p>The preventDefault() method cancels the event if it is cancelable, meaning that the default action or behaviour that belongs to the event will not occur. For example, prevent form submission when clicking on submit button and prevent opening the page URL when clicking on hyperlink are some common use cases.</p>
+        <prismcode [code]="code157" language="javascript"></prismcode>
+        <p><b>Note:</b> Remember that not all events are cancelable.</p>
+    </div>
+
+    <div class="questions" id="What_is_the_use_of_stopPropagation_method">
+        <h1>72. What is the use of stopPropagation method?</h1>
+    </div>
+    <div class="answers">
+        <p>The stopPropagation method is used to stop the event from bubbling up the event chain. For example, the below nested divs with stopPropagation method prevents default event propagation when clicking on nested div(Div1)</p>
+        <prismcode [code]="code158" language="html"></prismcode>
+    </div>
+
+    <div class="questions" id="Why_is_JavaScript_treated_as_Single_threaded">
+        <h1>73. Why is JavaScript treated as Single threaded?</h1>
+    </div>
+    <div class="answers">
+        <p>JavaScript is a single-threaded language. Because the language specification does not allow the programmer to write code so that the interpreter can run parts of it in parallel in multiple threads or processes. Whereas languages like java, go, C++ can make multi-threaded and multi-process programs.</p>
+    </div>
+
+    <div class="questions" id="What_is_an_event_delegation">
+        <h1>74. What is an event delegation?</h1>
+    </div>
+    <div class="answers">
+        <p>Event delegation is a technique for listening to events where you delegate a parent element as the listener for all of the events that happen inside it.</p>
+        <p>For example, if you wanted to detect field changes in inside a specific form, you can use event delegation technique,</p>
+        <prismcode [code]="code159" language="javascript"></prismcode>
+    </div>
+
+    <div class="questions" id="What_is_JSON">
+        <h1>75. What is JSON?</h1>
+    </div>
+    <div class="answers">
+        <p>JSON (JavaScript Object Notation) is a lightweight format that is used for data interchanging. It is based on a subset of JavaScript language in the way objects are built in JavaScript.</p>
+    </div>
+
+    <div class="questions" id="What_is_the_purpose_JSON_stringify_and_parse">
+        <h1>76. What is the purpose JSON stringify and parse?</h1>
+    </div>
+    <div class="answers">
+        <p>When sending data to a web server, the data has to be in a string format. You can achieve this by converting JSON object into a string using stringify() method.</p>
+        <prismcode [code]="code160" language="javascript"></prismcode>
+        <p>When receiving the data from a web server, the data is always in a string format. But you can convert this string value to a javascript object using parse() method.</p>
+        <prismcode [code]="code161" language="javascript"></prismcode>
+    </div>
+
+    <div class="questions" id="What_are_PWAs">
+        <h1>77. What are PWAs?</h1>
+    </div>
+    <div class="answers">
+        <p>Progressive web applications (PWAs) are a type of mobile app delivered through the web, built using common web technologies including HTML, CSS and JavaScript. These PWAs are deployed to servers, accessible through URLs, and indexed by search engines.</p>
+    </div>
+
+    <div class="questions" id="How_do_you_redirect_new_page_in_javascript">
+        <h1>78. How do you redirect new page in javascript?</h1>
+    </div>
+    <div class="answers">
+        <p>In vanilla javascript, you can redirect to a new page using the location property of window object. The syntax would be as follows,</p>
+        <prismcode [code]="code162" language="javascript"></prismcode>
+    </div>
+
+    <div class="questions" id="How_do_you_check_whether_a_string_contains_a_substring">
+        <h1>79. How do you check whether a string contains a substring?</h1>
+    </div>
+    <div class="answers">
+        <p>There are 3 possible ways to check whether a string contains a substring or not,</p>
+        <ol>
+            <li>
+                <b>Using includes:</b>
+                <span>ES6 provided String.prototype.includes method to test a string contains a substring.</span>
+                <prismcode [code]="code163" language="javascript"></prismcode>
+            </li>
+            <li>
+                <b>Using indexOf:</b>
+                <span>In an ES5 or older environment, you can use String.prototype.indexOf which returns the index of a substring. If the index value is not equal to -1 then it means the substring exists in the main string.</span>
+                <prismcode [code]="code164" language="javascript"></prismcode>
+            </li>
+            <li>
+                <b>Using RegEx:</b>
+                <span>The advanced solution is using Regular expression's test method(RegExp.test), which allows for testing for against regular expressions.</span>
+                <prismcode [code]="code165" language="javascript"></prismcode>
+            </li>
+        </ol>
+    </div>
+
+    <div class="questions" id="How_do_you_get_the_current_url_with_javascript">
+        <h1>80. How do you get the current url with javascript?</h1>
+    </div>
+    <div class="answers">
+        <p>You can use window.location.href expression to get the current url path and you can use the same expression for updating the URL too. You can also use document.URL for read-only purposes but this solution has issues in FF.</p>
+        <prismcode [code]="code166" language="javascript"></prismcode>
+    </div>
+
+    <div class="questions" id="What_are_the_various_url_properties_of_location_object">
+        <h1>81. What are the various url properties of location object?</h1>
+    </div>
+    <div class="answers">
+        <p>The below Location object properties can be used to access URL components of the page,</p>
+        <ul>
+            <li>href - The entire URL</li>
+            <li>protocol - The protocol of the URL</li>
+            <li>host - The hostname and port of the URL</li>
+            <li>hostname - The hostname of the URL</li>
+            <li>port - The port number in the URL</li>
+            <li>pathname - The path name of the URL</li>
+            <li>search - The query portion of the URL</li>
+            <li>hash - The anchor portion of the URL</li>
+        </ul>
+    </div>
+    <div class="questions" id="How_do_get_query_string_values_in_javascript">
+        <h1>82. How do get query string values in javascript?</h1>
+    </div>
+    <div class="answers">
+        <p>You can use URLSearchParams to get query string values in javascript. Let's see an example to get the client code value from URL query string,</p>
+        <prismcode [code]="code167" language="javascript"></prismcode>
+    </div>
+    <div class="questions" id="How_do_you_check_if_a_key_exists_in_an_object">
+        <h1>83. How do you check if a key exists in an object?</h1>
+    </div>
+    <div class="answers">
+        <p>You can check whether a key exists in an object or not using three approaches,</p>
+        <p><b>Using in operator:</b> You can use the in operator whether a key exists in an object or not</p>
+        <prismcode [code]="code168" language="javascript"></prismcode>
+        <p>and If you want to check if a key doesn't exist, remember to use parenthesis,</p>
+        <prismcode [code]="code169" language="javascript"></prismcode>
+        <p><b>Using hasOwnProperty method: </b>You can use hasOwnProperty to particularly test for properties of the object instance (and not inherited properties)</p>
+        <prismcode [code]="code170" language="javascript"></prismcode>
+        <p><b>Using undefined comparison: </b>If you access a non-existing property from an object, the result is undefined. Let’s compare the properties against undefined to determine the existence of the property.</p>
+        <prismcode [code]="code171" language="javascript"></prismcode>
+    </div>
+
+    <div class="questions" id="How_do_you_loop_through_or_enumerate_javascript_object">
+        <h1>84. How do you loop through or enumerate javascript object?</h1>
+    </div>
+    <div class="answers">
+        <p>You can use the for-in loop to loop through javascript object. You can also make sure that the key you get is an actual property of an object, and doesn't come from the prototype using hasOwnProperty method.</p>
+        <prismcode [code]="code172" language="javascript"></prismcode>
+    </div>
+
+    <div class="questions" id="How_do_you_test_for_an_empty_object">
+        <h1>85. How do you test for an empty object?</h1>
+    </div>
+    <div class="answers">
+        <p>There are different solutions based on ECMAScript versions</p>
+        <p><b>Using Object entries(ECMA 7+): </b>You can use object entries length along with constructor type.</p>
+        <prismcode [code]="code173" language="javascript"></prismcode>
+        <p><b>Using Object keys(ECMA 5+): </b>You can use object keys length along with constructor type.</p>
+        <prismcode [code]="code174" language="javascript"></prismcode>
+        <p><b>Using for-in with hasOwnProperty(Pre-ECMA 5): </b>You can use a for-in loop along with hasOwnProperty.</p>
+        <prismcode [code]="code175" language="javascript"></prismcode>
+    </div>
+
+    <div class="questions" id="What_is_an_arguments_object">
+        <h1>86. What is an arguments object?</h1>
+    </div>
+    <div class="answers">
+        <p>The arguments object is an Array-like object accessible inside functions that contains the values of the arguments passed to that function. For example, let's see how to use arguments object inside sum function,</p>
+        <prismcode [code]="code176" language="javascript"></prismcode>
+        <p><b>Note:</b> You can't apply array methods on arguments object. But you can convert into a regular array as below.</p>
+        <prismcode [code]="code177" language="javascript"></prismcode>
+    </div>
+
+    <div class="questions" id="How_do_you_compare_two_date_objects">
+        <h1>87. How do you compare two date objects?</h1>
+    </div>
+    <div class="answers">
+        <p>You need to use date.getTime() method to compare date values instead of comparison operators (==, !=, ===, and !== operators)</p>
+        <prismcode [code]="code178" language="javascript"></prismcode>
+    </div>
+
+    <div class="questions" id="How_do_you_assign_default_values_to_variables">
+        <h1>88. How do you assign default values to variables?</h1>
+    </div>
+    <div class="answers">
+        <p>You can use the logical or operator || in an assignment expression to provide a default value. The syntax looks like as below,</p>
+        <prismcode [code]="code179" language="javascript"></prismcode>
+        <p>As per the above expression, variable 'a 'will get the value of 'c' only if 'b' is falsy (if is null, false, undefined, 0, empty string, or NaN), otherwise 'a' will get the value of 'b'.</p>
+    </div>
+
+    <div class="questions" id="What_is_an_app_shell_model">
+        <h1>89. What is an app shell model?</h1>
+    </div>
+    <div class="answers">
+        <p>An application shell (or app shell) architecture is one way to build a Progressive Web App that reliably and instantly loads on your users' screens, similar to what you see in native applications. It is useful for getting some initial HTML to the screen fast without a network.</p>
+    </div> 
+    
+    <div class="questions" id="Can_we_define_properties_for_functions">
+        <h1>90. Can we define properties for functions?</h1>
+    </div>
+    <div class="answers">
+        <p>Yes, We can define properties for functions because functions are also objects.</p>
+        <prismcode [code]="code180" language="javascript"></prismcode>
+    </div>
+
+    <div class="questions" id="What_is_the_way_to_find_the_number_of_parameters_expected_by_a_function">
+        <h1>91. What is the way to find the number of parameters expected by a function?</h1>
+    </div>
+    <div class="answers">
+        <p>You can use function.length syntax to find the number of parameters expected by a function. Let's take an example of sum function to calculate the sum of numbers,</p>
+        <prismcode [code]="code181" language="javascript"></prismcode>
+    </div> 
+    
+    <div class="questions" id="What_is_a_polyfill">
+        <h1>92. What is a polyfill?</h1>
+    </div>
+    <div class="answers">
+        <p>A polyfill is a piece of JS code used to provide modern functionality on older browsers that do not natively support it. For example, Silverlight plugin polyfill can be used to mimic the functionality of an HTML Canvas element on Microsoft Internet Explorer 7.</p>
+        <p>There are two main polyfill libraries available,</p>
+        <p><b>Core.js:</b> It is a modular javascript library used for cutting-edge ECMAScript features.</p>
+        <p><b>Polyfill.io:</b> It provides polyfills that are required for browser needs.</p>
+    </div> 
+    
+    <div class="questions" id="What_are_break_and_continue_statements">
+        <h1>93. What are break and continue statements?</h1>
+    </div>
+    <div class="answers">
+        <p>The break statement is used to "jump out" of a loop. i.e, It breaks the loop and continues executing the code after the loop.</p>
+        <prismcode [code]="code182" language="javascript"></prismcode>
+        <p>The continue statement is used to "jump over" one iteration in the loop. i.e, It breaks one iteration (in the loop), if a specified condition occurs, and continues with the next iteration in the loop.</p>
+        <prismcode [code]="code183" language="javascript"></prismcode>
+    </div>
+
+    <div class="questions" id="What_are_js_labels">
+        <h1>94. What are js labels?</h1>
+    </div>
+    <div class="answers">
+        <p>The label statement allows us to name loops and blocks in JavaScript. We can then use these labels to refer back to the code later. For example, the below code with labels avoids printing the numbers when they are same,</p>
+        <prismcode [code]="code184" language="javascript"></prismcode>
+    </div>
+
+    <div class="questions" id="What_are_the_benefits_of_keeping_declarations_at_the_top">
+        <h1>95. What are the benefits of keeping declarations at the top?</h1>
+    </div>
+    <div class="answers">
+        <p>It is recommended to keep all declarations at the top of each script or function. The benefits of doing this are,</p>
+        <ul>
+            <li>Gives cleaner code</li>
+            <li>It provides a single place to look for local variables</li>
+            <li>Easy to avoid unwanted global variables</li>
+            <li>It reduces the possibility of unwanted re-declarations</li>
+        </ul>
+    </div>
+
+    <div class="questions" id="What_are_the_benefits_of_initializing_variables">
+        <h1>96. What are the benefits of initializing variables?</h1>
+    </div>
+    <div class="answers">
+        <p>It is recommended to initialize variables because of the below benefits,</p>
+        <ul>
+            <li>It gives cleaner code</li>
+            <li>It provides a single place to initialize variables</li>
+            <li>Avoid undefined values in the code</li>
+        </ul>
+    </div>
+
+    <div class="questions" id="What_are_the_recommendations_to_create_new_object">
+        <h1>97. What are the recommendations to create new object?</h1>
+    </div>
+    <div class="answers">
+        <p>It is recommended to avoid creating new objects using new Object(). Instead you can initialize values based on it's type to create the objects.</p>
+        <ul>
+            <li>Assign &lbrace; &rbrace; instead of new Object()</li>
+            <li>Assign "" instead of new String()</li>
+            <li>Assign 0 instead of new Number()</li>
+            <li>Assign false instead of new Boolean()</li>
+            <li>Assign [] instead of new Array()</li>
+            <li>Assign /()/ instead of new RegExp()</li>
+            <li>Assign function ()&lbrace; &rbrace; instead of new Function()</li>
+        </ul>
+        <p>You can define them as an example,</p>
+        <prismcode [code]="code185" language="javascript"></prismcode>
+    </div>
+
+    <div class="questions" id="How_do_you_define_JSON_arrays">
+        <h1>98. How do you define JSON arrays?</h1>
+    </div>
+    <div class="answers">
+        <p>JSON arrays are written inside square brackets and arrays contain javascript objects. For example, the JSON array of users would be as below,</p>
+        <prismcode [code]="code186" language="json"></prismcode>
+    </div>
+
+    <div class="questions" id="Can_you_write_a_random_integers_function_to_print_integers_with_in_a_range">
+        <h1>99. Can you write a random integers function to print integers with in a range?</h1>
+    </div>
+    <div class="answers">
+        <p>Yes, you can create a proper random function to return a random number between min and max (both included)</p>
+        <prismcode [code]="code187" language="json"></prismcode>
+    </div>
+
+    <div class="questions" id="What_is_tree_shaking">
+        <h1>100. What is tree shaking?</h1>
+    </div>
+    <div class="answers">
+        <p>Tree shaking is a form of dead code elimination. It means that unused modules will not be included in the bundle during the build process and for that it relies on the static structure of ES2015 module syntax,( i.e. import and export). Initially this has been popularized by the ES2015 module bundler rollup.</p>
+    </div>
+
+    <div class="questions" id="">
         <h1></h1>
     </div>
     <div class="answers">
         <p></p>
     </div>
 
-    <div class="questions">
-        <h1></h1>
-    </div>
-    <div class="answers">
-        <p></p>
-    </div>
 
-    <div class="questions">
-        <h1></h1>
+    <div class="questions" id="pattern_printing_and_numbers">
+        <h1>Pattern printing and numbers?</h1>
     </div>
     <div class="answers">
-        <p></p>
-    </div>
-
-    <div class="questions">
-        <h1></h1>
-    </div>
-    <div class="answers">
-        <p></p>
-    </div>
-
-    <div class="questions">
-        <h1></h1>
-    </div>
-    <div class="answers">
-        <p></p>
-    </div>
-
-    <div class="questions">
-        <h1></h1>
-    </div>
-    <div class="answers">
-        <p></p>
-    </div>
-
-    <div class="questions">
-        <h1></h1>
-    </div>
-    <div class="answers">
-        <p></p>
-    </div>
-
-    <div class="questions">
-        <h1></h1>
-    </div>
-    <div class="answers">
-        <p></p>
-    </div>
-
-    <div class="questions">
-        <h1></h1>
-    </div>
-    <div class="answers">
-        <p></p>
-    </div>
-
-    <div class="questions">
-        <h1></h1>
-    </div>
-    <div class="answers">
-        <p></p>
-    </div>
-
-    <div class="questions">
-        <h1></h1>
-    </div>
-    <div class="answers">
-        <p></p>
-    </div>
-
-    <div class="questions">
-        <h1></h1>
-    </div>
-    <div class="answers">
-        <p></p>
-    </div>
-
-    <div class="questions">
-        <h1></h1>
-    </div>
-    <div class="answers">
-        <p></p>
-    </div>
-
-    <div class="questions">
-        <h1></h1>
-    </div>
-    <div class="answers">
-        <p></p>
-    </div>
-
-    <div class="questions">
-        <h1></h1>
-    </div>
-    <div class="answers">
-        <p></p>
-    </div>
-
-    <div class="questions">
-        <h1></h1>
-    </div>
-    <div class="answers">
-        <p></p>
-    </div>
-
-    <div class="questions">
-        <h1></h1>
-    </div>
-    <div class="answers">
-        <p></p>
+        <ol>
+            <li>
+                <ul style="margin-left: 16px;">
+                    <li>
+                        <b>Example:</b>
+                        <prismcode [code]="code111" language="javascript"></prismcode>
+                        <b>Output:</b>
+                        <prismcode [code]="code112" language="javascript"></prismcode>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <ul style="margin-left: 16px;">
+                    <li>
+                        <b>Example:</b>
+                        <prismcode [code]="code113" language="javascript"></prismcode>
+                        <b>Output:</b>
+                        <prismcode [code]="code114" language="javascript"></prismcode>
+                    </li>
+                </ul>
+                <ul style="margin-left: 16px;">
+                    <li>
+                        <b>Example:</b>
+                        <prismcode [code]="code115" language="javascript"></prismcode>
+                        <b>Output:</b>
+                        <prismcode [code]="code116" language="javascript"></prismcode>
+                    </li>
+                </ul>
+                <ul style="margin-left: 16px;">
+                    <li>
+                        <b>Example:</b>
+                        <prismcode [code]="code117" language="javascript"></prismcode>
+                        <b>Output:</b>
+                        <prismcode [code]="code118" language="javascript"></prismcode>
+                    </li>
+                </ul>
+                <ul style="margin-left: 16px;">
+                    <li>
+                        <b>Example:</b>
+                        <prismcode [code]="code119" language="javascript"></prismcode>
+                        <b>Output:</b>
+                        <prismcode [code]="code120" language="javascript"></prismcode>
+                    </li>
+                </ul>
+                <ul style="margin-left: 16px;">
+                    <li>
+                        <b>Example:</b>
+                        <prismcode [code]="code121" language="javascript"></prismcode>
+                        <b>Output:</b>
+                        <prismcode [code]="code122" language="javascript"></prismcode>
+                    </li>
+                </ul>
+                <ul style="margin-left: 16px;">
+                    <li>
+                        <b>Example:</b>
+                        <prismcode [code]="code127" language="javascript"></prismcode>
+                        <b>Output:</b>
+                        <prismcode [code]="code128" language="javascript"></prismcode>
+                    </li>
+                </ul>
+                <ul style="margin-left: 16px;">
+                    <li>
+                        <b>Example:</b>
+                        <prismcode [code]="code129" language="javascript"></prismcode>
+                        <b>Output:</b>
+                        <prismcode [code]="code130" language="javascript"></prismcode>
+                    </li>
+                </ul>
+                <ul style="margin-left: 16px;">
+                    <li>
+                        <b>Example:</b>
+                        <prismcode [code]="code123" language="javascript"></prismcode>
+                        <b>Output:</b>
+                        <prismcode [code]="code124" language="javascript"></prismcode>
+                    </li>
+                </ul>
+                <ul style="margin-left: 16px;">
+                    <li>
+                        <b>Example:</b>
+                        <prismcode [code]="code125" language="javascript"></prismcode>
+                        <b>Output:</b>
+                        <prismcode [code]="code126" language="javascript"></prismcode>
+                    </li>
+                </ul>
+                <ul style="margin-left: 16px;">
+                    <li>
+                        <b>Example:</b>
+                        <prismcode [code]="code131" language="javascript"></prismcode>
+                        <b>Output:</b>
+                        <prismcode [code]="code132" language="javascript"></prismcode>
+                    </li>
+                </ul>
+                <ul style="margin-left: 16px;">
+                    <li>
+                        <b>Example:</b>
+                        <prismcode [code]="code133" language="javascript"></prismcode>
+                        <b>Output:</b>
+                        <prismcode [code]="code134" language="javascript"></prismcode>
+                    </li>
+                </ul>
+                <ul style="margin-left: 16px;">
+                    <li>
+                        <b>Example:</b>
+                        <prismcode [code]="code135" language="javascript"></prismcode>
+                        <b>Output:</b>
+                        <prismcode [code]="code136" language="javascript"></prismcode>
+                    </li>
+                </ul>
+                <ul style="margin-left: 16px;">
+                    <li>
+                        <b>Example:</b>
+                        <prismcode [code]="code137" language="javascript"></prismcode>
+                        <b>Output:</b>
+                        <prismcode [code]="code138" language="javascript"></prismcode>
+                    </li>
+                </ul>
+                <ul style="margin-left: 16px;">
+                    <li>
+                        <b>Fibonacci Sequence: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ...</b>
+                        <prismcode [code]="code139" language="javascript"></prismcode>
+                        <b>Output:</b>
+                        <prismcode [code]="code140" language="javascript"></prismcode>
+                    </li>
+                </ul>
+                <ul style="margin-left: 16px;">
+                    <li>
+                        <b>Powers of 2: 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, ...</b>
+                        <prismcode [code]="code141" language="javascript"></prismcode>
+                        <b>Output:</b>
+                        <prismcode [code]="code142" language="javascript"></prismcode>
+                    </li>
+                </ul>
+                <ul style="margin-left: 16px;">
+                    <li>
+                        <b>Triangular Numbers: 1, 3, 6, 10, 15, 21, 28, 36, 45, 55, ...</b>
+                        <prismcode [code]="code143" language="javascript"></prismcode>
+                        <b>Output:</b>
+                        <prismcode [code]="code144" language="javascript"></prismcode>
+                    </li>
+                </ul>
+                <ul style="margin-left: 16px;">
+                    <li>
+                        <b>Prime Numbers: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, ...</b>
+                        <prismcode [code]="code145" language="javascript"></prismcode>
+                        <b>Output:</b>
+                        <prismcode [code]="code146" language="javascript"></prismcode>
+                    </li>
+                </ul>
+                <ul style="margin-left: 16px;">
+                    <li>
+                        <b>Square Numbers: 1, 4, 9, 16, 25, 36, 49, 64, 81, 100, ...</b>
+                        <prismcode [code]="code147" language="javascript"></prismcode>
+                        <b>Output:</b>
+                        <prismcode [code]="code148" language="javascript"></prismcode>
+                    </li>
+                </ul>
+            </li>
+        </ol>
     </div>
 
 </div>

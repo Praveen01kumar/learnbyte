@@ -76,6 +76,46 @@ export class InterviewComponent implements OnInit, OnDestroy {
       { name: 'What is a strict mode in javascript?', id: "What_is_a_strict_mode_in_javascript" },
       { name: 'Why do you need strict mode?', id: "Why_do_you_need_strict_mode" },
       { name: 'How do you declare strict mode?', id: "How_do_you_declare_strict_mode" },
+      { name: 'What are script tag attribute?', id: "What_are_script_tag_attribute" },
+      { name: 'Explain call(), apply() and, bind() methods.', id: "Explain_call_apply_and_bind_methods" },
+      { name: 'What is the purpose of the delete operator?', id: "What_is_the_purpose_of_the_delete_operator" },
+      { name: 'How do you detect caps lock key turned on or not?', id: "How_do_you_detect_caps_lock_key_turned_on_or_not" },
+      { name: 'What is an event flow?', id: "What_is_an_event_flow" },
+      { name: 'What is the difference between native, host and user objects?', id: "What_is_the_difference_between_native_host_and_user_objects" },
+      { name: 'What are the pros and cons of promises over callbacks?', id: "What_are_the_pros_and_cons_of_promises_over_callbacks" },
+      { name: 'What is the difference between an attribute and a property?', id: "What_is_the_difference_between_an_attribute_and_a_property" },
+      { name: 'What is the purpose of void 0?', id: "What_is_the_purpose_of_void" },
+      { name: 'What are events?', id: "What_are_events" },
+      { name: 'What is the use of preventDefault method?', id: "What_is_the_use_of_preventDefault_method" },
+      { name: 'What is the use of stopPropagation method?', id: "What_is_the_use_of_stopPropagation_method" },
+      { name: 'Why is JavaScript treated as Single threaded?', id: "Why_is_JavaScript_treated_as_Single_threaded" },
+      { name: 'What is an event delegation?', id: "What_is_an_event_delegation" },
+      { name: 'What is JSON?', id: "What_is_JSON" },
+      { name: 'What is the purpose JSON stringify and parse?', id: "What_is_the_purpose_JSON_stringify_and_parse" },
+      { name: 'What are PWAs?', id: "What_are_PWAs" },
+      { name: 'How do you redirect new page in javascript?', id: "How_do_you_redirect_new_page_in_javascript" },
+      { name: 'How do you check whether a string contains a substring?', id: "How_do_you_check_whether_a_string_contains_a_substring" },
+      { name: 'How do you get the current url with javascript?', id: "How_do_you_get_the_current_url_with_javascript" },
+      { name: 'What are the various url properties of location object?', id: "What_are_the_various_url_properties_of_location_object" },
+      { name: 'How do get query string values in javascript?', id: "How_do_get_query_string_values_in_javascript" },
+      { name: 'How do you check if a key exists in an object?', id: "How_do_you_check_if_a_key_exists_in_an_object" },
+      { name: 'How do you loop through or enumerate javascript object?', id: "How_do_you_loop_through_or_enumerate_javascript_object" },
+      { name: 'How do you test for an empty object?', id: "How_do_you_test_for_an_empty_object" },
+      { name: 'What is an arguments object?', id: "What_is_an_arguments_object" },
+      { name: 'How do you compare two date objects?', id: "How_do_you_compare_two_date_objects" },
+      { name: 'How do you assign default values to variables?', id: "How_do_you_assign_default_values_to_variables" },
+      { name: 'What is an app shell model?', id: "What_is_an_app_shell_model" },
+      { name: 'Can we define properties for functions?', id: "Can_we_define_properties_for_functions" },
+      { name: 'What is the way to find the number of parameters expected by a function?', id: "What_is_the_way_to_find_the_number_of_parameters_expected_by_a_function" },
+      { name: 'What is a polyfill?', id: "What_is_a_polyfill" },
+      { name: 'What are break and continue statements?', id: "What_are_break_and_continue_statements" },
+      { name: 'What are js labels?', id: "What_are_js_labels" },
+      { name: 'What are the benefits of keeping declarations at the top?', id: "What_are_the_benefits_of_keeping_declarations_at_the_top" },
+      { name: 'What are the benefits of initializing variables?', id: "What_are_the_benefits_of_initializing_variables" },
+      { name: 'What are the recommendations to create new object?', id: "What_are_the_recommendations_to_create_new_object" },
+      { name: 'How do you define JSON arrays?', id: "How_do_you_define_JSON_arrays" },
+      { name: 'Can you write a random integers function to print integers with in a range?', id: "Can_you_write_a_random_integers_function_to_print_integers_with_in_a_range" },
+      { name: 'What is tree shaking?', id: "What_is_tree_shaking" },
       // { name: 'Variable_Declaration', id: "Variable_Declaration" },
       // { name: 'Variable_Declaration', id: "Variable_Declaration" },
       // { name: 'Variable_Declaration', id: "Variable_Declaration" },
@@ -90,6 +130,10 @@ export class InterviewComponent implements OnInit, OnDestroy {
       // { name: 'Variable_Declaration', id: "Variable_Declaration" },
       // { name: 'Variable_Declaration', id: "Variable_Declaration" },
       // { name: 'Variable_Declaration', id: "Variable_Declaration" },
+      // { name: 'Variable_Declaration', id: "Variable_Declaration" },
+      // { name: 'Variable_Declaration', id: "Variable_Declaration" },
+      // { name: 'Variable_Declaration', id: "Variable_Declaration" },
+      { name: 'Pattern printing and numbers?', id: "pattern_printing_and_numbers" },
     ];
     this.shearedService.rSidebar_Id_Data$.next(data);
     this.contentList = data;
@@ -842,17 +886,806 @@ generator.next().value
     "use strict";
     y = 3.14; // This will cause an error
   }`;
-  code100: string = ``;
-  code101: string = ``;
-  code102: string = ``;
-  code103: string = ``;
-  code104: string = ``;
-  code105: string = ``;
-  code106: string = ``;
-  code107: string = ``;
-  code108: string = ``;
-  code109: string = ``;
-  code110: string = ``;
+  code100: string = `<script src="script.js"></script>`;
+  code101: string = `
+<script type="text/javascript">
+  // JavaScript code here
+</script>
+`;
+  code102: string = `<script src="script.js" async></script>`;
+  code103: string = `<script src="script.js" defer></script>`;
+  code104: string = `<script src="script.js" integrity="sha384-ABC123"></script>`;
+  code105: string = `<script src="https://example.com/script.js" crossorigin="anonymous"></script>`;
+  code106: string = `function sayHello(){
+    return "Hello " + this.name;
+  }
+          
+  var obj = {name: "Sandy"};
+          
+  sayHello.call(obj);
+          
+  // Returns "Hello Sandy"	`;
+  code107: string = `var person = {
+    age: 23,
+    getAge: function(){
+      return this.age;
+    }
+  }        
+  var person2 = {age:  54};
+  person.getAge.call(person2);      
+  // Returns 54  `;
+  code108: string = `function saySomething(message){
+    return this.name + " is " + message;
+  }     
+  var person4 = {name:  "John"};     
+  saySomething.call(person4, "awesome");
+  // Returns "John is awesome"    `;
+  code109: string = `function saySomething(message){
+    return this.name + " is " + message;
+  }        
+  var person4 = {name:  "John"};
+  saySomething.apply(person4, ["awesome"]);`;
+  code110: string = `var bikeDetails = {
+    displayDetails: function(registrationNumber,brandName){
+    return this.name+ " , "+ "bike details: "+ registrationNumber + " , " + brandName;
+  }
+}
+   
+var person1 = {name:  "Vivek"};
+     
+var detailsOfPerson1 = bikeDetails.displayDetails.bind(person1, "TS0122", "Bullet");
+      
+// Binds the displayDetails function to the person1 object
+        
+      
+detailsOfPerson1();
+//Returns Vivek, bike details: TS0122, Bullet`;
+code111: string = `
+for(let i=1; i<=4; i++){
+  let pa = "";
+  for(let j=1; j<=i; j++){
+      pa += i+" "; 
+  }
+  console.log(pa);
+}`;
+code112: string = `
+1 
+2 2 
+3 3 3 
+4 4 4 4`;
+code113: string = `
+for(let i=1; i<=4; i++){
+  let pa = "";
+  for(let j=1; j<=i; j++){
+      pa += j+" "; 
+  }
+  console.log(pa);
+}`;
+code114: string = `
+1 
+1 2 
+1 2 3 
+1 2 3 4 `;
+code115: string = `
+let counter = 1;
+for(let i=1; i<=4; i++){
+    let pa= "";
+    for(let j=1; j<=i; j++){
+        pa += counter+" ";
+        counter++;
+    }
+    console.log(pa);
+}`;
+code116: string = `
+1 
+2 3 
+4 5 6 
+7 8 9 10`;
+code117: string = `
+for(let i=1; i<=4; i++){
+  let pa = "";
+  for(let j=4; j>=i; j--){
+      pa += " ";
+  }
+  for(let k=1; k<=i; k++){
+      pa += i+" ";
+  }
+  console.log(pa);
+}`;
+code118: string = `    
+   1 
+  2 2 
+ 3 3 3 
+4 4 4 4 `;
+code119: string = `
+for(let i=1; i<=4; i++){
+  let pa = "";
+  for(let j=4; j>=i; j--){
+      pa += " ";
+  }
+  for(let k=1; k<=i; k++){
+      pa += k+" ";
+  }
+  console.log(pa);
+}`;
+code120: string = `
+   1 
+  1 2 
+ 1 2 3 
+1 2 3 4`;
+code121: string = `
+let couter = 1;
+for(let i=1; i<=4; i++){
+    let pa = "";
+    for(let j=4; j>=i; j--){
+        pa += " ";
+    }
+    for(let k=1; k<=i; k++){
+        pa += couter+" ";
+        couter++;
+    }
+    console.log(pa);
+}`;
+code122: string = `
+    1 
+   2 3 
+  4 5 6 
+ 7 8 9 10 `;
+code123: string = `
+for(let i=1; i<=5; i++){
+  let pa = "";
+  for(let k=1; k<=i; k++){
+      pa += " * ";
+  }
+  console.log(pa);
+}`;
+code124: string = `
+* 
+*  * 
+*  *  * 
+*  *  *  * 
+*  *  *  *  * `;
+code125: string = `
+for(let i=1; i<=5; i++){
+  let pa = "";
+  for(let k=5; k>=i; k--){
+      pa += " * ";
+  }
+  console.log(pa);
+}`;
+code126: string = `
+*  *  *  *  * 
+*  *  *  * 
+*  *  * 
+*  * 
+* `;
+code127: string = ` 
+let n = 5;
+for(let i = 0; i<=n; i++){
+ let patern = "";
+ for(let j=1;j<=(n-i);j++){
+     patern += j;
+ }
+ console.log(patern); 
+}`;
+code128: string = `
+12345
+1234
+123
+12
+1`;
+code129: string = ` 
+let n = 5;
+function getPattern(n){
+   for(let i = 0; i<=n; i++){
+   if(i%2!==0){
+       let patern = "";
+       for(let k=n; k>=i; k--){
+         patern += " ";
+       }
+       for(let j=1;j<=i;j++){
+       patern += j+" ";
+       }
+       console.log(patern); 
+   }
+ }
+};
+getPattern(n);`;
+code130: string = `
+    1 
+  1 2 3 
+1 2 3 4 5 `;
+code131: string = `
+let n = 5;
+function getPatteern(n){
+    for (let i = 2; i < n; i++) {
+        let patt = "";
+        if(i!==1){
+            for (let j = n; j > i; j--) {
+                patt += " ";
+            }
+            
+        for (let j = 0; j < i; j++) {
+                patt += " *";
+            }
+            
+        for (let j = n; j > i; j--) {
+                patt += " ";
+            }
+        
+        for (let j = n; j > i; j--) {
+                patt += " ";
+            }
+        
+        for (let j = 0; j < i; j++) {
+                patt += " *";
+            }
+        }
+        console.log(patt);
+    }
+
+for (let i = 0; i < n*2; i++) {
+        let patt = "";
+    
+        for (let j = 0; j < i; j++) {
+                patt += " ";
+            }
+            
+        for (let j = n*2; j > i; j--) {
+                patt += " *";
+            }
+        
+        console.log(patt);
+    }
+}
+
+getPatteern(n);`;
+code132: string = `
+    * *       * *
+   * * *     * * *
+  * * * *   * * * *
+ * * * * * * * * * *
+  * * * * * * * * *
+   * * * * * * * *
+    * * * * * * *
+     * * * * * *
+      * * * * *
+       * * * *
+        * * *
+         * *
+          *
+`;
+code133: string = `
+ let n = 5;
+for (let i = 0; i < n; i++) {
+       let patt = "";
+   
+       for (let j = n; j > i; j--) {
+               patt += " ";
+           }
+           
+       for (let j = 0; j < i; j++) {
+               patt += " *";
+           }
+       
+       console.log(patt);
+   }
+   
+for (let i = 0; i < n; i++) {
+       let patt = "";
+   
+       for (let j = 0; j < i; j++) {
+               patt += " ";
+           }
+           
+       for (let j = n; j > i; j--) {
+               patt += " *";
+           }
+       
+       console.log(patt);
+   }
+`;
+code134: string = `
+     *
+    * *
+   * * *
+  * * * *
+ * * * * *
+  * * * *
+   * * *
+    * *
+     * `;
+code135: string = ` 
+let n = 5;
+for (let i = 0; i < n; i++) {
+       let patt = "";
+   
+       for (let j = 0; j < i; j++) {
+               patt += " ";
+           }
+           
+       for (let j = n; j > i; j--) {
+               patt += " *";
+           }
+       
+       console.log(patt);
+   }
+   
+   for (let i = 1; i < n+1; i++) {
+       let patt = "";
+   
+       for (let j = n; j > i; j--) {
+               patt += " ";
+           }
+           
+       for (let j = 0; j < i; j++) {
+               patt += " *";
+           }
+       
+       console.log(patt);
+   }
+
+`;
+code136: string = ` 
+* * * * *
+ * * * *
+  * * *
+   * *
+    *
+    *
+   * *
+  * * *
+ * * * *
+* * * * *`;
+code137: string = ` 
+let n = 5;
+for (let i = 0; i < n; i++) {
+       let patt = "";
+       for (let j = 0; j <= i; j++) {
+               patt += "*";
+       }
+       for (let j = n; j >i; j--) {
+               patt += "  ";
+       }
+       for (let j = 0; j <= i; j++) {
+               patt += "*";
+       }
+       console.log(patt);
+   }
+   
+   
+   for (let i = 1; i < n; i++) {
+       let patt = "";
+       for (let j = n; j-1 >= i; j--) {
+               patt += "*";
+       }
+       for (let j = 0; j<=i; j++) {
+               patt += "  ";
+       }
+       for (let j = n; j-1 >= i; j--) {
+               patt += "*";
+       }
+       console.log(patt);
+   }
+
+
+`;
+code138: string = `
+*          *
+**        **
+***      ***
+****    ****
+*****  *****
+****    ****
+***      ***
+**        **
+*          *`;
+code139: string = `
+let n = 5;
+function getFibonacciSq(n){
+    if(n>=0){
+    let arr = [0,1];
+    for(let i = 2; i<=n; i++){
+        let next = arr[i-1] + arr[i-2];
+         if(n<next){
+            break;
+        }
+        arr.push(next);
+     }
+     return n>0?arr:[0];
+    }
+}
+
+let series = getFibonacciSq(n);
+console.log(series);`;
+code140: string = `[ 0, 1, 1, 2, 3, 5 ]`;
+code141: string = `
+let n = 10;
+function getPowersofSq(n){
+    if(n>=1){
+    let arr = [];
+    for(let i = 0; i<=n; i++){
+        let next = 2**i;
+         if(n<next){
+            break;
+        }
+        arr.push(next);
+     }
+     return arr;
+    }
+}
+
+let series = getPowersofSq(n);
+console.log(series);`;
+code142: string = `[ 1, 2, 4, 8 ]`;
+code143: string = `
+let n = 55;
+function getTriangular(n){
+    if(n>=1){
+    let arr = [];
+    for(let i = 1; i<=n; i++){
+        let next = (i*(i+1))/2;
+         if(n<next){
+            break;
+        }
+        arr.push(next);
+     }
+     return arr;
+    }
+}
+
+let series = getTriangular(n);
+console.log(series);`;
+code144: string = `[1,  3, 6, 10, 15, 21, 28, 36, 45, 55]`;
+code145: string = `
+function checkPrime(num) {
+  if (num < 2) return false;
+  for (i = 2; i < num; i++) { if (num % i === 0) return false; }
+  return true;
+}
+
+function getPrime(num){
+  let primeList = [];
+  if(num>1){
+  for(let i=0; i<=num; i++){
+      if(checkPrime(i)){
+          primeList.push(i);
+      } 
+    }   
+  }
+  return primeList;
+}
+
+let series = getPrime(30);
+console.log(series);`;
+code146: string = `[2,  3,  5,  7, 11, 13, 17, 19, 23, 29]`;
+code147: string = `
+let n = 100;
+function getSquare(n){
+    if(n>=1){
+    let arr = [];
+    for(let i = 1; i<=n; i++){
+        let next = i*i;
+         if(n<next){
+            break;
+        }
+        arr.push(next);
+     }
+     return arr;
+    }
+}
+
+let series = getSquare(n);
+console.log(series);`;
+code148: string = `[1,  4,  9, 16,  25, 36, 49, 64, 81, 100]`;
+code149: string = `
+var user = { firstName: "John", lastName:"Doe", age: 20 };
+delete user.age;
+
+console.log(user); // {firstName: "John", lastName:"Doe"}`;
+code150: string = `
+<input type="password" onmousedown="enterInput(event)" />
+
+<p id="feedback"></p>
+
+<script>
+  function enterInput(e) {
+    var flag = e.getModifierState("CapsLock");
+    if (flag) {
+      document.getElementById("feedback").innerHTML = "CapsLock activated";
+    } else {
+      document.getElementById("feedback").innerHTML =
+        "CapsLock not activated";
+    }
+  }
+</script>`;
+code151: string = `
+<div>
+<button class="child">Hello</button>
+</div>
+
+<script>
+const parent = document.querySelector("div");
+const child = document.querySelector(".child");
+
+parent.addEventListener("click",
+  function () {
+    console.log("Parent");
+  },
+  true
+);
+
+child.addEventListener("click", function () {
+  console.log("Child");
+});
+</script>
+// Parent
+// Child`;
+code152: string = `    
+<div>
+<button class="child">Hello</button>
+</div>
+
+<script>
+const parent = document.querySelector("div");
+const child = document.querySelector(".child");
+
+parent.addEventListener("click",
+  function () {
+    console.log("Parent");
+  }
+);
+
+child.addEventListener("click", function () {
+  console.log("Child");
+});
+</script>
+// Child
+// Parent`;
+code153: string = `<a href="https://www.example.com">Example Website</a>`;
+code154: string = `
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo">Example Paragraph</p>
+
+<script>
+var paragraph = document.getElementById("demo");
+console.log(paragraph.innerHTML); // Output: Example Paragraph
+</script>
+
+</body>
+</html>
+`;
+code155: string = `
+<a href="JavaScript:void(0);" onclick="alert('Well done!')">
+Click Me!
+</a>`;
+code156: string = `
+<!doctype html>
+<html>
+ <head>
+   <script>
+     function greeting() {
+       alert('Hello! Good morning');
+     }
+   </script>
+ </head>
+ <body>
+   <button type="button" onclick="greeting()">Click me</button>
+ </body>
+</html>`;
+code157: string = `document
+.getElementById("link")
+.addEventListener("click", function (event) {
+  event.preventDefault();
+});`;
+code158: string = `
+<p>Click DIV1 Element</p>
+<div onclick="secondFunc()">DIV 2
+  <div onclick="firstFunc(event)">DIV 1</div>
+</div>
+
+<script>
+function firstFunc(event) {
+  alert("DIV 1");
+  event.stopPropagation();
+}
+
+function secondFunc() {
+  alert("DIV 2");
+}
+</script>`;
+code159: string = `
+var form = document.querySelector("#registration-form");
+
+// Listen for changes to fields inside the form
+form.addEventListener(
+  "input",
+  function (event) {
+    // Log the field that was changed
+    console.log(event.target);
+  },
+  false
+);`;
+code160: string = `
+var userJSON = { name: "John", age: 31 };
+var userString = JSON.stringify(userJSON);
+console.log(userString); //"{"name":"John","age":31}"`;
+code161: string = `
+var userString = '{"name":"John","age":31}';
+var userJSON = JSON.parse(userString);
+console.log(userJSON); // {name: "John", age: 31}`;
+code162: string = `function redirect() {
+  window.location.href = "newPage.html";
+}`;
+code163: string = `
+let string = "Hello, world!";
+let substring = "world";
+
+if (string.includes(substring)) {
+    console.log("Substring found!");
+} else {
+    console.log("Substring not found!");
+}
+`;
+code164: string = `
+let string = "Hello, world!";
+let substring = "world";
+
+if (string.indexOf(substring) !== -1) {
+    console.log("Substring found!");
+} else {
+    console.log("Substring not found!");
+}
+`;
+code165: string = `
+let string = "Hello, world!";
+let substring = "world";
+
+let regex = new RegExp(substring);
+
+if (regex.test(string)) {
+    console.log("Substring found!");
+} else {
+    console.log("Substring not found!");
+}
+`;
+code166: string = `console.log("location.href", window.location.href); // Returns full URL`;
+code167: string = `const urlParams = new URLSearchParams(window.location.search);
+const clientCode = urlParams.get("clientCode");`;
+code168: string = `"key" in obj;`;
+code169: string = `!("key" in obj);`;
+code170: string = `obj.hasOwnProperty("key"); // true`;
+code171: string = `
+const user = {
+  name: "John",
+};
+
+console.log(user.name !== undefined); // true
+console.log(user.nickName !== undefined); // false`;
+code172: string = `
+var object = {
+  k1: "value1",
+  k2: "value2",
+  k3: "value3",
+};
+
+for (var key in object) {
+  if (object.hasOwnProperty(key)) {
+    console.log(key + " -> " + object[key]); // k1 -> value1 ...
+  }
+}`;
+code173: string = `Object.entries(obj).length === 0 && obj.constructor === Object; // Since date object length is 0, you need to check constructor check as well`;
+code174: string = `Object.keys(obj).length === 0 && obj.constructor === Object; // Since date object length is 0, you need to check constructor check as well`;
+code175: string = `
+function isEmpty(obj) {
+  for (var prop in obj) {
+    if (obj.hasOwnProperty(prop)) {
+      return false;
+    }
+  }
+
+  return JSON.stringify(obj) === JSON.stringify({});
+}`;
+code176: string = `
+function sum() {
+  var total = 0;
+  for (var i = 0, len = arguments.length; i < len; ++i) {
+    total += arguments[i];
+  }
+  return total;
+}
+
+sum(1, 2, 3); // returns 6`;
+code177: string = `var argsArray = Array.prototype.slice.call(arguments);`;
+code178: string = `
+var d1 = new Date();
+var d2 = new Date(d1);
+console.log(d1.getTime() === d2.getTime()); //True
+console.log(d1 === d2); // False`;
+code179: string = `var a = b || c;`;
+code180: string = `
+fn = function (x) {
+  //Function code goes here
+};
+
+fn.name = "John";
+
+fn.profile = function (y) {
+  //Profile code goes here
+};`;
+code181: string = `
+function sum(num1, num2, num3, num4) {
+  return num1 + num2 + num3 + num4;
+}
+sum.length; // 4 is the number of parameters expected.`;
+code182: string = `
+for (i = 0; i < 10; i++) {
+  if (i === 5) {
+    break;
+  }
+  text += "Number: " + i + "<br>";
+}`;
+code183: string = `
+for (i = 0; i < 10; i++) {
+  if (i === 5) {
+    continue;
+  }
+  text += "Number: " + i + "<br>";
+}`;
+code184: string = `
+var i, j;
+
+loop1: for (i = 0; i < 3; i++) {
+  loop2: for (j = 0; j < 3; j++) {
+    if (i === j) {
+      continue loop1;
+    }
+    console.log("i = " + i + ", j = " + j);
+  }
+}
+
+// Output is:
+//   "i = 1, j = 0"
+//   "i = 2, j = 0"
+//   "i = 2, j = 1"`;
+code185: string = `
+var v1 = {};
+var v2 = "";
+var v3 = 0;
+var v4 = false;
+var v5 = [];
+var v6 = /()/;
+var v7 = function () {};`;
+code186: string = `
+"users":[
+  {"firstName":"John", "lastName":"Abrahm"},
+  {"firstName":"Anna", "lastName":"Smith"},
+  {"firstName":"Shane", "lastName":"Warn"}
+]`;
+code187: string = `
+function randomInteger(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+randomInteger(1, 100); // returns a random integer from 1 to 100
+randomInteger(1, 1000); // returns a random integer from 1 to 1000`;
+code188: string = ``;
+code189: string = ``;
+code190: string = ``;
+code191: string = ``;
+code192: string = ``;
+code193: string = ``;
+code194: string = ``;
+code195: string = ``;
+code196: string = ``;
+code197: string = ``;
+code198: string = ``;
+code199: string = ``;
+code200: string = ``;
+code201: string = ``;
+code202: string = ``;
 
 
 
