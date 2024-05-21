@@ -1671,8 +1671,33 @@ function randomInteger(min, max) {
 }
 randomInteger(1, 100); // returns a random integer from 1 to 100
 randomInteger(1, 1000); // returns a random integer from 1 to 1000`;
-code188: string = ``;
-code189: string = ``;
+code188: string = `function reverseString(str) {
+  let reversedStr = '';
+  for (let i = str.length-1; i >= 0; i--) {
+      reversedStr += str[i];
+  }
+  return reversedStr;
+}
+
+console.log(reverseString("Praveen")); 
+// neevarP`;
+code189: string = `function PalindromeNum(num) {
+  let numvalue = String(num);
+  let reversedNum = '';
+  for (let i = numvalue.length-1; i >= 0; i--) {
+      reversedNum += numvalue[i];
+  }
+  if(numvalue===reversedNum){
+      return +reversedNum;
+  }else{
+      return "Number is not Palindrome";
+  }
+}
+
+console.log(PalindromeNum(123444321));
+console.log(PalindromeNum(1234443210));
+// 123444321
+// Number is not Palindrome`;
 code190: string = ``;
 code191: string = ``;
 code192: string = ``;
