@@ -2079,8 +2079,38 @@ export class InterViewsComponent implements OnInit, OnDestroy {
   })
   export class ExampleComponent {}
   `;
-  code221: string = ``;
-  code222: string = ``;
+  code221: string = `import { NgModule } from '@angular/core';
+  import { BrowserModule } from '@angular/platform-browser';
+  import { AppComponent } from './app.component';
+  import { RandomPipe } from './random.pipe';
+  
+  @NgModule({
+    declarations: [
+      AppComponent,
+      RandomPipe
+    ],
+    imports: [
+      BrowserModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
+  })
+  export class AppModule { }
+  `;
+  code222: string = `import { Component } from '@angular/core';
+
+  @Component({
+    selector: 'app-root',
+    template: '
+      <div>
+        Original Value: 100
+        <br>
+        Random Value: {{ 100 | random }}
+      </div>
+    '
+  })
+  export class AppComponent { }
+  `;
   code223: string = ``;
   code224: string = ``;
   code225: string = ``;

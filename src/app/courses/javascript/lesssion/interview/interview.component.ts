@@ -116,18 +116,114 @@ export class InterviewComponent implements OnInit, OnDestroy {
       { name: 'How do you define JSON arrays?', id: "How_do_you_define_JSON_arrays" },
       { name: 'Can you write a random integers function to print integers with in a range?', id: "Can_you_write_a_random_integers_function_to_print_integers_with_in_a_range" },
       { name: 'What is tree shaking?', id: "What_is_tree_shaking" },
-      // { name: 'Variable_Declaration', id: "Variable_Declaration" },
-      // { name: 'Variable_Declaration', id: "Variable_Declaration" },
-      // { name: 'Variable_Declaration', id: "Variable_Declaration" },
-      // { name: 'Variable_Declaration', id: "Variable_Declaration" },
-      // { name: 'Variable_Declaration', id: "Variable_Declaration" },
-      // { name: 'Variable_Declaration', id: "Variable_Declaration" },
-      // { name: 'Variable_Declaration', id: "Variable_Declaration" },
-      // { name: 'Variable_Declaration', id: "Variable_Declaration" },
-      // { name: 'Variable_Declaration', id: "Variable_Declaration" },
-      // { name: 'Variable_Declaration', id: "Variable_Declaration" },
-      // { name: 'Variable_Declaration', id: "Variable_Declaration" },
-      // { name: 'Variable_Declaration', id: "Variable_Declaration" },
+      { name: 'What is a Regular Expression?', id: "What_is_a_Regular_Expression" },
+      { name: 'What are the string methods available in Regular expression?', id: "What_are_the_string_methods_available_in_Regular_expression" },
+      { name: 'What is a debugger statement?', id: "What_is_a_debugger_statement" },
+      { name: 'How do you detect a mobile browser?', id: "How_do_you_detect_a_mobile_browser" },
+      { name: 'How do you detect a mobile browser without regexp?', id: "How_do_you_detect_a_mobile_browser_without_regexp" },
+      { name: 'How do you get the image width and height using JS?', id: "How_do_you_get_the_image_width_and_height_using_JS" },
+      { name: 'How do you make synchronous HTTP request?', id: "How_do_you_make_synchronous_HTTP_request" },
+      { name: 'How do you make asynchronous HTTP request?', id: "How_do_you_make_asynchronous_HTTP_request" },
+      { name: 'How do you convert date to another timezone in javascript?', id: "How_do_you_convert_date_to_another_timezone_in_javascript" },
+      { name: 'What are the properties used to get size of window?', id: "What_are_the_properties_used_to_get_size_of_window" },
+      { name: 'How do you detect a browser language preference?', id: "How_do_you_detect_a_browser_language_preference" },
+      { name: 'How to convert string to title case with javascript?', id: "How_to_convert_string_to_title_case_with_javascript" },
+      { name: 'How do you detect javascript disabled in the page?', id: "How_do_you_detect_javascript_disabled_in_the_page" },
+      { name: 'What is the purpose of using object is method?', id: "What_is_the_purpose_of_using_object_is_method" },
+      { name: 'How do you copy properties from one object to other?', id: "How_do_you_copy_properties_from_one_object_to_other" },
+      { name: 'What are the applications of assign method?', id: "What_are_the_applications_of_assign_method" },
+      { name: 'What is a proxy object?', id: "What_is_a_proxy_object" },
+      { name: 'What is the purpose of seal and freeze method?', id: "What_is_the_purpose_of_seal_and_freeze_method" },
+      { name: 'What are the differences between freeze and seal methods?', id: "What_are_the_differences_between_freeze_and_seal_methods" },
+      { name: 'How do you determine if an object is sealed or not?', id: "How_do_you_determine_if_an_object_is_sealed_or_not" },
+      { name: 'How do you get enumerable key and value pairs?', id: "How_do_you_get_enumerable_key_and_value_pairs" },
+      { name: 'What is the main difference between Object.values and Object.entries method?', id: "What_is_the_main_difference_between_Object_values_and_Object_entries_method" },
+      { name: 'What is a Set?', id: "What_is_a_Set" },
+      { name: 'What is a WeakSet?', id: "What_is_a_WeakSet" },
+      { name: 'What are the differences between WeakSet and Set?', id: "What_are_the_differences_between_WeakSet_and_Set" },
+      { name: 'What is Map?', id: "What_is_Map" },
+      { name: 'What is a WeakMap?', id: "What_is_a_WeakMap" },
+      { name: 'What are the differences between WeakMap and Map?', id: "What_are_the_differences_between_WeakMap_and_Map" },
+      { name: 'How do you print the contents of web page?', id: "How_do_you_print_the_contents_of_web_page" },
+      { name: 'What is the difference between uneval and eval?', id: "What_is_the_difference_between_uneval_and_eval" },
+      { name: 'What is the precedence order between local and global variables?', id: "What_is_the_precedence_order_between_local_and_global_variables" },
+      { name: 'What are javascript accessors?', id: "What_are_javascript_accessors" },
+      { name: 'How do you define property on Object constructor?', id: "How_do_you_define_property_on_Object_constructor" },
+      { name: 'What is the difference between get and defineProperty?', id: "What_is_the_difference_between_get_and_defineProperty" },
+      { name: 'What are the advantages of Getters and Setters?', id: "What_are_the_advantages_of_Getters_and_Setters" },
+      { name: 'Can I add getters and setters using defineProperty method?', id: "Can_I_add_getters_and_setters_using_defineProperty_method" },
+      { name: 'What are primitive data types?', id: "What_are_primitive_data_types" },
+      { name: 'What is an error object?', id: "What_is_an_error_object" },
+      { name: 'When you get a syntax error?', id: "When_you_get_a_syntax_error" },
+      { name: 'What are the various statements in error handling?', id: "What_are_the_various_statements_in_error_handling" },
+      { name: 'What is an Intl object?', id: "What_is_an_Intl_object" },
+      { name: 'How do you perform language specific date and time formatting?', id: "How_do_you_perform_language_specific_date_and_time_formatting" },
+      { name: 'What is an event loop?', id: "What_is_an_event_loop" },
+      { name: 'What is call stack?', id: "What_is_call_stack" },
+      { name: 'What is an event queue?', id: "What_is_an_event_queue" },
+      { name: 'What are the properties of Intl object?', id: "What_are_the_properties_of_Intl_object" },
+      { name: 'How do you reversing an array?', id: "How_do_you_reversing_an_array" },
+      { name: 'How do you find min and max value in an array?', id: "How_do_you_find_min_and_max_value_in_an_array" },
+      { name: 'How do you find min and max values without Math functions?', id: "How_do_you_find_min_and_max_values_without_Math_functions" },
+      { name: 'What is an object initializer?', id: "What_is_an_object_initializer" },
+      { name: 'What happens if you write constructor more than once in a class?', id: "What_happens_if_you_write_constructor_more_than_once_in_a_class" },
+      { name: 'How do you get the prototype of an object?', id: "How_do_you_get_the_prototype_of_an_object" },
+      { name: 'What happens If I pass string type for getPrototype method?', id: "What_happens_If_I_pass_string_type_for_getPrototype_method" },
+      { name: 'How do you set prototype of one object to another?', id: "How_do_you_set_prototype_of_one_object_to_another" },
+      { name: 'How do you define multiple properties on an object?', id: "How_do_you_define_multiple_properties_on_an_object" },
+      { name: 'What Is Obfuscation in javascript?', id: "What_Is_Obfuscation_in_javascript" },
+      { name: 'What is Minification?', id: "What_is_Minification" },
+      { name: 'What are the differences between Obfuscation and Encryption?', id: "What_are_the_differences_between_Obfuscation_and_Encryption" },
+      { name: 'What are the DOM methods available for constraint validation?', id: "What_are_the_DOM_methods_available_for_constraint_validation" },
+      { name: 'How do you list all properties of an object?', id: "How_do_you_list_all_properties_of_an_object" },
+      { name: 'How do you extend classes?', id: "How_do_you_extend_classes" },
+      { name: 'How do I modify the url without reloading the page?', id: "How_do_I_modify_the_url_without_reloading_the_page" },
+      { name: 'How do you check whether an array includes a particular value or not?', id: "How_do_you_check_whether_an_array_includes_a_particular_value_or_not" },
+      { name: 'How do you compare scalar arrays?', id: "How_do_you_compare_scalar_arrays" },
+      { name: 'How do you print numbers with commas as thousand separators?', id: "How_do_you_print_numbers_with_commas_as_thousand_separators" },
+      { name: 'Does JavaScript supports namespace?', id: "Does_JavaScript_supports_namespace" },
+      { name: 'How do you declare namespace?', id: "How_do_you_declare_namespace" },
+      { name: 'How do you invoke javascript code in an iframe from parent page?', id: "How_do_you_invoke_javascript_code_in_an_iframe_from_parent_page" },
+      { name: 'How do get the timezone offset from date?', id: "How_do_get_the_timezone_offset_from_date" },
+      { name: 'How do you load CSS and JS files dynamically?', id: "How_do_you_load_CSS_and_JS_files_dynamically" },
+      { name: 'What is a void operator?', id: "What_is_a_void_operator" },
+      { name: 'List down some of the features of ES6?', id: "List_down_some_of_the_features_of_ES6" },
+      { name: 'Is const variable makes the value immutable?', id: "Is_const_variable_makes_the_value_immutable" },
+      { name: 'What are nesting templates?', id: "What_are_nesting_templates" },
+      { name: 'What are tagged templates?', id: "What_are_tagged_templates" },
+      { name: 'What are raw strings?', id: "What_are_raw_strings" },
+      { name: 'What are enhanced object literals?', id: "What_are_enhanced_object_literals" },
+      { name: 'What are dynamic imports?', id: "What_are_dynamic_imports" },
+      { name: 'What is the output of below spread operator array?', id: "What_is_the_output_of_below_spread_operator_array" },
+      { name: 'How do you convert character to ASCII code?', id: "How_do_you_convert_character_to_ASCII_code" },
+      { name: 'What is ArrayBuffer?', id: "What_is_ArrayBuffer" },
+      { name: 'What is the output of below string expression?', id: "What_is_the_output_of_below_string_expression" },
+      { name: 'Do all objects have prototypes?', id: "Do_all_objects_have_prototypes" },
+      { name: 'What is the difference between a parameter and an argument?', id: "What_is_the_difference_between_a_parameter_and_an_argument" },
+      { name: 'What is the difference between Shallow and Deep copy?', id: "What_is_the_difference_between_Shallow_and_Deep_copy" },
+      { name: 'What are the possible ways to make deep copy?', id: "What_are_the_possible_ways_to_make_deep_copy" },
+      { name: 'How do you trim a string at the beginning or ending?', id: "How_do_you_trim_a_string_at_the_beginning_or_ending" },
+      { name: 'Does javascript uses mixins?', id: "Does_javascript_uses_mixins" },
+      { name: 'What is a thunk function?', id: "What_is_a_thunk_function" },
+      { name: 'What are asynchronous thunks?', id: "What_are_asynchronous_thunks" },
+      { name: 'How to remove all line breaks from a string?', id: "How_to_remove_all_line_breaks_from_a_string" },
+      { name: 'What is the difference between reflow and repaint?', id: "What_is_the_difference_between_reflow_and_repaint" },
+      { name: 'How do you remove falsy values from an array?', id: "How_do_you_remove_falsy_values_from_an_array" },
+      { name: 'What is destructuring aliases?', id: "What_is_destructuring_aliases" },
+      { name: 'How do you map the array values without using map method?', id: "How_do_you_map_the_array_values_without_using_map_method" },
+      { name: 'What is the easiest way to convert an array to an object?', id: "What_is_the_easiest_way_to_convert_an_array_to_an_object" },
+      { name: 'How do you create an array with some data?', id: "How_do_you_create_an_array_with_some_data" },
+      { name: 'How do you verify that an argument is a Number or not?', id: "How_do_you_verify_that_an_argument_is_a_Number_or_not" },
+      { name: 'How do you create copy to clipboard button?', id: "How_do_you_create_copy_to_clipboard_button" },
+      { name: 'How do you flattening multi dimensional arrays?', id: "How_do_you_flattening_multi_dimensional_arrays" },
+      { name: 'What is the easiest multi condition checking?', id: "What_is_the_easiest_multi_condition_checking" },
+      { name: 'How do you capture browser back button?', id: "How_do_you_capture_browser_back_button" },
+      { name: 'How do you disable right click in the web page?', id: "How_do_you_disable_right_click_in_the_web_page" },
+      { name: 'What is minimum timeout throttling?', id: "What_is_minimum_timeout_throttling" },
+      { name: 'What is the difference between shim and polyfill?', id: "What_is_the_difference_between_shim_and_polyfill" },
+      { name: 'Is Node.js completely single threaded?', id: "Is_Node_js_completely_single_threaded" },
+      { name: 'What is a Short circuit condition?', id: "What_is_a_Short_circuit_condition" },
+      { name: 'What is the difference between function and class declarations?', id: "What_is_the_difference_between_function_and_class_declarations" },
       // { name: 'Variable_Declaration', id: "Variable_Declaration" },
       // { name: 'Variable_Declaration', id: "Variable_Declaration" },
       // { name: 'Variable_Declaration', id: "Variable_Declaration" },
@@ -1698,21 +1794,958 @@ console.log(PalindromeNum(123444321));
 console.log(PalindromeNum(1234443210));
 // 123444321
 // Number is not Palindrome`;
-code190: string = ``;
-code191: string = ``;
-code192: string = ``;
-code193: string = ``;
-code194: string = ``;
-code195: string = ``;
-code196: string = ``;
-code197: string = ``;
-code198: string = ``;
-code199: string = ``;
-code200: string = ``;
-code201: string = ``;
-code202: string = ``;
+code190: string = `/pattern/modifiers;`;
+code191: string = `/John/i;`;
+code192: string = `var msg = "Hello John";
+var n = msg.search(/John/i); // 6`;
+code193: string = `var msg = "Hello John";
+var n = msg.replace(/John/i, "Buttler"); // Hello Buttler`;
+code194: string = `function getProfile() {
+  // code goes here
+  debugger;
+  // code goes here
+}`;
+code195: string = `window.mobilecheck = function () {
+  var mobileCheck = false;
+  (function (a) {
+    if (
+      /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(
+        a
+      ) ||
+      /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(
+        a.substr(0, 4)
+      )
+    )
+      mobileCheck = true;
+  })(navigator.userAgent || navigator.vendor || window.opera);
+  return mobileCheck;
+};`;
+code196: string = `function detectmob() {
+  if (
+    navigator.userAgent.match(/Android/i) ||
+    navigator.userAgent.match(/webOS/i) ||
+    navigator.userAgent.match(/iPhone/i) ||
+    navigator.userAgent.match(/iPad/i) ||
+    navigator.userAgent.match(/iPod/i) ||
+    navigator.userAgent.match(/BlackBerry/i) ||
+    navigator.userAgent.match(/Windows Phone/i)
+  ) {
+    return true;
+  } else {
+    return false;
+  }
+}`;
+code197: string = `var img = new Image();
+img.onload = function () {
+  console.log(this.width + "x" + this.height);
+};
+img.src = "http://www.google.com/intl/en_ALL/images/logo.gif";`;
+code198: string = `function httpGet(theUrl) {
+  var xmlHttpReq = new XMLHttpRequest();
+  xmlHttpReq.open("GET", theUrl, false); // false for synchronous request
+  xmlHttpReq.send(null);
+  return xmlHttpReq.responseText;
+}`;
+code199: string = `function httpGetAsync(theUrl, callback) {
+  var xmlHttpReq = new XMLHttpRequest();
+  xmlHttpReq.onreadystatechange = function () {
+    if (xmlHttpReq.readyState == 4 && xmlHttpReq.status == 200)
+      callback(xmlHttpReq.responseText);
+  };
+  xmlHttpReq.open("GET", theUrl, true); // true for asynchronous
+  xmlHttpReq.send(null);
+}`;
+code200: string = `console.log(event.toLocaleString("en-GB", { timeZone: "UTC" })); //29/06/2019, 09:56:00`;
+code201: string = `var width =
+window.innerWidth ||
+document.documentElement.clientWidth ||
+document.body.clientWidth;
+
+var height =
+window.innerHeight ||
+document.documentElement.clientHeight ||
+document.body.clientHeight;`;
+code202: string = `var language =
+(navigator.languages && navigator.languages[0]) || // Chrome / Firefox
+navigator.language || // All browsers
+navigator.userLanguage; // IE <= 10
+
+console.log(language);`;
+code203: string = `function toTitleCase(str) {
+  return str.replace(/\w\S*/g, function (txt) {
+    return txt.charAt(0).toUpperCase() + txt.substring(1).toLowerCase();
+  });
+}
+toTitleCase("good morning john"); // Good Morning John`;
+code204: string = `<script type="javascript">
+// JS related code goes here
+</script>
+<noscript>
+<a href="next_page.html?noJS=true">JavaScript is disabled in the page. Please click Next Page</a>
+</noscript>`;
+code205: string = `Object.assign(target, ...sources);`;
+code206: string = `const target = { a: 1, b: 2 };
+const source = { b: 3, c: 4 };
+
+const returnedTarget = Object.assign(target, source);
+
+console.log(target); // { a: 1, b: 3, c: 4 }
+
+console.log(returnedTarget); // { a: 1, b: 3, c: 4 }`;
+code207: string = `var p = new Proxy(target, handler);`;
+code208: string = ` //Example1:
+
+const person = {
+  name: 'Sudheer Jonna',
+  age: 35
+};
+
+const handler = {
+get(target, prop) {
+  if (prop === 'name') {
+    return 'Mr. ' + target[prop];
+  }
+  return target[prop];
+}
+};
+
+const proxy = new Proxy(person, handler);
+
+//Example2: 
+
+var handler1 = {
+get: function (obj, prop) {
+  return prop in obj ? obj[prop] : 100;
+},
+};
+
+var p = new Proxy({}, handler1);
+p.a = 10;
+p.b = null;
+
+console.log(p.a, p.b); // 10, null
+console.log("c" in p, p.c); // false, 100`;
+code209: string = `const object = {
+  property: "Welcome JS world",
+};
+Object.seal(object);
+object.property = "Welcome to object world";
+console.log(Object.isSealed(object)); // true
+delete object.property; // You cannot delete when sealed
+console.log(object.property); //Welcome to object world`;
+code210: string = `const obj = {
+  prop: 100,
+};
+
+Object.freeze(obj);
+obj.prop = 200; // Throws an error in strict mode
+
+console.log(obj.prop); //100`;
+code211: string = `const user = {
+  name: "John",
+  employment: {
+    department: "IT",
+  },
+};
+
+Object.freeze(user);
+user.employment.department = "HR";`;
+code212: string = `const object = {
+  property: "Hello, Good morning",
+};
+
+Object.seal(object); // Using seal() method to seal the object
+
+console.log(Object.isSealed(object)); // checking whether the object is sealed or not`;
+code213: string = `const object = {
+  a: "Good morning",
+  b: 100,
+};
+
+for (let [key, value] of Object.entries(object)) {
+  console.log('\${key}: \${value}'); // a: 'Good morning'
+  // b: 100
+}`;
+code214: string = `const object = {
+  a: "Good morning",
+  b: 100,
+};
+
+for (let value of Object.values(object)) {
+  console.log('\${value}'); // 'Good morning \n100'
+}`;
+code215: string = `// Creating a new Set
+const mySet = new Set();
+
+// Adding values to the Set
+mySet.add(1);
+mySet.add(5);
+mySet.add('hello');
+mySet.add({ name: 'Alice' });
+
+// Adding a duplicate value (this will have no effect since 1 is already in the Set)
+mySet.add(1);
+
+// Checking for values in the Set
+console.log(mySet.has(1));    // true
+console.log(mySet.has(3));    // false
+
+// Deleting a value from the Set
+mySet.delete(5);
+
+// Iterating over the Set
+mySet.forEach(value => {
+  console.log(value);
+});
+
+// Another way to iterate using for...of loop
+for (let value of mySet) {
+  console.log(value);
+}
+
+// Clearing the Set
+mySet.clear();
+console.log(mySet.size); // 0 (the Set is now empty)
+
+const numbers = [1, 2, 3, 4, 4, 5, 6, 6, 7];
+const uniqueNumbers = [...new Set(numbers)];
+
+console.log(uniqueNumbers); // [1, 2, 3, 4, 5, 6, 7]
+
+`;
+code216: string = `new WeakSet([iterable]);`;
+code217: string = `var ws = new WeakSet();
+var user = {};
+ws.add(user);
+ws.has(user); // true
+ws.delete(user); // removes user from the set
+ws.has(user); // false, user has been removed`;
+code218: string = `var weakSetObject = new WeakSet();
+var firstObject = {};
+var secondObject = {};
+// add(value)
+weakSetObject.add(firstObject);
+weakSetObject.add(secondObject);
+console.log(weakSetObject.has(firstObject)); //true
+weakSetObject.delete(secondObject);`;
+code219: string = `// Creating a new Map
+const myMap = new Map();
+
+// Setting key-value pairs
+myMap.set('name', 'Alice');
+myMap.set('age', 25);
+myMap.set(true, 'Boolean key');
+myMap.set(1, 'Number key');
+
+// Setting an object as a key
+const objKey = { id: 1 };
+myMap.set(objKey, 'Object key');
+
+// Getting values by keys
+console.log(myMap.get('name'));       // 'Alice'
+console.log(myMap.get('age'));        // 25
+console.log(myMap.get(true));         // 'Boolean key'
+console.log(myMap.get(1));            // 'Number key'
+console.log(myMap.get(objKey));       // 'Object key'
+
+// Checking for keys
+console.log(myMap.has('name'));       // true
+console.log(myMap.has('nonexistent')); // false
+
+// Deleting a key-value pair
+myMap.delete('age');
+console.log(myMap.has('age'));        // false
+
+// Iterating over the Map
+myMap.forEach((value, key) => {
+  console.log('\${key}: \${value}');
+});
+
+// Another way to iterate using for...of loop
+for (let [key, value] of myMap) {
+  console.log('\${key}: \${value}');
+}
+
+// Clearing the Map
+myMap.clear();
+console.log(myMap.size); // 0 (the Map is now empty)
+
+const items = ['apple', 'banana', 'apple', 'orange', 'banana', 'apple'];
+const itemCount = new Map();
+
+items.forEach(item => {
+  if (itemCount.has(item)) {
+    itemCount.set(item, itemCount.get(item) + 1);
+  } else {
+    itemCount.set(item, 1);
+  }
+});
+
+for (let [item, count] of itemCount) {
+  console.log('\${item}: \${count}');
+}
+
+// Output:
+// apple: 3
+// banana: 2
+// orange: 1
 
 
+`;
+code220: string = `new WeakMap([iterable]);`;
+code221: string = `var ws = new WeakMap();
+var user = {};
+ws.set(user);
+ws.has(user); // true
+ws.delete(user); // removes user from the map
+ws.has(user); // false, user has been removed`;
+code222: string = `<input type="button" value="Print" onclick="window.print()" />`;
+code223: string = `var msg = uneval(function greeting() {
+  return "Hello, Good morning";
+});
+var greeting = eval(msg);
+greeting(); // returns "Hello, Good morning"`;
+code224: string = `var msg = "Good morning";
+function greeting() {
+  msg = "Good Evening";
+  console.log(msg); // Good Evening
+}
+greeting();`;
+code225: string = `var user = {
+  firstName: "John",
+  lastName: "Abraham",
+  language: "en",
+  get lang() {
+    return this.language;
+  },
+  set lang(lang) {
+    this.language = lang;
+  },
+};
+console.log(user.lang); // getter access lang as en
+user.lang = "fr";
+console.log(user.lang); // setter used to set lang as fr`;
+code226: string = `const newObject = {};
+
+Object.defineProperty(newObject, "newProperty", {
+  value: 100,
+  writable: false,
+});
+
+console.log(newObject.newProperty); // 100
+
+newObject.newProperty = 200; // It throws an error in strict mode due to writable setting`;
+code227: string = `var obj = { counter: 0 };
+
+// Define getters
+Object.defineProperty(obj, "increment", {
+  get: function () {
+    this.counter++;
+  },
+});
+Object.defineProperty(obj, "decrement", {
+  get: function () {
+    this.counter--;
+  },
+});
+
+// Define setters
+Object.defineProperty(obj, "add", {
+  set: function (value) {
+    this.counter += value;
+  },
+});
+Object.defineProperty(obj, "subtract", {
+  set: function (value) {
+    this.counter -= value;
+  },
+});
+
+obj.add = 10;
+obj.subtract = 5;
+console.log(obj.increment); //6
+console.log(obj.decrement); //5`;
+code228: string = `try {
+  greeting("Welcome");
+} catch (err) {
+  console.log(err.name + "<br>" + err.message);
+}`;
+code229: string = `try {
+  eval("greeting('welcome)"); // Missing ' will produce an error
+} catch (err) {
+  console.log(err.name);
+}`;
+code230: string = `var date = new Date(Date.UTC(2019, 07, 07, 3, 0, 0));
+console.log(new Intl.DateTimeFormat("en-GB").format(date)); // 07/08/2019
+console.log(new Intl.DateTimeFormat("en-AU").format(date)); // 07/08/2019`;
+code231: string = `function hungry() {
+  eatFruits();
+}
+function eatFruits() {
+  return "I'm eating fruits";
+}
+
+// Invoke the 'hungry' function
+hungry();`;
+code232: string = `let numbers = [1, 2, 5, 3, 4];
+numbers.sort((a, b) => b - a);
+numbers.reverse();
+console.log(numbers); // [1, 2, 3, 4 ,5]`;
+code233: string = `var marks = [50, 20, 70, 60, 45, 30];
+function findMin(arr) {
+  return Math.min.apply(null, arr);
+}
+function findMax(arr) {
+  return Math.max.apply(null, arr);
+}
+
+console.log(findMin(marks));
+console.log(findMax(marks));`;
+code234: string = `var marks = [50, 20, 70, 60, 45, 30];
+function findMin(arr) {
+  var length = arr.length;
+  var min = Infinity;
+  while (length--) {
+    if (arr[length] < min) {
+      min = arr[length];
+    }
+  }
+  return min;
+}
+
+function findMax(arr) {
+  var length = arr.length;
+  var max = -Infinity;
+  while (length--) {
+    if (arr[length] > max) {
+      max = arr[length];
+    }
+  }
+  return max;
+}
+
+console.log(findMin(marks));
+console.log(findMax(marks));`;
+code235: string = `var initObject = { a: "John", b: 50, c: {} };
+
+console.log(initObject.a); // John`;
+code236: string = ` class Employee {
+  constructor() {
+    this.name = "John";
+  }
+  constructor() {   //  Uncaught SyntaxError: A class may only have one constructor
+    this.age = 30;
+  }
+}
+
+var employeeObject = new Employee();
+
+console.log(employeeObject.name);`;
+code237: string = `const newPrototype = {};
+const newObject = Object.create(newPrototype);
+
+console.log(Object.getPrototypeOf(newObject) === newPrototype); // true`;
+code238: string = `// ES5
+Object.getPrototypeOf("James"); // TypeError: "James" is not an object
+// ES2015
+Object.getPrototypeOf("James"); // String.prototype`;
+code239: string = `Object.setPrototypeOf(Square.prototype, Rectangle.prototype);
+Object.setPrototypeOf({}, null);`;
+code240: string = `const newObject = {};
+
+Object.defineProperties(newObject, {
+  newProperty1: {
+    value: "John",
+    writable: true,
+  },
+  newProperty2: {},
+});`;
+code241: string = `function greeting() {
+  console.log("Hello, welcome to JS world");
+}`;
+code242: string = `eval(
+  (function (p, a, c, k, e, d) {
+    e = function (c) {
+      return c;
+    };
+    if (!"".replace(/^/, String)) {
+      while (c--) {
+        d[c] = k[c] || c;
+      }
+      k = [
+        function (e) {
+          return d[e];
+        },
+      ];
+      e = function () {
+        return "\\w+";
+      };
+      c = 1;
+    }
+    while (c--) {
+      if (k[c]) {
+        p = p.replace(new RegExp("\\b" + e(c) + "\\b", "g"), k[c]);
+      }
+    }
+    return p;
+  })(
+    "2 1(){0.3('4, 7 6 5 8')}",
+    9,
+    9,
+    "console|greeting|function|log|Hello|JS|to|welcome|world".split("|"),
+    0,
+    {}
+  )
+);`;
+code243: string = `function myFunction() {
+  var userName = document.getElementById("uname");
+  if (!userName.checkValidity()) {
+    document.getElementById("message").innerHTML =
+      userName.validationMessage;
+  } else {
+    document.getElementById("message").innerHTML =
+      "Entered a valid username";
+  }
+}`;
+code244: string = `<input id="age" type="number" max="100" />
+<button onclick="myOverflowFunction()">OK</button>
+`;
+code245: string = `
+function myOverflowFunction() {
+  if (document.getElementById("age").validity.rangeOverflow) {
+    alert("The mentioned age is not allowed");
+  }
+}`;
+code246: string = `const newObject = {
+  a: 1,
+  b: 2,
+  c: 3,
+};
+
+console.log(Object.getOwnPropertyNames(newObject));
+["a", "b", "c"];`;
+code247: string = `const newObject = {
+  a: 1,
+  b: 2,
+  c: 3,
+};
+const descriptorsObject = Object.getOwnPropertyDescriptors(newObject);
+console.log(descriptorsObject.a.writable); //true
+console.log(descriptorsObject.a.configurable); //true
+console.log(descriptorsObject.a.enumerable); //true
+console.log(descriptorsObject.a.value); // 1`;
+code248: string = `class ChildClass extends ParentClass { ... }`;
+code249: string = `class Square extends Rectangle {
+  constructor(length) {
+    super(length, length);
+    this.name = "Square";
+  }
+
+  get area() {
+    return this.width * this.height;
+  }
+
+  set area(value) {
+    this.area = value;
+  }
+}`;
+code250: string = `window.history.pushState("page2", "Title", "/page2.html");`;
+code251: string = `var numericArray = [1, 2, 3, 4];
+console.log(numericArray.includes(3)); // true
+
+var stringArray = ["green", "yellow", "blue"];
+console.log(stringArray.includes("blue")); //true`;
+code252: string = `const arrayFirst = [1, 2, 3, 4, 5];
+const arraySecond = [1, 2, 3, 4, 5];
+console.log(
+  arrayFirst.length === arraySecond.length &&
+    arrayFirst.every((value, index) => value === arraySecond[index])
+); // true`;
+code253: string = `const arrayFirst = [2, 3, 1, 4, 5];
+const arraySecond = [1, 2, 3, 4, 5];
+console.log(
+  arrayFirst.length === arraySecond.length &&
+    arrayFirst.sort().every((value, index) => value === arraySecond[index])
+); //true`;
+code254: string = `function convertToThousandFormat(x) {
+  return x.toLocaleString(); // 12,345.679
+}
+
+console.log(convertToThousandFormat(12345.6789));`;
+code255: string = `function func1() {
+  console.log("This is a first definition");
+}
+function func1() {
+  console.log("This is a second definition");
+}
+func1(); // This is a second definition`;
+code256: string = `var namespaceOne = {
+  function func1() {
+      console.log("This is a first definition");
+  }
+}
+var namespaceTwo = {
+    function func1() {
+        console.log("This is a second definition");
+    }
+}
+namespaceOne.func1(); // This is a first definition
+namespaceTwo.func1(); // This is a second definition`;
+code257: string = `(function () {
+  function fun1() {
+    console.log("This is a first definition");
+  }
+  fun1();
+})();
+
+(function () {
+  function fun1() {
+    console.log("This is a second definition");
+  }
+  fun1();
+})();`;
+code258: string = `{
+  let myFunction = function fun1() {
+    console.log("This is a first definition");
+  };
+  myFunction();
+}
+//myFunction(): ReferenceError: myFunction is not defined.
+
+{
+  let myFunction = function fun1() {
+    console.log("This is a second definition");
+  };
+  myFunction();
+}
+//myFunction(): ReferenceError: myFunction is not defined.`;
+code259: string = `document.getElementById("targetFrame").contentWindow.targetFunction();
+window.frames[0].frameElement.contentWindow.targetFunction(); // Accessing iframe this way may not work in latest versions chrome and firefox`;
+code260: string = `var offset = new Date().getTimezoneOffset();
+console.log(offset); // -480`;
+code261: string = `function loadAssets(filename, filetype) {
+  if (filetype == "css") {
+    // External CSS file
+    var fileReference = document.createElement("link");
+    fileReference.setAttribute("rel", "stylesheet");
+    fileReference.setAttribute("type", "text/css");
+    fileReference.setAttribute("href", filename);
+  } else if (filetype == "js") {
+    // External JavaScript file
+    var fileReference = document.createElement("script");
+    fileReference.setAttribute("type", "text/javascript");
+    fileReference.setAttribute("src", filename);
+  }
+  if (typeof fileReference != "undefined")
+    document.getElementsByTagName("head")[0].appendChild(fileReference);
+}`;
+code262: string = `void expression;
+void expression;`;
+code263: string = `<a href="javascript:void(alert('Welcome to JS world'))">
+Click here to see a message
+</a>`;
+code264: string = `const userList = [];
+userList.push("John"); // Can mutate even though it can't re-assign
+console.log(userList); // ['John']`;
+code265: string = `const iconStyles = 'icon \${
+  isMobilePlatform()
+    ? ""
+    : 'icon-\${user.isAuthorized ? "submit" : "disabled"}'
+}';`;
+code266: string = `//Without nesting templates
+const iconStyles = 'icon \${
+  isMobilePlatform()
+    ? ""
+    : user.isAuthorized
+    ? "icon-submit"
+    : "icon-disabled"
+}';`;
+code267: string = `var user1 = "John";
+var skill1 = "JavaScript";
+var experience1 = 15;
+
+var user2 = "Kane";
+var skill2 = "JavaScript";
+var experience2 = 5;
+
+function myInfoTag(strings, userExp, experienceExp, skillExp) {
+  var str0 = strings[0]; // "Mr/Ms. "
+  var str1 = strings[1]; // " is a/an "
+  var str2 = strings[2]; // "in"
+
+  var expertiseStr;
+  if (experienceExp > 10) {
+    expertiseStr = "expert developer";
+  } else if (skillExp > 5 && skillExp <= 10) {
+    expertiseStr = "senior developer";
+  } else {
+    expertiseStr = "junior developer";
+  }
+
+  return '\${str0}\${userExp}\${str1}\${expertiseStr}\${str2}\${skillExp}';
+}
+
+var output1 = myInfoTag'Mr/Ms. \${user1} is a/an \${experience1} in \${skill1}';
+var output2 = myInfoTag'Mr/Ms. \${user2} is a/an \${experience2} in \${skill2}';
+
+console.log(output1); // Mr/Ms. John is a/an expert developer in JavaScript
+console.log(output2); // Mr/Ms. Kane is a/an junior developer in JavaScript`;
+code268: string = `var calculationString = String.raw'The sum of numbers is \n${
+  1 + 2 + 3 + 4
+}!';
+console.log(calculationString); // The sum of numbers is \n10!`;
+code269: string = `var calculationString = 'The sum of numbers is \n${1 + 2 + 3 + 4}!';
+console.log(calculationString);
+// The sum of numbers is
+// 10!`;
+code270: string = `function tag(strings) {
+  console.log(strings.raw[0]);
+}`;
+code271: string = `//ES6
+var x = 10,
+  y = 20;
+obj = { x, y };
+console.log(obj); // {x: 10, y:20}
+//ES5
+var x = 10,
+  y = 20;
+obj = { x: x, y: y };
+console.log(obj); // {x: 10, y:20}`;
+code272: string = `import("./Module").then((Module) => Module.method());`;
+code273: string = `[..."John Resig"];`;
+code274: string = `"ABC".charCodeAt(0); // returns 65`;
+code275: string = `String.fromCharCode(65, 66, 67); // returns 'ABC'`;
+code276: string = `let buffer = new ArrayBuffer(16); // create a buffer of length 16
+alert(buffer.byteLength); // 16`;
+code277: string = `//Create a DataView referring to the buffer
+let view = new DataView(buffer);`;
+code278: string = `console.log("Welcome to JS world"[0]);`;
+code279: string = `function myFunction(parameter1, parameter2, parameter3) {
+  console.log(arguments[0]); // "argument1"
+  console.log(arguments[1]); // "argument2"
+  console.log(arguments[2]); // "argument3"
+}
+myFunction("argument1", "argument2", "argument3");`;
+code280: string = `var empDetails = {
+  name: "John",
+  age: 25,
+  expertise: "Software Developer",
+};  `;
+code281: string = `var empDetailsShallowCopy = empDetails; //Shallow copying!`;
+code282: string = `empDetailsShallowCopy.name = "Johnson";`;
+code283: string = `var empDetails = {
+  name: "John",
+  age: 25,
+  expertise: "Software Developer",
+};`;
+code284: string = `var empDetailsDeepCopy = {
+  name: empDetails.name,
+  age: empDetails.age,
+  expertise: empDetails.expertise,
+};`;
+code285: string = `const original = { a: 1, b: { c: 2 } };
+const copy = JSON.parse(JSON.stringify(original));
+`;
+code286: string = `function deepCopy(obj, hash = new WeakMap()) {
+  if (Object(obj) !== obj) return obj; // Primitives
+  if (hash.has(obj)) return hash.get(obj); // Circular reference
+  const result = Array.isArray(obj) ? [] : obj.constructor ? new obj.constructor() : Object.create(null);
+  hash.set(obj, result);
+  return Object.keys(obj).reduce((acc, key) => {
+      acc[key] = deepCopy(obj[key], hash);
+      return acc;
+  }, result);
+}
+
+const original = { a: 1, b: { c: 2 }, d: function() { return 3; } };
+const copy = deepCopy(original);
+`;
+code287: string = `const _ = require('lodash');
+const original = { a: 1, b: { c: 2 } };
+const copy = _.cloneDeep(original);
+`;
+code288: string = `const original = { a: 1, b: { c: 2 } };
+const copy = structuredClone(original);
+`;
+code289: string = `function deepCopy(obj) {
+  if (obj === null || typeof obj !== 'object') return obj;
+  if (Array.isArray(obj)) return obj.map(deepCopy);
+  const copy = {};
+  for (let key in obj) {
+      if (obj.hasOwnProperty(key)) {
+          copy[key] = deepCopy(obj[key]);
+      }
+  }
+  return copy;
+}
+
+const original = { a: 1, b: { c: 2 } };
+const copy = deepCopy(original);
+`;
+code290: string = `const structuredClone = require('structured-clone');
+const original = { a: 1, b: { c: 2 } };
+const copy = structuredClone(original);
+`;
+code291: string = `var greeting = "   Hello, Goodmorning!   ";
+
+console.log(greeting); // "   Hello, Goodmorning!   "
+console.log(greeting.trimStart()); // "Hello, Goodmorning!   "
+console.log(greeting.trimLeft()); // "Hello, Goodmorning!   "
+
+console.log(greeting.trimEnd()); // "   Hello, Goodmorning!"
+console.log(greeting.trimRight()); // "   Hello, Goodmorning!"`;
+code292: string = `// mixin
+let cleanRoomMixin = {
+  cleanRoom() {
+    alert('Hello \${this.name}, your room is clean now');
+  },
+  sayBye() {
+    alert('Bye \${this.name}');
+  },
+};
+
+// usage:
+class User {
+  constructor(name) {
+    this.name = name;
+  }
+}
+
+// copy the methods
+Object.assign(User.prototype, cleanRoomMixin);
+
+// now User can clean the room
+new User("Dude").cleanRoom(); // Hello Dude, your room is clean now!`;
+code293: string = `const add = (x, y) => x + y;
+
+const thunk = () => add(2, 3);
+
+thunk(); // 5`;
+code294: string = `function fetchData(fn) {
+  fetch("https://jsonplaceholder.typicode.com/todos/1")
+    .then((response) => response.json())
+    .then((json) => fn(json));
+}
+
+const asyncThunk = function () {
+  return fetchData(function getData(data) {
+    console.log(data);
+  });
+};
+
+asyncThunk();`;
+code295: string = `function remove_linebreaks( var message ) {
+  return message.replace( /[\r\n]+/gm, "" );
+}`;
+code296: string = `const myArray = [false, null, 1, 5, undefined];
+myArray.filter(Boolean); // [1, 5] // is same as myArray.filter(x => x);`;
+code297: string = `const obj = { x: 1 };
+// Grabs obj.x as as { otherName }
+const { x: otherName } = obj;`;
+code298: string = `const countries = [
+  { name: "India", capital: "Delhi" },
+  { name: "US", capital: "Washington" },
+  { name: "Russia", capital: "Moscow" },
+  { name: "Singapore", capital: "Singapore" },
+  { name: "China", capital: "Beijing" },
+  { name: "France", capital: "Paris" },
+];
+
+const cityNames = Array.from(countries, ({ capital }) => capital);
+console.log(cityNames); // ['Delhi, 'Washington', 'Moscow', 'Singapore', 'Beijing', 'Paris']`;
+code299: string = `var fruits = ["banana", "apple", "orange", "watermelon"];
+var fruitsObject = { ...fruits };
+console.log(fruitsObject); // {0: "banana", 1: "apple", 2: "orange", 3: "watermelon"}`;
+code300: string = `var newArray = new Array(5).fill("0");
+console.log(newArray); // ["0", "0", "0", "0", "0"]`;
+code301: string = `function isNumber(n) {
+  return !isNaN(parseFloat(n)) && isFinite(n);
+}`;
+code302: string = `document.querySelector("#copy-button").onclick = function () {
+  // Select the content
+  document.querySelector("#copy-input").select();
+  // Copy to the clipboard
+  document.execCommand("copy");
+};`;
+code303: string = `const biDimensionalArr = [11, [22, 33], [44, 55], [66, 77], 88, 99];
+const flattenArr = [].concat(...biDimensionalArr); // [11, 22, 33, 44, 55, 66, 77, 88, 99]`;
+code304: string = `function flattenMultiArray(arr) {
+  const flattened = [].concat(...arr);
+  return flattened.some((item) => Array.isArray(item))
+    ? flattenMultiArray(flattened)
+    : flattened;
+}
+const multiDimensionalArr = [11, [22, 33], [44, [55, 66, [77, [88]], 99]]];
+const flatArr = flattenMultiArray(multiDimensionalArr); // [11, 22, 33, 44, 55, 66, 77, 88, 99]`;
+code305: string = `const arr = [1, [2, 3], 4, 5, [6, 7]];
+const fllattenArr = arr.flat(); // [1, 2, 3, 4, 5, 6, 7]
+
+// And for multiDemensional arrays
+const multiDimensionalArr = [11, [22, 33], [44, [55, 66, [77, [88]], 99]]];
+const oneStepFlat = multiDimensionalArr.flat(1); // [11, 22, 33, 44, [55, 66, [77, [88]], 99]]
+const towStep = multiDimensionalArr.flat(2); // [11, 22, 33, 44, 55, 66, [77, [88]], 99]
+const fullyFlatArray = multiDimensionalArr.flat(Infinity); // [11, 22, 33, 44, 55, 66, 77, 88, 99]`;
+code306: string = `// Verbose approach
+if (
+  input === "first" ||
+  input === 1 ||
+  input === "second" ||
+  input === 2
+) {
+  someFunction();
+}
+// Shortcut
+if (["first", 1, "second", 2].indexOf(input) !== -1) {
+  someFunction();
+}`;
+code307: string = ` window.addEventListener('beforeunload', () => {
+  console.log('Clicked browser back button');
+});`;
+code308: string = `window.addEventListener('popstate', () => {
+  console.log('Clicked browser back button');
+  box.style.backgroundColor = 'white';
+});
+
+const box = document.getElementById('div');
+
+box.addEventListener('click', () => {
+box.style.backgroundColor = 'blue';
+window.history.pushState({}, null, null);
+});
+
+In the preceeding code, When the box element clicked, its background color appears in blue color and changed to while color upon clicking the browser back button using 'popstate' event handler. The 'state' property of 'popstate' contains the copy of history entry's state object.
+
+ **[⬆ Back to Top](#table-of-contents)**
+
+`;
+code309: string = `<body oncontextmenu="return false;"></body>`;
+code310: string = `function runMeFirst() {
+  console.log("My script is initialized");
+}
+setTimeout(runMeFirst, 0);
+console.log("Script loaded");`;
+code311: string = `Script loaded
+My script is initialized`;
+code312: string = `function runMeFirst() {
+  console.log("My script is initialized");
+}
+runMeFirst();
+console.log("Script loaded");`;
+code313: string = `My script is initialized
+Script loaded`;
+code314: string = `if (authenticate) {
+  loginToPorta();
+}`;
+code315: string = `authenticate && loginToPorta();`;
+code316: string = `const user = new User(); // ReferenceError
+
+class User {}`;
+code317: string = `const user = new User(); // No error
+
+function User() {}`;
+code318: string = ``;
+code319: string = ``;
+code320: string = ``;
 
 
   ngOnDestroy(): void { this.shearedService.rSidebar_Id_Data$.next([]); }
