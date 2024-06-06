@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { IntroComponent } from './lesssion/intro/intro.component';
+import { TypescriptDashboardComponent } from './dashboard/dashboard.component';
+import { TypescriptIntroComponent } from './lesssion/intro/intro.component';
 import { courceRoute, routeConfig, tsTopics } from 'src/app/shared/const/const';
 import { LayoutComponent } from 'src/app/shared/components/layout/layout.component';
 import { InstallingTypeScriptComponent } from './lesssion/installing-type-script/installing-type-script.component';
-import { VariablesComponent } from './lesssion/variables/variables.component';
-import { DataTypesComponent } from './lesssion/data-types/data-types.component';
-import { FunctionsComponent } from './lesssion/functions/functions.component';
-import { DeclarationsComponent } from './lesssion/declarations/declarations.component';
-import { ArrowFunctionsComponent } from './lesssion/arrow-functions/arrow-functions.component';
+import { TypescriptVariablesComponent } from './lesssion/variables/variables.component';
+import { TypescriptDataTypesComponent } from './lesssion/data-types/data-types.component';
+import { TypescriptFunctionsComponent } from './lesssion/functions/functions.component';
+import { TypescriptDeclarationsComponent } from './lesssion/declarations/declarations.component';
+import { TypescriptArrowFunctionsComponent } from './lesssion/arrow-functions/arrow-functions.component';
 import { ParametersComponent } from './lesssion/parameters/parameters.component';
 import { RestParametersComponent } from './lesssion/rest-parameters/rest-parameters.component';
 import { TofixedFunctionComponent } from './lesssion/tofixed-function/tofixed-function.component';
@@ -21,7 +21,7 @@ import { OptionalPropertiesComponent } from './lesssion/optional-properties/opti
 import { ReadonlyPropertiesComponent } from './lesssion/readonly-properties/readonly-properties.component';
 import { ExtendingInterfacesComponent } from './lesssion/extending-interfaces/extending-interfaces.component';
 import { InterfaceVsTypeAliasComponent } from './lesssion/interface-vs-type-alias/interface-vs-type-alias.component';
-import { ClassesComponent } from './lesssion/classes/classes.component';
+import { TypescriptClassesComponent } from './lesssion/classes/classes.component';
 import { ConstructorsComponent } from './lesssion/constructors/constructors.component';
 import { PropertiesComponent } from './lesssion/properties/properties.component';
 import { MethodsComponent } from './lesssion/methods/methods.component';
@@ -38,9 +38,9 @@ import { NumericEnumsComponent } from './lesssion/numeric-enums/numeric-enums.co
 import { StringEnumsComponent } from './lesssion/string-enums/string-enums.component';
 import { ComputedAndConstantMembersComponent } from './lesssion/computed-and-constant-members/computed-and-constant-members.component';
 import { ReverseMappingComponent } from './lesssion/reverse-mapping/reverse-mapping.component';
-import { ModulesComponent } from './lesssion/modules/modules.component';
+import { TypescriptModulesComponent } from './lesssion/modules/modules.component';
 import { ModuleBasicsComponent } from './lesssion/module-basics/module-basics.component';
-import { ExportAndImportComponent } from './lesssion/export-and-import/export-and-import.component';
+import { TypescriptExportAndImportComponent } from './lesssion/export-and-import/export-and-import.component';
 import { DefaultExportsComponent } from './lesssion/default-exports/default-exports.component';
 import { NamespaceImportsComponent } from './lesssion/namespace-imports/namespace-imports.component';
 import { ReExportingComponent } from './lesssion/re-exporting/re-exporting.component';
@@ -49,14 +49,14 @@ import { NamespacesInTypeScriptComponent } from './lesssion/namespaces-in-type-s
 import { NestedNamespacesComponent } from './lesssion/nested-namespaces/nested-namespaces.component';
 import { DeclaringAmbientModulesComponent } from './lesssion/declaring-ambient-modules/declaring-ambient-modules.component';
 import { MergingNamespacesComponent } from './lesssion/merging-namespaces/merging-namespaces.component';
-import { DecoratorsComponent } from './lesssion/decorators/decorators.component';
+import { TypescriptDecoratorsComponent } from './lesssion/decorators/decorators.component';
 import { IntroductionToDecoratorsComponent } from './lesssion/introduction-to-decorators/introduction-to-decorators.component';
 import { ClassDecoratorsComponent } from './lesssion/class-decorators/class-decorators.component';
 import { MethodDecoratorsComponent } from './lesssion/method-decorators/method-decorators.component';
 import { PropertyDecoratorsComponent } from './lesssion/property-decorators/property-decorators.component';
 import { ParameterDecoratorsComponent } from './lesssion/parameter-decorators/parameter-decorators.component';
 import { DecoratorFactoriesComponent } from './lesssion/decorator-factories/decorator-factories.component';
-import { MixinsComponent } from './lesssion/mixins/mixins.component';
+import { TypescriptMixinsComponent } from './lesssion/mixins/mixins.component';
 import { CompositionOverInheritanceComponent } from './lesssion/composition-over-inheritance/composition-over-inheritance.component';
 import { MixinsInTypeScriptComponent } from './lesssion/mixins-in-type-script/mixins-in-type-script.component';
 import { TypeInferenceComponent } from './lesssion/type-inference/type-inference.component';
@@ -118,9 +118,9 @@ import { ValueOfMethodComponent } from './lesssion/value-of-method/value-of-meth
 import { TostringMethodComponent } from './lesssion/tostring-method/tostring-method.component';
 import { ToexponentialMethodComponent } from './lesssion/toexponential-method/toexponential-method.component';
 import { MethodOverridingComponent } from './lesssion/method-overriding/method-overriding.component';
-import { ArrayMethodsComponent } from './lesssion/array-methods/array-methods.component';
+import { TypescriptArrayMethodsComponent } from './lesssion/array-methods/array-methods.component';
 import { StringMethodsComponent } from './lesssion/string-methods/string-methods.component';
-import { ObjectMethodsComponent } from './lesssion/object-methods/object-methods.component';
+import { TypescriptObjectMethodsComponent } from './lesssion/object-methods/object-methods.component';
 import { AdvanceComponent } from './lesssion/advance/advance.component';
 import { GenericObjectTypesComponent } from './lesssion/generic-object-types/generic-object-types.component';
 import { CallSignaturesComponent } from './lesssion/call-signatures/call-signatures.component';
@@ -144,30 +144,30 @@ import { InterfacesTypeComponent } from './lesssion/interfaces-type/interfaces-t
 import { ReturnTypeVoidComponent } from './lesssion/return-type-void/return-type-void.component';
 
 const routes: Routes = [
-    { path: routeConfig?.empty, component: DashboardComponent },
+    { path: routeConfig?.empty, component: TypescriptDashboardComponent },
     {
         path: routeConfig?.version, component: LayoutComponent,
         children: [
             {
                 path: tsTopics?.tsintro,
                 children: [
-                    { path: routeConfig?.empty, component: IntroComponent },
+                    { path: routeConfig?.empty, component: TypescriptIntroComponent },
                     { path: tsTopics?.installing_typeScript, component: InstallingTypeScriptComponent },
-                    { path: tsTopics?.variables, component: VariablesComponent },
+                    { path: tsTopics?.variables, component: TypescriptVariablesComponent },
                 ],
             },
             {
                 path: tsTopics?.data_types,
                 children: [
-                    { path: routeConfig?.empty, component: DataTypesComponent },
+                    { path: routeConfig?.empty, component: TypescriptDataTypesComponent },
                 ],
             },
             {
                 path: tsTopics?.functions,
                 children: [
-                    { path: routeConfig?.empty, component: FunctionsComponent },
-                    { path: tsTopics?.declarations, component: DeclarationsComponent },
-                    { path: tsTopics?.arrow_functions, component: ArrowFunctionsComponent },
+                    { path: routeConfig?.empty, component: TypescriptFunctionsComponent },
+                    { path: tsTopics?.declarations, component: TypescriptDeclarationsComponent },
+                    { path: tsTopics?.arrow_functions, component: TypescriptArrowFunctionsComponent },
                     { path: tsTopics?.parameters, component: ParametersComponent },
                     { path: tsTopics?.rest_parameters, component: RestParametersComponent },
                     { path: tsTopics?.tofixed_function, component: TofixedFunctionComponent },
@@ -189,7 +189,7 @@ const routes: Routes = [
             {
                 path: tsTopics?.classes,
                 children: [
-                    { path: routeConfig?.empty, component: ClassesComponent },
+                    { path: routeConfig?.empty, component: TypescriptClassesComponent },
                     { path: tsTopics?.constructors, component: ConstructorsComponent },
                     { path: tsTopics?.properties, component: PropertiesComponent },
                     { path: tsTopics?.methods, component: MethodsComponent },
@@ -220,9 +220,9 @@ const routes: Routes = [
             {
                 path: tsTopics?.modules,
                 children: [
-                    { path: routeConfig?.empty, component: ModulesComponent },
+                    { path: routeConfig?.empty, component: TypescriptModulesComponent },
                     { path: tsTopics?.module_basics, component: ModuleBasicsComponent },
-                    { path: tsTopics?.export_and_import, component: ExportAndImportComponent },
+                    { path: tsTopics?.export_and_import, component: TypescriptExportAndImportComponent },
                     { path: tsTopics?.default_exports, component: DefaultExportsComponent },
                     { path: tsTopics?.namespace_imports, component: NamespaceImportsComponent },
                     { path: tsTopics?.re_exporting, component: ReExportingComponent },
@@ -241,7 +241,7 @@ const routes: Routes = [
             {
                 path: tsTopics?.decorators,
                 children: [
-                    { path: routeConfig?.empty, component: DecoratorsComponent },
+                    { path: routeConfig?.empty, component: TypescriptDecoratorsComponent },
                     { path: tsTopics?.introduction_to_decorators, component: IntroductionToDecoratorsComponent },
                     { path: tsTopics?.class_decorators, component: ClassDecoratorsComponent },
                     { path: tsTopics?.method_decorators, component: MethodDecoratorsComponent },
@@ -253,7 +253,7 @@ const routes: Routes = [
             {
                 path: tsTopics?.mixins,
                 children: [
-                    { path: routeConfig?.empty, component: MixinsComponent },
+                    { path: routeConfig?.empty, component: TypescriptMixinsComponent },
                     { path: tsTopics?.mixins_in_typeScript, component: MixinsInTypeScriptComponent },
                     { path: tsTopics?.composition_over_inheritance, component: CompositionOverInheritanceComponent },
                 ],
@@ -350,9 +350,9 @@ const routes: Routes = [
                     { path: tsTopics?.tostring_method, component: TostringMethodComponent },
                     { path: tsTopics?.toexponential_method, component: ToexponentialMethodComponent },
                     { path: tsTopics?.method_overriding, component: MethodOverridingComponent },
-                    { path: tsTopics?.array_methods, component: ArrayMethodsComponent },
+                    { path: tsTopics?.array_methods, component: TypescriptArrayMethodsComponent },
                     { path: tsTopics?.string_methods, component: StringMethodsComponent },
-                    { path: tsTopics?.object_methods, component: ObjectMethodsComponent },
+                    { path: tsTopics?.object_methods, component: TypescriptObjectMethodsComponent },
                 ],
             },
             {

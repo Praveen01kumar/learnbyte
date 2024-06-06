@@ -192,7 +192,7 @@ const routes: Routes = [
             {
                 path: ngTopics?.ngintro,
                 children: [
-                    { path: routeConfig?.empty, component: IntroComponent},
+                    { path: routeConfig?.empty, component: IntroComponent },
                     { path: ngTopics?.features_of_angular, component: FeaturesOfAngularComponent },
                 ],
             },
@@ -467,6 +467,7 @@ const routes: Routes = [
                 path: ngTopics?.inter_views,
                 children: [
                     { path: routeConfig?.empty, component: InterViewsComponent },
+                    { path: ngTopics?.inter_views_concept_based, component: InterViewsComponent },
                 ],
             }
         ],

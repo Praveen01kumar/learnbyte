@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './testing.component.html',
   styleUrls: ['./testing.component.scss']
 })
-export class TestingComponent {
+export class NestjsTestingComponent {
 
 }

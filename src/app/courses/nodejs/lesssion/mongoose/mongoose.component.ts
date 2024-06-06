@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './mongoose.component.html',
   styleUrls: ['./mongoose.component.scss']
 })
-export class MongooseComponent {
+export class NodejsMongooseComponent {
 
 }

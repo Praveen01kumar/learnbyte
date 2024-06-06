@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './decorators.component.html',
   styleUrls: ['./decorators.component.scss']
 })
-export class DecoratorsComponent {
+export class TypescriptDecoratorsComponent {
 
 }

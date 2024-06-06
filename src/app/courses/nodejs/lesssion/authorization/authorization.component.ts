@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './authorization.component.html',
   styleUrls: ['./authorization.component.scss']
 })
-export class AuthorizationComponent {
+export class NodejsAuthorizationComponent {
 
 }

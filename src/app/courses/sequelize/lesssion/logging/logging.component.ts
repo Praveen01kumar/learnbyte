@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './logging.component.html',
   styleUrls: ['./logging.component.scss']
 })
-export class LoggingComponent {
+export class SequelizeLoggingComponent {
 
 }

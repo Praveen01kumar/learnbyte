@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './error-handling.component.html',
   styleUrls: ['./error-handling.component.scss']
 })
-export class ErrorHandlingComponent {
+export class NestjsErrorHandlingComponent {
 
 }

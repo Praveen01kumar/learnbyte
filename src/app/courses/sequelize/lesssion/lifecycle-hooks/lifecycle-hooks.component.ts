@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './lifecycle-hooks.component.html',
   styleUrls: ['./lifecycle-hooks.component.scss']
 })
-export class LifecycleHooksComponent {
+export class SequelizeLifecycleHooksComponent {
 
 }

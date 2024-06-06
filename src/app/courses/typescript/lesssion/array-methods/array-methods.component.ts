@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './array-methods.component.html',
   styleUrls: ['./array-methods.component.scss']
 })
-export class ArrayMethodsComponent {
+export class TypescriptArrayMethodsComponent {
 
 }

@@ -7,7 +7,7 @@ import { Content } from 'src/app/shared/interfaces/interfaces';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
-export class DashboardComponent {
+export class NodejsDashboardComponent {
   contentData:Content = NodeJsContent;
   
 }

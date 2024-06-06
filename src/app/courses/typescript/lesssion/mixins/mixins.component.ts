@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './mixins.component.html',
   styleUrls: ['./mixins.component.scss']
 })
-export class MixinsComponent {
+export class TypescriptMixinsComponent {
 
 }

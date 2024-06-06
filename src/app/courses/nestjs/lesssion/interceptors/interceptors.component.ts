@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './interceptors.component.html',
   styleUrls: ['./interceptors.component.scss']
 })
-export class InterceptorsComponent {
+export class NestjsInterceptorsComponent {
 
 }

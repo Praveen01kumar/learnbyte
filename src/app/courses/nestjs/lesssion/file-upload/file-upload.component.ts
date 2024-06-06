@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './file-upload.component.html',
   styleUrls: ['./file-upload.component.scss']
 })
-export class FileUploadComponent {
+export class NestjsFileUploadComponent {
 
 }

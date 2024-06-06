@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './express.component.html',
   styleUrls: ['./express.component.scss']
 })
-export class ExpressComponent {
+export class NodejsExpressComponent {
 
 }

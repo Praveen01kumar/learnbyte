@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './data-types.component.html',
   styleUrls: ['./data-types.component.scss']
 })
-export class DataTypesComponent {
+export class SequelizeDataTypesComponent {
 
 }

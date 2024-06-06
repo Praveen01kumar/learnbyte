@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './performance-optimization.component.html',
   styleUrls: ['./performance-optimization.component.scss']
 })
-export class PerformanceOptimizationComponent {
+export class NodejsPerformanceOptimizationComponent {
 
 }

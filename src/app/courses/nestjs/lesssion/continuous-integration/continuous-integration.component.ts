@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './continuous-integration.component.html',
   styleUrls: ['./continuous-integration.component.scss']
 })
-export class ContinuousIntegrationComponent {
+export class NestjsContinuousIntegrationComponent {
 
 }

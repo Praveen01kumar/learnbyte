@@ -7,7 +7,7 @@ import { SharedService } from 'src/app/shared/service/shared-service';
   templateUrl: './intro.component.html',
   styleUrls: ['./intro.component.scss']
 })
-export class IntroComponent implements OnInit, OnDestroy {
+export class JavascriptIntroComponent implements OnInit, OnDestroy {
 
   symbal: string = '${}';
 

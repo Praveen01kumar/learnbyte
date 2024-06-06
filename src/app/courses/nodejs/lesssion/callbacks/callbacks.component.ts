@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './callbacks.component.html',
   styleUrls: ['./callbacks.component.scss']
 })
-export class CallbacksComponent {
+export class NodejsCallbacksComponent {
 
 }

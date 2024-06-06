@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './export-and-import.component.html',
   styleUrls: ['./export-and-import.component.scss']
 })
-export class ExportAndImportComponent {
+export class TypescriptExportAndImportComponent {
 
 }

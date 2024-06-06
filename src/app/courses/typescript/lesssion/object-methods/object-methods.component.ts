@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './object-methods.component.html',
   styleUrls: ['./object-methods.component.scss']
 })
-export class ObjectMethodsComponent {
+export class TypescriptObjectMethodsComponent {
 
 }

@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './security.component.html',
   styleUrls: ['./security.component.scss']
 })
-export class SecurityComponent {
+export class NodejsSecurityComponent {
 
 }

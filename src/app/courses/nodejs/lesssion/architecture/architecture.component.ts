@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './architecture.component.html',
   styleUrls: ['./architecture.component.scss']
 })
-export class ArchitectureComponent {
+export class NodejsArchitectureComponent {
 
 }

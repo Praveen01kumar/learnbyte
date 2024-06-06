@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './usage.component.html',
   styleUrls: ['./usage.component.scss']
 })
-export class UsageComponent {
+export class SequelizeUsageComponent {
 
 }

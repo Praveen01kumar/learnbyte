@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { IntroComponent } from './lesssion/intro/intro.component';
+import { SequelizeDashboardComponent } from './dashboard/dashboard.component';
+import { SequelizeIntroComponent } from './lesssion/intro/intro.component';
 import { courceRoute, seqTopics, routeConfig } from 'src/app/shared/const/const';
 import { LayoutComponent } from 'src/app/shared/components/layout/layout.component';
-import { UsageComponent } from './lesssion/usage/usage.component';
+import { SequelizeUsageComponent } from './lesssion/usage/usage.component';
 import { BasicsComponent } from './lesssion/basics/basics.component';
 import { ModelsComponent } from './lesssion/models/models.component';
 import { InstancesComponent } from './lesssion/instances/instances.component';
@@ -19,7 +19,7 @@ import { RawQueriesComponent } from './lesssion/raw-queries/raw-queries.componen
 import { AggregatingComponent } from './lesssion/aggregating/aggregating.component';
 import { PluginsComponent } from './lesssion/plugins/plugins.component';
 import { ModelDefinitionComponent } from './lesssion/model-definition/model-definition.component';
-import { DataTypesComponent } from './lesssion/data-types/data-types.component';
+import { SequelizeDataTypesComponent } from './lesssion/data-types/data-types.component';
 import { ValidationComponent } from './lesssion/validation/validation.component';
 import { MdHooksComponent } from './lesssion/md-hooks/md-hooks.component';
 import { DefaultScopeComponent } from './lesssion/default-scope/default-scope.component';
@@ -41,7 +41,7 @@ import { IncrementComponent } from './lesssion/increment/increment.component';
 import { UpdateComponent } from './lesssion/update/update.component';
 import { DecrementComponent } from './lesssion/decrement/decrement.component';
 import { HooksComponent } from './lesssion/hooks/hooks.component';
-import { LifecycleHooksComponent } from './lesssion/lifecycle-hooks/lifecycle-hooks.component';
+import { SequelizeLifecycleHooksComponent } from './lesssion/lifecycle-hooks/lifecycle-hooks.component';
 import { ModelHooksComponent } from './lesssion/model-hooks/model-hooks.component';
 import { InstanceHooksComponent } from './lesssion/instance-hooks/instance-hooks.component';
 import { AssociationsComponent } from './lesssion/associations/associations.component';
@@ -57,25 +57,25 @@ import { ValidationsComponent } from './lesssion/validations/validations.compone
 import { ValidatorsComponent } from './lesssion/validators/validators.component';
 import { CustomValidatorsComponent } from './lesssion/custom-validators/custom-validators.component';
 import { VBasicsComponent } from './lesssion/v-basics/v-basics.component';
-import { ConfigurationComponent } from './lesssion/configuration/configuration.component';
+import { SequelizeConfigurationComponent } from './lesssion/configuration/configuration.component';
 import { OptionsComponent } from './lesssion/options/options.component';
-import { LoggingComponent } from './lesssion/logging/logging.component';
-import { ErrorHandlingComponent } from './lesssion/error-handling/error-handling.component';
+import { SequelizeLoggingComponent } from './lesssion/logging/logging.component';
+import { SequelizeErrorHandlingComponent } from './lesssion/error-handling/error-handling.component';
 import { HandlingErrorsComponent } from './lesssion/handling-errors/handling-errors.component';
 import { ErrorsComponent } from './lesssion/errors/errors.component';
 import { UtilsComponent } from './lesssion/utils/utils.component';
 import { HelpersComponent } from './lesssion/helpers/helpers.component';
 
 const routes: Routes = [
-    { path: routeConfig?.empty, component: DashboardComponent },
+    { path: routeConfig?.empty, component: SequelizeDashboardComponent },
     {
         path: routeConfig?.version, component: LayoutComponent,
         children: [
             {
                 path: seqTopics?.intro,
                 children: [
-                    { path: routeConfig?.empty, component: IntroComponent },
-                    { path: seqTopics?.usage, component: UsageComponent },
+                    { path: routeConfig?.empty, component: SequelizeIntroComponent },
+                    { path: seqTopics?.usage, component: SequelizeUsageComponent },
                 ],
             },
             {
@@ -105,7 +105,7 @@ const routes: Routes = [
                 path: seqTopics?.model_definition,
                 children: [
                     { path: routeConfig?.empty, component: ModelDefinitionComponent },
-                    { path: seqTopics?.data_types, component: DataTypesComponent },
+                    { path: seqTopics?.data_types, component: SequelizeDataTypesComponent },
                     { path: seqTopics?.validation, component: ValidationComponent },
                     { path: seqTopics?.md_hooks, component: MdHooksComponent },
                     { path: seqTopics?.default_scope, component: DefaultScopeComponent },
@@ -142,7 +142,7 @@ const routes: Routes = [
                 path: seqTopics?.hooks,
                 children: [
                     { path: routeConfig?.empty, component: HooksComponent },
-                    { path: seqTopics?.lifecycle_hooks, component: LifecycleHooksComponent },
+                    { path: seqTopics?.lifecycle_hooks, component: SequelizeLifecycleHooksComponent },
                     { path: seqTopics?.instance_hooks, component: InstanceHooksComponent },
                     { path: seqTopics?.model_hooks, component: ModelHooksComponent },
                 ],
@@ -178,15 +178,15 @@ const routes: Routes = [
             {
                 path: seqTopics?.configuration,
                 children: [
-                    { path: routeConfig?.empty, component: ConfigurationComponent },
+                    { path: routeConfig?.empty, component: SequelizeConfigurationComponent },
                     { path: seqTopics?.options, component: OptionsComponent },
-                    { path: seqTopics?.logging, component: LoggingComponent },
+                    { path: seqTopics?.logging, component: SequelizeLoggingComponent },
                 ],
             },
             {
                 path: seqTopics?.error_handling,
                 children: [
-                    { path: routeConfig?.empty, component: ErrorHandlingComponent },
+                    { path: routeConfig?.empty, component: SequelizeErrorHandlingComponent },
                     { path: seqTopics?.handling_errors, component: HandlingErrorsComponent },
                     { path: seqTopics?.errors, component: ErrorsComponent },
                 ],

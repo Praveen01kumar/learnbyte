@@ -860,6 +860,9 @@ export const jsTopics = {
     dynamic_imports: "dynamic-imports",
 
     inter_views: "inter-views",
+    inter_views_concept_based: "inter-views-concept-based",
+    inter_views_output_based: "inter-views-output-based",
+    inter_views_pattern_based: "inter-views-pattern-based",
 }
 
 export const JavaScriptContent: Content = {
@@ -1032,7 +1035,11 @@ export const JavaScriptContent: Content = {
     {
         list_title: "InterView",
         href: jsTopics?.inter_views,
-        sub_list: []
+        sub_list: [
+            {sub_title: "Concept based questions", href: jsTopics?.inter_views_concept_based},
+            {sub_title: "Output based questions", href: jsTopics?.inter_views_output_based},
+            {sub_title: "Pattren based questions", href: jsTopics?.inter_views_pattern_based}
+        ]
     },
     ]
 }
@@ -1235,7 +1242,10 @@ export const ngTopics = {
     grouping_and_sequencing: "grouping-and-sequencing",
     dynamic_animations: "dynamic-animations",
     integration_with_angular_directives: "integration-with-angular-directives",
+    
     inter_views: "inter-views",
+    inter_views_concept_based: "inter-views-concept-based",
+    
 }
 
 export const AngularContent: Content = {
@@ -1520,7 +1530,7 @@ export const AngularContent: Content = {
     {
         list_title: "InterView",
         href: ngTopics?.inter_views,
-        sub_list: []
+        sub_list: [{ sub_title: "Concept based questions", href: ngTopics?.inter_views_concept_based }]
     },
     ]
 }

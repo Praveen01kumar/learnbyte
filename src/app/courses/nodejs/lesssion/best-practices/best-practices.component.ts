@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './best-practices.component.html',
   styleUrls: ['./best-practices.component.scss']
 })
-export class BestPracticesComponent {
+export class NodejsBestPracticesComponent {
 
 }

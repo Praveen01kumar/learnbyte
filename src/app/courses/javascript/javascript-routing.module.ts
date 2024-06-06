@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { IntroComponent } from './lesssion/intro/intro.component';
+import { JavascriptDashboardComponent } from './dashboard/dashboard.component';
+import { JavascriptIntroComponent } from './lesssion/intro/intro.component';
 import { courceRoute, jsTopics, routeConfig } from 'src/app/shared/const/const';
 import { LayoutComponent } from 'src/app/shared/components/layout/layout.component';
 import { ManualsComponent } from './lesssion/manuals/manuals.component';
@@ -84,7 +84,7 @@ import { PrivateAndProtectedComponent } from './lesssion/private-and-protected/p
 import { ExtendingBuiltComponent } from './lesssion/extending-built/extending-built.component';
 import { ClassCheckingComponent } from './lesssion/class-checking/class-checking.component';
 import { MixinsComponent } from './lesssion/mixins/mixins.component';
-import { ErrorHandlingComponent } from './lesssion/error-handling/error-handling.component';
+import { JavascriptErrorHandlingComponent } from './lesssion/error-handling/error-handling.component';
 import { TryCatchComponent } from './lesssion/try-catch/try-catch.component';
 import { ExtendingErrorComponent } from './lesssion/extending-error/extending-error.component';
 import { PromisesComponent } from './lesssion/promises/promises.component';
@@ -103,16 +103,18 @@ import { ModulesDuctionComponent } from './lesssion/modules-duction/modules-duct
 import { ExportAndImportComponent } from './lesssion/export-and-import/export-and-import.component';
 import { DynamicImportsComponent } from './lesssion/dynamic-imports/dynamic-imports.component';
 import { InterviewComponent } from './lesssion/interview/interview.component';
+import { InterviewOutoutBasedComponent } from './lesssion/interview-outout-based/interview-outout-based.component';
+import { InterviewPatternBasedComponent } from './lesssion/interview-pattern-based/interview-pattern-based.component';
 
 const routes: Routes = [
-    { path: routeConfig?.empty, component: DashboardComponent },
+    { path: routeConfig?.empty, component: JavascriptDashboardComponent },
     {
         path: routeConfig?.version, component: LayoutComponent,
         children: [
             {
                 path: jsTopics?.intro,
                 children: [
-                    { path: routeConfig?.empty, component: IntroComponent },
+                    { path: routeConfig?.empty, component: JavascriptIntroComponent },
                     { path: jsTopics?.manuals, component: ManualsComponent },
                     { path: jsTopics?.code_editors, component: CodeEditorsComponent },
                     { path: jsTopics?.developer_console, component: DeveloperConsoleComponent },
@@ -237,7 +239,7 @@ const routes: Routes = [
             {
                 path: jsTopics?.error_handling,
                 children: [
-                    { path: routeConfig?.empty, component: ErrorHandlingComponent },
+                    { path: routeConfig?.empty, component: JavascriptErrorHandlingComponent },
                     { path: jsTopics?.try_catch, component: TryCatchComponent },
                     { path: jsTopics?.extending_error, component: ExtendingErrorComponent },
                 ],
@@ -277,6 +279,9 @@ const routes: Routes = [
                 path: jsTopics?.inter_views,
                 children: [
                     { path: routeConfig?.empty, component: InterviewComponent },
+                    { path: jsTopics?.inter_views_concept_based, component: InterviewComponent },
+                    { path: jsTopics?.inter_views_output_based, component: InterviewOutoutBasedComponent },
+                    { path: jsTopics?.inter_views_pattern_based, component: InterviewPatternBasedComponent }
                 ],
             }
         ],

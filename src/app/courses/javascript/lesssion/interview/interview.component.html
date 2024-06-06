@@ -3409,23 +3409,26 @@
             values(0, undefined, null, false and "") from the array.</p>
         <prismcode [code]="code296" language="javascript"></prismcode>
     </div>
-    
+
     <div class="questions" id="What_is_destructuring_aliases">
         <h1>194. What is destructuring aliases?</h1>
     </div>
     <div class="answers">
-        <p>Sometimes you would like to have a destructured variable with a different name than the property name. In that case, you'll use a : newName to specify a name for the variable. This process is called destructuring aliases.</p>
+        <p>Sometimes you would like to have a destructured variable with a different name than the property name. In
+            that case, you'll use a : newName to specify a name for the variable. This process is called destructuring
+            aliases.</p>
         <prismcode [code]="code297" language="javascript"></prismcode>
     </div>
-    
+
     <div class="questions" id="How_do_you_map_the_array_values_without_using_map_method">
         <h1>195. How do you map the array values without using map method?</h1>
     </div>
     <div class="answers">
-        <p>You can map the array values without using the map method by just using the from method of Array. Let's map city names from Countries array,</p>
+        <p>You can map the array values without using the map method by just using the from method of Array. Let's map
+            city names from Countries array,</p>
         <prismcode [code]="code298" language="javascript"></prismcode>
     </div>
-    
+
     <div class="questions" id="What_is_the_easiest_way_to_convert_an_array_to_an_object">
         <h1>196. What is the easiest way to convert an array to an object?</h1>
     </div>
@@ -3433,7 +3436,7 @@
         <p>You can convert an array to an object with the same data using spread(...) operator.</p>
         <prismcode [code]="code299" language="javascript"></prismcode>
     </div>
-    
+
     <div class="questions" id="How_do_you_create_an_array_with_some_data">
         <h1>197. How do you create an array with some data?</h1>
     </div>
@@ -3441,7 +3444,7 @@
         <p>You can create an array with some data or an array with the same values using fill method.</p>
         <prismcode [code]="code300" language="javascript"></prismcode>
     </div>
-    
+
     <div class="questions" id="How_do_you_verify_that_an_argument_is_a_Number_or_not">
         <h1>198. How do you verify that an argument is a Number or not?</h1>
     </div>
@@ -3449,15 +3452,16 @@
         <p>The combination of IsNaN and isFinite methods are used to confirm whether an argument is a number or not.</p>
         <prismcode [code]="code301" language="javascript"></prismcode>
     </div>
-    
+
     <div class="questions" id="How_do_you_create_copy_to_clipboard_button">
         <h1>199. How do you create copy to clipboard button?</h1>
     </div>
     <div class="answers">
-        <p>You need to select the content(using .select() method) of the input element and execute the copy command with execCommand (i.e, execCommand('copy')). You can also execute other system commands like cut and paste.</p>
+        <p>You need to select the content(using .select() method) of the input element and execute the copy command with
+            execCommand (i.e, execCommand('copy')). You can also execute other system commands like cut and paste.</p>
         <prismcode [code]="code302" language="javascript"></prismcode>
     </div>
-    
+
     <div class="questions" id="How_do_you_flattening_multi_dimensional_arrays">
         <h1>200. How do you flattening multi dimensional arrays?</h1>
     </div>
@@ -3469,38 +3473,47 @@
         <p>Also you can use the flat method of Array.</p>
         <prismcode [code]="code305" language="javascript"></prismcode>
     </div>
-    
+
     <div class="questions" id="What_is_the_easiest_multi_condition_checking">
         <h1>201. What is the easiest multi condition checking?</h1>
     </div>
     <div class="answers">
-        <p>You can use indexOf to compare input with multiple values instead of checking each value as one condition.</p>
+        <p>You can use indexOf to compare input with multiple values instead of checking each value as one condition.
+        </p>
         <prismcode [code]="code306" language="javascript"></prismcode>
     </div>
-    
+
     <div class="questions" id="How_do_you_capture_browser_back_button">
         <h1>202. How do you capture browser back button?</h1>
     </div>
     <div class="answers">
-        <p>The beforeunload event is triggered when the window, the document and its resources are about to be unloaded. This event is helpful to warn users about losing the current data and detect back button event.</p>
+        <p>The beforeunload event is triggered when the window, the document and its resources are about to be unloaded.
+            This event is helpful to warn users about losing the current data and detect back button event.</p>
         <prismcode [code]="code307" language="javascript"></prismcode>
-        <p>You can also use popstate event to detect the browser back button. Note: The history entry has been activated using history.pushState method.</p>
+        <p>You can also use popstate event to detect the browser back button. Note: The history entry has been activated
+            using history.pushState method.</p>
         <prismcode [code]="code308" language="javascript"></prismcode>
     </div>
-    
+
     <div class="questions" id="How_do_you_disable_right_click_in_the_web_page">
         <h1>203. How do you disable right click in the web page?</h1>
     </div>
     <div class="answers">
-        <p>The right click on the page can be disabled by returning false from the oncontextmenu attribute on the body element.</p>
+        <p>The right click on the page can be disabled by returning false from the oncontextmenu attribute on the body
+            element.</p>
         <prismcode [code]="code309" language="html"></prismcode>
     </div>
-    
+
     <div class="questions" id="What_is_minimum_timeout_throttling">
         <h1>204. What is minimum timeout throttling?</h1>
     </div>
     <div class="answers">
-        <p>Both browser and NodeJS javascript environments throttles with a minimum delay that is greater than 0ms. That means even though setting a delay of 0ms will not happen instantaneously. Browsers: They have a minimum delay of 4ms. This throttle occurs when successive calls are triggered due to callback nesting(certain depth) or after a certain number of successive intervals. Note: The older browsers have a minimum delay of 10ms. Nodejs: They have a minimum delay of 1ms. This throttle happens when the delay is larger than 2147483647 or less than</p>
+        <p>Both browser and NodeJS javascript environments throttles with a minimum delay that is greater than 0ms. That
+            means even though setting a delay of 0ms will not happen instantaneously. Browsers: They have a minimum
+            delay of 4ms. This throttle occurs when successive calls are triggered due to callback nesting(certain
+            depth) or after a certain number of successive intervals. Note: The older browsers have a minimum delay of
+            10ms. Nodejs: They have a minimum delay of 1ms. This throttle happens when the delay is larger than
+            2147483647 or less than</p>
         <p>The best example to explain this timeout throttling behavior is the order of below code snippet.</p>
         <prismcode [code]="code310" language="javascript"></prismcode>
         <p>and the output would be in</p>
@@ -3510,259 +3523,587 @@
         <p>and the output is,</p>
         <prismcode [code]="code313" language="javascript"></prismcode>
     </div>
-    
+
     <div class="questions" id="What_is_the_difference_between_shim_and_polyfill">
         <h1>205. What is the difference between shim and polyfill?</h1>
     </div>
     <div class="answers">
-        <p>A shim is a library that brings a new API to an older environment, using only the means of that environment. It isn't necessarily restricted to a web application. For example, es5-shim.js is used to emulate ES5 features on older browsers (mainly pre IE9). Whereas polyfill is a piece of code (or plugin) that provides the technology that you, the developer, expect the browser to provide natively. In a simple sentence, A polyfill is a shim for a browser API.</p>
+        <p>A shim is a library that brings a new API to an older environment, using only the means of that environment.
+            It isn't necessarily restricted to a web application. For example, es5-shim.js is used to emulate ES5
+            features on older browsers (mainly pre IE9). Whereas polyfill is a piece of code (or plugin) that provides
+            the technology that you, the developer, expect the browser to provide natively. In a simple sentence, A
+            polyfill is a shim for a browser API.</p>
     </div>
-    
+
     <div class="questions" id="Is_Node_js_completely_single_threaded">
         <h1>206. Is Node.js completely single threaded?</h1>
     </div>
     <div class="answers">
-        <p>Node is a single thread, but some of the functions included in the Node.js standard library(e.g, fs module functions) are not single threaded. i.e, Their logic runs outside of the Node.js single thread to improve the speed and performance of a program.</p>
+        <p>Node is a single thread, but some of the functions included in the Node.js standard library(e.g, fs module
+            functions) are not single threaded. i.e, Their logic runs outside of the Node.js single thread to improve
+            the speed and performance of a program.</p>
     </div>
-    
+
     <div class="questions" id="What_is_a_Short_circuit_condition">
         <h1>207. What is a Short circuit condition?</h1>
     </div>
     <div class="answers">
-        <p>Short circuit conditions are meant for condensed way of writing simple if statements. Let's demonstrate the scenario using an example. If you would like to login to a portal with an authentication condition, the expression would be as below,</p>
+        <p>Short circuit conditions are meant for condensed way of writing simple if statements. Let's demonstrate the
+            scenario using an example. If you would like to login to a portal with an authentication condition, the
+            expression would be as below,</p>
         <prismcode [code]="code314" language="javascript"></prismcode>
-        <p>Since the javascript logical operators evaluated from left to right, the above expression can be simplified using && logical operator</p>
+        <p>Since the javascript logical operators evaluated from left to right, the above expression can be simplified
+            using && logical operator</p>
         <prismcode [code]="code315" language="javascript"></prismcode>
     </div>
-    
+
     <div class="questions" id="What_is_the_difference_between_function_and_class_declarations">
         <h1>208. What is the difference between function and class declarations?</h1>
     </div>
     <div class="answers">
-        <p>The main difference between function declarations and class declarations is hoisting. The function declarations are hoisted but not class declarations.</p>
+        <p>The main difference between function declarations and class declarations is hoisting. The function
+            declarations are hoisted but not class declarations.</p>
         <b>Classes:</b>
         <prismcode [code]="code316" language="javascript"></prismcode>
         <b>Constructor Function:</b>
         <prismcode [code]="code317" language="javascript"></prismcode>
     </div>
-    
-    <div class="questions" id="">
-        <h1></h1>
+
+    <div class="questions" id="What_is_an_async_function">
+        <h1>209. What is an async function?</h1>
     </div>
     <div class="answers">
-        <p></p>
-    </div>
-    
-    <div class="questions" id="">
-        <h1></h1>
-    </div>
-    <div class="answers">
-        <p></p>
-    </div>
-    
-    <div class="questions" id="">
-        <h1></h1>
-    </div>
-    <div class="answers">
-        <p></p>
-    </div>
-    
-    <div class="questions" id="">
-        <h1></h1>
-    </div>
-    <div class="answers">
-        <p></p>
-    </div>
-    
-    <div class="questions" id="">
-        <h1></h1>
-    </div>
-    <div class="answers">
-        <p></p>
-    </div>
-    
-    <div class="questions" id="">
-        <h1></h1>
-    </div>
-    <div class="answers">
-        <p></p>
+        <p>An async function is a function declared with the async keyword which enables asynchronous, promise-based
+            behavior to be written in a cleaner style by avoiding promise chains. These functions can contain zero or
+            more await expressions.</p>
+        <p>Let's take a below async function example,</p>
+        <prismcode [code]="code318" language="javascript"></prismcode>
+        <p>It is basically syntax sugar over ES2015 promises and generators.</p>
     </div>
 
-
-
-    <div class="questions" id="pattern_printing_and_numbers">
-        <h1>Pattern printing and numbers?</h1>
+    <div class="questions" id="How_do_you_prevent_promises_swallowing_errors">
+        <h1>210. How do you prevent promises swallowing errors?</h1>
     </div>
     <div class="answers">
+        <p>While using asynchronous code, JavaScript’s ES6 promises can make your life a lot easier without having
+            callback pyramids and error handling on every second line. But Promises have some pitfalls and the biggest
+            one is swallowing errors by default.</p>
+        <p>Let's say you expect to print an error to the console for all the below cases,</p>
+        <prismcode [code]="code319" language="javascript"></prismcode>
+        <p>But there are many modern JavaScript environments that won't print any errors. You can fix this problem in
+            different ways,</p>
         <ol>
             <li>
-                <ul style="margin-left: 16px;">
-                    <li>
-                        <b>Example:</b>
-                        <prismcode [code]="code111" language="javascript"></prismcode>
-                        <b>Output:</b>
-                        <prismcode [code]="code112" language="javascript"></prismcode>
-                    </li>
-                </ul>
+                <b>Add catch block at the end of each chain:</b>
+                <p>You can add catch block to the end of each of your promise chains</p>
+                <prismcode [code]="code320" language="javascript"></prismcode>
+                <p>But it is quite difficult to type for each promise chain and verbose too.</p>
             </li>
             <li>
-                <ul style="margin-left: 16px;">
-                    <li>
-                        <b>Example:</b>
-                        <prismcode [code]="code113" language="javascript"></prismcode>
-                        <b>Output:</b>
-                        <prismcode [code]="code114" language="javascript"></prismcode>
-                    </li>
-                </ul>
-                <ul style="margin-left: 16px;">
-                    <li>
-                        <b>Example:</b>
-                        <prismcode [code]="code115" language="javascript"></prismcode>
-                        <b>Output:</b>
-                        <prismcode [code]="code116" language="javascript"></prismcode>
-                    </li>
-                </ul>
-                <ul style="margin-left: 16px;">
-                    <li>
-                        <b>Example:</b>
-                        <prismcode [code]="code117" language="javascript"></prismcode>
-                        <b>Output:</b>
-                        <prismcode [code]="code118" language="javascript"></prismcode>
-                    </li>
-                </ul>
-                <ul style="margin-left: 16px;">
-                    <li>
-                        <b>Example:</b>
-                        <prismcode [code]="code119" language="javascript"></prismcode>
-                        <b>Output:</b>
-                        <prismcode [code]="code120" language="javascript"></prismcode>
-                    </li>
-                </ul>
-                <ul style="margin-left: 16px;">
-                    <li>
-                        <b>Example:</b>
-                        <prismcode [code]="code121" language="javascript"></prismcode>
-                        <b>Output:</b>
-                        <prismcode [code]="code122" language="javascript"></prismcode>
-                    </li>
-                </ul>
-                <ul style="margin-left: 16px;">
-                    <li>
-                        <b>Example:</b>
-                        <prismcode [code]="code127" language="javascript"></prismcode>
-                        <b>Output:</b>
-                        <prismcode [code]="code128" language="javascript"></prismcode>
-                    </li>
-                </ul>
-                <ul style="margin-left: 16px;">
-                    <li>
-                        <b>Example:</b>
-                        <prismcode [code]="code129" language="javascript"></prismcode>
-                        <b>Output:</b>
-                        <prismcode [code]="code130" language="javascript"></prismcode>
-                    </li>
-                </ul>
-                <ul style="margin-left: 16px;">
-                    <li>
-                        <b>Example:</b>
-                        <prismcode [code]="code123" language="javascript"></prismcode>
-                        <b>Output:</b>
-                        <prismcode [code]="code124" language="javascript"></prismcode>
-                    </li>
-                </ul>
-                <ul style="margin-left: 16px;">
-                    <li>
-                        <b>Example:</b>
-                        <prismcode [code]="code125" language="javascript"></prismcode>
-                        <b>Output:</b>
-                        <prismcode [code]="code126" language="javascript"></prismcode>
-                    </li>
-                </ul>
-                <ul style="margin-left: 16px;">
-                    <li>
-                        <b>Example:</b>
-                        <prismcode [code]="code131" language="javascript"></prismcode>
-                        <b>Output:</b>
-                        <prismcode [code]="code132" language="javascript"></prismcode>
-                    </li>
-                </ul>
-                <ul style="margin-left: 16px;">
-                    <li>
-                        <b>Example:</b>
-                        <prismcode [code]="code133" language="javascript"></prismcode>
-                        <b>Output:</b>
-                        <prismcode [code]="code134" language="javascript"></prismcode>
-                    </li>
-                </ul>
-                <ul style="margin-left: 16px;">
-                    <li>
-                        <b>Example:</b>
-                        <prismcode [code]="code135" language="javascript"></prismcode>
-                        <b>Output:</b>
-                        <prismcode [code]="code136" language="javascript"></prismcode>
-                    </li>
-                </ul>
-                <ul style="margin-left: 16px;">
-                    <li>
-                        <b>Example:</b>
-                        <prismcode [code]="code137" language="javascript"></prismcode>
-                        <b>Output:</b>
-                        <prismcode [code]="code138" language="javascript"></prismcode>
-                    </li>
-                </ul>
-                <ul style="margin-left: 16px;">
-                    <li>
-                        <b>Fibonacci Sequence: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ...</b>
-                        <prismcode [code]="code139" language="javascript"></prismcode>
-                        <b>Output:</b>
-                        <prismcode [code]="code140" language="javascript"></prismcode>
-                    </li>
-                </ul>
-                <ul style="margin-left: 16px;">
-                    <li>
-                        <b>Powers of 2: 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, ...</b>
-                        <prismcode [code]="code141" language="javascript"></prismcode>
-                        <b>Output:</b>
-                        <prismcode [code]="code142" language="javascript"></prismcode>
-                    </li>
-                </ul>
-                <ul style="margin-left: 16px;">
-                    <li>
-                        <b>Triangular Numbers: 1, 3, 6, 10, 15, 21, 28, 36, 45, 55, ...</b>
-                        <prismcode [code]="code143" language="javascript"></prismcode>
-                        <b>Output:</b>
-                        <prismcode [code]="code144" language="javascript"></prismcode>
-                    </li>
-                </ul>
-                <ul style="margin-left: 16px;">
-                    <li>
-                        <b>Prime Numbers: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, ...</b>
-                        <prismcode [code]="code145" language="javascript"></prismcode>
-                        <b>Output:</b>
-                        <prismcode [code]="code146" language="javascript"></prismcode>
-                    </li>
-                </ul>
-                <ul style="margin-left: 16px;">
-                    <li>
-                        <b>Square Numbers: 1, 4, 9, 16, 25, 36, 49, 64, 81, 100, ...</b>
-                        <prismcode [code]="code147" language="javascript"></prismcode>
-                        <b>Output:</b>
-                        <prismcode [code]="code148" language="javascript"></prismcode>
-                    </li>
-                </ul>
-                <ul style="margin-left: 16px;">
-                    <li>
-                        <b>Reverse String</b>
-                        <prismcode [code]="code188" language="javascript"></prismcode>
-                    </li>
-                </ul>
-                <ul style="margin-left: 16px;">
-                    <li>
-                        <b>Palindrome Number</b>
-                        <prismcode [code]="code189" language="javascript"></prismcode>
-                    </li>
-                </ul>
+                <b>Add done method:</b>
+                <p>You can replace first solution's then and catch blocks with done method</p>
+                <prismcode [code]="code321" language="javascript"></prismcode>
+                <p>Let's say you want to fetch data using HTTP and later perform processing on the resulting data
+                    asynchronously. You can write done block as below,</p>
+                <prismcode [code]="code322" language="javascript"></prismcode>
+                <p>In future, if the processing library API changed to synchronous then you can remove done block as
+                    below,</p>
+                <prismcode [code]="code323" language="javascript"></prismcode>
+                <p>and then you forgot to add done block to then block leads to silent errors.</p>
             </li>
+            <li>
+                <b>Extend ES6 Promises by Bluebird:</b>
+                <p>Bluebird extends the ES6 Promises API to avoid the issue in the second solution. This library has a
+                    “default” onRejection handler which will print all errors from rejected Promises to stderr. After
+                    installation, you can process unhandled rejections</p>
+                <prismcode [code]="code324" language="javascript"></prismcode>
+                <p>and discard a rejection, just handle it with an empty catch</p>
+                <prismcode [code]="code325" language="javascript"></prismcode>
+            </li>
+        </ol>
+    </div>
+
+    <div class="questions" id="How_do_you_make_an_object_iterable_in_javascript">
+        <h1>211. How do you make an object iterable in javascript?</h1>
+    </div>
+    <div class="answers">
+        <p>By default, plain objects are not iterable. But you can make the object iterable by defining a
+            Symbol.iterator property on it.</p>
+        <p>Let's demonstrate this with an example,</p>
+        <prismcode [code]="code326" language="javascript"></prismcode>
+        <p>The above process can be simplified using a generator function,</p>
+        <prismcode [code]="code327" language="javascript"></prismcode>
+    </div>
+
+    <div class="questions" id="What_is_a_Proper_Tail_Call">
+        <h1>212. What is a Proper Tail Call?</h1>
+    </div>
+    <div class="answers">
+        <p>First, we should know about tail call before talking about "Proper Tail Call". A tail call is a subroutine or
+            function call performed as the final action of a calling function. Whereas Proper tail call(PTC) is a
+            technique where the program or code will not create additional stack frames for a recursion when the
+            function call is a tail call.</p>
+        <p>For example, the below classic or head recursion of factorial function relies on stack for each step. Each
+            step need to be processed upto n * factorial(n - 1)</p>
+        <prismcode [code]="code328" language="javascript"></prismcode>
+        <p>But if you use Tail recursion functions, they keep passing all the necessary data it needs down the recursion
+            without relying on the stack.</p>
+        <prismcode [code]="code329" language="javascript"></prismcode>
+        <p>The above pattern returns the same output as the first one. But the accumulator keeps track of total as an
+            argument without using stack memory on recursive calls.</p>
+    </div>
+
+    <div class="questions" id="How_do_you_check_an_object_is_a_promise_or_not">
+        <h1>213. How do you check an object is a promise or not?</h1>
+    </div>
+    <div class="answers">
+        <p>If you don't know if a value is a promise or not, wrapping the value as Promise.resolve(value) which returns
+            a promise</p>
+        <prismcode [code]="code330" language="javascript"></prismcode>
+        <p>Another way is to check for .then() handler type</p>
+        <prismcode [code]="code331" language="javascript"></prismcode>
+    </div>
+
+    <div class="questions" id="How_to_detect_if_a_function_is_called_as_constructor">
+        <h1>214. How to detect if a function is called as constructor?</h1>
+    </div>
+    <div class="answers">
+        <p>You can use new.target pseudo-property to detect whether a function was called as a constructor(using the new
+            operator) or as a regular function call.</p>
+        <ul>
+            <li>If a constructor or function invoked using the new operator, new.target returns a reference to the
+                constructor or function.</li>
+            <li>For function calls, new.target is undefined.</li>
+            <li>
+                <prismcode [code]="code332" language="javascript"></prismcode>
+            </li>
+        </ul>
+    </div>
+
+    <div class="questions" id="What_are_the_different_kinds_of_generators">
+        <h1>215. What are the different kinds of generators?</h1>
+    </div>
+    <div class="answers">
+        <p>There are five kinds of generators,</p>
+        <ol>
+            <li>
+                <b>Generator function declaration:</b>
+                <prismcode [code]="code333" language="javascript"></prismcode>
+            </li>
+            <li>
+                <b>Generator function expressions:</b>
+                <prismcode [code]="code334" language="javascript"></prismcode>
+            </li>
+            <li>
+                <b>Generator method definitions in object literals:</b>
+                <prismcode [code]="code335" language="javascript"></prismcode>
+            </li>
+            <li>
+                <b>Generator method definitions in class:</b>
+                <prismcode [code]="code336" language="javascript"></prismcode>
+            </li>
+            <li>
+                <b>Generator as a computed property:</b>
+                <prismcode [code]="code337" language="javascript"></prismcode>
+            </li>
+        </ol>
+    </div>
+
+    <div class="questions" id="What_are_the_built_in_iterables">
+        <h1>216. What are the built-in iterables?</h1>
+    </div>
+    <div class="answers">
+        <p>Below are the list of built-in iterables in javascript,</p>
+        <ol>
+            <li>Arrays and TypedArrays</li>
+            <li>Strings: Iterate over each character or Unicode code-points</li>
+            <li>Maps: iterate over its key-value pairs</li>
+            <li>Sets: iterates over their elements</li>
+            <li>arguments: An array-like special variable in functions</li>
+            <li>DOM collection such as NodeList</li>
+        </ol>
+    </div>
+
+    <div class="questions" id="What_are_the_differences_between_for_of_and_for_in_statements">
+        <h1>217. What are the differences between for...of and for...in statements?</h1>
+    </div>
+    <div class="answers">
+        <p>Both for...in and for...of statements iterate over js data structures. The only difference is over what they
+            iterate:</p>
+        <p>1. for..in iterates over all enumerable property keys of an object</p>
+        <p>2. for..of iterates over the values of an iterable object.</p>
+        <p>Let's explain this difference with an example,</p>
+        <prismcode [code]="code338" language="javascript"></prismcode>
+        <p>Since for..in loop iterates over the keys of the object, the first loop logs 0, 1, 2 and newProp while
+            iterating over the array object. The for..of loop iterates over the values of a arr data structure and logs
+            a, b, c in the console.</p>
+    </div>
+
+    <div class="questions" id="What_is_the_easiest_way_to_ignore_promise_errors">
+        <h1>218. What is the easiest way to ignore promise errors?</h1>
+    </div>
+    <div class="answers">
+        <p>The easiest and safest way to ignore promise errors is void that error. This approach is ESLint friendly too.
+        </p>
+        <prismcode [code]="code339" language="javascript"></prismcode>
+    </div>
+
+    <div class="questions" id="What_is_the_difference_between_setTimeout_setImmediate_and_process_nextTick">
+        <h1>219. What is the difference between setTimeout, setImmediate and process.nextTick?</h1>
+    </div>
+    <div class="answers">
+        <ul>
+            <li>
+                <b>Set Timeout:</b> setTimeout() is to schedule execution of a one-time callback after delay
+                milliseconds.
+            </li>
+            <li>
+                <b>Set Immediate:</b> The setImmediate function is used to execute a function right after the current
+                event loop finishes.
+            </li>
+            <li>
+                <b>Process NextTick:</b> If process.nextTick() is called in a given phase, all the callbacks passed to
+                process.nextTick() will be resolved before the event loop continues. This will block the event loop and
+                create I/O Starvation if process.nextTick() is called recursively.
+            </li>
+        </ul>
+    </div>
+
+    <div class="questions" id="How_do_you_reverse_an_array_without_modifying_original_array">
+        <h1>220. How do you reverse an array without modifying original array?</h1>
+    </div>
+    <div class="answers">
+        <p>The reverse() method reverses the order of the elements in an array but it mutates the original array. Let's
+            take a simple example to demonistrate this case,</p>
+        <prismcode [code]="code340" language="javascript"></prismcode>
+        <p>There are few solutions that won't mutate the original array. Let's take a look.</p>
+        <ol>
+            <li>
+                <b>Using slice and reverse methods:</b>
+                <p>In this case, just invoke the slice() method on the array to create a shallow copy followed by
+                    reverse() method call on the copy.</p>
+                <prismcode [code]="code341" language="javascript"></prismcode>
+            </li>
+            <li>
+                <b>Using spread and reverse methods:</b>
+                <p>In this case, let's use the spread syntax (...) to create a copy of the array followed by reverse()
+                    method call on the copy.</p>
+                <prismcode [code]="code342" language="javascript"></prismcode>
+            </li>
+            <li>
+                <b>Using reduce and spread methods:</b>
+                <p>Here execute a reducer function on an array elements and append the accumulated array on right side
+                    using spread syntax</p>
+                <prismcode [code]="code343" language="javascript"></prismcode>
+            </li>
+            <li>
+                <b>Using reduceRight and spread methods:</b>
+                <p>Here execute a right reducer function(i.e. opposite direction of reduce method) on an array elements
+                    and append the accumulated array on left side using spread syntax</p>
+                <prismcode [code]="code344" language="javascript"></prismcode>
+            </li>
+            <li>
+                <b>Using reduceRight and push methods:</b>
+                <p>Here execute a right reducer function(i.e. opposite direction of reduce method) on an array elements
+                    and push the iterated value to the accumulator</p>
+                <prismcode [code]="code345" language="javascript"></prismcode>
+            </li>
+        </ol>
+    </div>
+
+    <div class="questions" id="What_is_debouncing">
+        <h1>221. What is debouncing?</h1>
+    </div>
+    <div class="answers">
+        <p>Debouncing is a programming pattern that allows delaying execution of some piece of code until a specified
+            time to avoid unnecessary CPU cycles, API calls and improve performance. The debounce function make sure
+            that your code is only triggered once per user input. The common usecases are Search box suggestions,
+            text-field auto-saves, and eliminating double-button clicks.</p>
+        <p>Let's say you want to show suggestions for a search query, but only after a visitor has finished typing it.
+            So here you write a debounce function where the user keeps writing the characters with in 500ms then
+            previous timer cleared out using clearTimeout and reschedule API call/DB query for a new time—300 ms in the
+            future.</p>
+        <prismcode [code]="code346" language="javascript"></prismcode>
+        <p>The debounce() function can be used on input, button and window events</p>
+        <b>Input:</b>
+        <prismcode [code]="code347" language="html"></prismcode>
+        <b>Button:</b>
+        <prismcode [code]="code348" language="html"></prismcode>
+        <b>Windows event:</b>
+        <prismcode [code]="code349" language="javascript"></prismcode>
+    </div>
+
+    <div class="questions" id="What_is_throttling">
+        <h1>222. What is throttling?</h1>
+    </div>
+    <div class="answers">
+        <p>Throttling is a technique used to limit the execution of an event handler function, even when this event
+            triggers continuously due to user actions. The common use cases are browser resizing, window scrolling etc.
+        </p>
+        <p>The below example creates a throttle function to reduce the number of events for each pixel change and
+            trigger scroll event for each 100ms except for the first event.</p>
+        <prismcode [code]="code350" language="javascript"></prismcode>
+    </div>
+
+    <div class="questions" id="How_to_verify_if_a_variable_is_an_array">
+        <h1>223. How to verify if a variable is an array?</h1>
+    </div>
+    <div class="answers">
+        <p>It is possible to check if a variable is an array instance using 3 different ways,</p>
+        <ol>
+            <li>
+                <b>Array.isArray() method:</b>
+                <p>The Array.isArray(value) utility function is used to determine whether value is an array or not. This
+                    function returns a true boolean value if the variable is an array and a false value if it is not.
+                </p>
+                <prismcode [code]="code351" language="javascript"></prismcode>
+            </li>
+            <li>
+                <b>instanceof operator:</b>
+                <p>The instanceof operator is used to check the type of an array at run time. It returns true if the
+                    type of a variable is an Array other false for other type.</p>
+                <prismcode [code]="code352" language="javascript"></prismcode>
+            </li>
+            <li>
+                <b>Checking constructor type:</b>
+                <p>The constructor property of the variable is used to determine whether the variable Array type or not.
+                </p>
+                <prismcode [code]="code353" language="javascript"></prismcode>
+            </li>
+        </ol>
+    </div>
+
+    <div class="questions" id="What_is_pass_by_value_and_pass_by_reference">
+        <h1>224. What is pass by value and pass by reference?</h1>
+    </div>
+    <div class="answers">
+        <p>Pass-by-value creates a new space in memory and makes a copy of a value. Primitives such as string, number,
+            boolean etc will actually create a new copy. Hence, updating one value doesn't impact the other value. i.e,
+            The values are independent of each other.</p>
+        <prismcode [code]="code354" language="javascript"></prismcode>
+        <p>In the above code snippet, the value of a is assigned to b and the variable b has been incremented. Since
+            there is a new space created for variable b, any update on this variable doesn't impact the variable a.</p>
+        <p>Pass by reference doesn't create a new space in memory but the new variable adopts a memory address of an
+            initial variable. Non-primitives such as objects, arrays and functions gets the reference of the initiable
+            variable. i.e, updating one value will impact the other variable.</p>
+        <prismcode [code]="code355" language="javascript"></prismcode>
+        <p>In the above code snippet, updating the age property of one object will impact the other property due to the
+            same reference.</p>
+    </div>
+
+    <div class="questions" id="How_do_you_create_your_own_bind_method_using_either_call_or_apply_method">
+        <h1>225. How do you create your own bind method using either call or apply method?</h1>
+    </div>
+    <div class="answers">
+        <p>The custom bind function needs to be created on Function prototype inorder to use it as other builtin
+            functions. This custom function should return a function similar to original bind method and the
+            implementation of inner function needs to use apply method call.</p>
+        <p>The function which is going to bind using custom myOwnBind method act as the attached
+            function(boundTargetFunction) and argument as the object for apply method call.</p>
+        <prismcode [code]="code356" language="javascript"></prismcode>
+    </div>
+
+    <div class="questions" id="What_are_the_differences_between_pure_and_impure_functions">
+        <h1>226. What are the differences between pure and impure functions?</h1>
+    </div>
+    <div class="answers">
+        <p>Some of the major differences between pure and impure function are as below,</p>
+        <table>
+            <tr>
+                <th>Pure function</th>
+                <th>Impure function</th>
+            </tr>
+            <tr>
+                <td>It has no side effects</td>
+                <td>It causes side effects</td>
+            </tr>
+            <tr>
+                <td>It is always return the same result</td>
+                <td>It returns different result on each call</td>
+            </tr>
+            <tr>
+                <td>Easy to read and debug</td>
+                <td>Difficult to read and debug because they are affected by extenal code</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="questions" id="What_are_compose_and_pipe_functions">
+        <h1>227. What are compose and pipe functions?</h1>
+    </div>
+    <div class="answers">
+        <p>The "compose" and "pipe" are two techniques commonly used in functional programming to simplify complex
+            operations and make code more readable. They are not native to JavaScript and higher-order functions. the
+            compose() applies right to left any number of functions to the output of the previous function.</p>
+    </div>
+
+    <div class="questions" id="What_is_Function_Composition">
+        <h1>228. What is Function Composition?</h1>
+    </div>
+    <div class="answers">
+        <p>It is an approach where the result of one function is passed on to the next function, which is passed to
+            another until the final function is executed for the final result.</p>
+        <prismcode [code]="code357" language="javascript"></prismcode>
+    </div>
+
+    <div class="questions" id="What_are_the_uses_of_closures">
+        <h1>229. What are the uses of closures?</h1>
+    </div>
+    <div class="answers">
+        <p>Closures are a powerful feature in programming languages like JavaScript. They allow functions to retain
+            access to variables from their containing (enclosing) scope even after the outer function has finished
+            executing. This means that a function defined within another function can access variables from the outer
+            function, even if the outer function has already returned. Here are some common use cases of closures:</p>
+        <ol>
+            <li>
+                <b>Data Privacy:</b>
+                <p>Closures can be used to create private variables and methods. By defining variables within a
+                    function's scope and returning inner functions that have access to those variables, you can create a
+                    form of encapsulation, limiting access to certain data or functionality.</p>
+            </li>
+            <li>
+                <b>Function Factories:</b>
+                <p>Closures are often used to create functions with pre-set parameters. This is useful when you need to
+                    create multiple functions with similar behavior but different configurations.</p>
+            </li>
+            <li>
+                <b>Callback Functions:</b>
+                <p>Closures are frequently used in asynchronous programming, such as handling event listeners or AJAX
+                    requests. The inner function captures variables from the outer scope and can access them when the
+                    callback is invoked.</p>
+            </li>
+            <li>
+                <b>Memoization:</b>
+                <p>Closures can be used for memoization, a technique to optimize performance by caching the results of
+                    expensive function calls. The inner function can remember the results of previous calls and return
+                    the cached result if the same input is provided again.</p>
+            </li>
+            <li>
+                <b>iterators and Generators:</b>
+                <p>Closures can be used to create iterators and generators, which are essential for working with
+                    collections of data in modern JavaScript.</p>
+            </li>
+        </ol>
+    </div>
+
+    <div class="questions" id="What_are_the_possible_reasons_for_memory_leaks">
+        <h1>230. What are the possible reasons for memory leaks?</h1>
+    </div>
+    <div class="answers">
+        <p>Memory leaks can lead to poor performance, slow loading times and even crashes in web applications. Some of
+            the common causes of memory leaks are listed below,</p>
+        <ol>
+            <li>
+                <p>The execessive usage of global variables or omitting the var keyword in local scope.</p>
+            </li>
+            <li>
+                <p>Forgetting to clear the timers set up by setTimeout or setInterval.</p>
+            </li>
+            <li>
+                <p>Closures retain references to variables from their parent scope, which leads to variables might not
+                    garbage collected even they are no longer used.</p>
+            </li>
+        </ol>
+    </div>
+
+    <div class="questions" id="What_are_the_optimization_techniques_of_V8_engine">
+        <h1>231. What are the optimization techniques of V8 engine?</h1>
+    </div>
+    <div class="answers">
+        <p>V8 engine uses the below optimization techniques.</p>
+        <ol>
+            <li>
+                <b>Inline expansion:</b>
+                <p>It is a compiler optimization by replacing the function calls with the corresponding function blocks.
+                </p>
+            </li>
+            <li>
+                <b>Copy elision:</b>
+                <p>This is a compiler optimization method to prevent expensive extra objects from being duplicated or
+                    copied.</p>
+            </li>
+            <li>
+                <b>Inline caching:</b>
+                <p> It is a runtime optimization technique where it caches the execution of older tasks those can be
+                    lookup while executing the same task in the future.</p>
+            </li>
+        </ol>
+    </div>
+
+    <div class="questions" id="What_are_the_examples_of_built_in_higher_order_functions">
+        <h1>232. What are the examples of built-in higher order functions?</h1>
+    </div>
+    <div class="answers">
+        <p>There are several built-in higher order functions exists on arrays, strings, DOM and promise methods in
+            javascript. These higher order functions provides significant level of abstraction. The list of functions on
+            these categories are listed below,</p>
+        <ol>
+            <li>
+                <b>arrays:</b>
+                <p> map, filter, reduce, sort, forEach, some etc.</p>
+            </li>
+            <li>
+                <b>DOM:</b>
+                <p>The DOM method element.addEventListener(type, handler) also accepts the function handler as a second
+                    argument.</p>
+            </li>
+            <li>
+                <b>Strings:</b>
+                <p>.some() method</p>
+            </li>
+        </ol>
+    </div>
+
+    <div class="questions" id="What_are_the_benefits_higher_order_functions">
+        <h1>233. What are the benefits higher order functions?</h1>
+    </div>
+    <div class="answers">
+        <p>The main benefits of higher order functions are:</p>
+        <ul>
+            <li>
+                <p>Abstration</p>
+            </li>
+            <li>
+                <p>Reusability</p>
+            </li>
+            <li>
+                <p>Immutability</p>
+            </li>
+            <li>
+                <p>Modularity</p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="questions" id="Give_an_example_of_statements_affected_by_automatic_semicolon_insertion">
+        <h1>234. Give an example of statements affected by automatic semicolon insertion?</h1>
+    </div>
+    <div class="answers">
+        <p>The javascript parser will automatically add a semicolon while parsing the source code. For example, the
+            below common statements affected by Automatic Semicolon Insertion(ASI).</p>
+        <ol>
+            <li>An empty statement</li>
+            <li>var statement</li>
+            <li>An expression statement</li>
+            <li>do-while statement</li>
+            <li>continue statement</li>
+            <li>break statement</li>
+            <li>return statement</li>
+            <li>throw statement</li>
+        </ol>
+    </div>
+
+    <div class="questions" id="What_are_the_real_world_usecases_of_proxy">
+        <h1>235. What are the real world usecases of proxy?</h1>
+    </div>
+    <div class="answers">
+        <p>Proxies are not used in regular day to day JavaScript work but they enabled many exciting programming
+            patterns. Some of the real world usecases are listed below,</p>
+        <ol>
+            <li>Vue3 used proxy concept to implement reactive state</li>
+            <li>SolidJS implemented reactive stores</li>
+            <li>Immerjs built upon proxy to track updates to immutable updates</li>
+            <li>ZenStack improved Prisma ORM for access control layer</li>
         </ol>
     </div>
 
@@ -3782,4 +4123,20 @@
     </tr>
 </table> 
 <prismcode [code]="code91" language="javascript"></prismcode>
+
+<ol>
+    <li>
+        <b></b>
+        <p></p>
+    </li>
+</ol>
+
+ <div class="questions" id="">
+        <h1></h1>
+    </div>
+    <div class="answers">
+        <p></p>
+    </div>
+
+        
 -->

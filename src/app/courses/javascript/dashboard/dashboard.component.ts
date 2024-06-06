@@ -7,6 +7,6 @@ import { Content } from 'src/app/shared/interfaces/interfaces';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
-export class DashboardComponent {
+export class JavascriptDashboardComponent {
   contentData:Content = JavaScriptContent;
 }

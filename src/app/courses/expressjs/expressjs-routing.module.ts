@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { IntroComponent } from './lesssion/intro/intro.component';
+import { ExpressjsDashboardComponent } from './dashboard/dashboard.component';
+import { ExpressjsIntroComponent } from './lesssion/intro/intro.component';
 import { courceRoute, exTopics, routeConfig } from 'src/app/shared/const/const';
 import { LayoutComponent } from 'src/app/shared/components/layout/layout.component';
 import { ArchitectureComponent } from './lesssion/architecture/architecture.component';
@@ -27,14 +27,14 @@ import { ScaffoldingComponent } from './lesssion/scaffolding/scaffolding.compone
 import { TemplateEngineComponent } from './lesssion/template-engine/template-engine.component';
 
 const routes: Routes = [
-    { path: routeConfig?.empty, component: DashboardComponent },
+    { path: routeConfig?.empty, component: ExpressjsDashboardComponent },
     {
         path: routeConfig?.version, component: LayoutComponent,
         children: [
             {
                 path: exTopics?.intro,
                 children: [
-                    { path: routeConfig?.empty, component: IntroComponent },
+                    { path: routeConfig?.empty, component: ExpressjsIntroComponent },
                     { path: exTopics?.architecture, component: ArchitectureComponent },
                 ]
             },

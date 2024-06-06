@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './arrow-functions.component.html',
   styleUrls: ['./arrow-functions.component.scss']
 })
-export class ArrowFunctionsComponent {
+export class TypescriptArrowFunctionsComponent {
 
 }

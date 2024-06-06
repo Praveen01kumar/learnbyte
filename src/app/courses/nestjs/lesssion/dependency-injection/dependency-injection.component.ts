@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './dependency-injection.component.html',
   styleUrls: ['./dependency-injection.component.scss']
 })
-export class DependencyInjectionComponent {
+export class NestjsDependencyInjectionComponent {
 
 }

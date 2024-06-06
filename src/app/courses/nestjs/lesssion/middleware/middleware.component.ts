@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './middleware.component.html',
   styleUrls: ['./middleware.component.scss']
 })
-export class MiddlewareComponent {
+export class NestjsMiddlewareComponent {
 
 }

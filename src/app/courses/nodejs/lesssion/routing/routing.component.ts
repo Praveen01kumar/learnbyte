@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './routing.component.html',
   styleUrls: ['./routing.component.scss']
 })
-export class RoutingComponent {
+export class NodejsRoutingComponent {
 
 }

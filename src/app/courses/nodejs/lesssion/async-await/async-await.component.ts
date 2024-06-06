@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './async-await.component.html',
   styleUrls: ['./async-await.component.scss']
 })
-export class AsyncAwaitComponent {
+export class NodejsAsyncAwaitComponent {
 
 }

@@ -224,12 +224,34 @@ export class InterviewComponent implements OnInit, OnDestroy {
       { name: 'Is Node.js completely single threaded?', id: "Is_Node_js_completely_single_threaded" },
       { name: 'What is a Short circuit condition?', id: "What_is_a_Short_circuit_condition" },
       { name: 'What is the difference between function and class declarations?', id: "What_is_the_difference_between_function_and_class_declarations" },
+      { name: 'What is an async function?', id: "What_is_an_async_function" },
+      { name: 'How do you prevent promises swallowing errors?', id: "How_do_you_prevent_promises_swallowing_errors" },
+      { name: 'How do you make an object iterable in javascript?', id: "How_do_you_make_an_object_iterable_in_javascript" },
+      { name: 'What is a Proper Tail Call?', id: "What_is_a_Proper_Tail_Call" },
+      { name: 'How do you check an object is a promise or not?', id: "How_do_you_check_an_object_is_a_promise_or_not" },
+      { name: 'How to detect if a function is called as constructor?', id: "How_to_detect_if_a_function_is_called_as_constructor" },
+      { name: 'What are the different kinds of generators?', id: "What_are_the_different_kinds_of_generators" },
+      { name: 'What are the built-in iterables?', id: "What_are_the_built_in_iterables" },
+      { name: 'What are the differences between for...of and for...in statements?', id: "What_are_the_differences_between_for_of_and_for_in_statements" },
+      { name: 'What is the easiest way to ignore promise errors?', id: "What_is_the_easiest_way_to_ignore_promise_errors" },
+      { name: 'What is the difference between setTimeout, setImmediate and process.nextTick?', id: "What_is_the_difference_between_setTimeout_setImmediate_and_process_nextTick" },
+      { name: 'How do you reverse an array without modifying original array?', id: "How_do_you_reverse_an_array_without_modifying_original_array" },
+      { name: 'What is debouncing?', id: "What_is_debouncing" },
+      { name: 'What is throttling?', id: "What_is_throttling" },
+      { name: 'How to verify if a variable is an array?', id: "How_to_verify_if_a_variable_is_an_array" },
+      { name: 'What is pass by value and pass by reference?', id: "What_is_pass_by_value_and_pass_by_reference" },
+      { name: 'How do you create your own bind method using either call or apply method?', id: "How_do_you_create_your_own_bind_method_using_either_call_or_apply_method" },
+      { name: 'What are the differences between pure and impure functions?', id: "What_are_the_differences_between_pure_and_impure_functions" },
+      { name: 'What are compose and pipe functions?', id: "What_are_compose_and_pipe_functions" },
+      { name: 'What is Function Composition?', id: "What_is_Function_Composition" },
+      { name: 'What are the uses of closures?', id: "What_are_the_uses_of_closures" },
+      { name: 'What are the possible reasons for memory leaks?', id: "What_are_the_possible_reasons_for_memory_leaks" },
+      { name: 'What are the optimization techniques of V8 engine?', id: "What_are_the_optimization_techniques_of_V8_engine" },
+      { name: 'What are the examples of built-in higher order functions?', id: "What_are_the_examples_of_built_in_higher_order_functions" },
+      { name: 'What are the benefits higher order functions?', id: "What_are_the_benefits_higher_order_functions" },
+      { name: 'Give an example of statements affected by automatic semicolon insertion?', id: "Give_an_example_of_statements_affected_by_automatic_semicolon_insertion" },
+      { name: 'What are the real world usecases of proxy?', id: "What_are_the_real_world_usecases_of_proxy" },
       // { name: 'Variable_Declaration', id: "Variable_Declaration" },
-      // { name: 'Variable_Declaration', id: "Variable_Declaration" },
-      // { name: 'Variable_Declaration', id: "Variable_Declaration" },
-      // { name: 'Variable_Declaration', id: "Variable_Declaration" },
-      // { name: 'Variable_Declaration', id: "Variable_Declaration" },
-      { name: 'Pattern printing and numbers?', id: "pattern_printing_and_numbers" },
     ];
     this.shearedService.rSidebar_Id_Data$.next(data);
     this.contentList = data;
@@ -1036,444 +1058,6 @@ var detailsOfPerson1 = bikeDetails.displayDetails.bind(person1, "TS0122", "Bulle
       
 detailsOfPerson1();
 //Returns Vivek, bike details: TS0122, Bullet`;
-code111: string = `
-for(let i=1; i<=4; i++){
-  let pa = "";
-  for(let j=1; j<=i; j++){
-      pa += i+" "; 
-  }
-  console.log(pa);
-}`;
-code112: string = `
-1 
-2 2 
-3 3 3 
-4 4 4 4`;
-code113: string = `
-for(let i=1; i<=4; i++){
-  let pa = "";
-  for(let j=1; j<=i; j++){
-      pa += j+" "; 
-  }
-  console.log(pa);
-}`;
-code114: string = `
-1 
-1 2 
-1 2 3 
-1 2 3 4 `;
-code115: string = `
-let counter = 1;
-for(let i=1; i<=4; i++){
-    let pa= "";
-    for(let j=1; j<=i; j++){
-        pa += counter+" ";
-        counter++;
-    }
-    console.log(pa);
-}`;
-code116: string = `
-1 
-2 3 
-4 5 6 
-7 8 9 10`;
-code117: string = `
-for(let i=1; i<=4; i++){
-  let pa = "";
-  for(let j=4; j>=i; j--){
-      pa += " ";
-  }
-  for(let k=1; k<=i; k++){
-      pa += i+" ";
-  }
-  console.log(pa);
-}`;
-code118: string = `    
-   1 
-  2 2 
- 3 3 3 
-4 4 4 4 `;
-code119: string = `
-for(let i=1; i<=4; i++){
-  let pa = "";
-  for(let j=4; j>=i; j--){
-      pa += " ";
-  }
-  for(let k=1; k<=i; k++){
-      pa += k+" ";
-  }
-  console.log(pa);
-}`;
-code120: string = `
-   1 
-  1 2 
- 1 2 3 
-1 2 3 4`;
-code121: string = `
-let couter = 1;
-for(let i=1; i<=4; i++){
-    let pa = "";
-    for(let j=4; j>=i; j--){
-        pa += " ";
-    }
-    for(let k=1; k<=i; k++){
-        pa += couter+" ";
-        couter++;
-    }
-    console.log(pa);
-}`;
-code122: string = `
-    1 
-   2 3 
-  4 5 6 
- 7 8 9 10 `;
-code123: string = `
-for(let i=1; i<=5; i++){
-  let pa = "";
-  for(let k=1; k<=i; k++){
-      pa += " * ";
-  }
-  console.log(pa);
-}`;
-code124: string = `
-* 
-*  * 
-*  *  * 
-*  *  *  * 
-*  *  *  *  * `;
-code125: string = `
-for(let i=1; i<=5; i++){
-  let pa = "";
-  for(let k=5; k>=i; k--){
-      pa += " * ";
-  }
-  console.log(pa);
-}`;
-code126: string = `
-*  *  *  *  * 
-*  *  *  * 
-*  *  * 
-*  * 
-* `;
-code127: string = ` 
-let n = 5;
-for(let i = 0; i<=n; i++){
- let patern = "";
- for(let j=1;j<=(n-i);j++){
-     patern += j;
- }
- console.log(patern); 
-}`;
-code128: string = `
-12345
-1234
-123
-12
-1`;
-code129: string = ` 
-let n = 5;
-function getPattern(n){
-   for(let i = 0; i<=n; i++){
-   if(i%2!==0){
-       let patern = "";
-       for(let k=n; k>=i; k--){
-         patern += " ";
-       }
-       for(let j=1;j<=i;j++){
-       patern += j+" ";
-       }
-       console.log(patern); 
-   }
- }
-};
-getPattern(n);`;
-code130: string = `
-    1 
-  1 2 3 
-1 2 3 4 5 `;
-code131: string = `
-let n = 5;
-function getPatteern(n){
-    for (let i = 2; i < n; i++) {
-        let patt = "";
-        if(i!==1){
-            for (let j = n; j > i; j--) {
-                patt += " ";
-            }
-            
-        for (let j = 0; j < i; j++) {
-                patt += " *";
-            }
-            
-        for (let j = n; j > i; j--) {
-                patt += " ";
-            }
-        
-        for (let j = n; j > i; j--) {
-                patt += " ";
-            }
-        
-        for (let j = 0; j < i; j++) {
-                patt += " *";
-            }
-        }
-        console.log(patt);
-    }
-
-for (let i = 0; i < n*2; i++) {
-        let patt = "";
-    
-        for (let j = 0; j < i; j++) {
-                patt += " ";
-            }
-            
-        for (let j = n*2; j > i; j--) {
-                patt += " *";
-            }
-        
-        console.log(patt);
-    }
-}
-
-getPatteern(n);`;
-code132: string = `
-    * *       * *
-   * * *     * * *
-  * * * *   * * * *
- * * * * * * * * * *
-  * * * * * * * * *
-   * * * * * * * *
-    * * * * * * *
-     * * * * * *
-      * * * * *
-       * * * *
-        * * *
-         * *
-          *
-`;
-code133: string = `
- let n = 5;
-for (let i = 0; i < n; i++) {
-       let patt = "";
-   
-       for (let j = n; j > i; j--) {
-               patt += " ";
-           }
-           
-       for (let j = 0; j < i; j++) {
-               patt += " *";
-           }
-       
-       console.log(patt);
-   }
-   
-for (let i = 0; i < n; i++) {
-       let patt = "";
-   
-       for (let j = 0; j < i; j++) {
-               patt += " ";
-           }
-           
-       for (let j = n; j > i; j--) {
-               patt += " *";
-           }
-       
-       console.log(patt);
-   }
-`;
-code134: string = `
-     *
-    * *
-   * * *
-  * * * *
- * * * * *
-  * * * *
-   * * *
-    * *
-     * `;
-code135: string = ` 
-let n = 5;
-for (let i = 0; i < n; i++) {
-       let patt = "";
-   
-       for (let j = 0; j < i; j++) {
-               patt += " ";
-           }
-           
-       for (let j = n; j > i; j--) {
-               patt += " *";
-           }
-       
-       console.log(patt);
-   }
-   
-   for (let i = 1; i < n+1; i++) {
-       let patt = "";
-   
-       for (let j = n; j > i; j--) {
-               patt += " ";
-           }
-           
-       for (let j = 0; j < i; j++) {
-               patt += " *";
-           }
-       
-       console.log(patt);
-   }
-
-`;
-code136: string = ` 
-* * * * *
- * * * *
-  * * *
-   * *
-    *
-    *
-   * *
-  * * *
- * * * *
-* * * * *`;
-code137: string = ` 
-let n = 5;
-for (let i = 0; i < n; i++) {
-       let patt = "";
-       for (let j = 0; j <= i; j++) {
-               patt += "*";
-       }
-       for (let j = n; j >i; j--) {
-               patt += "  ";
-       }
-       for (let j = 0; j <= i; j++) {
-               patt += "*";
-       }
-       console.log(patt);
-   }
-   
-   
-   for (let i = 1; i < n; i++) {
-       let patt = "";
-       for (let j = n; j-1 >= i; j--) {
-               patt += "*";
-       }
-       for (let j = 0; j<=i; j++) {
-               patt += "  ";
-       }
-       for (let j = n; j-1 >= i; j--) {
-               patt += "*";
-       }
-       console.log(patt);
-   }
-
-
-`;
-code138: string = `
-*          *
-**        **
-***      ***
-****    ****
-*****  *****
-****    ****
-***      ***
-**        **
-*          *`;
-code139: string = `
-let n = 5;
-function getFibonacciSq(n){
-    if(n>=0){
-    let arr = [0,1];
-    for(let i = 2; i<=n; i++){
-        let next = arr[i-1] + arr[i-2];
-         if(n<next){
-            break;
-        }
-        arr.push(next);
-     }
-     return n>0?arr:[0];
-    }
-}
-
-let series = getFibonacciSq(n);
-console.log(series);`;
-code140: string = `[ 0, 1, 1, 2, 3, 5 ]`;
-code141: string = `
-let n = 10;
-function getPowersofSq(n){
-    if(n>=1){
-    let arr = [];
-    for(let i = 0; i<=n; i++){
-        let next = 2**i;
-         if(n<next){
-            break;
-        }
-        arr.push(next);
-     }
-     return arr;
-    }
-}
-
-let series = getPowersofSq(n);
-console.log(series);`;
-code142: string = `[ 1, 2, 4, 8 ]`;
-code143: string = `
-let n = 55;
-function getTriangular(n){
-    if(n>=1){
-    let arr = [];
-    for(let i = 1; i<=n; i++){
-        let next = (i*(i+1))/2;
-         if(n<next){
-            break;
-        }
-        arr.push(next);
-     }
-     return arr;
-    }
-}
-
-let series = getTriangular(n);
-console.log(series);`;
-code144: string = `[1,  3, 6, 10, 15, 21, 28, 36, 45, 55]`;
-code145: string = `
-function checkPrime(num) {
-  if (num < 2) return false;
-  for (i = 2; i < num; i++) { if (num % i === 0) return false; }
-  return true;
-}
-
-function getPrime(num){
-  let primeList = [];
-  if(num>1){
-  for(let i=0; i<=num; i++){
-      if(checkPrime(i)){
-          primeList.push(i);
-      } 
-    }   
-  }
-  return primeList;
-}
-
-let series = getPrime(30);
-console.log(series);`;
-code146: string = `[2,  3,  5,  7, 11, 13, 17, 19, 23, 29]`;
-code147: string = `
-let n = 100;
-function getSquare(n){
-    if(n>=1){
-    let arr = [];
-    for(let i = 1; i<=n; i++){
-        let next = i*i;
-         if(n<next){
-            break;
-        }
-        arr.push(next);
-     }
-     return arr;
-    }
-}
-
-let series = getSquare(n);
-console.log(series);`;
-code148: string = `[1,  4,  9, 16,  25, 36, 49, 64, 81, 100]`;
 code149: string = `
 var user = { firstName: "John", lastName:"Doe", age: 20 };
 delete user.age;
@@ -1767,33 +1351,6 @@ function randomInteger(min, max) {
 }
 randomInteger(1, 100); // returns a random integer from 1 to 100
 randomInteger(1, 1000); // returns a random integer from 1 to 1000`;
-code188: string = `function reverseString(str) {
-  let reversedStr = '';
-  for (let i = str.length-1; i >= 0; i--) {
-      reversedStr += str[i];
-  }
-  return reversedStr;
-}
-
-console.log(reverseString("Praveen")); 
-// neevarP`;
-code189: string = `function PalindromeNum(num) {
-  let numvalue = String(num);
-  let reversedNum = '';
-  for (let i = numvalue.length-1; i >= 0; i--) {
-      reversedNum += numvalue[i];
-  }
-  if(numvalue===reversedNum){
-      return +reversedNum;
-  }else{
-      return "Number is not Palindrome";
-  }
-}
-
-console.log(PalindromeNum(123444321));
-console.log(PalindromeNum(1234443210));
-// 123444321
-// Number is not Palindrome`;
 code190: string = `/pattern/modifiers;`;
 code191: string = `/John/i;`;
 code192: string = `var msg = "Hello John";
@@ -2743,9 +2300,311 @@ class User {}`;
 code317: string = `const user = new User(); // No error
 
 function User() {}`;
-code318: string = ``;
-code319: string = ``;
-code320: string = ``;
+code318: string = `async function logger() {
+  let data = await fetch("http://someapi.com/users"); // pause until fetch returns
+  console.log(data);
+}
+logger();`;
+code319: string = `Promise.resolve("promised value").then(function () {
+  throw new Error("error");
+});
+
+Promise.reject("error value").catch(function () {
+  throw new Error("error");
+});
+
+new Promise(function (resolve, reject) {
+  throw new Error("error");
+});`;
+code320: string = `Promise.resolve("promised value")
+.then(function () {
+  throw new Error("error");
+})
+.catch(function (error) {
+  console.error(error.stack);
+});`;
+code321: string = `Promise.resolve("promised value").done(function () {
+  throw new Error("error");
+});`;
+code322: string = `getDataFromHttp()
+.then(function (result) {
+  return processDataAsync(result);
+})
+.done(function (processed) {
+  displayData(processed);
+});`;
+code323: string = `getDataFromHttp().then(function (result) {
+  return displayData(processDataAsync(result));
+});`;
+code324: string = `Promise.onPossiblyUnhandledRejection(function (error) {
+  throw error;
+});`;
+code325: string = `Promise.reject("error value").catch(function () {});`;
+code326: string = `const collection = {
+  one: 1,
+  two: 2,
+  three: 3,
+  [Symbol.iterator]() {
+    const values = Object.keys(this);
+    let i = 0;
+    return {
+      next: () => {
+        return {
+          value: this[values[i++]],
+          done: i > values.length,
+        };
+      },
+    };
+  },
+};
+
+const iterator = collection[Symbol.iterator]();
+
+console.log(iterator.next()); // → {value: 1, done: false}
+console.log(iterator.next()); // → {value: 2, done: false}
+console.log(iterator.next()); // → {value: 3, done: false}
+console.log(iterator.next()); // → {value: undefined, done: true}`;
+code327: string = `const collection = {
+  one: 1,
+  two: 2,
+  three: 3,
+  [Symbol.iterator]: function* () {
+    for (let key in this) {
+      yield this[key];
+    }
+  },
+};
+const iterator = collection[Symbol.iterator]();
+console.log(iterator.next()); // {value: 1, done: false}
+console.log(iterator.next()); // {value: 2, done: false}
+console.log(iterator.next()); // {value: 3, done: false}
+console.log(iterator.next()); // {value: undefined, done: true}`;
+code328: string = `function factorial(n) {
+  if (n === 0) {
+    return 1;
+  }
+  return n * factorial(n - 1);
+}
+console.log(factorial(5)); //120`;
+code329: string = `function factorial(n, acc = 1) {
+  if (n === 0) {
+    return acc;
+  }
+  return factorial(n - 1, n * acc);
+}
+console.log(factorial(5)); //120`;
+code330: string = `function isPromise(object) {
+  if (Promise && Promise.resolve) {
+    return Promise.resolve(object) == object;
+  } else {
+    throw "Promise not supported in your environment";
+  }
+}
+
+var i = 1;
+var promise = new Promise(function (resolve, reject) {
+  resolve();
+});
+
+console.log(isPromise(i)); // false
+console.log(isPromise(promise)); // true`;
+code331: string = `function isPromise(value) {
+  return Boolean(value && typeof value.then === "function");
+}
+var i = 1;
+var promise = new Promise(function (resolve, reject) {
+  resolve();
+});
+
+console.log(isPromise(i)); // false
+console.log(isPromise(promise)); // true`;
+code332: string = `function Myfunc() {
+  if (new.target) {
+    console.log("called with new");
+  } else {
+    console.log("not called with new");
+  }
+}
+
+new Myfunc(); // called with new
+Myfunc(); // not called with new
+Myfunc.call({}); // not called with new`;
+code333: string = `function* myGenFunc() {
+  yield 1;
+  yield 2;
+  yield 3;
+}
+const genObj = myGenFunc();`;
+code334: string = `const myGenFunc = function* () {
+  yield 1;
+  yield 2;
+  yield 3;
+};
+const genObj = myGenFunc();`;
+code335: string = `const myObj = {
+  *myGeneratorMethod() {
+    yield 1;
+    yield 2;
+    yield 3;
+  },
+};
+const genObj = myObj.myGeneratorMethod();`;
+code336: string = `class MyClass {
+  *myGeneratorMethod() {
+    yield 1;
+    yield 2;
+    yield 3;
+  }
+}
+const myObject = new MyClass();
+const genObj = myObject.myGeneratorMethod();`;
+code337: string = `const SomeObj = {
+  *[Symbol.iterator]() {
+    yield 1;
+    yield 2;
+    yield 3;
+  },
+};
+
+console.log(Array.from(SomeObj)); // [ 1, 2, 3 ]`;
+code338: string = `let arr = ["a", "b", "c"];
+
+arr.newProp = "newVlue";
+
+// key are the property keys
+for (let key in arr) {
+  console.log(key); // 0, 1, 2 & newValue
+}
+
+// value are the property values
+for (let value of arr) {
+  console.log(value); // a, b, c
+}`;
+code339: string = `await promise.catch((e) => void e);`;
+code340: string = `const originalArray = [1, 2, 3, 4, 5];
+const newArray = originalArray.reverse();
+
+console.log(newArray); // [ 5, 4, 3, 2, 1]
+console.log(originalArray); // [ 5, 4, 3, 2, 1]`;
+code341: string = `const originalArray = [1, 2, 3, 4, 5];
+const newArray = originalArray.slice().reverse(); //Slice an array gives a new copy
+
+console.log(originalArray); // [1, 2, 3, 4, 5]
+console.log(newArray); // [ 5, 4, 3, 2, 1]`;
+code342: string = `const originalArray = [1, 2, 3, 4, 5];
+const newArray = [...originalArray].reverse();
+
+console.log(originalArray); // [1, 2, 3, 4, 5]
+console.log(newArray); // [ 5, 4, 3, 2, 1]`;
+code343: string = `const originalArray = [1, 2, 3, 4, 5];
+const newArray = originalArray.reduce((accumulator, value) => {
+  return [value, ...accumulator];
+}, []);
+
+console.log(originalArray); // [1, 2, 3, 4, 5]
+console.log(newArray); // [ 5, 4, 3, 2, 1]`;
+code344: string = `const originalArray = [1, 2, 3, 4, 5];
+const newArray = originalArray.reduceRight((accumulator, value) => {
+  return [...accumulator, value];
+}, []);
+
+console.log(originalArray); // [1, 2, 3, 4, 5]
+console.log(newArray); // [ 5, 4, 3, 2, 1]`;
+code345: string = `const originalArray = [1, 2, 3, 4, 5];
+const newArray = originalArray.reduceRight((accumulator, value) => {
+  accumulator.push(value);
+  return accumulator;
+}, []);
+
+console.log(originalArray); // [1, 2, 3, 4, 5]
+console.log(newArray); // [ 5, 4, 3, 2, 1]`;
+code346: string = `function debounce(func, timeout = 500) {
+  let timer;
+  return (...args) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      func.apply(this, args);
+    }, timeout);
+  };
+}
+function fetchResults() {
+  console.log("Fetching input suggestions");
+}
+const processChange = debounce(() => fetchResults());`;
+code347: string = `<input type="text" onkeyup="processChange()" />`;
+code348: string = `<button onclick="processChange()">Click me</button>`;
+code349: string = `window.addEventListener("scroll", processChange);`;
+code350: string = `const throttle = (func, limit) => {
+  let inThrottle;
+  return (...args) => {
+    if (!inThrottle) {
+      func.apply(this, args);
+      inThrottle = true;
+      setTimeout(() => (inThrottle = false), limit);
+    }
+  };
+};
+window.addEventListener("scroll", () => {
+  throttle(handleScrollAnimation, 100);
+});`;
+code351: string = `const numbers = [1, 2, 3];
+const user = { name: "John" };
+Array.isArray(numbers); // true
+Array.isArray(user); //false`;
+code352: string = `const numbers = [1, 2, 3];
+const user = { name: "John" };
+console.log(numbers instanceof Array); // true
+console.log(user instanceof Array); // false`;
+code353: string = `const numbers = [1, 2, 3];
+const user = { name: "John" };
+console.log(numbers.constructor === Array); // true
+console.log(user.constructor === Array); // false`;
+code354: string = `let a = 5;
+let b = a;
+
+b++;
+console.log(a, b); //5, 6`;
+code355: string = `let user1 = {
+  name: "John",
+  age: 27,
+};
+let user2 = user1;
+user2.age = 30;
+
+console.log(user1.age, user2.age); // 30, 30`;
+code356: string = `Function.prototype.myOwnBind = function (whoIsCallingMe) {
+  if (typeof this !== "function") {
+    throw new Error(this + "cannot be bound as it's not callable");
+  }
+  const boundTargetFunction = this;
+  return function () {
+    boundTargetFunction.apply(whoIsCallingMe, arguments);
+  };
+};`;
+code357: string = `//example
+const double = (x) => x * 2;
+const square = (x) => x * x;
+
+var output1 = double(2);
+var output2 = square(output1);
+console.log(output2);
+
+var output_final = square(double(2));
+console.log(output_final);`;
+code358: string = ``;
+code359: string = ``;
+code360: string = ``;
+code361: string = ``;
+code362: string = ``;
+code363: string = ``;
+code364: string = ``;
+code365: string = ``;
+code366: string = ``;
+code367: string = ``;
+code368: string = ``;
+code369: string = ``;
+code370: string = ``;
+code371: string = ``;
 
 
   ngOnDestroy(): void { this.shearedService.rSidebar_Id_Data$.next([]); }

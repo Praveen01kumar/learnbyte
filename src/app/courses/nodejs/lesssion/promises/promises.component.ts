@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './promises.component.html',
   styleUrls: ['./promises.component.scss']
 })
-export class PromisesComponent {
+export class NodejsPromisesComponent {
 
 }
