@@ -83,7 +83,52 @@ export class InterviewOutoutBasedComponent implements OnInit {
   console.log(obj.prop3());`;
   code10: string = `console.log(1 < 2 < 3);
   console.log(3 > 2 > 1);`;
-  code11: string = ``;
-  code12: string = ``;
+  code11: string = `function printNumbers(first, second, first) {
+    console.log(first, second, first);
+  }
+  printNumbers(1, 2, 3);`;
+  code12: string = `const arrowFunc = () => arguments.length;
+  console.log(arrowFunc(1, 2, 3));`;
+  code13: string = `console.log(String.prototype.trimLeft.name === "trimLeft");
+  console.log(String.prototype.trimLeft.name === "trimStart");`;
+  code14: string = `console.log(Math.max());`;
+  code15: string = `console.log(10 == [10]);
+  console.log(10 == [[[[[[[10]]]]]]]);`;
+  code16: string = `console.log(10 + "10");
+  console.log(10 - "10");`;
+  code17: string = `console.log([0] == false);
+  if ([0]) {
+    console.log("I'm True");
+  } else {
+    console.log("I'm False");
+  }`;
+  code18: string = `console.log([1, 2] + [3, 4]);`;
+  code19: string = `const numbers = new Set([1, 1, 2, 3, 4]);
+  console.log(numbers);
+  
+  const browser = new Set("Firefox");
+  console.log(browser);`;
+  code20: string = ``;
+  code21: string = ``;
+  code22: string = ``;
+  code23: string = ``;
+  code24: string = ``;
+  code25: string = ``;
+  code26: string = ``;
+  code27: string = ``;
+  code28: string = ``;
+  code29: string = ``;
+  code30: string = ``;
+  code31: string = ``;
+  code32: string = ``;
+  code33: string = ``;
+  code34: string = ``;
+  code35: string = ``;
+  code36: string = ``;
+  code37: string = ``;
+  code38: string = ``;
+  code39: string = ``;
+  code40: string = ``;
+  
 
 }
